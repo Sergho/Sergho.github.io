@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width = device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:300,400,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="fontawesome-free-5.9.0-web/css/all.css">
+	<link rel="stylesheet" href="css/style.css">
+	<title>AVENUE FASHION</title>
+</head>
+<body>
+	
+	<header>
+		<div class="top">
+			<div class="content">
+				<div class="valute">
+					Currency: 
+					<b class="value" id="h-t-v1" onclick="Valute();">
+						<span id="h-t-t">GBP</span>
+						<i class="fas fa-chevron-down" id="h-t-i"></i>
+					</b>
+					<ul class="valute-drop" id="h-t-v2" style="max-height: 0px;">
+						<li class="drop-item" onclick="ChooseValute(this);">GBP</li>
+						<li class="drop-item" onclick="ChooseValute(this);">RUB</li>
+						<li class="drop-item" onclick="ChooseValute(this);">USD</li>
+						<li class="drop-item" onclick="ChooseValute(this);">EUR</li>
+						<li class="drop-item" onclick="ChooseValute(this);">UAH</li>
+					</ul>
+				</div>
+				<div class="register">
+					Register
+				</div>
+				<div class="sign-in">
+					Sign In
+				</div>
+				<div class="shopping-cart">
+					<i class="fas fa-shopping-cart"></i>
+					Empty
+					<i class="fas fa-chevron-down"></i>
+				</div>
+			</div>
+		</div>
+
+		<div class="bottom">
+			<div class="content">
+				<div class="logo">
+					<b>AVENUE</b> 
+					FASHION
+				</div>
+				<div class="nav">
+					<ul class="nav-bar">
+						<li class="nav-item" onclick="Categories(0);">
+							<span>MEN</span>
+							<i class="fas fa-chevron-down h-drop"></i>
+						</li>
+						<li class="nav-item" onclick="Categories(1);">
+							<span>WOMEN</span>
+							<i class="fas fa-chevron-down h-drop"></i>
+						</li>
+						<li class="nav-item" onclick="Categories(2);">
+							<span>THE BRANDS</span>
+							<i class="fas fa-chevron-down h-drop"></i>
+						</li>
+						<li class="nav-item" onclick="Categories(3);">
+							<span>LOCAL STORIES</span>
+							<i class="fas fa-chevron-down h-drop"></i>
+						</li>
+						<li class="nav-item" onclick="Categories(4);">
+							<span>LOOK BOOK</span>
+							<i class="fas fa-chevron-down h-drop"></i>
+						</li>
+					</ul>
+					<div class="drop first" style="max-height: 0px;">
+						<div class="drop-content">
+							<ul>
+								<li class="item">CASUALS 1</li>
+								<li class="item">Jackets</li>
+								<li class="item">Hoodies & Sweatshirts</li>
+								<li class="item">Polo Shirts</li>
+								<li class="item">Sportswear</li>
+								<li class="item">Trousers $ Chinos</li>
+								<li class="item">T-Shirts</li>
+							</ul>
+							<ul>
+								<li class="item">FORMAL</li>
+								<li class="item">Jackets</li>
+								<li class="item">Shirts</li>
+								<li class="item">Suits</li>
+								<li class="item">Trousers</li>
+							</ul>
+							<div class="advert">
+								<b>AUTUMN SALE!</b><br>
+								UP TO 50% OFF
+							</div>
+						</div>
+					</div>
+					<div class="drop second" style="max-height: 0px;">
+						<div class="drop-content">
+							<ul>
+								<li class="item">CASUALS 2</li>
+								<li class="item">Jackets</li>
+								<li class="item">Hoodies & Sweatshirts</li>
+								<li class="item">Polo Shirts</li>
+								<li class="item">Sportswear</li>
+								<li class="item">Trousers $ Chinos</li>
+								<li class="item">T-Shirts</li>
+							</ul>
+							<ul>
+								<li class="item">FORMAL</li>
+								<li class="item">Jackets</li>
+								<li class="item">Shirts</li>
+								<li class="item">Suits</li>
+								<li class="item">Trousers</li>
+							</ul>
+							<div class="advert">
+								<b>AUTUMN SALE!</b><br>
+								UP TO 50% OFF
+							</div>
+						</div>
+					</div>
+					<div class="drop third" style="max-height: 0px;">
+						<div class="drop-content">
+							<ul>
+								<li class="item">CASUALS 3</li>
+								<li class="item">Jackets</li>
+								<li class="item">Hoodies & Sweatshirts</li>
+								<li class="item">Polo Shirts</li>
+								<li class="item">Sportswear</li>
+								<li class="item">Trousers $ Chinos</li>
+								<li class="item">T-Shirts</li>
+							</ul>
+							<ul>
+								<li class="item">FORMAL</li>
+								<li class="item">Jackets</li>
+								<li class="item">Shirts</li>
+								<li class="item">Suits</li>
+								<li class="item">Trousers</li>
+							</ul>
+							<div class="advert">
+								<b>AUTUMN SALE!</b><br>
+								UP TO 50% OFF
+							</div>
+						</div>
+					</div>
+					<div class="drop fourth" style="max-height: 0px;">
+						<div class="drop-content">
+							<ul>
+								<li class="item">CASUALS 4</li>
+								<li class="item">Jackets</li>
+								<li class="item">Hoodies & Sweatshirts</li>
+								<li class="item">Polo Shirts</li>
+								<li class="item">Sportswear</li>
+								<li class="item">Trousers $ Chinos</li>
+								<li class="item">T-Shirts</li>
+							</ul>
+							<ul>
+								<li class="item">FORMAL</li>
+								<li class="item">Jackets</li>
+								<li class="item">Shirts</li>
+								<li class="item">Suits</li>
+								<li class="item">Trousers</li>
+							</ul>
+							<div class="advert">
+								<b>AUTUMN SALE!</b><br>
+								UP TO 50% OFF
+							</div>
+						</div>
+					</div>
+					<div class="drop fifth" style="max-height: 0px;">
+						<div class="drop-content">
+							<ul>
+								<li class="item">CASUALS 5</li>
+								<li class="item">Jackets</li>
+								<li class="item">Hoodies & Sweatshirts</li>
+								<li class="item">Polo Shirts</li>
+								<li class="item">Sportswear</li>
+								<li class="item">Trousers $ Chinos</li>
+								<li class="item">T-Shirts</li>
+							</ul>
+							<ul>
+								<li class="item">FORMAL</li>
+								<li class="item">Jackets</li>
+								<li class="item">Shirts</li>
+								<li class="item">Suits</li>
+								<li class="item">Trousers</li>
+							</ul>
+							<div class="advert">
+								<b>AUTUMN SALE!</b><br>
+								UP TO 50% OFF
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="input">
+					<label class="search">
+						<input type="text" placeholder="Search..." class="in" id="search" oninput="ShowVariants();">
+						<i class="fas fa-search" id="search-i"></i>
+						<ul class="variable">
+						</ul>
+					</label>
+				</div>
+			</div>
+		</div>
+	</header>
+
+
+
+	<main>
+		<div class="carousel-container">
+			<h1 class="text"><pre>A  V  E</pre></h1>
+			<button class="view">SHOP MEN'S COLLECTION</button>
+		</div>
+		<hr class="m-hr">
+		<div class="items">
+			<ul class="sort-nav-bar">
+				<li class="sort-nav-item active" onclick="Active(this);">POPULAR</li>
+				<li class="sort-nav-item" onclick="Active(this);">NEW ARRIVALS</li>
+				<li class="sort-nav-item" onclick="Active(this);">BEST SELLERS</li>
+				<li class="sort-nav-item" onclick="Active(this);">SPECIAL OFFERS</li>
+				<li class="sort-nav-item" onclick="Active(this);">COMING SOON</li>
+			</ul>
+			<div class="content">
+				<div class="orders">
+					<div class="order">
+						<img src="img/1.png" alt="1">
+						<div class="price"><sup>£</sup> <span> 89.99</span></div>
+						<div class="information">123</div>
+					</div>
+					<div class="order">
+						<img src="img/2.png" alt="2">
+						<div class="price"><sup>£</sup> <span> 47.50</span></div>
+					</div>
+					<div class="order">
+						<img src="img/3.png" alt="3">
+						<div class="price"><sup>£</sup><span class="last">107</span> <sup>£</sup> <span> 47.50</span></div>
+					</div>
+					<div class="order">
+						<img src="img/4.png" alt="4">
+						<div class="price"><sup>£</sup> <span> 47.50</span></div>
+					</div>
+					<div class="order">
+						<img src="img/5.png" alt="5">
+						<div class="price"><sup>£</sup> <span> 47.50</span></div>
+					</div>
+					<div class="order">
+						<img src="img/6.png" alt="6">
+						<div class="price"><sup>£</sup> <span> 47.50</span></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<script src="js/script.js"></script>
+</body>
+</html>
