@@ -152,6 +152,7 @@
 		position: relative;
 		top: 0;
 		left: 50%;
+		z-index: 1;
 		transform: translate(-50%, 0);
 		transition: max-height 0.2s ease;
 		overflow: hidden;
@@ -462,6 +463,154 @@
 		color: white;
 	}
 
+	main .content .preview{
+		width: 100%;
+		background-color: black;
+		position: relative;
+	}
+	main .content .preview img{
+		width: 100%;
+		opacity: 0.6;
+		margin: 0;
+		display: flex;
+	}
+	main .content .preview h1, main .content .preview h2, main .content .preview h3{
+		position: absolute;
+		color: white;
+		width: 100%;
+		text-align: center;
+	}
+	main .content .preview h1{
+		font-size: 60px;
+		opacity: 0.15;
+		line-height: auto;
+		letter-spacing: 20px;
+		top: auto;
+		bottom: 0;
+	}
+	main .content .preview h2{
+		font-size: 15px;
+		bottom: 40%;
+		font-weight: normal;
+	}
+	main .content .preview h3{
+		font-size: 10px;
+		bottom: 15%;
+		font-weight: normal;
+	}
+
+	main .content .places{
+		width: 80%;
+		margin: auto;
+		margin-top: 30px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	main .content .places .place{
+		width: 100%;
+		text-align: center;
+		margin-top: 15px;
+	}
+	main .content .places .place .heading{
+		font-size: 30px;
+		color: #686365;
+	}
+	main .content .places .place .address{
+		font-size: 20px;
+		color: #aaa;
+		margin-top: 5px;
+	}
+	main .content .places .place .description{
+		font-size: 12px;
+		color: #8E8C8C;
+		margin-top: 10px;
+	}
+	main .content .places .place .details button{
+		width: 120px;
+		height: 40px;
+		border: none;
+		outline: 1px solid #737373;
+		color: #737373;
+		font-size: 14px;
+		background-color: rgba(0, 0, 0, 0);
+		margin: auto;
+		margin-top: 10px;
+		cursor: pointer;
+		transition: 0.5s ease;
+	}
+	main .content .places .place .details button:hover{
+		outline: none;
+		color: white;
+		background-color: #00c8c8;
+	}
+	main .content .map{
+		width: 100%;
+		height: 700px;
+		background-color: #f8f8f8;
+		margin-top: 30px;
+		margin-bottom: 60px;
+	}
+	main .content .map iframe{
+		height: 50%;
+		width: 100%;
+	}
+	main .content .map .info{
+		width: 80%;
+		margin: auto;
+		color: #A3A2A2;
+	}
+	main .content .map .info .heading{
+		color: #5D585A;
+		font-size: 14px;
+		font-weight: bold;
+		margin-top: 10px;
+	}
+	main .content .map .info .address{
+		color: #818181;
+		font-size: 12px;
+		margin-top: 10px;
+		font-weight: bold;
+	}
+	main .content .map .info .description{
+		font-size: 12px;
+		margin-top: 5px;
+	}
+	main .content .map .info .contact{
+		margin-top: 5px;
+		font-size: 12px;
+	}
+	main .content .map .info .contact div{
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
+	main .content .map .info .socials{
+		margin-top: 30px;
+		padding-bottom: 40px;
+	}
+	main .content .map .info .socials a i{
+		font-size: 18px;
+		color: white;
+		margin-right: 10px;
+		width: 30px;
+		height: 30px;
+		background-color: #727272;
+		border-radius: 50%;
+		cursor: pointer;
+		transition: 0.5s ease;
+	}
+	main .content .map .info .socials a i::before{
+		text-align: center;
+		display: block;
+		position: relative;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	main .content .map .info .socials a i:hover{
+		background-color: #00c8c8;
+	}
+
 	footer .content{
 		background-color: #f8f8f8;
 		margin-top: 30px;
@@ -477,9 +626,14 @@
 	footer .content .columns .column{
 		width: 100%;
 		margin-top: 15px;
-		font-size: 15px;
 		list-style: none;
+		font-size: 15px;
 		color: #575153;
+	}
+	footer .content .columns .column a{
+		color: #575153;
+		text-decoration: none;
+		transition: 0.5s ease;
 	}
 	footer .content .columns .column .head{
 		font-weight: bold;
@@ -487,9 +641,8 @@
 	footer .content .columns .column .item{
 		cursor: pointer;
 		margin-top: 5px;
-		transition: 0.5s ease;
 	}
-	footer .content .columns .column .item:hover{
+	footer .content .columns .column .item a:hover{
 		color: #00c8c8;
 	}
 
@@ -687,6 +840,20 @@
 		align-items: flex-end;
 	}
 
+	main .content .preview h1{
+		font-size: 80px;
+	}
+	main .content .preview h2{
+		font-size: 25px;
+	}
+	main .content .preview h3{
+		font-size: 15px;
+	}
+
+	main .content .map{
+		height: 600px;
+	}
+
 }
 
 @media (min-width: 772px){
@@ -854,6 +1021,39 @@
 		font-size: 10px;
 	}
 
+	main .content .preview h1{
+		font-size: 150px;
+	}
+	main .content .preview h2{
+		font-size: 40px;
+	}
+	main .content .preview h3{
+		font-size: 25px;
+	}
+
+	main .content .places .place{
+		width: 30%;
+	}
+	main .content .places .place .heading{
+		font-size: 20px;
+	}
+	main .content .places .place .address{
+		font-size: 15px;
+	}
+
+	main .content .map{
+		display: flex;
+		justify-content: space-between;
+		height: 400px;
+	}
+	main .content .map iframe{
+		height: 100%;
+		width: 65%;
+	}
+	main .content .map .info{
+		width: 25%;
+	}
+
 	footer .content .columns .column{
 		width: 30%;
 	}
@@ -997,6 +1197,28 @@
 		width: 100px;
 		padding: 5px;
 		font-size: 12px;
+	}
+
+	main .content .preview h1{
+		font-size: 200px;
+	}
+	main .content .preview h2{
+		font-size: 50px;
+	}
+	main .content .preview h3{
+		font-size: 30px;
+	}
+
+	main .content .places .place .heading{
+		font-size: 25px;
+	}
+	main .content .places .place .address{
+		font-size: 20px;
+		margin-top: 10px;
+	}
+
+	main .content .map{
+		height: 350px;
 	}
 
 	footer .content .columns .column{
@@ -1147,6 +1369,39 @@
 		padding: 10px;
 		font-size: 16px;
 	}
+
+	main .content .preview h1{
+		font-size: 250px;
+		letter-spacing: 65px;
+	}
+	main .content .preview h2{
+		font-size: 70px;
+	}
+	main .content .preview h3{
+		font-size: 50px;
+	}
+
+	main .content .places{
+		width: 70%;
+	}
+
+	main .content .map .info .heading{
+		font-size: 16px;
+	}
+	main .content .map .info .address{
+		font-size: 14px;
+	}
+	main .content .map .info .description{
+		font-size: 14px;
+	}
+	main .content .map .info .contact{
+		font-size: 14px;
+	}
+	main .content .map .info .socials a i{
+		font-size: 28px;
+		width: 40px;
+		height: 40px;
+	}
 	
 	footer .bottom .content{
 		font-size: 14px;
@@ -1232,6 +1487,24 @@
 		width: 170px;
 		padding: 15px;
 		font-size: 20px;
+	}
+
+	main .content .preview h1{
+		font-size: 300px;
+		letter-spacing: 80px;
+	}
+	main .content .preview h2{
+		font-size: 90px;
+	}
+	main .content .preview h3{
+		font-size: 65px;
+	}
+
+	main .content .places .place .details button{
+		width: 150px;
+		height: 50px;
+		margin-top: 20px;
+		font-size: 16px;
 	}
 
 	footer .bottom .content{
