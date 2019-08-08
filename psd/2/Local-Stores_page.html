@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>LOCAL STORES</title>
+	<meta name="viewport" content="width = device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:300,400,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="fontawesome-free-5.9.0-web/css/all.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+	<header>
+		<div class="top">
+			<div class="content">
+				<div class="valute">
+					Currency: 
+					<b class="value" id="h-t-v1" onclick="Valute();">
+						<span id="h-t-t">GBP</span>
+						<i class="fas fa-chevron-down" id="h-t-i"></i>
+					</b>
+					<ul class="valute-drop" id="h-t-v2" style="max-height: 0px;">
+						<li class="drop-item" onclick="ChooseValute(this);">GBP</li>
+						<li class="drop-item" onclick="ChooseValute(this);">RUB</li>
+						<li class="drop-item" onclick="ChooseValute(this);">USD</li>
+						<li class="drop-item" onclick="ChooseValute(this);">EUR</li>
+						<li class="drop-item" onclick="ChooseValute(this);">UAH</li>
+					</ul>
+				</div>
+				<div class="register">
+					Register
+				</div>
+				<div class="sign-in">
+					Sign In
+				</div>
+				<div class="shopping-cart">
+					<i class="fas fa-shopping-cart"></i>
+					Empty
+					<i class="fas fa-chevron-down"></i>
+				</div>
+			</div>
+		</div>
+
+		<div class="bottom">
+			<div class="content">
+				<div class="logo">
+					<b>AVENUE</b> 
+					FASHION
+				</div>
+				<div class="nav">
+					<ul class="nav-bar">
+						<li class="nav-item" onclick="Categories(0);">
+							<span>MEN</span>
+							<i class="fas fa-chevron-down h-drop"></i>
+						</li>
+						<li class="nav-item" onclick="Categories(1);">
+							<span>WOMEN</span>
+							<i class="fas fa-chevron-down h-drop"></i>
+						</li>
+						<li class="nav-item" onclick="Categories(2);">
+							<span>THE BRANDS</span>
+							<i class="fas fa-chevron-down h-drop"></i>
+						</li>
+						<li class="nav-item" onclick="Categories(3);">
+							<span>LOCAL STORIES</span>
+							<i class="fas fa-chevron-down h-drop"></i>
+						</li>
+						<li class="nav-item" onclick="Categories(4);">
+							<span>LOOK BOOK</span>
+							<i class="fas fa-chevron-down h-drop"></i>
+						</li>
+					</ul>
+					<div class="drop first" style="max-height: 0px;">
+						<div class="drop-content">
+							<ul>
+								<li class="item">CASUALS 1</li>
+								<li class="item">Jackets</li>
+								<li class="item">Hoodies & Sweatshirts</li>
+								<li class="item">Polo Shirts</li>
+								<li class="item">Sportswear</li>
+								<li class="item">Trousers $ Chinos</li>
+								<li class="item">T-Shirts</li>
+							</ul>
+							<ul>
+								<li class="item">FORMAL</li>
+								<li class="item">Jackets</li>
+								<li class="item">Shirts</li>
+								<li class="item">Suits</li>
+								<li class="item">Trousers</li>
+							</ul>
+							<div class="advert">
+								<b>AUTUMN SALE!</b><br>
+								UP TO 50% OFF
+							</div>
+						</div>
+					</div>
+					<div class="drop second" style="max-height: 0px;">
+						<div class="drop-content">
+							<ul>
+								<li class="item">CASUALS 2</li>
+								<li class="item">Jackets</li>
+								<li class="item">Hoodies & Sweatshirts</li>
+								<li class="item">Polo Shirts</li>
+								<li class="item">Sportswear</li>
+								<li class="item">Trousers $ Chinos</li>
+								<li class="item">T-Shirts</li>
+							</ul>
+							<ul>
+								<li class="item">FORMAL</li>
+								<li class="item">Jackets</li>
+								<li class="item">Shirts</li>
+								<li class="item">Suits</li>
+								<li class="item">Trousers</li>
+							</ul>
+							<div class="advert">
+								<b>AUTUMN SALE!</b><br>
+								UP TO 50% OFF
+							</div>
+						</div>
+					</div>
+					<div class="drop third" style="max-height: 0px;">
+						<div class="drop-content">
+							<ul>
+								<li class="item">CASUALS 3</li>
+								<li class="item">Jackets</li>
+								<li class="item">Hoodies & Sweatshirts</li>
+								<li class="item">Polo Shirts</li>
+								<li class="item">Sportswear</li>
+								<li class="item">Trousers $ Chinos</li>
+								<li class="item">T-Shirts</li>
+							</ul>
+							<ul>
+								<li class="item">FORMAL</li>
+								<li class="item">Jackets</li>
+								<li class="item">Shirts</li>
+								<li class="item">Suits</li>
+								<li class="item">Trousers</li>
+							</ul>
+							<div class="advert">
+								<b>AUTUMN SALE!</b><br>
+								UP TO 50% OFF
+							</div>
+						</div>
+					</div>
+					<div class="drop fourth" style="max-height: 0px;">
+						<div class="drop-content">
+							<ul>
+								<li class="item">CASUALS 4</li>
+								<li class="item">Jackets</li>
+								<li class="item">Hoodies & Sweatshirts</li>
+								<li class="item">Polo Shirts</li>
+								<li class="item">Sportswear</li>
+								<li class="item">Trousers $ Chinos</li>
+								<li class="item">T-Shirts</li>
+							</ul>
+							<ul>
+								<li class="item">FORMAL</li>
+								<li class="item">Jackets</li>
+								<li class="item">Shirts</li>
+								<li class="item">Suits</li>
+								<li class="item">Trousers</li>
+							</ul>
+							<div class="advert">
+								<b>AUTUMN SALE!</b><br>
+								UP TO 50% OFF
+							</div>
+						</div>
+					</div>
+					<div class="drop fifth" style="max-height: 0px;">
+						<div class="drop-content">
+							<ul>
+								<li class="item">CASUALS 5</li>
+								<li class="item">Jackets</li>
+								<li class="item">Hoodies & Sweatshirts</li>
+								<li class="item">Polo Shirts</li>
+								<li class="item">Sportswear</li>
+								<li class="item">Trousers $ Chinos</li>
+								<li class="item">T-Shirts</li>
+							</ul>
+							<ul>
+								<li class="item">FORMAL</li>
+								<li class="item">Jackets</li>
+								<li class="item">Shirts</li>
+								<li class="item">Suits</li>
+								<li class="item">Trousers</li>
+							</ul>
+							<div class="advert">
+								<b>AUTUMN SALE!</b><br>
+								UP TO 50% OFF
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="input">
+					<label class="search">
+						<input type="text" placeholder="Search..." class="in" id="search" oninput="ShowVariants();">
+						<i class="fas fa-search" id="search-i"></i>
+						<ul class="variable">
+						</ul>
+					</label>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<main>
+		<div class="content">
+			<div class="preview">
+				<img src="img/city.jpg" alt="city">
+				<h1>A V E</h1>
+				<h2><b>LOCAL</b> STORES</h2>
+				<h3>FIND A STORE NEAR YOU</h3>
+			</div>
+			<div class="places">
+				<div class="place">
+					<div class="heading">LONDON</div>
+					<div class="address">80-182 REGENT STREET, LONDON, W1B 5BT</div>
+					<div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate quaerat exercitationem excepturi atque placeat quas sequi aut amet nihil laudantium quae perferendis, tenetur fugiat maiores sunt eveniet, voluptatum impedit voluptas.</div>
+					<div class="details">
+						<button onclick="Details(0);">VIEW DETAILS</button>
+					</div>
+				</div>
+				<div class="place">
+					<div class="heading">NEW YORK</div>
+					<div class="address">109 COLUMBUS CIRCLE, NEW YORK, NY 10023</div>
+					<div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur eius deleniti aperiam non pariatur blanditiis doloremque modi eum accusantium tempora incidunt ad, ratione consequuntur perspiciatis facere iure expedita nobis repellendus!</div>
+					<div class="details">
+						<button onclick="Details(1);">VIEW DETAILS</button>
+					</div>
+				</div>
+				<div class="place">
+					<div class="heading">PARIS</div>
+					<div class="address">2133 RUE SAINT-HONORE, 75001 PARIS</div>
+					<div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis neque voluptatibus aspernatur laudantium modi soluta, eius, corporis omnis minus tenetur temporibus sapiente quisquam reiciendis nesciunt nulla, perferendis tempora adipisci dolorum.</div>
+					<div class="details">
+						<button onclick="Details(2);">VIEW DETAILS</button>
+					</div>
+				</div>
+			</div>
+			<div class="map">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d577325.3464971667!2d36.82513809290739!3d55.58152447403445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54afc73d4b0c9%3A0x3d44d6cc5757cf4c!2z0JzQvtGB0LrQstCw!5e0!3m2!1sru!2sru!4v1565240527490!5m2!1sru!2sru" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+				<div class="info" id="i">
+					<div class="heading">LONDON</div>
+					<div class="address">80-182 REGENT STREET, LONDON, W1B 5BT</div>
+					<div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur eius deleniti aperiam non pariatur blanditiis doloremque modi eum accusantium tempora incidunt.</div>
+					<div class="contact">
+						<div class="point">
+							<i class="fas fa-map-marker-alt"></i>
+							80-182 REGENT STREET, LONDON, W1B 5BT
+						</div>
+						<div class="phone">
+							<i class="fas fa-phone"></i>
+							1-234-567-89-00
+						</div>
+						<div class="site">
+							<i class="fas fa-link"></i>
+							sergho.github.io/psd/1
+						</div>
+						<div class="mail">
+							<i class="far fa-envelope"></i>
+							qwerty@qwerty.com
+						</div>
+						<div class="hours">
+							<i class="far fa-clock"></i>
+							24/7
+						</div>
+					</div>
+					<div class="socials">
+						<a href="#"><i class="fab fa-facebook-f"></i></a>
+						<a href="#"><i class="fab fa-twitter"></i></a>
+						<a href="#"><i class="fab fa-instagram"></i></a>
+						<a href="#"><i class="fab fa-pinterest"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer>
+		<div class="content">
+			<div class="columns">
+				<ul class="column">
+					<li class="head">INFORMATION</li>
+					<li class="item"><a href="#">The brand</a></li>
+					<li class="item"><a href="Local-Stores_page.html">Local stores</a></li>
+					<li class="item"><a href="#">Customer service</a></li>
+					<li class="item"><a href="#">Privacy & cookies</a></li>
+					<li class="item"><a href="#">Site map</a></li>
+				</ul>
+				<ul class="column">
+					<li class="head">WHY BUY FROM US</li>
+					<li class="item"><a href="#">Shipping & returns</a></li>
+					<li class="item"><a href="#">Secure shopping</a></li>
+					<li class="item"><a href="#">Testimonials</a></li>
+					<li class="item"><a href="#">Award winning</a></li>
+					<li class="item"><a href="#">Ethical trading</a></li>
+				</ul>
+				<ul class="column">
+					<li class="head">YOUR ACCOUNT</li>
+					<li class="item"><a href="#">Sign in</a></li>
+					<li class="item"><a href="#">Register</a></li>
+					<li class="item"><a href="#">View cart</a></li>
+					<li class="item"><a href="#">View your lookbook</a></li>
+					<li class="item"><a href="#">Track an order</a></li>
+					<li class="item"><a href="#">Update information</a></li>
+				</ul>
+				<ul class="column">
+					<li class="head">LOOKBOOK</li>
+					<li class="item"><a href="#">Latest posts</a></li>
+					<li class="item"><a href="#">Men’s lookbook</a></li>
+					<li class="item"><a href="#">Women’s lookbook</a></li>
+					<li class="item"><a href="#">Lookbooks RSS feed</a></li>
+					<li class="item"><a href="#">View your lookbook</a></li>
+					<li class="item"><a href="#">Delete your lookbook</a></li>
+				</ul>
+				<ul class="column">
+					<li class="head">CONTACT DETAILS</li>
+					<li class="item"><a href="#">Head Office: Avenue Fashion, 180-182 Regent Street, London.</a></li>
+					<li class="item"><a href="#">Telephone: 0123-456-789</a></li>
+					<li class="item"><a href="#">Email: support@yourwebsite.com</a></li>
+				</ul>
+			</div>
+			<div class="blocks">
+				<div class="block">
+					<h1><b>AWARD WINNER</b><br> FASHION AWARDS 2016</h1>
+				</div>
+				<div class="block">
+					<h1>
+						<a href="#"><i class="fab fa-facebook-f"></i></a>
+						<a href="#"><i class="fab fa-twitter"></i></a>
+						<a href="#"><i class="fab fa-instagram"></i></a>
+						<a href="#"><i class="fab fa-pinterest"></i></a>
+					</h1>
+				</div>
+			</div>
+		</div>
+		<div class="bottom">
+			<div class="content">
+				<p>© 2016 Avenue Fashion™</p>
+				<p>Design by RobbyDesigns.com</p>
+				<p> Dev by Loremipsum.com</p>
+			</div>
+		</div>
+	</footer>
+
+	<script src="js/script.js"></script>
+</body>
+</html>
