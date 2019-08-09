@@ -1,0 +1,10 @@
+*{
+	margin: 0;
+	padding: 0;
+	background-color: #8AB9EB;
+}
+.rain{
+	position: absolute;
+	background-color: #6A84EB;
+	border-radius: 50%;
+}
