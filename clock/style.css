@@ -1,0 +1,26 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	background-color: #0C0C4B;
+}
+.container {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+}
+.time{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	font-size: 2vw;
+	color: white;/*
+	transform: translate(-50%, -50%);*/
+}
+.h, .m, .s, .ms{
+	transform: rotate(-90deg);
+	transform-origin: 50vw 50vh 0;
+}
