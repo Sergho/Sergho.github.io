@@ -1,0 +1,27 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	position: absolute;
+	background-color: #0C0C4B;
+	width: 100vw;
+	height: 100vh;
+}
+.container {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.time{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	font-size: 36px;
+	color: white;
+	transform: translate(-50%, -50%);
+}
+.h, .m, .s, .ms{
+	transform: rotate(-90deg);
+	transform-origin: 50% 50% 0;
+}
