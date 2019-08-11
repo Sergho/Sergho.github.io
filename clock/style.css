@@ -9,14 +9,16 @@ body{
 	position: absolute;
 	width: 100vw;
 	height: 100vh;
+	display: flex;
+	justify-content: center;
 }
 .time{
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%);
 	font-size: 2vw;
-	color: white;
+	color: white;/*
+	transform: translate(-50%, -50%);*/
 }
 .h, .m, .s, .ms{
 	transform: rotate(-90deg);
