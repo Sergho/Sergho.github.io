@@ -1,0 +1,129 @@
+*{
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+body{
+	background-color: #f8f8f8;
+}
+a, button{
+	text-decoration: none;
+	-webkit-transition: color 0.5s ease;
+	-o-transition: color 0.5s ease;
+	transition: color 0.5s ease;
+	-webkit-transition: background-color 0.5s ease;
+	-o-transition: background-color 0.5s ease;
+	transition: background-color 0.5s ease;
+}
+
+@media screen and (min-width: 320px){
+	#login{
+		width: 100%;
+		height: 100vh;
+		background-color: white;
+	}
+	#login .header{
+		background-color: #DA2822;
+		padding: 0 5%;
+		height: 5vh;
+	}
+	#login .header .logo{
+		width: 100%;
+	}
+	#login .header .logo a{
+		display: block;
+		width: 100%;
+		text-align: center;
+		color: white;
+		font-size: 24px;
+		font-family: Arial;
+		font-weight: 900;
+		line-height: 5vh;
+		cursor: pointer;
+	}
+	#login .header .logo a:hover{
+		color: #ccc;
+	}
+
+	#login .main{
+		width: 100%;
+		background-color: #eee;
+		background-image: url(../img/bg.gif);
+		background-repeat: no-repeat;
+		background-size: cover;
+		padding: 0 5%;
+		height: 90vh;
+		box-sizing: border-box;
+	}
+	#login .main form{
+		position: relative;
+		top: 50%;
+		transform: translate(0, -50%);
+		width: 100%;
+	}
+	#login .main input{
+		width: 70%;
+		margin: 0 15%;
+		height: 30px;
+		border: none;
+		border-bottom: 2px solid white;
+		background-color: rgba(0, 0, 0, 0.0);
+		font-size: 16px;
+		font-family: Arial;
+		color: white;
+		margin-top: 10px;
+		cursor: pointer;
+	}
+	#login .main input::placeholder{
+		color: white;
+	}
+	#login .main button{
+		background-color: rgba(0, 0, 0, 0.0);
+		border: 2px solid white;
+		color: white;
+		border-radius: 5px;
+		width: 50%;
+		height: 35px;
+		cursor: pointer;
+		margin-top: 20px;
+		position: relative;
+		left: 50%;
+		transform: translate(-50%, 0);
+		text-transform: uppercase;
+		font-size: 16px;
+		font-family: Arial;
+	}
+
+	#login .footer{
+		background-color: black;
+		color: white;
+		width: 100%;
+		height: 5vh;
+		text-align: center;
+	}
+	#login .footer p{
+		position: relative;
+		top: 50%;
+		transform: translate(0, -50%);
+	}
+}
+
+@media screen and (min-width: 425px){
+	
+}
+
+@media screen and (min-width: 768px){
+	
+}
+
+@media screen and (min-width: 1024px){
+	
+}
+
+@media screen and (min-width: 1440px){
+	
+}
+
+@media screen and (min-width: 2560px){
+	
+}
