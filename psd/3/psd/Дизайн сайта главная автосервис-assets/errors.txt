@@ -1,0 +1,4 @@
+[2019-09-01 11:18:37] layer "+7 777 000 00 00": Expected Either a default asset specification or a layer asset specification but "+" found.
+[2019-09-01 11:18:37] layer "info@b4-group.ru +7(495) 961-35-28 115583, г. Москва, ул. Ворон": Unsupported extension: ru
+[2019-09-01 11:18:37] layer "xslide1.jpg.pagespeed.ic.AxhwRIWs3p": Unsupported extension: axhwriws
+[2019-09-01 11:18:37] layer "xslide1.jpg.pagespeed.ic.AxhwRIWs3p": Invalid quality: 30
