@@ -1,0 +1,19 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+.field{
+	width: 500px;
+	height: 500px;
+	background-color: #eee;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: 2px solid crimson;
+}
+.ball{
+	border-radius: 50%;
+	background-color: crimson;
+	position: absolute;
+}
