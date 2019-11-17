@@ -1,66 +1,88 @@
-// Draw a cordinat NET
-function DrawAll(){
-	// Clear screen
-	ctx.clearRect(0, 0, canv.width, canv.height);
-	//Begin Path of net
-	ctx.beginPath();
-	// Horizontal
-	for (let x = 0; x < canv.width; x += zoom) {
-		ctx.moveTo(x, 0);
-		ctx.lineTo(x, canv.height);
-	}
-
-	// Vertical
-	for (let y = 0; y < canv.height; y += zoom) {
-		ctx.moveTo(0, y);
-		ctx.lineTo(canv.width, y);
-	}
-
-	// Draw
-	ctx.lineWidth = 0.2;
-	ctx.strokeStyle = "black";
-	ctx.stroke();
-
-	//Drawing an object
-	start.Draw(ctx, zoom);
-}
-// Change zoom by scrolling
-function ChangeZoom(event){
-	let delta = event.deltaY / 53 * 5; // 53 is maybe my mouse characteristics (step)
-	zoom -= delta;
-	if(zoom < 10) zoom = 10;
-	if(zoom > 100) zoom = 100;
-	// Checking the position of cursor when scrolling
-	if(event.pageY >= canv.height / 2) start.posY--;
-	else start.posY++;
-	if(event.pageX >= canv.width / 2) start.posX--;
-	else start.posX++;
-	DrawAll();
-}
-
-// Getting canvas by DOM
-const canv = document.querySelector("canvas");
-
-// Changing Zoom when we scroll mouse on canvas with SHIFT
-canv.addEventListener("wheel", function(e){
-	if(e.shiftKey) ChangeZoom(e);
-});
-
-// Setting size of canvas - 100%
-canv.height = window.innerHeight;
-canv.width = window.innerWidth;
-
-// Gettin context - 2d
-let ctx = canv.getContext("2d");
-let zoom = 100;
-
-let start = new Obj(Math.floor(canv.width / 2 / zoom), Math.floor(canv.height / 2 / zoom)); // Center of coord
-
+// zoom integer
+let zoom = 30;
 // Setup function 
-function Setup(){
-	// Draw a cordinat NET
-	DrawAll();
+function Main(){
+	// Canvas
+	const canv = new Canvas();
+
+	// New object as start of coord
+	let start = new Obj(Math.floor(canv.canvas.width / 2 / zoom) - 1, Math.floor(canv.canvas.height / 2 / zoom), "#ccc", true);
+
+	// Objects
+	let objects = [new Obj(1, 1, "red"), new Obj(2,1, "red"), new Obj(3,1, "red"), new Obj(2,2, "red")];
+
+	Draw();
+
+	// Moving by arrows (transition)
+	document.onkeydown = MoveD;
+	function MoveD(e){
+		// delta x and delta y
+		let dx = 0, dy = 0;
+		// init deltas
+		if(e.key == "ArrowDown") dy = -1;
+		if(e.key == "ArrowUp") dy = 1;
+		if(e.key == "ArrowRight") dx = -1;
+		if(e.key == "ArrowLeft") dx = 1;
+		
+		// Drawing all
+		Draw(dx, dy);
+	}
+	// coords of touch start
+	let startX, startY;
+	const debounce = 100;
+	// Moving by swipes
+	document.ontouchstart = MoveMStart;
+	function MoveMStart(e){
+		// init start touch coords
+		startX = e.touches[0].screenX;
+		startY = e.touches[0].screenY;
+	}
+	document.ontouchend = MoveMEnd;
+	function MoveMEnd(e){
+		// Get deltas
+		let dx = startX - e.changedTouches[0].screenX;
+		let dy = startY - e.changedTouches[0].screenY;
+		dx = Math.floor(dx / 100);
+		dy = Math.floor(dy / 100);
+		// Draw
+		Draw(dx, dy);
+	}
+
+	// Changing zoom on scroll with shift
+	document.onmousewheel = ChangeZoom;
+	function ChangeZoom(e){
+		if(e.shiftKey){
+			// Get Delta
+			delta = e.wheelDeltaY / 120;
+			// Change zoom
+			zoom += delta;
+			// Min and max control
+			if(zoom < 10) 	zoom = 10;
+			if(zoom > 100) 	zoom = 100;
+
+			console.log(start.posX, start.posY);
+			// Start to center
+			start.NewPos(Math.floor(window.innerWidth / 2 / zoom) - 1, Math.floor(window.innerHeight / 2 / zoom), true)
+			// Draw All
+			Draw();
+		}
+	}
+
+	// Function of drawing all
+	function Draw(dx, dy){
+		if(dx != undefined && dy != undefined) start.NewPos(start.posX + dx, start.posY + dy, true);
+		// Clear All
+		canv.Clear();
+		// Draw a coord net
+		canv.DrawNet();
+		// Draw a start dot
+		start.Draw(canv.ctx, zoom);
+		// Draw all objects
+		objects.forEach(function(obj){
+			obj.Draw(canv.ctx, zoom);
+		});
+	}
 }
 
 // Setting Up )
-Setup();
+Main();
