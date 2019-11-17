@@ -42,8 +42,8 @@ function Main(){
 		// Get deltas
 		let dx = startX - e.changedTouches[0].screenX;
 		let dy = startY - e.changedTouches[0].screenY;
-		dx = -Math.floor(dx / 100);
-		dy = -Math.floor(dy / 100);
+		dx = -Math.floor(dx / 50);
+		dy = -Math.floor(dy / 50);
 		// Draw
 		Draw(dx, dy);
 	}
