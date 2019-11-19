@@ -32,4 +32,8 @@ class Canvas{
 		// Clear screen
 		this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
 	}
+	Update(){
+		this.canvas.width 	= window.innerWidth;
+		this.canvas.height 	= window.innerHeight;
+	}
 }

@@ -29,23 +29,38 @@ function Main(){
 	}
 	// coords of touch start
 	let startX, startY;
-	// Moving by swipes
-	document.ontouchstart = MoveMStart;
-	function MoveMStart(e){
-		// init start touch coords
-		startX = e.touches[0].screenX;
-		startY = e.touches[0].screenY;
+
+	document.ontouchstart = MobileStart;
+	// Moving by swipes and zoom on mobile - start
+	function MobileStart(e){
+		if(e.touches.length == 1){
+			// init start touch coords on single touch
+			startX = [e.touches[0].screenX];
+			startY = [e.touches[0].screenY];
+		}
+		if(e.touches.length == 2){
+			// init start touch coords on multi touch (two touches) 
+			startX = [e.touches[0].screenX, e.touches[1].screenX];
+			startY = [e.touches[0].screenY, e.touches[1].screenY];
+			console.log(startX, startY);
+		}
 	}
-	document.ontouchmove = MoveMEnd;
-	function MoveMEnd(e){
-		// Get deltas
-		let dx = -Math.round((startX - e.touches[0].screenX) / zoom * 2);
-		let dy = -Math.round((startY - e.touches[0].screenY) / zoom * 2);
-		// Draw
-		Draw(dx, dy);
-		// Update Start coords
-		startX = e.touches[0].screenX;
-		startY = e.touches[0].screenY;
+	document.ontouchmove = MobileEnd;
+	// Moving by swipes and zoom on mobile - end
+	function MobileEnd(e){
+		if(e.touches.length == 1){
+			// Get deltas on single touch
+			let dx = -Math.round((startX[0] - e.touches[0].screenX) / zoom * 2);
+			let dy = -Math.round((startY[0] - e.touches[0].screenY) / zoom * 2);
+			// Draw
+			Draw(dx, dy);
+			// Update Start coords
+			startX = [e.touches[0].screenX];
+			startY = [e.touches[0].screenY];
+		}
+		if(e.touches.length == 2){
+			// Get deltas on multi touch (two touches)
+		}
 	}
 
 	// Changing zoom on scroll with shift
@@ -59,8 +74,6 @@ function Main(){
 			// Min and max control
 			if(zoom < 10) 	zoom = 10;
 			if(zoom > 100) 	zoom = 100;
-
-			console.log(start.posX, start.posY);
 			// Start to center
 			start.NewPos(Math.floor(window.innerWidth / 2 / zoom) - 1, Math.floor(window.innerHeight / 2 / zoom), true)
 			// Draw All
@@ -81,6 +94,12 @@ function Main(){
 		objects.forEach(function(obj){
 			obj.Draw(canv.ctx, zoom);
 		});
+	}
+
+	// Security from resize
+	window.onresize = function(){
+		canv.Update();
+		Draw();
 	}
 }
 
