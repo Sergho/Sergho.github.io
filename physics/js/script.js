@@ -60,6 +60,21 @@ function Main(){
 		}
 		if(e.touches.length == 2){
 			// Get deltas on multi touch (two touches)
+			let dx = (startX[0] - e.touches[0].screenX) - (startX[1] - e.touches[1].screenX);
+			let dy = (startY[0] - e.touches[0].screenX) - (startY[1] - e.touches[1].screenX);
+
+			// Delta zoom
+			let dzoom = dx + dy;
+			// Changing zoom
+			zoom += dzoom;
+
+			// Min and max control
+			if(zoom < 10) 	zoom = 10;
+			if(zoom > 100) 	zoom = 100;
+			// Start to center
+			start.NewPos(Math.floor(window.innerWidth / 2 / zoom) - 1, Math.floor(window.innerHeight / 2 / zoom), true);
+			// Draw All
+			Draw();
 		}
 	}
 
@@ -75,7 +90,7 @@ function Main(){
 			if(zoom < 10) 	zoom = 10;
 			if(zoom > 100) 	zoom = 100;
 			// Start to center
-			start.NewPos(Math.floor(window.innerWidth / 2 / zoom) - 1, Math.floor(window.innerHeight / 2 / zoom), true)
+			start.NewPos(Math.floor(window.innerWidth / 2 / zoom) - 1, Math.floor(window.innerHeight / 2 / zoom), true);
 			// Draw All
 			Draw();
 		}
