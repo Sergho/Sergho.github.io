@@ -1,0 +1,239 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	overflow: hidden;
+}
+.darkness{
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 3;
+	transition: .5s ease;
+	opacity: 0;
+	display: none;
+}
+
+@media screen and (min-width: 320px){
+
+	#main-wrapper{
+		width: 100%;
+		display: block;
+		background-color: #F6F6F9;
+	}
+
+	header.main{
+		background-image: url(../img/main-background.jpg);
+		width: 100%;
+		background-position: center center;
+		background-repeat: no-repeat;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		box-sizing: border-box;
+		padding: 15px;
+	}
+
+	header.main .logo{
+		order: 1;
+		width: 80%;
+		max-width: 400px;
+		position: relative;
+	}
+	header.main .logo a{
+		display: block;
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%, 0);
+		height: 100%;
+	}
+	header.main .logo img{
+		height: 100%;
+	}
+
+	header.main .nav{
+		width: 20%;
+		max-width: 100px;
+	}
+	header.main .nav .navbar{
+		display: none;
+	}
+	header.main .nav .dropdown-burger{
+		position: relative;
+		cursor: pointer;
+		width: 40px;
+	}
+	header.main .nav .dropdown-burger:hover span{
+		background-color: #ccc;
+	}
+	header.main .nav .dropdown-burger span{
+		display: block;
+		width: 40px;
+		height: 4px;
+		background-color: #F6F6F6;
+		margin: 7px 0;
+		border-radius: 2px;
+		transition: .3s ease;
+	}
+	header.main .nav .dropdown-menu{
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: #30394C;
+		width: 70%;
+		transform: translate(-100%, 0);
+		box-sizing: border-box;
+		padding: 20px;
+		z-index: 10;
+		height: 100vh;
+		transition: transform .5s ease;
+	}
+	header.main .nav .dropdown-item{
+		box-sizing: border-box;
+		padding: 10px;
+		list-style: none;
+		transition: .3s ease;
+	}
+	header.main .nav .dropdown-item:hover a{
+		color: #ccc;
+	}
+	header.main .nav .dropdown-item a{
+		color: #EDEDF1;
+		font-size: 16px;
+		text-decoration: none;
+		font-family: Proxima Nova Rg;
+	}
+
+	header.main .text{
+		order: 3;
+		width: 90%;
+		margin-top: 50px;
+		margin-bottom: 30px;
+		color: white;
+		text-align: center;
+	}
+	header.main .text h1{
+		font-size: 1.5em;
+		font-family: Proxima Nova Cn Th;
+	}
+	header.main .text p{
+		font-size: 1em;
+		font-family: Proxima Nova Rg;
+		margin-top: 10px;
+	}
+	header.main .text a{
+		display: block;
+		width: 80%;
+		margin-top: 10px;
+		margin-left: 50%;
+		transform: translate(-50%, 0);
+		padding: 10px;
+		border-radius: 20px;
+		border: 2px solid #568DCB;
+		color: #F6F6F6;
+		font-size: 1em;
+		font-family: Proxima Nova Rg;
+		font-weight: bold;
+		text-decoration: none;
+		transition: background-color .3s ease;
+	}
+	header.main .text a:hover{
+		background-color: #568DCB;
+	}
+
+}
+
+@media screen and (min-width: 768px){
+
+	header.main .text{
+		width: 60%;
+		margin-bottom: 20px;
+	}
+	header.main .text h1{
+		font-size: 2em;
+	}
+	header.main .text p{
+		margin-bottom: 20px;
+	}
+	header.main .text a{
+		width: 50%;
+	}
+
+}
+
+@media screen and (min-width: 1024px){
+
+	header.main .nav .dropdown{
+		display: none;
+	}
+	header.main .logo{
+		order: 0;
+		width: 20%;
+		max-width: 300px;
+	}
+	header.main .nav{
+		order: 1;
+		width: 80%;
+		max-width: 1200px;
+	}
+	header.main .nav .navbar{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	header.main .nav .navbar-menu{
+		display: flex;
+	}
+	header.main .nav .navbar-menu .navbar-item{
+		margin: 15px 20px;
+		list-style: none;
+	}
+	header.main .nav .navbar-menu .navbar-item a{
+		color: #F6F6F6;
+		text-decoration: none;
+		font-family: Proxima Nova Lt;
+		font-weight: 600;
+		transition: .3s ease;
+		font-size: 1em;
+	}
+	header.main .nav .navbar-menu .navbar-item:hover a{
+		color: #ccc;
+	}
+
+	header.main .nav .navbar .navbar-personal a{
+		transition: background-color .3s ease;
+		border: 2px solid #568DCB;
+		border-radius: 15px;
+		padding: 15px 30px;
+		margin-left: 45px;
+		display: block;
+		color: #F6F6F6;
+		text-decoration: none;
+		font-family: Proxima Nova Lt;
+		font-weight: 600;
+		font-size: 1em;
+	}
+	header.main .nav .navbar .navbar-personal a:hover{
+		background-color: #568DCB;
+	}
+
+	header.main .text{
+		margin-top: 100px;
+		margin-bottom: 100px;
+	}
+	header.main .text h1{
+		font-size: 3em;
+	}
+	header.main .text p{
+		font-size: 1.5em;
+	}
+	header.main .text a{
+		width: 30%;
+		max-width: 300px;
+	}
+
+}
