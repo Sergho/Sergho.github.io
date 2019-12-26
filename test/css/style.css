@@ -36,6 +36,7 @@ body{
 		justify-content: center;
 		box-sizing: border-box;
 		padding: 15px;
+		max-height: 990px;
 	}
 
 	header.main .logo{
@@ -111,7 +112,7 @@ body{
 	header.main .text{
 		order: 3;
 		width: 90%;
-		margin-top: 50px;
+		margin-top: 70px;
 		margin-bottom: 30px;
 		color: white;
 		text-align: center;
@@ -123,15 +124,17 @@ body{
 	header.main .text p{
 		font-size: 1em;
 		font-family: Proxima Nova Rg;
-		margin-top: 10px;
+		margin-top: 15px;
+		margin-bottom: 50px;
 	}
 	header.main .text a{
+		box-sizing: border-box;
 		display: block;
 		width: 80%;
-		margin-top: 10px;
+		margin-top: 20px;
 		margin-left: 50%;
 		transform: translate(-50%, 0);
-		padding: 10px;
+		padding: 15px;
 		border-radius: 20px;
 		border: 2px solid #568DCB;
 		color: #F6F6F6;
@@ -160,7 +163,7 @@ body{
 		margin-bottom: 20px;
 	}
 	header.main .text a{
-		width: 50%;
+		width: 55%;
 	}
 
 }
@@ -183,7 +186,7 @@ body{
 	header.main .nav .navbar{
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: center;
+		justify-content: space-around;
 	}
 	header.main .nav .navbar-menu{
 		display: flex;
@@ -222,17 +225,19 @@ body{
 	}
 
 	header.main .text{
-		margin-top: 100px;
-		margin-bottom: 100px;
+		margin-top: 200px;
+		margin-bottom: 200px;
+		width: 40%;
 	}
 	header.main .text h1{
 		font-size: 3em;
 	}
 	header.main .text p{
 		font-size: 1.5em;
+		margin-bottom: 70px;
 	}
 	header.main .text a{
-		width: 30%;
+		width: 35%;
 		max-width: 300px;
 	}
 
