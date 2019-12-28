@@ -2,9 +2,6 @@
 	padding: 0;
 	margin: 0;
 }
-body{
-	overflow: hidden;
-}
 .darkness{
 	width: 100vw;
 	height: 100vh;
@@ -19,6 +16,10 @@ body{
 }
 
 @media screen and (min-width: 320px){
+
+	#main-background{
+		position: absolute;
+	}
 
 	#main-wrapper{
 		width: 100%;
@@ -37,6 +38,11 @@ body{
 		box-sizing: border-box;
 		padding: 15px;
 		max-height: 990px;
+		max-width: 2048px;
+		position: relative;
+		left: 50%;
+		transform: translate(-50%, 0);
+		margin-bottom: 250px;
 	}
 
 	header.main .logo{
@@ -112,8 +118,8 @@ body{
 	header.main .text{
 		order: 3;
 		width: 90%;
-		margin-top: 70px;
-		margin-bottom: 30px;
+		margin-top: 120px;
+		margin-bottom: 120px;
 		color: white;
 		text-align: center;
 	}
@@ -138,7 +144,7 @@ body{
 		border-radius: 20px;
 		border: 2px solid #568DCB;
 		color: #F6F6F6;
-		font-size: 1em;
+		font-size: 0.8em;
 		font-family: Proxima Nova Rg;
 		font-weight: bold;
 		text-decoration: none;
@@ -150,11 +156,18 @@ body{
 
 }
 
+@media screen and (min-width: 425px){
+
+	header.main .text a{
+		width: 55%;
+	}
+
+}
+
 @media screen and (min-width: 768px){
 
 	header.main .text{
 		width: 60%;
-		margin-bottom: 20px;
 	}
 	header.main .text h1{
 		font-size: 2em;
@@ -175,13 +188,21 @@ body{
 	}
 	header.main .logo{
 		order: 0;
-		width: 20%;
-		max-width: 300px;
+		width: 15%;
+		max-width: 250px;
+	}
+	header.main .logo a{
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		height: 80%;
 	}
 	header.main .nav{
 		order: 1;
 		width: 80%;
-		max-width: 1200px;
+		max-width: 1400px;
 	}
 	header.main .nav .navbar{
 		display: flex;
@@ -192,7 +213,7 @@ body{
 		display: flex;
 	}
 	header.main .nav .navbar-menu .navbar-item{
-		margin: 15px 20px;
+		margin: 20px 1vw;
 		list-style: none;
 	}
 	header.main .nav .navbar-menu .navbar-item a{
@@ -201,7 +222,8 @@ body{
 		font-family: Proxima Nova Lt;
 		font-weight: 600;
 		transition: .3s ease;
-		font-size: 1em;
+		font-size: 1.2em;
+		padding: 5px;
 	}
 	header.main .nav .navbar-menu .navbar-item:hover a{
 		color: #ccc;
@@ -211,34 +233,67 @@ body{
 		transition: background-color .3s ease;
 		border: 2px solid #568DCB;
 		border-radius: 15px;
-		padding: 15px 30px;
-		margin-left: 45px;
+		padding: 15px 1vw;
+		margin-left: 2vw;
+		margin-top: 5px;
 		display: block;
 		color: #F6F6F6;
 		text-decoration: none;
 		font-family: Proxima Nova Lt;
 		font-weight: 600;
-		font-size: 1em;
 	}
 	header.main .nav .navbar .navbar-personal a:hover{
 		background-color: #568DCB;
 	}
 
 	header.main .text{
-		margin-top: 200px;
-		margin-bottom: 200px;
-		width: 40%;
+		margin-top: 240px;
+		margin-bottom: 240px;
+		width: 45%;
+		max-width: 1000px;
 	}
 	header.main .text h1{
 		font-size: 3em;
+		letter-spacing: 2px;
 	}
 	header.main .text p{
+		margin-top: 10px;
 		font-size: 1.5em;
 		margin-bottom: 70px;
 	}
 	header.main .text a{
-		width: 35%;
+		width: 50%;
 		max-width: 300px;
+		font-size: 1.1em;
+		padding: 25px;
+		max-width: 500px;
+		border-radius: 60px;
+	}
+
+}
+
+@media screen and (min-width: 1440px){
+
+	header.main .nav .navbar-menu .navbar-item{
+		margin: 20px 2.5vw;
+	}
+
+	header.main .nav .navbar .navbar-personal a{
+		margin-left: 3vw;
+	}
+
+}
+
+
+@media screen and (min-width: 2560px){
+
+	header.main .nav .navbar-menu .navbar-item{
+		margin: 20px 50px;
+		list-style: none;
+	}
+	header.main .nav .navbar .navbar-personal a{
+		padding: 15px 50px;
+		margin-left: 70px;
 	}
 
 }
