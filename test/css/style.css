@@ -19,10 +19,13 @@
 
 	#main-background{
 		position: absolute;
+		width: 100%;
+		max-width: 2048px;
+		margin-left: 50%;
+		transform: translate(-50%, 0);
 	}
 	#main-background img{
 		width: 100%;
-		max-width: 2048px;
 	}
 
 	#main-wrapper{
@@ -161,7 +164,7 @@
 		max-width: 2048px;
 		display: flex;
 		justify-content: center;
-		padding-bottom: 50px;
+		padding-bottom: 40px;
 	}
 	.online .avatar{
 		width: 70px;
@@ -207,6 +210,9 @@
 	.about{
 		width: 100%;
 		max-width: 2048px;
+		margin-left: 50%;
+		transform: translate(-50%, 0);
+		padding-bottom: 70px;
 	}
 	.about .card{
 		background-color: white;
@@ -236,7 +242,6 @@
 	}
 	.about .card .text p{
 		margin-top: 15px;
-		text-align: center;
 		color: #363c4d;
 		font-size: 0.8em;
 		font-family: Proxima Nova Rg;
@@ -251,17 +256,9 @@
 
 	.about .card .text h1{
 		font-size: 2em;
-		font-family: Proxima Nova Cn Th;
-		color: #444b61;
-		text-align: center;
-		letter-spacing: 1px;
 	}
 	.about .card .text p{
-		margin-top: 15px;
-		text-align: center;
-		color: #363c4d;
 		font-size: 1em;
-		font-family: Proxima Nova Rg;
 	}
 
 }
@@ -352,8 +349,8 @@
 	}
 
 	header.main .text{
-		margin-top: 200px;
-		margin-bottom: 200px;
+		margin-top: 240px;
+		margin-bottom: 240px;
 		width: 60%;
 		max-width: 1000px;
 	}
@@ -421,11 +418,13 @@
 
 	.about{
 		margin-top: 60px;
+		padding-bottom: 120px;
 	}
 	.about .card{
 		display: flex;
+		flex-wrap: wrap;
 		background-color: rgba(0, 0, 0, 0.0);
-		height: 650px;
+		position: relative;
 	}
 	.about .card .image{
 		border-radius: 0;
@@ -434,14 +433,11 @@
 		background-size: 150%;
 		background-position: center right;
 		height: 100%;
-	}
-	.about .card .text h1{
-		font-size: 28px;
-	}
-	.about .card .text p{
-		font-size: 16px;
+		position: absolute;
+		right: 0;
 	}
 	.about .card .text{
+		box-sizing: border-box;
 		padding: 50px 20px;
 		width: 50%;
 		order: 0;
@@ -457,6 +453,9 @@
 		z-index: -1;
 		top: -20px;
 		left: -20px;
+	}
+	.about .card{
+		width: 70%;
 	}
 
 }
@@ -485,6 +484,13 @@
 	.about .card .text::before{
 		width: 150px;
 		height: 150px;
+	}
+	.about .card .text{
+		padding: 80px 60px;
+	}
+	.about .card .text p{
+		margin-top: 30px;
+		font-size: 1.2em;
 	}
 
 }
