@@ -129,7 +129,7 @@
 	}
 	header.main .text h1{
 		font-size: 1.5em;
-		font-family: Proxima Nova Cn Th;
+		font-family: Proxima Nova Th;
 	}
 	header.main .text p{
 		font-size: 1em;
@@ -138,14 +138,15 @@
 		margin-bottom: 50px;
 	}
 	header.main .text a{
-		box-sizing: border-box;
 		display: block;
-		width: 80%;
+		width: 360px;
+		height: 66px;
+		text-align: center;
+		line-height: 66px;
 		margin-top: 20px;
 		margin-left: 50%;
 		transform: translate(-50%, 0);
-		padding: 15px;
-		border-radius: 20px;
+		border-radius: 33px;
 		border: 2px solid #568DCB;
 		color: #F6F6F6;
 		font-size: 0.8em;
@@ -246,13 +247,47 @@
 		font-size: 0.8em;
 		font-family: Proxima Nova Rg;
 	}
+
+	.start{
+		width: 100%;
+		max-width: 2048px;
+		margin-left: 50%;
+		transform: translate(-50%, 0);
+		margin-top: 50px;
+	}
+	.start .actions{
+		width: 60%;
+		margin-left: 50%;
+		transform: translate(-50%, 0);
+	}
+	.start .actions li{
+		list-style: none;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	.start .actions li .number{
+		display: block;
+		width: 7vw;
+		height: 7vw;
+		border-radius: 50%;
+		border: 1px solid #363c4d;
+		text-align: center;
+		font-size: 1.2em;
+		line-height: 7vw;
+		color: #363c4d;
+		font-family: Proxima Nova Rg;
+	}
+	.start .actions .text{
+		width: 80%;
+	}
+	.start .actions .text h1{
+		font-size: 1.5em;
+		color: #363c4d;
+	}
 }
 
 @media screen and (min-width: 425px){
-
-	header.main .text a{
-		width: 55%;
-	}
 
 	.about .card .text h1{
 		font-size: 2em;
@@ -274,9 +309,6 @@
 	header.main .text p{
 		margin-bottom: 20px;
 	}
-	header.main .text a{
-		width: 55%;
-	}
 
 }
 
@@ -290,8 +322,8 @@
 	}
 	header.main .logo{
 		order: 0;
-		width: 15%;
-		max-width: 250px;
+		width: 20%;
+		max-width: 500px;
 	}
 	header.main .logo a{
 		display: block;
@@ -303,8 +335,8 @@
 	}
 	header.main .nav{
 		order: 1;
-		width: 80%;
-		max-width: 1400px;
+		width: 75%;
+		max-width: 1200px;
 	}
 	header.main .nav .navbar{
 		display: flex;
@@ -316,6 +348,7 @@
 	}
 	header.main .nav .navbar-menu .navbar-item{
 		margin: 20px 1vw;
+		margin-left: 0;
 		list-style: none;
 	}
 	header.main .nav .navbar-menu .navbar-item a{
@@ -332,13 +365,16 @@
 	}
 
 	header.main .nav .navbar .navbar-personal a{
+		display: block;
 		transition: background-color .3s ease;
 		border: 2px solid #568DCB;
 		border-radius: 15px;
-		padding: 15px 1vw;
+		width: 222px;
+		height: 50px;
+		text-align: center;
+		line-height: 50px;
 		margin-left: 2vw;
 		margin-top: 5px;
-		display: block;
 		color: #F6F6F6;
 		text-decoration: none;
 		font-family: Proxima Nova Lt;
@@ -349,7 +385,7 @@
 	}
 
 	header.main .text{
-		margin-top: 240px;
+		margin-top: 260px;
 		margin-bottom: 240px;
 		width: 60%;
 		max-width: 1000px;
@@ -364,11 +400,7 @@
 		margin-bottom: 70px;
 	}
 	header.main .text a{
-		width: 50%;
-		max-width: 300px;
 		font-size: 1.1em;
-		padding: 25px;
-		max-width: 500px;
 		border-radius: 60px;
 	}
 
@@ -467,13 +499,18 @@
 		margin-left: 50%;
 		transform: translate(-50%, 0);
 	}
-
+	
+	header.main .nav .navbar-menu{
+		box-sizing: border-box;
+		padding-left: 2vw;
+	}
 	header.main .nav .navbar-menu .navbar-item{
-		margin: 20px 2.5vw;
+		margin: 20px 4.3vw;
+		margin-left: 0;
 	}
 
 	header.main .nav .navbar .navbar-personal a{
-		margin-left: 3vw;
+		margin-left: 1vw;
 	}
 
 	.online{
@@ -495,16 +532,14 @@
 
 }
 
-
-@media screen and (min-width: 2560px){
+@media screen and (min-width: 2000px){
 	
 	header.main .nav .navbar-menu .navbar-item{
-		margin: 20px 50px;
+		margin: 20px 30px;
 		list-style: none;
 	}
 	header.main .nav .navbar .navbar-personal a{
-		padding: 15px 50px;
-		margin-left: 70px;
+		margin-left: 50px;
 	}
 
 }
