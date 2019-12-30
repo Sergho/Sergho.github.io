@@ -139,14 +139,14 @@
 	}
 	header.main .text a{
 		display: block;
-		width: 360px;
-		height: 66px;
+		width: 250px;
+		height: 50px;
 		text-align: center;
-		line-height: 66px;
+		line-height: 50px;
 		margin-top: 20px;
 		margin-left: 50%;
 		transform: translate(-50%, 0);
-		border-radius: 33px;
+		border-radius: 25px;
 		border: 2px solid #568DCB;
 		color: #F6F6F6;
 		font-size: 0.8em;
@@ -309,6 +309,12 @@
 	header.main .text p{
 		margin-bottom: 20px;
 	}
+	header.main .text a{
+		width: 360px;
+		height: 66px;
+		line-height: 66px;
+		border-radius: 33px;
+	}
 
 }
 
@@ -408,15 +414,15 @@
 		padding-bottom: 70px;
 	}
 	.online .avatar{
-		width: 100px;
-		height: 100px;
+		width: 150px;
+		height: 150px;
 		background-color: #30394C;
 		border-radius: 50%;
 		position: relative;
 	}
 	.online .avatar .point{
-		width: 25px;
-		height: 25px;
+		width: 40px;
+		height: 40px;
 		border-radius: 50%;
 		background-color: #F6F6F9;
 		position: absolute;
@@ -425,8 +431,8 @@
 	}
 	.online .avatar .point::after{
 		content: "";
-		width: 15px;
-		height: 15px;
+		width: 30px;
+		height: 30px;
 		border-radius: 50%;
 		position: absolute;
 		right: 5px;
@@ -440,12 +446,12 @@
 		font-family: Proxima Nova Rg;
 		font-weight: 600;
 		color: #30394C;
-		font-size: 2em;
+		font-size: 3em;
 	}
 	.online .people-online span{
 	font-family: 'Proxima Nova Lt';
 	color: #00B770;
-	font-size: 1em;
+	font-size: 2em;
 	}
 
 	.about{
