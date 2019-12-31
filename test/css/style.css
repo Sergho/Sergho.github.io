@@ -46,7 +46,7 @@
 		padding: 15px;
 		max-height: 990px;
 		max-width: 2048px;
-		margin-bottom: 50px;
+		margin-bottom: 100px;
 	}
 
 	header.main .logo{
@@ -165,7 +165,7 @@
 		max-width: 2048px;
 		display: flex;
 		justify-content: center;
-		padding-bottom: 40px;
+		padding-bottom: 100px;
 	}
 	.online .avatar{
 		width: 70px;
@@ -256,7 +256,7 @@
 		margin-top: 50px;
 	}
 	.start .actions{
-		width: 60%;
+		width: 90%;
 		margin-left: 50%;
 		transform: translate(-50%, 0);
 	}
@@ -265,6 +265,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
+		position: relative;
 	}
 	.start .actions li .number{
 		display: block;
@@ -279,11 +280,39 @@
 		font-family: Proxima Nova Rg;
 	}
 	.start .actions .text{
-		width: 80%;
+		width: 90%;
 	}
 	.start .actions .text h1{
 		font-size: 1.5em;
 		color: #363c4d;
+	}
+	.start .actions p{
+		font-size: 1em;
+		color: #444b61;
+		margin-top: 10px;
+	}
+	.start .actions a{
+		width: 218px;
+		height: 45px;
+		border: 2px solid #698cc8;
+		border-radius: 22.5px;
+		text-align: center;
+		line-height: 45px;
+		text-decoration: none;
+		color: #698cc8;
+		transition: .3s ease;
+		font-family: Proxima Nove Rg;
+		font-weight: 600;
+		font-size: 0.9em;
+		position: relative;
+		left: 100%;
+		transform: translate(-100%, 0);
+		margin-top: 10px;
+		margin-bottom: 20px;
+	}
+	.start .actions a:hover{
+		background-color: #698cc8;
+		color: white;
 	}
 }
 
@@ -294,6 +323,12 @@
 	}
 	.about .card .text p{
 		font-size: 1em;
+	}
+
+	.start .actions li .number{
+		width: 30px;
+		height: 30px;
+		line-height: 30px;
 	}
 
 }
@@ -316,12 +351,49 @@
 		border-radius: 33px;
 	}
 
+	.online .avatar{
+		width: 100px;
+		height: 100px;
+	}
+	.online .avatar .point{
+		width: 25px;
+		height: 25px;
+	}
+	.online .avatar .point::after{
+		width: 15px;
+		height: 15px;
+	}
+	.online .people-online{
+		padding: 20px;
+	}
+	.online .people-online h1{
+		font-size: 2em;
+	}
+	.online .people-online span{
+		font-size: 1.5em;
+	}
+
+	.start .actions{
+		width: 60%;
+	}
+	.start .actions li .number{
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+		font-size: 1.5em;
+	}
+	.start .actions li .text{
+		width: 90%;
+		box-sizing: border-box;
+		padding: 5px;
+	}
+
 }
 
 @media screen and (min-width: 1024px){
 
 	header.main{
-		margin-bottom: 70px;
+		margin-bottom: 150px;
 	}
 	header.main .nav .dropdown{
 		display: none;
@@ -411,7 +483,7 @@
 	}
 
 	.online{
-		padding-bottom: 70px;
+		padding-bottom: 150px;
 	}
 	.online .avatar{
 		width: 150px;
@@ -421,8 +493,8 @@
 		position: relative;
 	}
 	.online .avatar .point{
-		width: 40px;
-		height: 40px;
+		width: 35px;
+		height: 35px;
 		border-radius: 50%;
 		background-color: #F6F6F9;
 		position: absolute;
@@ -431,8 +503,8 @@
 	}
 	.online .avatar .point::after{
 		content: "";
-		width: 30px;
-		height: 30px;
+		width: 25px;
+		height: 25px;
 		border-radius: 50%;
 		position: absolute;
 		right: 5px;
@@ -440,7 +512,7 @@
 		background-color: #00B770;
 	}
 	.online .people-online{
-		padding: 15px;
+		padding: 30px;
 	}
 	.online .people-online h1{
 		font-family: Proxima Nova Rg;
@@ -484,8 +556,8 @@
 	}
 	.about .card .text::before{
 		content: "";
-		width: 100px;
-		height: 100px;
+		width: 200px;
+		height: 200px;
 		background-color: #698cc8;
 		position: absolute;
 		z-index: -1;
@@ -496,6 +568,38 @@
 		width: 70%;
 	}
 
+	.start .actions li{
+		height: 200px;
+	}
+	.start .actions li .number{
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+		margin-top: 10px;
+	}
+	.start .actions li:nth-child(odd) .number::before{
+		content: "";
+		position: absolute;
+		top: 30px;
+		left: -130px;
+		width: 100px;
+		height: 200px;
+		border-radius: 100px 0 0 100px;
+		border: 2px solid #698cc8;
+		border-right: 2px solid #f6f6f9;
+	}
+	.start .actions li:nth-child(2) .number::after{
+		content: "";
+		position: absolute;
+		top: 60px;
+		right: -130px;
+		width: 100px;
+		height: 200px;
+		border-radius: 0 100px 100px 0;
+		border: 2px solid #698cc8;
+		border-left: none;
+	}
+
 }
 
 @media screen and (min-width: 1440px){
@@ -504,6 +608,7 @@
 	header.main{
 		margin-left: 50%;
 		transform: translate(-50%, 0);
+		margin-bottom: 200px;
 	}
 	
 	header.main .nav .navbar-menu{
@@ -522,11 +627,14 @@
 	.online{
 		margin-left: 50%;
 		transform: translate(-50%, 0);
+		padding-bottom: 200px;
 	}
 
 	.about .card .text::before{
-		width: 150px;
-		height: 150px;
+		width: 250px;
+		height: 250px;
+		left: -40px;
+		top: -40px;
 	}
 	.about .card .text{
 		padding: 80px 60px;
@@ -534,6 +642,10 @@
 	.about .card .text p{
 		margin-top: 30px;
 		font-size: 1.2em;
+	}
+
+	.start .actions{
+		width: 50%;
 	}
 
 }
