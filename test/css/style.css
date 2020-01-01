@@ -203,10 +203,10 @@
 		font-size: 1.5em;
 	}
 	#online .people-online span{
-	font-family: 'Proxima Nova Lt';
-	font-weight: 600;
-	color: #00B770;
-	font-size: 0.8em;
+		font-family: 'Proxima Nova Lt';
+		font-weight: 600;
+		color: #00B770;
+		font-size: 0.8em;
 	}
 
 	#about{
@@ -239,7 +239,6 @@
 		font-size: 1.5em;
 		font-family: Proxima Nova Th;
 		color: #444b61;
-		text-align: center;
 		letter-spacing: 1px;
 	}
 	#about .card .text p{
@@ -273,11 +272,11 @@
 		width: 7vw;
 		height: 7vw;
 		border-radius: 50%;
-		border: 1px solid #363c4d;
+		border: 1px solid rgba(54, 60, 77, 0.5);
 		text-align: center;
 		font-size: 1.2em;
 		line-height: 7vw;
-		color: #363c4d;
+		color: rgba(54, 60, 77, 0.5);
 		font-family: Proxima Nova Rg;
 	}
 	#start .actions .text{
@@ -615,18 +614,19 @@
 		background-color: #00B770;
 	}
 	#online .people-online{
-		padding: 30px;
+		padding: 40px;
 	}
 	#online .people-online h1{
 		font-family: Proxima Nova Rg;
 		font-weight: 600;
 		color: #30394C;
-		font-size: 3em;
+		font-size: 36px;
 	}
 	#online .people-online span{
 	font-family: 'Proxima Nova Lt';
 	color: #00B770;
-	font-size: 2em;
+	font-size: 18px;
+	margin-top: 5px;
 	}
 
 	#about{
@@ -694,6 +694,7 @@
 		border-radius: 100px 0 0 100px;
 		border: 2px solid #698cc8;
 		border-right: 2px solid #f6f6f9;
+		opacity: 0.5;
 	}
 	#start .actions li:nth-child(2) .number::after{
 		content: "";
@@ -705,6 +706,7 @@
 		border-radius: 0 100px 100px 0;
 		border: 2px solid #698cc8;
 		border-left: none;
+		opacity: 0.5;
 	}
 
 	#start .bg{
@@ -764,7 +766,7 @@
 	}
 
 	#start .actions{
-		width: 50%;
+		width: 40%;
 	}
 
 }
