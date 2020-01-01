@@ -14,11 +14,20 @@ function DropdownToggle(){
 	});
 	darkness.addEventListener("click", () => {	// Закрываем меню
 		document.body.style.overflow = "visible"; // Убираем прокрутку страницы
-		menu.style.transform = "translate(-100%, 0)";
+		menu.style.transform = "translate(-101%, 0)";
 		darkness.style.opacity = "0";
 		setTimeout(function(){darkness.style.display = "none";}, 550);
 	});
 
 }
 
+function ScrollTop(){
+	const btn = document.querySelector(".scroll-top .chevron");
+
+	btn.addEventListener("click", function(){
+		$('html, body').animate({scrollTop: 0}, 1000);
+	});
+}
+
 DropdownToggle();
+ScrollTop();
