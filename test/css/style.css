@@ -204,6 +204,7 @@
 	}
 	#online .people-online span{
 	font-family: 'Proxima Nova Lt';
+	font-weight: 600;
 	color: #00B770;
 	font-size: 0.8em;
 	}
@@ -236,7 +237,7 @@
 	}
 	#about .card .text h1{
 		font-size: 1.5em;
-		font-family: Proxima Nova Cn Th;
+		font-family: Proxima Nova Th;
 		color: #444b61;
 		text-align: center;
 		letter-spacing: 1px;
@@ -294,18 +295,17 @@
 		font-family: Proxima Nova Lt;
 	}
 	#start .actions a{
-		width: 218px;
-		height: 45px;
+		width: 286px;
+		height: 59px;
 		border: 2px solid #698cc8;
-		border-radius: 22.5px;
+		border-radius: 15px;
 		text-align: center;
-		line-height: 45px;
+		line-height: 59px;
 		text-decoration: none;
 		color: #698cc8;
 		transition: .3s ease;
 		font-family: Proxima Nova Rg;
 		font-weight: 600;
-		font-size: 0.9em;
 		position: relative;
 		left: 100%;
 		transform: translate(-100%, 0);
@@ -391,7 +391,8 @@
 		color: #f6f6f6;
 	}
 	footer .bottom span{
-		padding-top: 20px;
+		display: block;
+		margin-top: 10px;
 		font-size: 1em;
 		color: #d5d5d5;
 	}
@@ -488,13 +489,6 @@
 		height: 20px;
 		border-top: 4px solid #6070b1;
 		border-right: 4px solid #6070b1;
-	}
-
-	footer .bottom h1{
-		font-size: 2em;
-	}
-	footer .bottom span{
-		font-size: 1em;
 	}
 
 }
@@ -721,7 +715,7 @@
 	#start .bg img{
 		position: absolute;
 		right: 5vw;
-		bottom: -1vw;
+		bottom: 1vw;
 		z-index: -1;
 	}
 
