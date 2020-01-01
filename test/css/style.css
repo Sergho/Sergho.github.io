@@ -160,21 +160,21 @@
 	}
 	
 
-	.online{
+	#online{
 		width: 100%;
 		max-width: 2048px;
 		display: flex;
 		justify-content: center;
 		padding-bottom: 100px;
 	}
-	.online .avatar{
+	#online .avatar{
 		width: 70px;
 		height: 70px;
 		background-color: #30394C;
 		border-radius: 50%;
 		position: relative;
 	}
-	.online .avatar .point{
+	#online .avatar .point{
 		width: 20px;
 		height: 20px;
 		border-radius: 50%;
@@ -183,7 +183,7 @@
 		right: 0;
 		bottom: 0;
 	}
-	.online .avatar .point::after{
+	#online .avatar .point::after{
 		content: "";
 		width: 10px;
 		height: 10px;
@@ -193,36 +193,36 @@
 		bottom: 5px;
 		background-color: #00B770;
 	}
-	.online .people-online{
+	#online .people-online{
 		padding: 10px;
 	}
-	.online .people-online h1{
+	#online .people-online h1{
 		font-family: Proxima Nova Rg;
 		font-weight: 600;
 		color: #30394C;
 		font-size: 1.5em;
 	}
-	.online .people-online span{
+	#online .people-online span{
 	font-family: 'Proxima Nova Lt';
 	color: #00B770;
 	font-size: 0.8em;
 	}
 
-	.about{
+	#about{
 		width: 100%;
 		max-width: 2048px;
 		margin-left: 50%;
 		transform: translate(-50%, 0);
 		padding-bottom: 70px;
 	}
-	.about .card{
+	#about .card{
 		background-color: white;
 		width: 80%;
 		margin-left: 50%;
 		transform: translate(-50%, 0);
 		border-radius: 25px;
 	}
-	.about .card .image{
+	#about .card .image{
 		width: 100%;
 		height: 40vw;
 		background-image: url(../img/about.jpg);
@@ -231,43 +231,43 @@
 		background-size: 150%;
 		border-radius: 25px 25px 0 0;
 	}
-	.about .card .text{
+	#about .card .text{
 		padding: 20px;
 	}
-	.about .card .text h1{
+	#about .card .text h1{
 		font-size: 1.5em;
 		font-family: Proxima Nova Cn Th;
 		color: #444b61;
 		text-align: center;
 		letter-spacing: 1px;
 	}
-	.about .card .text p{
+	#about .card .text p{
 		margin-top: 15px;
 		color: #363c4d;
 		font-size: 0.8em;
 		font-family: Proxima Nova Rg;
 	}
 
-	.start{
+	#start{
 		width: 100%;
 		max-width: 2048px;
 		margin-left: 50%;
 		transform: translate(-50%, 0);
 		margin-top: 50px;
 	}
-	.start .actions{
+	#start .actions{
 		width: 90%;
 		margin-left: 50%;
 		transform: translate(-50%, 0);
 	}
-	.start .actions li{
+	#start .actions li{
 		list-style: none;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
 		position: relative;
 	}
-	.start .actions li .number{
+	#start .actions li .number{
 		display: block;
 		width: 7vw;
 		height: 7vw;
@@ -279,19 +279,21 @@
 		color: #363c4d;
 		font-family: Proxima Nova Rg;
 	}
-	.start .actions .text{
+	#start .actions .text{
 		width: 90%;
 	}
-	.start .actions .text h1{
+	#start .actions .text h1{
 		font-size: 1.5em;
 		color: #363c4d;
+		font-family: Proxima Nova Rg;
 	}
-	.start .actions p{
+	#start .actions p{
 		font-size: 1em;
 		color: #444b61;
 		margin-top: 10px;
+		font-family: Proxima Nova Lt;
 	}
-	.start .actions a{
+	#start .actions a{
 		width: 218px;
 		height: 45px;
 		border: 2px solid #698cc8;
@@ -301,7 +303,7 @@
 		text-decoration: none;
 		color: #698cc8;
 		transition: .3s ease;
-		font-family: Proxima Nove Rg;
+		font-family: Proxima Nova Rg;
 		font-weight: 600;
 		font-size: 0.9em;
 		position: relative;
@@ -310,22 +312,101 @@
 		margin-top: 10px;
 		margin-bottom: 20px;
 	}
-	.start .actions a:hover{
+	#start .actions a:hover{
 		background-color: #698cc8;
 		color: white;
+	}
+
+	#start .bg{
+		display: none;
+	}
+
+	footer .top{
+		width: 100%;
+		height: 140px;
+		background-color: #363c4d;
+		position: relative;
+	}
+	footer .top .socials{
+		width: 150px;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	footer .top .socials .image{
+		width: 60px;
+		height: 60px;
+		border-radius: 20px;
+		background-color: #3c4254;
+		position: relative;
+	}
+	footer .top .socials .image img{
+		width: 60%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	footer .top .socials .image .hover{
+		opacity: 0;
+		transition: .3s ease;
+	}
+	footer .top .socials .image:hover .hover{
+		opacity: 1;
+	}
+	footer .top .scroll-top{
+		position: absolute;
+		top: 50%;
+		right: 10%;
+		transform: translate(-50%, 0);
+	}
+	footer .top .scroll-top .chevron{
+		display: block;
+		width: 15px;
+		height: 15px;
+		border-top: 3px solid #6070b1;
+		border-right: 3px solid #6070b1;
+		transform: rotate(-45deg);
+		cursor: pointer;
+		transition: .3s ease;
+	}
+	footer .top .scroll-top .chevron:hover{
+		border-color: #7b90e3;
+	}
+
+	footer .bottom{
+		width: 100%;
+		height: 90px;
+		box-sizing: border-box;
+		background-color: #1a1c23;
+		text-align: center;
+	}
+	footer .bottom h1{
+		padding-top: 20px;
+		font-size: 1.3em;
+		color: #f6f6f6;
+	}
+	footer .bottom span{
+		padding-top: 20px;
+		font-size: 1em;
+		color: #d5d5d5;
 	}
 }
 
 @media screen and (min-width: 425px){
 
-	.about .card .text h1{
+	#about .card .text h1{
 		font-size: 2em;
 	}
-	.about .card .text p{
+	#about .card .text p{
 		font-size: 1em;
 	}
 
-	.start .actions li .number{
+	#start .actions li .number{
 		width: 30px;
 		height: 30px;
 		line-height: 30px;
@@ -351,41 +432,69 @@
 		border-radius: 33px;
 	}
 
-	.online .avatar{
+	#online .avatar{
 		width: 100px;
 		height: 100px;
 	}
-	.online .avatar .point{
+	#online .avatar .point{
 		width: 25px;
 		height: 25px;
 	}
-	.online .avatar .point::after{
+	#online .avatar .point::after{
 		width: 15px;
 		height: 15px;
 	}
-	.online .people-online{
+	#online .people-online{
 		padding: 20px;
 	}
-	.online .people-online h1{
+	#online .people-online h1{
 		font-size: 2em;
 	}
-	.online .people-online span{
+	#online .people-online span{
 		font-size: 1.5em;
 	}
 
-	.start .actions{
+	#start .actions{
 		width: 60%;
 	}
-	.start .actions li .number{
+	#start .actions li .number{
 		width: 40px;
 		height: 40px;
 		line-height: 40px;
 		font-size: 1.5em;
 	}
-	.start .actions li .text{
+	#start .actions li .text{
 		width: 90%;
 		box-sizing: border-box;
 		padding: 5px;
+	}
+
+	footer .top .socials{
+		width: 200px;
+	}
+	footer .top .socials .image{
+		width: 75px;
+		height: 75px;
+		border-radius: 25px;
+		background-color: #3c4254;
+		position: relative;
+	}
+
+	footer .top .scroll-top{
+		right: 5%;
+	}
+	footer .top .scroll-top .chevron{
+		width: 20px;
+		height: 20px;
+		border-top: 4px solid #6070b1;
+		border-right: 4px solid #6070b1;
+	}
+
+	footer .bottom h1{
+		font-size: 2em;
+	}
+	footer .bottom span{
+		font-size: 1em;
 	}
 
 }
@@ -463,7 +572,7 @@
 	}
 
 	header.main .text{
-		margin-top: 260px;
+		margin-top: 200px;
 		margin-bottom: 240px;
 		width: 60%;
 		max-width: 1000px;
@@ -482,17 +591,17 @@
 		border-radius: 60px;
 	}
 
-	.online{
+	#online{
 		padding-bottom: 150px;
 	}
-	.online .avatar{
+	#online .avatar{
 		width: 150px;
 		height: 150px;
 		background-color: #30394C;
 		border-radius: 50%;
 		position: relative;
 	}
-	.online .avatar .point{
+	#online .avatar .point{
 		width: 35px;
 		height: 35px;
 		border-radius: 50%;
@@ -501,7 +610,7 @@
 		right: 5px;
 		bottom: 5px;
 	}
-	.online .avatar .point::after{
+	#online .avatar .point::after{
 		content: "";
 		width: 25px;
 		height: 25px;
@@ -511,32 +620,32 @@
 		bottom: 5px;
 		background-color: #00B770;
 	}
-	.online .people-online{
+	#online .people-online{
 		padding: 30px;
 	}
-	.online .people-online h1{
+	#online .people-online h1{
 		font-family: Proxima Nova Rg;
 		font-weight: 600;
 		color: #30394C;
 		font-size: 3em;
 	}
-	.online .people-online span{
+	#online .people-online span{
 	font-family: 'Proxima Nova Lt';
 	color: #00B770;
 	font-size: 2em;
 	}
 
-	.about{
+	#about{
 		margin-top: 60px;
 		padding-bottom: 120px;
 	}
-	.about .card{
+	#about .card{
 		display: flex;
 		flex-wrap: wrap;
 		background-color: rgba(0, 0, 0, 0.0);
 		position: relative;
 	}
-	.about .card .image{
+	#about .card .image{
 		border-radius: 0;
 		width: 50%;
 		order: 1;
@@ -546,7 +655,7 @@
 		position: absolute;
 		right: 0;
 	}
-	.about .card .text{
+	#about .card .text{
 		box-sizing: border-box;
 		padding: 50px 20px;
 		width: 50%;
@@ -554,7 +663,7 @@
 		background-color: white;
 		height: 100%;
 	}
-	.about .card .text::before{
+	#about .card .text::before{
 		content: "";
 		width: 200px;
 		height: 200px;
@@ -564,20 +673,24 @@
 		top: -20px;
 		left: -20px;
 	}
-	.about .card{
+	#about .card{
 		width: 70%;
 	}
 
-	.start .actions li{
+	#start{
+		margin-top: 200px;
+		margin-bottom: 250px;
+	}
+	#start .actions li{
 		height: 200px;
 	}
-	.start .actions li .number{
+	#start .actions li .number{
 		width: 40px;
 		height: 40px;
 		line-height: 40px;
 		margin-top: 10px;
 	}
-	.start .actions li:nth-child(odd) .number::before{
+	#start .actions li:nth-child(odd) .number::before{
 		content: "";
 		position: absolute;
 		top: 30px;
@@ -588,7 +701,7 @@
 		border: 2px solid #698cc8;
 		border-right: 2px solid #f6f6f9;
 	}
-	.start .actions li:nth-child(2) .number::after{
+	#start .actions li:nth-child(2) .number::after{
 		content: "";
 		position: absolute;
 		top: 60px;
@@ -598,6 +711,18 @@
 		border-radius: 0 100px 100px 0;
 		border: 2px solid #698cc8;
 		border-left: none;
+	}
+
+	#start .bg{
+		display: block;
+		width: 100%;
+		overflow: hidden;
+	}
+	#start .bg img{
+		position: absolute;
+		right: 5vw;
+		bottom: -1vw;
+		z-index: -1;
 	}
 
 }
@@ -624,27 +749,27 @@
 		margin-left: 1vw;
 	}
 
-	.online{
+	#online{
 		margin-left: 50%;
 		transform: translate(-50%, 0);
 		padding-bottom: 200px;
 	}
 
-	.about .card .text::before{
+	#about .card .text::before{
 		width: 250px;
 		height: 250px;
 		left: -40px;
 		top: -40px;
 	}
-	.about .card .text{
+	#about .card .text{
 		padding: 80px 60px;
 	}
-	.about .card .text p{
+	#about .card .text p{
 		margin-top: 30px;
 		font-size: 1.2em;
 	}
 
-	.start .actions{
+	#start .actions{
 		width: 50%;
 	}
 
