@@ -13,7 +13,7 @@
 		<img src="../img/background.png" alt="background">
 	</div>
 	<div id="main-wrapper">
-		<div class="darkness"></div>
+		<div class="darkness" onclick="Auth();"></div>
 		<header class="main">
 			<div class="logo">
 				<a href="main.html">
@@ -33,7 +33,7 @@
 						<li class="dropdown-item"><a href="donate.html">Донат</a></li>
 						<li class="dropdown-item"><a href="#">Gregtech FM</a></li>
 						<li class="dropdown-item"><a href="#">Форум</a></li>
-						<li class="dropdown-item"><a href="personal.html">Личный кабинет</a></li>
+						<li class="dropdown-item lc"><a href="#" onclick="Auth();">Личный кабинет</a></li>
 					</ul>
 				</div>
 				<div class="navbar">
@@ -45,7 +45,7 @@
 						<li class="navbar-item"><a href="#">Форум</a></li>
 					</ul>
 					<div class="navbar-personal">
-						<a href="personal.html">Личный кабинет</a>
+						<a href="#" class="lc" onclick="Auth();">Личный кабинет</a>
 					</div>
 				</div>
 			</div>
@@ -136,6 +136,21 @@
 				<span>Made by Kipper Studio</span>
 			</div>
 		</footer>
+		<div id="auth">
+			 <div class="exit" onclick="Auth();">
+			 	<span></span>
+			 	<span></span>
+			 </div>
+			<h1>Авторизация</h1>
+			<p class="error">Ошибка! Логин или пароль введён неверно</p>
+			<form>
+				<input type="text" placeholder="Логин">
+				<input type="password" placeholder="Пароль">
+				<img src="../img/eye.png" alt="show" class="show">
+				<a href="#">Забыли пароль?</a>
+				<button type="submit">Войти</button>
+			</form>
+				</div>
 	</div>
 	
 

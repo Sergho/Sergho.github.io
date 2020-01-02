@@ -22,11 +22,32 @@ function DropdownToggle(){
 }
 
 function ScrollTop(){
+	// Кнопка
 	const btn = document.querySelector(".scroll-top .chevron");
 
 	btn.addEventListener("click", function(){
+		// Прокручиваем в начало
 		$('html, body').animate({scrollTop: 0}, 1000);
 	});
+}
+function Auth(){		// login
+	// Окно авторизации
+	const modal = document.querySelector("#auth");
+	// Темнота
+	const darkness = document.querySelector(".darkness");
+	// Крестик выхода
+	const exit = document.querySelector(".exit");
+
+	if(darkness.style.display != "block"){
+		darkness.style.display = "block";
+		setTimeout(function(){darkness.style.opacity = "1";}, 50);
+		setTimeout(function(){modal.style.opacity = "1";}, 50);
+	} else {
+		modal.style.opacity = "0";
+		darkness.style.opacity = "0";
+		setTimeout(function(){darkness.style.display = "none";}, 550);
+	}
+
 }
 
 DropdownToggle();
