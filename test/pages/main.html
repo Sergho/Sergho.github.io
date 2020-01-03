@@ -15,8 +15,6 @@
 	<div id="main-wrapper">
 		<div class="darkness" onclick="Auth(); DropdownToggle(this);"></div>
 		<header>
-		<div class="darkness" onclick="Auth();"></div>
-		<header class="main">
 			<div class="logo">
 				<a href="main.html">
 					<img src="../img/logo.png" alt="logotype">
@@ -24,7 +22,7 @@
 			</div>
 			<div class="nav">
 				<div class="dropdown">
-					<div class="dropdown-burger">
+					<div class="dropdown-burger" onclick="DropdownToggle(this);">
 						<span></span>
 						<span></span>
 						<span></span>
@@ -130,7 +128,7 @@
 					</div>
 				</div>
 				<div class="scroll-top">
-					<span class="chevron"></span>
+					<span class="chevron" onclick="ScrollTop()"></span>
 				</div>
 			</div>
 			<div class="bottom">
