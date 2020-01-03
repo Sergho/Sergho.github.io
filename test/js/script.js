@@ -50,7 +50,6 @@ function Auth(){		// login
 
 }
 
-<<<<<<< HEAD
 /* --------------- Setting and removing a tick	--------------------- */
 
 function Tick(elem){
@@ -63,7 +62,3 @@ function Tick(elem){
 	else tick.style.opacity = "1";
 	console.log(chbox.checked);
 }
-=======
-DropdownToggle();
-ScrollTop();
->>>>>>> parent of 7ca151b... end of main
