@@ -2,11 +2,11 @@
 
 function DropdownToggle(elem){
 	// Кнопка меню (три полосочки)
-	const burger 		= document.querySelector("header.main .nav .dropdown-burger");
+	const burger 		= document.querySelector("header .nav .dropdown-burger");
 	// Блок затемнения фона
 	const darkness 	= document.querySelector(".darkness");
 	// Само выпадающее меню
-	const menu			= document.querySelector("header.main .nav .dropdown-menu");
+	const menu			= document.querySelector("header .nav .dropdown-menu");
 
 	if(elem == burger){
 		// Открываем менюшку
@@ -51,4 +51,17 @@ function Auth(){		// login
 		setTimeout(function(){modal.style.display = "none";}, 550);
 	}
 
+}
+
+/* --------------- Setting and removing a tick	--------------------- */
+
+function Tick(elem){
+	// Чекбокс
+	const chbox = document.querySelector("header form .confirm input");
+	// Галочка
+	const tick  = document.querySelector("header form .confirm .visible .tick");
+
+	if(chbox.checked) tick.style.opacity = "0";
+	else tick.style.opacity = "1";
+	console.log(chbox.checked);
 }

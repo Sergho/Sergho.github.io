@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../fonts/fonts.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<title>Donate Page - Green Tech</title>
+</head>
+<body>
+	<div id="donate-wrapper">
+		<div class="darkness" onclick="Auth(); DropdownToggle(this);"></div>
+		<header>
+			<div class="logo">
+				<a href="main.html">
+					<img src="../img/logo.png" alt="logotype">
+				</a>
+			</div>
+			<div class="nav">
+				<div class="dropdown">
+					<div class="dropdown-burger" onclick="DropdownToggle(this);">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+					<ul class="dropdown-menu">
+						<li class="dropdown-item"><a href="main.html">Главная</a></li>
+						<li class="dropdown-item"><a href="#">Ставки BoxBet</a></li>
+						<li class="dropdown-item"><a href="donate.html">Донат</a></li>
+						<li class="dropdown-item"><a href="#">Gregtech FM</a></li>
+						<li class="dropdown-item"><a href="#">Форум</a></li>
+						<li class="dropdown-item lc"><a href="#" onclick="Auth();">Личный кабинет</a></li>
+					</ul>
+				</div>
+				<div class="navbar">
+					<ul class="navbar-menu">
+						<li class="navbar-item"><a href="main.html">Главная</a></li>
+						<li class="navbar-item"><a href="#">Ставки BoxBet</a></li>
+						<li class="navbar-item"><a href="donate.html">Донат</a></li>
+						<li class="navbar-item"><a href="#">Gregtech FM</a></li>
+						<li class="navbar-item"><a href="#">Форум</a></li>
+					</ul>
+					<div class="navbar-personal">
+						<a href="#" class="lc" onclick="Auth();">Личный кабинет</a>
+					</div>
+				</div>
+			</div>
+			<div class="text">
+				<div class="image-pig">
+					<img src="../img/pig.png" alt="pig_money">
+				</div>
+				<h1>Пополнение средств</h1>
+				<p>Основная идея социально–политических взглядов К.Маркса была в том, что созерцание традиционно понимает под собой либерализм. Александрийская школа экстремально иллюстрирует авторитаризм, изменяя привычную реальность</p>
+				<form>
+					<input type="text" placeholder="Никнейм">
+					<input type="text" placeholder="Сумма (Руб)">
+					<div class="agreement">
+						<label class="confirm">
+							<input type="checkbox">
+							<span class="visible" onclick="Tick(this);">
+								<span class="tick"></span>
+							</span>
+						</label>
+						<p>Я изучил и принял <a href="#">пользовательское соглашение</a></p>
+					</div>
+					<button type="submit">Продолжить</button>
+				</form>
+			</div>
+		</header>
+		<footer>
+			<div class="top">
+				<div class="socials">
+					<div class="image">
+						<a href="#" class="blur"><img src="../img/vk_blue.png" alt="VK"></a>
+						<a href="#" class="hover"><img src="../img/vk.png" alt="VK"></a>
+					</div>
+					<div class="image">
+						<a href="#" class="blur"><img src="../img/youtube_blue.png" alt="YOUTUBE"></a>
+						<a href="#" class="hover"><img src="../img/youtube.png" alt="YOUTUBE"></a>
+					</div>
+				</div>
+				<div class="scroll-top">
+					<span class="chevron" onclick="ScrollTop()"></span>
+				</div>
+			</div>
+			<div class="bottom">
+				<h1>GreenTech RolePlay © 2012-2019</h1>
+				<span>Made by Kipper Studio</span>
+			</div>
+		</footer>
+		<div id="auth">
+			<div class="exit" onclick="Auth();">
+				<span></span>
+				<span></span>
+			</div>
+			<h1>Авторизация</h1>
+			<p class="error">Ошибка! Логин или пароль введён неверно</p>
+			<form>
+				<input type="text" placeholder="Логин">
+				<input type="password" placeholder="Пароль">
+				<img src="../img/eye.png" alt="show" class="show">
+				<a href="#">Забыли пароль?</a>
+				<button type="submit">Войти</button>
+			</form>
+		</div>
+	</div>
+
+	<script src="../js/jquery.js"></script>
+	<script src="../js/script.js"></script>
+</body>
+</html>

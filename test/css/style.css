@@ -34,7 +34,7 @@
 		background-color: #F6F6F9;
 	}
 
-	header.main{
+	header{
 		background-image: url(../img/main-background.jpg);
 		width: 100%;
 		background-position: center center;
@@ -49,39 +49,39 @@
 		margin-bottom: 100px;
 	}
 
-	header.main .logo{
+	header .logo{
 		order: 1;
 		width: 80%;
 		max-width: 400px;
 		position: relative;
 	}
-	header.main .logo a{
+	header .logo a{
 		display: block;
 		position: absolute;
 		left: 50%;
 		transform: translate(-50%, 0);
 		height: 100%;
 	}
-	header.main .logo img{
+	header .logo img{
 		height: 100%;
 	}
 
-	header.main .nav{
+	header .nav{
 		width: 20%;
 		max-width: 100px;
 	}
-	header.main .nav .navbar{
+	header .nav .navbar{
 		display: none;
 	}
-	header.main .nav .dropdown-burger{
+	header .nav .dropdown-burger{
 		position: relative;
 		cursor: pointer;
 		width: 40px;
 	}
-	header.main .nav .dropdown-burger:hover span{
+	header .nav .dropdown-burger:hover span{
 		background-color: #ccc;
 	}
-	header.main .nav .dropdown-burger span{
+	header .nav .dropdown-burger span{
 		display: block;
 		width: 40px;
 		height: 4px;
@@ -90,7 +90,7 @@
 		border-radius: 2px;
 		transition: .3s ease;
 	}
-	header.main .nav .dropdown-menu{
+	header .nav .dropdown-menu{
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -103,23 +103,23 @@
 		height: 100vh;
 		transition: transform .5s ease;
 	}
-	header.main .nav .dropdown-item{
+	header .nav .dropdown-item{
 		box-sizing: border-box;
 		padding: 10px;
 		list-style: none;
 		transition: .3s ease;
 	}
-	header.main .nav .dropdown-item:hover a{
+	header .nav .dropdown-item:hover a{
 		color: #ccc;
 	}
-	header.main .nav .dropdown-item a{
+	header .nav .dropdown-item a{
 		color: #EDEDF1;
 		font-size: 16px;
 		text-decoration: none;
 		font-family: Proxima Nova Rg;
 	}
 
-	header.main .text{
+	header .text{
 		order: 3;
 		width: 90%;
 		margin-top: 120px;
@@ -127,17 +127,17 @@
 		color: white;
 		text-align: center;
 	}
-	header.main .text h1{
+	header .text h1{
 		font-size: 1.5em;
 		font-family: Proxima Nova Th;
 	}
-	header.main .text p{
+	header .text p{
 		font-size: 1em;
 		font-family: Proxima Nova Rg;
 		margin-top: 15px;
 		margin-bottom: 50px;
 	}
-	header.main .text a{
+	header .text a.start, header .text a.connect{
 		display: block;
 		width: 250px;
 		height: 50px;
@@ -155,7 +155,7 @@
 		text-decoration: none;
 		transition: background-color .3s ease;
 	}
-	header.main .text a:hover{
+	header .text a.start:hover, header .text a.connect:hover{
 		background-color: #568DCB;
 	}
 	
@@ -507,6 +507,132 @@
 		font-size: 1em;
 		color: #d5d5d5;
 	}
+
+	/* -------------------------- DONATE ---------------------- */
+
+	#donate-wrapper{
+		width: 100%;
+		display: block;
+		background-color: #F6F6F9;
+	}
+
+	#donate-wrapper header{
+		background-image: url(../img/donate-background.jpg);
+		margin-bottom: 0;
+	}
+	#donate-wrapper header .text{
+		margin-top: 50px;
+		margin-bottom: 20px;
+	}
+	#donate-wrapper header .text p{
+		margin-bottom: 20px;
+	}
+	header .image-pig{
+		margin-bottom: 10px;
+	}
+	header form{
+		width: 110%;
+		margin-left: 50%;
+		transform: translate(-50%, 0);
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	header form input{
+		width: 250px;
+		height: 50px;
+		border-radius: 15px;
+		border: none;
+		opacity: 0.6;
+		margin-top: 15px;
+		box-sizing: border-box;
+		padding: 20px;
+		font-size: 1em;
+		font-family: Proxima Nova Rg;
+		color: #363c4d;
+		opacity: 0.6;
+		transition: .3s ease;
+	}
+	header form input:focus{
+		outline: none;
+		opacity: 1;
+		color: white;
+		color: #363c4d;
+	}
+
+	header form .agreement{
+		width: 100%;
+		font-family: Proxima Nova Rg;
+		font-size: 1em;
+		line-height: 20px;
+		margin-top: 10px;
+		color: #f6f6f6;
+		display: flex;
+		justify-content: center;
+	}
+	header form .agreement .confirm{
+		display: block;
+		width: 20px;
+		height: 20px;
+		cursor: pointer;
+		margin-top: 10px;
+
+	}
+	header form .agreement .confirm input{
+		display: none;
+	}
+	header form .agreement .confirm .visible{
+		display: block;
+		width: 20px;
+		height: 20px;
+		background-color: rgba(255, 255, 255, 0.2);
+		border-radius: 5px;
+		position: relative;
+	}
+	header form .agreement .confirm .visible .tick{
+		display: block;
+		width: 10px;
+		height: 5px;
+		border-left: 3px solid white;
+		border-bottom: 3px solid white;
+		position: absolute;
+		top: 40%;
+		left: 50%;
+		transform: translate(-50%, -50%) rotate(-45deg);
+		opacity: 0;
+		transition: .3s ease;
+	}
+	header form .agreement p{
+		font-family: Proxima Nova Rg;
+		font-size: 0.9em;
+		line-height: 20px;
+		margin-top: 10px;
+		color: #f6f6f6;
+		margin-left: 5px;
+	}
+	header form .agreement a{
+		color: #f6f6f6;
+		font-family: Proxima Nova Rg;
+		font-size: 0.9em;
+		line-height: 20px;
+	}
+	header form button{
+		width: 194px;
+		height: 50px;
+		border-radius: 15px;
+		border: 2px solid #698cc8;
+		background-color: rgba(0, 0, 0, 0.0);
+		color: #698cc8;
+		font-family: Proxima Nova Rg;
+		font-weight: 600;
+		transition: .3s ease;
+		cursor: pointer;
+	}
+	header form button:hover{
+		background-color: #698cc8;
+		color: white;
+	}
+
 }
 
 @media screen and (min-width: 425px){
@@ -535,20 +661,33 @@
 		width: 200px;
 	}
 
+	/* -------------------------- DONATE ---------------------- */
+
+	#donate-wrapper header .text{
+		margin-top: 70px;
+		margin-bottom: 70px;
+	}
+	header form{
+		max-width: 500px;
+	}
+	header form input{
+		width: 300px;
+	}
+
 }
 
 @media screen and (min-width: 768px){
 
-	header.main .text{
+	header .text{
 		width: 60%;
 	}
-	header.main .text h1{
+	header .text h1{
 		font-size: 2em;
 	}
-	header.main .text p{
+	header .text p{
 		margin-bottom: 20px;
 	}
-	header.main .text a{
+	header .text a{
 		width: 360px;
 		height: 66px;
 		line-height: 66px;
@@ -621,22 +760,48 @@
 		font-size: 1em;
 	}
 
+	/* -------------------------- DONATE ---------------------- */
+
+	#donate-wrapper header .text{
+		margin-top: 100px;
+		margin-bottom: 100px;
+	}
+	header form .agreement p{
+		font-size: 1em;
+	}
+	header form .agreement a{
+		font-size: 1em;
+	}
+	header form input{
+		width: 550px;
+		height: 66px;
+	}
+	header form .agreement{
+		width: 100%;
+		justify-content: left;
+	}
+	header form button{
+		width: 254px;
+		height: 66px;
+		font-size: 1.1em;
+	}
+
 }
 
 @media screen and (min-width: 1024px){
 
-	header.main{
+	header{
 		margin-bottom: 150px;
 	}
-	header.main .nav .dropdown{
+	header .nav .dropdown{
 		display: none;
 	}
-	header.main .logo{
+	header .logo{
 		order: 0;
 		width: 20%;
 		max-width: 500px;
 	}
-	header.main .logo a{
+	header .logo a{
 		display: block;
 		position: absolute;
 		top: 50%;
@@ -644,26 +809,26 @@
 		transform: translate(-50%, -50%);
 		height: 80%;
 	}
-	header.main .nav{
+	header .nav{
 		order: 1;
 		width: 75%;
 		max-width: 1200px;
 		z-index: 1;
 	}
-	header.main .nav .navbar{
+	header .nav .navbar{
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-around;
 	}
-	header.main .nav .navbar-menu{
+	header .nav .navbar-menu{
 		display: flex;
 	}
-	header.main .nav .navbar-menu .navbar-item{
+	header .nav .navbar-menu .navbar-item{
 		margin: 20px 1vw;
 		margin-left: 0;
 		list-style: none;
 	}
-	header.main .nav .navbar-menu .navbar-item a{
+	header .nav .navbar-menu .navbar-item a{
 		color: #F6F6F6;
 		text-decoration: none;
 		font-family: Proxima Nova Lt;
@@ -672,11 +837,11 @@
 		font-size: 1.2em;
 		padding: 5px;
 	}
-	header.main .nav .navbar-menu .navbar-item:hover a{
+	header .nav .navbar-menu .navbar-item:hover a{
 		color: #ccc;
 	}
 
-	header.main .nav .navbar .navbar-personal a{
+	header .nav .navbar .navbar-personal a{
 		display: block;
 		transition: background-color .3s ease;
 		border: 2px solid #568DCB;
@@ -692,26 +857,26 @@
 		font-family: Proxima Nova Lt;
 		font-weight: 600;
 	}
-	header.main .nav .navbar .navbar-personal a:hover{
+	header .nav .navbar .navbar-personal a:hover{
 		background-color: #568DCB;
 	}
 
-	header.main .text{
+	header .text{
 		margin-top: 200px;
 		margin-bottom: 240px;
 		width: 60%;
 		max-width: 1000px;
 	}
-	header.main .text h1{
+	header .text h1{
 		font-size: 3em;
 		letter-spacing: 2px;
 	}
-	header.main .text p{
+	header .text p{
 		margin-top: 10px;
 		font-size: 1.5em;
 		margin-bottom: 70px;
 	}
-	header.main .text a{
+	header .text a{
 		font-size: 1.1em;
 		border-radius: 60px;
 	}
@@ -890,27 +1055,41 @@
 		margin-right: 45px;
 	}
 
+	/* -------------------------- DONATE ---------------------- */
+
+	#donate-wrapper header .text{
+		margin-top: 130px;
+		margin-bottom: 130px;
+	}
+	header form input{
+		margin-top: 30px;
+		font-size: 1.2em;
+	}
+	header form .agreement p{
+		margin-left: 15px;
+	}
+
 }
 
 @media screen and (min-width: 1440px){
 
 	
-	header.main{
+	header{
 		margin-left: 50%;
 		transform: translate(-50%, 0);
 		margin-bottom: 200px;
 	}
 	
-	header.main .nav .navbar-menu{
+	header .nav .navbar-menu{
 		box-sizing: border-box;
 		padding-left: 2vw;
 	}
-	header.main .nav .navbar-menu .navbar-item{
+	header .nav .navbar-menu .navbar-item{
 		margin: 20px 4.3vw;
 		margin-left: 0;
 	}
 
-	header.main .nav .navbar .navbar-personal a{
+	header .nav .navbar .navbar-personal a{
 		margin-left: 1vw;
 		width: 222px;
 	}
@@ -939,15 +1118,22 @@
 		width: 40%;
 	}
 
+	/* -------------------------- DONATE ---------------------- */
+
+	#donate-wrapper header .text{
+		margin-top: 160px;
+		margin-bottom: 160px;
+	}
+
 }
 
 @media screen and (min-width: 2000px){
 	
-	header.main .nav .navbar-menu .navbar-item{
+	header .nav .navbar-menu .navbar-item{
 		margin: 20px 30px;
 		list-style: none;
 	}
-	header.main .nav .navbar .navbar-personal a{
+	header .nav .navbar .navbar-personal a{
 		margin-left: 50px;
 	}
 
