@@ -321,6 +321,7 @@
 	}
 
 	#auth{
+		display: none;
 		opacity: 0;
 		position: absolute;
 		top: 50vh;
@@ -647,6 +648,7 @@
 		order: 1;
 		width: 75%;
 		max-width: 1200px;
+		z-index: 1;
 	}
 	header.main .nav .navbar{
 		display: flex;
@@ -679,7 +681,7 @@
 		transition: background-color .3s ease;
 		border: 2px solid #568DCB;
 		border-radius: 15px;
-		width: 222px;
+		width: 180px;
 		height: 50px;
 		text-align: center;
 		line-height: 50px;
@@ -910,6 +912,7 @@
 
 	header.main .nav .navbar .navbar-personal a{
 		margin-left: 1vw;
+		width: 222px;
 	}
 
 	#online{
