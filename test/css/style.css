@@ -37,6 +37,7 @@
 	header{
 		background-image: url(../img/main-background.jpg);
 		width: 100%;
+		background-size: cover;
 		background-position: center center;
 		background-repeat: no-repeat;
 		display: flex;
@@ -402,6 +403,14 @@
 	#auth form input:focus{
 		outline: none;
 	}
+	#auth form img.show{
+		width: 24px;
+		height: 14px;
+		position: absolute;
+		top: 225px;
+		right: 40px;
+		cursor: pointer;
+	}
 	#auth form a{
 		margin-top: 20px;
 		color: #444b61;
@@ -437,6 +446,9 @@
 		height: 140px;
 		background-color: #363c4d;
 		position: relative;
+		max-width: 2048px;
+		left: 50%;
+		transform: translate(-50%, 0);
 	}
 	footer .top .socials{
 		width: 150px;
@@ -495,6 +507,10 @@
 		box-sizing: border-box;
 		background-color: #1a1c23;
 		text-align: center;
+		position: relative;
+		max-width: 2048px;
+		left: 50%;
+		transform: translate(-50%, 0);
 	}
 	footer .bottom h1{
 		padding-top: 20px;
@@ -660,6 +676,10 @@
 	#auth form button{
 		width: 200px;
 	}
+	#auth form img.show{
+		top: 225px;
+		right: 70px;
+	}
 
 	/* -------------------------- DONATE ---------------------- */
 
@@ -758,6 +778,10 @@
 	}
 	#auth .error{
 		font-size: 1em;
+	}
+	#auth form img.show{
+		top: 227px;
+		right: 90px;
 	}
 
 	/* -------------------------- DONATE ---------------------- */
@@ -1033,12 +1057,8 @@
 		font-size: 18px;
 	}
 	#auth form img.show{
-		width: 24px;
-		height: 14px;
-		position: absolute;
 		top: 250px;
 		right: 110px;
-		cursor: pointer;
 	}
 	#auth form a{
 		width: 50%;
