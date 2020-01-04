@@ -144,8 +144,8 @@
 			<h1>Авторизация</h1>
 			<p class="error">Ошибка! Логин или пароль введён неверно</p>
 			<form>
-				<input type="text" placeholder="Никнейм">
-				<input type="password" placeholder="Пароль">
+				<input type="text" placeholder="Ник" oninput="CheckInput(this);">
+				<input type="password" placeholder="Пароль" oninput="CheckInput(this);">
 				<img src="../img/eye.png" alt="show" class="show">
 				<a href="#">Забыли пароль?</a>
 				<button type="submit">Войти</button>

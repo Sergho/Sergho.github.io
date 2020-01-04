@@ -29,7 +29,7 @@
 						<li class="dropdown-item"><a href="donate.html">Донат</a></li>
 						<li class="dropdown-item"><a href="#">Gregtech FM</a></li>
 						<li class="dropdown-item"><a href="#">Форум</a></li>
-						<li class="dropdown-item lc"><a href="#" onclick="Auth();">Личный кабинет</a></li>
+						<li class="dropdown-item lc"><a href="#" onclick="DropdownToggle(this); setTimeout(() => {Auth();}, 550);">Личный кабинет</a></li>
 					</ul>
 				</div>
 				<div class="navbar">
@@ -52,8 +52,8 @@
 				<h1>Пополнение средств</h1>
 				<p>Основная идея социально–политических взглядов К.Маркса была в том, что созерцание традиционно понимает под собой либерализм. Александрийская школа экстремально иллюстрирует авторитаризм, изменяя привычную реальность</p>
 				<form>
-					<input type="text" placeholder="Никнейм">
-					<input type="text" placeholder="Сумма (Руб)">
+					<input type="text" placeholder="Ник" oninput="CheckInput(this);">
+					<input type="text" placeholder="Сумма (Руб)" oninput="CheckInput(this);">
 					<div class="agreement">
 						<label class="confirm">
 							<input type="checkbox">
@@ -71,12 +71,12 @@
 			<div class="top">
 				<div class="socials">
 					<div class="image">
-						<a href="#" class="blur"><img src="../img/vk_blue.png" alt="VK"></a>
-						<a href="#" class="hover"><img src="../img/vk.png" alt="VK"></a>
+						<a href="https://vk.com/greentech_rp" class="blur"><img src="../img/vk_blue.png" alt="VK"></a>
+						<a href="https://vk.com/greentech_rp" class="hover"><img src="../img/vk.png" alt="VK"></a>
 					</div>
 					<div class="image">
-						<a href="#" class="blur"><img src="../img/youtube_blue.png" alt="YOUTUBE"></a>
-						<a href="#" class="hover"><img src="../img/youtube.png" alt="YOUTUBE"></a>
+						<a href="https://vk.com/away.php?to=https%3A%2F%2Fwww.youtube.com%2Fchannel%2FUC3Qk5CUeWmucl-HCdsy612Q&cc_key=" class="blur"><img src="../img/youtube_blue.png" alt="YOUTUBE"></a>
+						<a href="https://vk.com/away.php?to=https%3A%2F%2Fwww.youtube.com%2Fchannel%2FUC3Qk5CUeWmucl-HCdsy612Q&cc_key=" class="hover"><img src="../img/youtube.png" alt="YOUTUBE"></a>
 					</div>
 				</div>
 				<div class="scroll-top">
@@ -96,9 +96,9 @@
 			<h1>Авторизация</h1>
 			<p class="error">Ошибка! Логин или пароль введён неверно</p>
 			<form>
-				<input type="text" placeholder="Логин">
-				<input type="password" placeholder="Пароль">
-				<img src="../img/eye.png" alt="show" class="show">
+				<input type="text" placeholder="Ник" oninput="CheckInput(this);">
+				<input type="password" placeholder="Пароль" oninput="CheckInput(this);">
+				<img src="../img/eye.png" alt="show" class="show" onclick="ShowPassword(this);">
 				<a href="#">Забыли пароль?</a>
 				<button type="submit">Войти</button>
 			</form>

@@ -65,3 +65,18 @@ function Tick(elem){
 	else tick.style.opacity = "1";
 	console.log(chbox.checked);
 }
+function CheckInput(input){		// Функция проверки заполнения поля ввода
+	if(input.value.length > 0) input.classList.add("filled");
+	else input.classList.remove("filled");
+}
+function ShowPassword(eye){		// Функция скрытия и показывания пароля
+	const input = document.querySelector("#auth form input:nth-child(2)");
+
+	if(input.type == "password"){
+		input.type = "text";
+		eye.style.opacity = "1";
+	} else {
+		input.type = "password";
+		eye.style.opacity = "0.5";
+	}
+}
