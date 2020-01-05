@@ -9,7 +9,7 @@
 	top: 0;
 	left: 0;
 	background-color: rgb(54, 60, 77, 0.7)
-;
+	;
 	z-index: 3;
 	transition: .5s ease;
 	opacity: 0;
@@ -290,6 +290,10 @@
 		color: #363c4d;
 		font-family: Proxima Nova Rg;
 	}
+	#start .actions .text h1 u{
+		text-decoration: none;
+		border-bottom: 2px solid #363c4d;
+	}
 	#start .actions p{
 		font-size: 1em;
 		color: #444b61;
@@ -338,7 +342,7 @@
 		border-radius: 40px;
 		transition: .3s ease;
 	}
-	#auth .exit{
+	.exit{
 		position: absolute;
 		top: 20px;
 		right: 20px;
@@ -346,7 +350,7 @@
 		height: 25px;
 		cursor: pointer;
 	}
-	#auth .exit span{
+	.exit span{
 		display: block;
 		width: 100%;
 		height: 1px;
@@ -356,13 +360,13 @@
 		transform: translate(0, -50%);
 		transition: .3s ease;
 	}
-	#auth .exit span:nth-child(1){
+	.exit span:nth-child(1){
 		transform: rotate(45deg);
 	}
-	#auth .exit span:nth-child(2){
+	.exit span:nth-child(2){
 		transform: rotate(-45deg);
 	}
-	#auth .exit:hover span{
+	.exit:hover span{
 		background-color: black;
 	}
 
@@ -405,7 +409,7 @@
 		border: none;
 		border-radius: 15px;
 		color: #363c4d;
-		opacity: 0.6;
+		opacity: 0.7;
 		transition: .3s ease;
 	}
 	#auth form input:focus, #auth form input.filled{
@@ -574,15 +578,14 @@
 		height: 50px;
 		border-radius: 15px;
 		border: none;
-		opacity: 0.6;
+		opacity: 0.7;
 		margin-top: 15px;
 		box-sizing: border-box;
-		padding: 20px;
+		padding: 23px;
 		font-size: 1em;
 		font-family: Proxima Nova Lt;
 		font-weight: 600;
 		color: #363c4d;
-		opacity: 0.6;
 		transition: .3s ease;
 	}
 	header form input:focus, header form input.filled{
@@ -666,6 +669,42 @@
 		color: white;
 	}
 
+	#success{
+		display: none;
+		opacity: 0;
+		position: absolute;
+		top: 50vh;
+		left: 50vw;
+		transform: translate(-50%, -50%);
+		background-color: #f6f6f9;
+		width: 300px;
+		height: 431px;
+		border-radius: 40px;
+		transition: .3s ease;
+	}
+	#success img{
+		margin-top: 50px;
+		margin-left: 50%;
+		transform: translate(-50%, 0);
+	}
+	#success h1{
+		font-size: 2em;
+		font-family: Proxima Nova Th;
+		color: #444b61;
+		text-align: center;
+		padding-top: 10px;
+	}
+	#success p{
+		font-size: 1em;
+		font-family: Proxima Nova Lt;
+		width: 90%;
+		margin-left: 50%;
+		transform: translate(-50%, 0);
+		margin-top: 20px;
+		color: #444b61;
+		text-align: center;
+	}
+
 }
 
 @media screen and (min-width: 425px){
@@ -709,6 +748,20 @@
 	}
 	header form input{
 		width: 300px;
+	}
+
+	#success{
+		width: 400px;
+	}
+	#success img{
+		margin-top: 70px;
+	}
+	#success h1{
+		margin-top: 20px;
+	}
+	#success p{
+		width: 75%;
+		margin-top: 30px;
 	}
 
 }
@@ -825,6 +878,22 @@
 		width: 254px;
 		height: 66px;
 		font-size: 1.1em;
+		margin-top: 10px;
+	}
+
+	#success{
+		width: 515px;
+		height: 350px;
+	}
+	#success img{
+		margin-top: 50px;
+	}
+	#success h1{
+		margin-top: 10px;
+		font-size: 28px;
+	}
+	#success p{
+		margin-top: 20px;
 	}
 
 }
@@ -880,6 +949,9 @@
 	}
 	header .nav .navbar-menu .navbar-item:hover a{
 		color: #ccc;
+	}
+	header .nav .navbar-menu .navbar-item.active a{
+		border-bottom: 2px solid rgba(255, 255, 255, 0.5);
 	}
 
 	header .nav .navbar .navbar-personal a{
@@ -961,10 +1033,10 @@
 		font-size: 36px;
 	}
 	#online .people-online span{
-	font-family: 'Proxima Nova Lt';
-	color: #00B770;
-	font-size: 18px;
-	margin-top: 5px;
+		font-family: 'Proxima Nova Lt';
+		color: #00B770;
+		font-size: 18px;
+		margin-top: 5px;
 	}
 
 	#about{
@@ -1014,7 +1086,7 @@
 		margin-bottom: 250px;
 	}
 	#start .actions li{
-		height: 200px;
+		height: 230px;
 	}
 	#start .actions li .number{
 		width: 40px;
@@ -1027,9 +1099,9 @@
 		position: absolute;
 		top: 30px;
 		left: -130px;
-		width: 100px;
-		height: 200px;
-		border-radius: 100px 0 0 100px;
+		width: 115px;
+		height: 230px;
+		border-radius: 115px 0 0 115px;
 		border: 2px solid #698cc8;
 		border-right: 2px solid #f6f6f9;
 		opacity: 0.5;
@@ -1039,12 +1111,18 @@
 		position: absolute;
 		top: 60px;
 		right: -130px;
-		width: 100px;
-		height: 200px;
-		border-radius: 0 100px 100px 0;
+		width: 115px;
+		height: 230px;
+		border-radius: 0 115px 115px 0;
 		border: 2px solid #698cc8;
 		border-left: none;
 		opacity: 0.5;
+	}
+	#start .actions p{
+		font-size: 1.1em;
+	}
+	#start .actions a{
+		margin-top: 20px;
 	}
 
 	#start .bg{
@@ -1103,7 +1181,7 @@
 		font-size: 2em;
 	}
 	#donate-wrapper header .text p{
-		font-size: 1em;
+		font-size: 1.1em;
 	}
 	header form input{
 		margin-top: 30px;
@@ -1111,6 +1189,23 @@
 	}
 	header form .agreement p{
 		padding-left: 15px;
+	}
+
+	#success{
+		width: 703px;
+		height: 478px;
+	}
+	#success img{
+		width: 150px;
+		margin-top: 80px;
+	}
+	#success h1{
+		margin-top: 30px;
+		font-size: 28px;
+	}
+	#success p{
+		margin-top: 20px;
+		font-size: 1.1em;
 	}
 
 }
