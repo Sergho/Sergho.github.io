@@ -1,0 +1,44 @@
+
+AddDefaultCharset UTF-8
+ServerSignature Off
+DirectoryIndex main.php
+
+Options All -ExecCGI -Indexes -Includes +FollowSymLinks
+
+<IfModule mod_setenvif.c>
+	SetEnv TZ Europe/Moscow
+</IfModule>
+
+<Files .htpasswd> 
+   deny from all 
+</Files>
+
+RewriteEngine On
+RewriteCond %{HTTPS} !on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+
+RewriteCond %{HTTP_HOST} ^forum.greentech-rp.ru$ [OR]
+RewriteCond %{HTTP_HOST} ^www.forum.greentech-rp.ru$
+RewriteRule ^/?$ "https\:\/\/greentech-rp\.ru\/forum" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^ucp.greentech-rp.ru$ [OR]
+RewriteCond %{HTTP_HOST} ^www.ucp.greentech-rp.ru$
+RewriteRule ^/?$ "https\:\/\/greentech-rp\.ru\/ucp" [R=301,L]
+
+<ifModule mod_deflate.c>
+	AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml application/xhtml+xml text/css text/javascript application/javascript application/x-javascript
+</ifModule>
+
+<ifModule mod_headers.c>
+	<FilesMatch "\.(js|css|txt)$">
+		Header set Cache-Control "max-age=604800"
+	</FilesMatch>
+	<FilesMatch "\.(flv|swf|ico|gif|jpg|jpeg|png)$">
+		Header set Cache-Control "max-age=2592000"
+	</FilesMatch>
+	<FilesMatch "\.(pl|php|cgi|spl|scgi|fcgi)$">
+		Header unset Cache-Control
+	</FilesMatch>
+</IfModule>

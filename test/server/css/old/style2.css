@@ -1,0 +1,177 @@
+
+/*
+* 2 Header CSS
+********-------*/
+
+.lh-menu {
+    height: 100px;
+    position: relative;
+    z-index: 2;
+}
+/*
+* 2.1 Top Header
+********-------*/
+.top-area {
+    background-color: #151e27;
+}
+.quick-contact, .quick-contact > p > a {
+    overflow: hidden;
+    color: #fff;
+    font-size: 12px;
+    line-height: 30px;
+}
+.quick-contact > p {
+    float: left;
+    margin-left: 15px;
+    margin-bottom: 0px;
+}
+.quick-contact > p > a {
+    margin-left: 10px;
+}
+.quick-contact > p:first-of-type {
+    margin-left: 0px;
+    border-right: 1px solid #02141d;
+    padding-right: 15px;
+}
+.social-links {
+    float: right;
+    overflow: hidden;
+    border-left: 1px solid #02141d;
+}
+.social-links > a {
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    float: left;
+    font-size: 12px;
+    line-height: 30px;
+    text-align: center;
+    border-right: 1px solid #02141d;
+}
+.social-links > a:hover {
+    background-color: #02141d;
+}
+
+/*
+* 2.2 Mainmenu Area & Logo CSS
+********-----------*/
+
+a.navbar-brand {
+    height: 70px;
+    padding: 6px 15px;
+}
+.sa-menu {
+    background-color: #22313f;
+}
+
+.header  .navbar-toggle {
+    background-color: #ef4836;
+    margin-top: 16px;
+}
+.header .navbar-toggle span {
+    background-color: #fff;
+}
+
+.sa-menu ul.nav.navbar-nav {}
+.sa-menu ul.nav.navbar-nav > li {
+    margin-left: 44px;
+}
+.sa-menu ul.nav.navbar-nav > li a{
+    text-transform: uppercase;
+    color: #fff;
+    padding:0px 0px;
+    position: relative;
+    line-height: 70px;
+}
+.sa-menu ul.nav.navbar-nav > li a:focus {
+    background: none;
+}
+.sa-menu ul.nav.navbar-nav > li a:after {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0;
+    width: 0%;
+    height: 2px;
+    content: "";
+    background-color: #ef4836;
+}
+.sa-menu ul.nav.navbar-nav > li.active a:after{
+    opacity: 1;
+    width: 100%;
+}
+.sa-menu ul.nav.navbar-nav > li a:hover {
+    background: none;
+}
+.sa-menu ul.nav.navbar-nav > li a:hover:after {
+    width: 100%;
+    opacity: 1;
+}
+.mobile-menu-area {
+    display: none;
+}
+.mobile-menu-area.mean-container .mean-bar {
+  background: #22313f;
+}
+.mobile-menu-area.mean-container .mean-bar {
+    margin-bottom: 95px;
+}
+.mobile-menu-area.mean-container .mean-nav ul li a {
+    background-color: #22313f;
+    border-color: #293b4b;
+}
+.mobile-menu-area.mean-container .mean-nav ul li a:hover {
+    background-color: #ef4836;
+}
+.is-sticky #mobileMenu {
+    z-index: 9;
+}
+
+/*
+* Layout 2 MainMenu CSS
+*/
+.index-layout-2 .sa-menu {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    bottom: 0px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+.index-layout-2 .is-sticky .sa-menu {
+  bottom: auto;
+}
+.index-layout-2 #LD.collapse.navbar-collapse {
+    background: #fff;
+    text-align: center;
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.26);
+    padding: 0px 96px;
+}
+.index-layout-2 ul.nav.navbar-nav {
+    width: 100%;
+    margin: 0px;
+}
+.index-layout-2 ul.nav.navbar-nav li:first-child  {
+    margin-left: 0px;
+}
+.index-layout-2 ul.nav.navbar-nav li  {}
+.index-layout-2 ul.nav.navbar-nav li a {
+    color: #000;
+}
+.index-layout-2 ul.nav.navbar-nav li a:hover:after {
+    width: 50%;
+}
+
+.index-layout-2 ul.nav.navbar-nav li.active a:after {
+    width: 50%;
+}
+
+/*
+*  Light Theme CSS
+*/
+.light-theme .sa-menu ul.nav.navbar-nav > li a {
+    color: #ffff00;
+}
+.light-theme .sa-menu ul.nav.navbar-nav > li a:hover, .light-theme .sa-menu ul.nav.navbar-nav > li.active a {
+    color: #ffff00;
+}

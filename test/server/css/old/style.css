@@ -1,0 +1,2476 @@
+/*
+Автор: CrazyCafe
+Переделал: Linkin (#bags)
+*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #999999;
+    overflow-y: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin-top: 0px;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 15px;
+}
+p {
+    margin-bottom: 10px;
+}
+img {
+    max-width: 100%;
+}
+a:hover, a:focus {
+    text-decoration: none;
+    outline: none !important;
+}
+video {
+    width: 100%;
+}
+.videoPlayer-wrapper {
+    height: 100%;
+}
+.index-layout-2 .sa-video .videoPlayer-wrapper {
+    height: auto;
+}
+.sa-txt {
+    text-align: center;
+    margin-bottom: 35px;
+}
+.sa-txt h2 {
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    color: #333333;
+    font-weight: 700;
+    padding-bottom: 24px;
+}
+.sa-txt h2:before, .sa-txt h2:after {
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    background-color: #dddddd;
+    height: 2px;
+    content: "";
+}
+.sa-txt h2:before {
+    width: 80px;
+    margin-left: -40px;
+}
+.sa-txt h2:after {
+    width: 39px;
+    background-color: #ef4836;
+    margin-left: -19.5px;
+    border-left: 7px solid #fff;
+    border-right: 7px solid #fff;
+}
+.sa-txt p {
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 26px;
+}
+.pd {
+    padding: 95px 0px;
+}
+.pd.no-padding-bottom {
+    padding-bottom: 0px;
+}
+.pd.no-padding-top {
+    padding-top: 0px;
+}
+
+.displayTable {
+    display: table;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.displayTableCell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.wrapper header + .single-posts, .wrapper header + .blog-posts {
+    padding: 56px 0px 110px;
+}
+.wrapper header + .blog-posts {
+    padding-bottom: 0px;
+}
+
+.work-hover .work-details, .work-hover > a, .work-hover, .sa-menu ul.nav.navbar-nav > li a:after,
+.single-service, .single-service:before, .single-service:after, .single-accordion h5 a span,
+.single-member .member-img > .member-links, .single-price, .single-price a, .single-price a i, .single-post,
+.single-post .post-details > a, .single-post .post-img, .single-post .post-img a > img,
+.blog .pagination-list ul.pagination li a, .widget_recent_post ul.recent-posts li.single-recent-post p a,
+.widget_recent_post ul.recent-posts li.single-recent-post a, .widget > ul > li a, .single .post-meta ul li a,
+.share-post a, a.reply, .single-creative-member > .member-img,
+.single-creative-member > .member-details h4, .single-creative-member > .member-details .member-follow,
+.sa-text > a, .sa-text > a i, .single-post .post-details > a i, .hw-work-menu > ul > li > a > i.hw-icon,
+.purchase-text a i, .btn,  .btn i, .index-layout-2 .playing #videoPlayerPause, #homeSlider .slick-arrow,
+.single-accordion h5 a, /*.input-submit:before,*/ .sa-links a  {
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.bgfull {
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.bg-img1 {
+    background-image: url(../images/bg.jpg);
+}
+
+/*.btn {
+    display: inline-block;
+    padding: 15px 20px;
+    color: #898989;
+    font-weight: 700;
+    border-radius: 0px;
+    font-size: 16px;
+    margin-top: 30px;
+}
+.btn-1{
+    padding: 20px 48px;
+}
+.btn.ld {
+  padding: 15px 24px;
+  font-size: 15px;
+}
+.linkin.red {
+  background-color: #ff0000;
+  -webkit-box-shadow: 0px 3px 0px #caa616;
+  -moz-box-shadow: 0px 3px 0px #caa616;
+  box-shadow: 0px 3px 0px #caa616;
+}
+.btn-medium {
+    padding: 20px 36px;
+}
+.btn-small {}
+.btn-2 {
+    background-color: #ef4836;
+}
+.btn-2:hover {
+    background-color: #e04130;
+}
+.btn-greenish {
+    background-color: #ffffff;
+}
+.btn-greenish:hover {
+    background-color: #3681ef;
+}
+.btn-2:hover, .btn-greenish:hover {
+    color: #fff;
+}*/
+.home-video {
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+}
+.home-video .banner {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+}
+.banner-area {
+    position: relative;
+    overflow: hidden;
+}
+.banner-area:before, .home-video:before {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background: rgba(0, 20, 38, 0.8);
+}
+.home-two-video .banner {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.btn.scroll-down {
+    border: 1px solid #fff;
+    border-radius: 30px;
+    height: 50px;
+    padding: 0;
+    position: relative;
+    text-indent: -1e+9%;
+    width: 28px;
+    margin-top: 40px;
+    display: inline-block;
+}
+.btn.scroll-down:before {
+    position: absolute;
+    left: 50%;
+    top: 10px;
+    width: 2px;
+    height: 10px;
+    content: "";
+    background-color: #fff;
+    margin-left: -1px;
+}
+
+.light-theme .lh-menu {
+    height: 70px;
+}
+.light-theme .sa-menu {
+    background-color: #fff;
+    box-shadow: 0 0 6px 0 rgba(110, 96, 33, 0.26);
+}
+
+/*input:focus, textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 0 #fff;
+}*/
+div#preloader {
+    overflow: hidden;
+    background-color: #ecf0f1;
+    background-image: url(../images/preLoader.gif);
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/*
+* 2 Header CSS
+********-------*/
+
+.lh-menu {
+    height: 100px;
+    position: relative;
+    z-index: 2;
+}
+/*
+* 2.1 Top Header
+********-------*/
+.top-area {
+    background-color: #151e27;
+}
+.quick-contact, .quick-contact > p > a {
+    overflow: hidden;
+    color: #fff;
+    font-size: 12px;
+    line-height: 30px;
+}
+.quick-contact > p {
+    float: left;
+    margin-left: 15px;
+    margin-bottom: 0px;
+}
+.quick-contact > p > a {
+    margin-left: 10px;
+}
+.quick-contact > p:first-of-type {
+    margin-left: 0px;
+    border-right: 1px solid #02141d;
+    padding-right: 15px;
+}
+.social-links {
+    float: right;
+    overflow: hidden;
+    border-left: 1px solid #02141d;
+}
+.social-links > a {
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    float: left;
+    font-size: 12px;
+    line-height: 30px;
+    text-align: center;
+    border-right: 1px solid #02141d;
+}
+.social-links > a:hover {
+    background-color: #02141d;
+}
+
+/*
+* 2.2 Mainmenu Area & Logo CSS
+********-----------*/
+
+@media (min-width: 800px) {
+	.main-block {
+		padding: 50px;
+	}
+	
+	.main-block-sub {
+		border: 3px solid #eeeeee;
+		padding: 30px;
+	}
+	
+	.main-block-sub-login {
+		border: 3px solid #eeeeee;
+		padding: 30px;
+		width: 70%;
+		overflow: hidden;
+	}
+	
+	.main-block-sub-ucp {
+		border: 3px solid #eeeeee;
+		padding: 30px;
+		width: 80%;
+		overflow: hidden;
+	}
+	
+	.block-title {
+		font-size: 25pt;
+		margin-bottom: 40px;
+	}
+	
+	.billing-form {
+		width: 70%;
+	}
+}
+
+@media (max-width: 799px) {
+	.main-block {
+		padding: 0px;
+	}
+	
+	.main-block-sub {
+		border: 3px solid #eeeeee;
+		width: 95%;
+		padding: 20px;
+		overflow: hidden;
+		margin-bottom: 40px;
+	}
+	
+	.main-block-sub-login {
+		border: 3px solid #eeeeee;
+		width: 95%;
+		padding: 30px;
+		overflow: hidden;
+		margin-bottom: 40px;
+	}
+	
+	.main-block-sub-ucp {
+		border: 3px solid #eeeeee;
+		padding: 30px;
+		width: 95%;
+		overflow: hidden;
+		margin-bottom: 40px;
+	}
+	
+	.block-title {
+		font-size: 18pt;
+		margin-bottom: 20px;
+	}
+	
+	.billing-form {
+		width: 99%;
+	}
+}
+
+@media (min-width: 800px) {
+	.ucp-block-left {
+		float: left;
+		width: 150px;
+	}
+	
+	.ucp-menu-btn-exit {
+		margin-bottom: 15px;
+	}
+	
+	.ucp-menu-btn-sub-left, .ucp-menu-btn-sub-right {
+		margin-bottom: 3px;
+	}
+	
+	.ucp-menu-pages {
+		margin-top: 15px;
+	}
+	
+	.ucp-block-right {
+	   float: right;
+	   width: calc(100% - 160px);
+	}
+	
+	.ucp-main-left {
+		float: left;
+		width: calc(100% - 242px);
+	}
+	
+	.ucp-main-right {
+		float: right;
+		width: 242px;
+	}
+}
+
+@media (max-width: 799px) {
+	.ucp-block-left {
+		float: center;
+		width: 100%;
+	}
+	
+	.ucp-menu-btn-exit {
+		width: 100%;
+		margin-bottom: 5px;
+	}
+	
+	.ucp-menu-btn-sub-left {
+		float: left;
+		width: 49%;
+		margin-bottom: 3px;
+	}
+	
+	.ucp-menu-btn-sub-right {
+		float: right;
+		width: 49%;
+		margin-bottom: 3px;
+	}
+	
+	.ucp-menu-pages {
+		margin-top: 15px;
+	}
+	
+	.ucp-block-right {
+	   float: center;
+	   width: 100%;
+	}
+	
+	.ucp-main-left {
+		float: center;
+		width: 100%;
+	}
+	
+	.ucp-main-right {
+		float: center;
+		width: 100%;
+	}
+}
+
+.ucp-skin {
+	width: 100%;
+	/*height: 100%;*/
+}
+
+table {
+	border-left: 1px solid #dddddd;
+	border-right: 1px solid #dddddd;
+	border-bottom: 1px solid #dddddd;
+}
+
+.ucp-table td {
+	width: 10px;
+}
+
+a.navbar-brand {
+	height: 70px;
+	padding: 6px 15px;
+}
+
+.sa-menu {
+    background-color: #22313f;
+}
+
+.header  .navbar-toggle {
+    background-color: #ef4836;
+    margin-top: 16px;
+}
+.header .navbar-toggle span {
+    background-color: #fff;
+}
+
+.sa-menu ul.nav.navbar-nav {}
+.sa-menu ul.nav.navbar-nav > li {
+    margin-left: 44px;
+}
+.sa-menu ul.nav.navbar-nav > li a{
+    text-transform: uppercase;
+    color: #fff;
+    padding:0px 0px;
+    position: relative;
+    line-height: 70px;
+}
+.sa-menu ul.nav.navbar-nav > li a:focus {
+    background: none;
+}
+.sa-menu ul.nav.navbar-nav > li a:after {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0;
+    width: 0%;
+    height: 2px;
+    content: "";
+    background-color: #ef4836;
+}
+.sa-menu ul.nav.navbar-nav > li.active a:after{
+    opacity: 1;
+    width: 100%;
+}
+.sa-menu ul.nav.navbar-nav > li a:hover {
+    background: none;
+}
+.sa-menu ul.nav.navbar-nav > li a:hover:after {
+    width: 100%;
+    opacity: 1;
+}
+.mobile-menu-area {
+    display: none;
+}
+.mobile-menu-area.mean-container .mean-bar {
+  background: #22313f;
+}
+.mobile-menu-area.mean-container .mean-bar {
+    margin-bottom: 95px;
+}
+.mobile-menu-area.mean-container .mean-nav ul li a {
+    background-color: #22313f;
+    border-color: #293b4b;
+}
+.mobile-menu-area.mean-container .mean-nav ul li a:hover {
+    background-color: #ef4836;
+}
+.is-sticky #mobileMenu {
+    z-index: 9;
+}
+
+/*
+* Layout 2 MainMenu CSS
+*/
+.index-layout-2 .sa-menu {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    bottom: 0px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+.index-layout-2 .is-sticky .sa-menu {
+  bottom: auto;
+}
+.index-layout-2 #LD.collapse.navbar-collapse {
+    background: #fff;
+    text-align: center;
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.26);
+    padding: 0px 96px;
+}
+.index-layout-2 ul.nav.navbar-nav {
+    width: 100%;
+    margin: 0px;
+}
+.index-layout-2 ul.nav.navbar-nav li:first-child  {
+    margin-left: 0px;
+}
+.index-layout-2 ul.nav.navbar-nav li  {}
+.index-layout-2 ul.nav.navbar-nav li a {
+    color: #000;
+}
+.index-layout-2 ul.nav.navbar-nav li a:hover:after {
+    width: 50%;
+}
+
+.index-layout-2 ul.nav.navbar-nav li.active a:after {
+    width: 50%;
+}
+
+/*
+*  Light Theme CSS
+*/
+.light-theme .sa-menu ul.nav.navbar-nav > li a {
+    color: #ffff00;
+}
+.light-theme .sa-menu ul.nav.navbar-nav > li a:hover, .light-theme .sa-menu ul.nav.navbar-nav > li.active a {
+    color: #ffff00;
+}
+
+/*
+* 3. Welcome Area CSS
+********--------------*/
+header + #fullscreen-banner {
+    top: -100px;
+    position: relative;
+}
+header + #fullscreen-banner > .displayTable{
+    padding-top: 100px;
+}
+.sa-text {
+    font-size: 18px;
+    font-weight: 300;
+    color: #ffffff ;
+}
+.sa-text h1 span {
+    background-color: #ef4836;
+    display: inline-block;
+    padding: 25px;
+    margin-left: 25px;
+}
+.sa-text h1 span {
+    background-color: #ef4836;
+    display: inline-block;
+    padding: 25px;
+    margin-left: 25px;
+}
+.sa-text > a {
+	background-color: #efa536;
+    display: inline-block;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    margin-top: 30px;
+}
+/* HOME SLIDER CSS */
+header + #homeSliderArea {
+    top: -100px;
+    position: relative;
+}
+header + #homeSliderArea .displayTable{
+    padding-top: 100px;
+}
+header + #homeSliderArea + .np, header + .sa-text-area + .np  {
+    margin-top: -100px;
+}
+.slider-area, .slick-list, .slick-track, .slide {
+    height: 100%;
+}
+#homeSlider .slick-list {
+  width: 100%;
+}
+#homeSlider .sa-text {
+    text-align: left;
+}
+
+#homeSlider .slide {
+    -webkit-background-size: cover;
+    background-size: cover;
+    position: relative;
+}
+/* SLIDER TEXT TRANSITION, VERSION ONE */
+#homeSlider .slide .sa-text > * {
+    animation-name: fadeOut;
+    animation-duration: 1s;
+    color: #fff;
+}
+#homeSlider .slide.slick-active .sa-text > * {
+    animation-name: fadeInLeft;
+}
+#homeSlider .slide .sa-text h1 {
+    animation-delay:  0.1s;
+}
+#homeSlider .slide .sa-text p {
+    animation-delay:  0.3s;
+}
+#homeSlider .slide .sa-text a {
+    animation-delay:  0.5s;
+}
+
+/* SLIDER TEXT TRANSITION, VERSION TWO */
+.slider-two .slide .slide-text h1{
+    animation:fadeOutDown 1s both;
+}
+.slider-two .slide .slide-text p {
+    animation:fadeOutUp 1s both;
+}
+.slider-two .slide.slick-active .slide-text h1{
+    animation:fadeInUp 1s both;
+}
+.slider-two .slide.slick-active .slide-text p {
+    animation:fadeInDown 1s both;
+}
+.slider-two .slide .slide-text a{
+    animation:fadeOut 1s both;
+}
+.slider-two .slide.slick-active .slide-text a{
+    animation:fadeIn 1s both;
+}
+/* SLIDER NAVIGATION */
+#homeSlider .slick-arrow {
+    position: absolute;
+    top: calc(50% + 50px);
+    margin-top: -24px;
+    border: none;
+    z-index: 1;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    text-align: center;
+    display: inline-block;
+    background-color: #ef4836;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    opacity: 0;
+    font-family: 'FontAwesome'
+}
+#homeSlider .PrevArrow{
+    left: 0px;
+}
+#homeSlider .NextArrow {
+    right: 0px;
+}
+#homeSlider .NextArrow:before{content:'\f105';}
+
+#homeSlider .PrevArrow:before{content:'\f104';}
+
+#homeSlider:hover .slick-arrow {
+    opacity: 1;
+}
+
+
+/*
+* 4. Services CSS
+********--------------*/
+
+.single-service {
+    text-align: center;
+    color: #999999;
+    background-color: #fff;
+    position: relative;
+    padding: 40px 30px 20px;
+    font-weight: 300;
+}
+.single-service .icon {
+    font-size: 50px;
+    color: #999999;
+    margin-bottom: 20px;
+}
+.single-service h3, .single-service h3 a {
+    font-size: 20px;
+    color: #666666;
+    font-weight: 700;
+}
+.single-service:after, .single-service:before {
+    opacity: 0;
+    content: "";
+    position: absolute;
+    top: 0px;
+    background-color: #22313f;
+}
+.single-service:before {
+    left: 0px;
+    width: 0%;
+    height: 3px;
+}
+.single-service:after {
+    left: 50%;
+    width: 3px;
+    margin-left: -1.5px;
+    height: 0px;
+}
+.single-service:hover {
+    box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.19);
+}
+.single-service:hover .icon {
+    color: #ef4836;
+}
+.single-service:hover:before, .single-service:hover:after {
+    opacity: 1;
+}
+
+.single-service:hover:before {
+    width: 100%;
+}
+.single-service:hover:after {
+    height: 17px;
+}
+.list-items {
+    border-top: 1px solid #ddd;
+}
+.single-items {
+    float: left;
+    width: 33.3333%;
+    padding:100px 25px 90px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+.list-items div:nth-child(3n+3){
+    border-right: 0px;
+}
+
+.single-items > .icon {
+    float: left;
+    font-size: 60px;
+    width: 100px;
+    text-align: center;
+    margin-right: 20px;
+}
+.single-items > .details {
+    padding-left: 120px;
+    color: #999999;
+    line-height: 20px;
+}
+
+.single-items > .details h4 {
+    font-weight: 700;
+}
+.single-items > .details p {
+    font-weight: 300;
+}
+
+/*
+* 5. About Us CSS
+********--------------*/
+
+.info {
+	position: relative;
+	padding: 115px 0px 105px;
+}
+
+@media (min-width: 800px) {
+	.info:after {
+		position: absolute;
+		right: 0px;
+		top: 0px;
+		width: calc(60% - 10px);
+		height: 100%;
+		content: "";
+		background-color: #22313f;
+		z-index: -1;
+	}
+	
+	.info-img {
+		position: absolute;
+		left: 0px;
+		width: 40%;
+		height: 100%;
+		top: 0px;
+		background: url(../images/info.jpg) no-repeat scroll center center / cover;
+	}
+}
+
+@media (max-width: 799px) {
+	.info:after {
+		position: absolute;
+		right: 0px;
+		top: 0px;
+		width: 100%;
+		height: 100%;
+		content: "";
+		background-color: #22313f;
+		z-index: -1;
+	}
+	
+	.info-img {
+		display: none;
+	}
+}
+
+.sa-info-txt {
+	color: #fff;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 26px;
+}
+
+.sa-info-txt h2 {
+	text-transform: uppercase;
+	font-weight: 700;
+	margin-bottom: 35px;
+}
+
+/*
+* 6. How We Work CSS
+********--------------*/
+
+.hw-work-menu {}
+.hw-work-menu > ul {
+    list-style: none;
+    margin: 0px;
+}
+.hw-work-menu > ul > li {
+    box-sizing: border-box;
+    display: inline-block;
+    float: left;
+    padding: 0 40px;
+    text-align: center;
+    width: 25%;
+    position: relative;
+    border-bottom: 1px solid #ddd;
+}
+.hw-work-menu > ul > li:last-of-type {
+    margin-right: 0px;
+}
+.hw-work-menu > ul > li > a {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    color: #383838;
+    position: relative;
+    padding-bottom: 30px;
+    display: inline-block;
+}
+.hw-work-menu > ul > li > a > i.hw-icon {
+    background: #fff none repeat scroll 0 0;
+    border-radius: 50%;
+    display: block;
+    font-size: 34px;
+    height: 93px;
+    line-height: 93px;
+    text-align: center;
+    width: 93px;
+    margin: 0 auto 20px;
+    position: relative;
+    border: 1px solid #f0f0f0;
+}
+.hw-work-menu > ul > li.active > a > i.hw-icon {
+    background-color: #ef4836;
+    color: #fff;
+    box-shadow: 0 0 0 5px #fff inset, 0 0 7px 0px rgba(0, 0, 0, 0.14);
+    border: none;
+}
+.hw-work-menu > ul > li > a > i.hw-icon::before {
+    background-color: #f0f0f0;
+    content: "";
+    height: 5px;
+    position: absolute;
+    right: -250%;
+    top: 50%;
+    width: 280%;
+    z-index: -1;
+}
+.hw-work-menu > ul > li:last-of-type > a > i.hw-icon::before {
+    display: none;
+}
+.hw-work-menu > ul > li.active a:before, .hw-work-menu > ul > li.active a:after {
+    content: "";
+    position: absolute;
+    background: #22313f;
+    bottom: -1.5px;
+}
+.hw-work-menu > ul > li.active a:before{
+    left: 0px;
+    width: 100%;
+    height: 3px;
+}
+.hw-work-menu > ul > li.active a:after {
+    width: 3px;
+    height: 13px;
+    left: 50%;
+    margin-left: -1.5px;
+}
+.hw-work-content {
+    padding: 30px;
+    font-weight: 300;
+    color: #989898;
+}
+.single-hw-content {
+    display: none;
+    padding: 0px 60px;
+}
+.single-hw-content.active  {
+    display: block;
+}
+
+/*
+* 7. Purchase CSS
+********--------------*/
+
+.purchase-text {
+    margin-top: 60px;
+}
+.purchase-text h3 {
+    font-weight: 300;
+    line-height: 36px;
+    color: #383838;
+    padding-right: 60px;
+}
+.purchase-text a {
+    display: inline-block;
+    color: #fff;
+    background-color: #00b16a;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 20px 36px;
+    margin-top: 30px;
+}
+
+
+/*
+* 8. Special Area CSS
+********--------------*/
+
+.special-area {
+    position: relative;
+}
+.special-area:before {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: calc(60% - 10px);
+    height: 100%;
+    content: "";
+    background-color: #ef4836;
+}
+.special-img {
+    position: absolute;
+    width: 40%;
+    right: 0px;
+    height: 100%;
+    top: 0px;
+    background: url(../images/special-img.jpg) no-repeat scroll center center / cover;
+}
+.special-text {}
+
+.s-special {
+    overflow: hidden;
+    color: #fff;
+    margin-bottom: 56px;
+}
+.s-special:last-of-type {
+    margin-bottom: 0px;
+}
+.s-special .icon {
+    width: 68px;
+    height: 68px;
+    line-height: 68px;
+    text-align: center;
+    border: 1px solid #fff;
+    float: left;
+    font-size: 24px;
+    margin-top: 8px;
+}
+.s-special .s-details {
+    padding-left: 88px ;
+    font-weight: 300;
+    line-height: 24px;
+}
+.s-special .s-details h4 {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+
+/*
+* 9. Our Work CSS
+********--------------*/
+
+.single-work {
+    position: relative;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.work-hover {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.73);
+    opacity: 0;
+}
+.work-hover > a {
+    display: table;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    font-weight: 100;
+    font-size: 84px;
+    color: #fff;
+    line-height: 1.5;
+    font-family: 'Roboto', sans-serif;
+    transform: scale(0);
+}
+.work-hover > a span {
+    display: table-cell;
+    vertical-align: middle;
+}
+.work-hover .work-details {
+    background-color: #ef4836;
+    padding: 15px 0;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    bottom: -100%;
+    left: 0;
+}
+.work-hover .work-details a {
+    font-weight: 700;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
+.single-work:hover .work-hover {
+    opacity: 1;
+}
+.single-work:hover .work-details {
+    bottom: 0px;
+}
+.single-work:hover .work-hover > a  {
+    transform: scale(1)
+}
+
+.single-work:hover .work-hover > a:hover  {
+    cursor: url(../images/hover-plus.png), auto;
+}
+
+
+/*
+* 10. Video Area CSS
+********--------------*/
+
+
+.sa-video {
+    background: url(../images/video-bg.jpg) no-repeat scroll center center / cover;
+    padding: 150px 0px;
+    position: relative;
+    text-align: center;
+    color: #fff;
+    line-height: 32px;
+}
+
+.sa-video:before {
+    background: rgba(6, 24, 38, 0.90);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    content: "";
+    z-index: 1;
+}
+
+.sa-video * {
+    margin-bottom: 0px;
+    z-index: 1;
+}
+
+.sa-video a {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #ff0000;
+    font-size: 25px;
+    text-align: center;
+    line-height: 80px;
+    display: inline-block;
+    margin: 0px auto;
+}
+.sa-video h3 {
+    font-weight: 700;
+    line-height: 32px;
+}
+.sa-video h4 {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 32px;
+}
+
+header + section.welcome-sa-video#banner  {
+    margin-top: -100px;
+    top: 0px;
+}
+
+/*
+* 11. FAQ's Area CSS
+********--------------*/
+
+.sa-game {
+    position: relative;
+    min-height: 600px;
+}
+
+@media (min-width: 800px) {
+	.game-img {
+		background-color: rgba(0, 0, 0, 0);
+		background-image: url("../images/game.png");
+		background-origin: content-box;
+		background-position: 0 center;
+		background-repeat: no-repeat;
+		height: 100%;
+		left: 0;
+		padding: 50px 0;
+		position: absolute;
+		top: 0;
+		width: 50%;
+	}
+}
+
+@media (max-width: 799px) {
+	.game-img {
+		display: none;
+	}
+}
+
+
+.single-accordion {
+    margin-bottom: 20px;
+}
+.single-accordion:last-of-type {
+    margin-bottom: 0px;
+}
+.single-accordion h5 a {
+    display: block;
+    position: relative;
+    padding: 20px 45px 20px 20px;
+    background-color: #ef4836;
+    font-weight: 700;
+    color: #fff;
+}
+.single-accordion h5 a.collapsed {
+    background-color: #22313f;
+}
+.single-accordion h5 a span {
+    position: absolute;
+    right: 20px;
+    top: 0px;
+    font-weight: 300;
+    height: 100%;
+    font-size: 24px;
+    line-height: 230%;
+}
+.single-accordion h5 a.collapsed span.accor-close {
+    opacity: 0;
+}
+span.accor-open {
+    opacity: 0;
+}
+.single-accordion h5 a.collapsed span.accor-open {
+    opacity: 1;
+}
+
+.single-accordion h5 {
+    margin-bottom: 0px;
+}
+.single-accordion .accordion-content  {
+    border: 1px solid #ddd;
+}
+.single-accordion .accordion-content p {
+    padding: 20px 20px 10px;
+}
+
+/*
+* 12. Creative Member Area  CSS
+********-------------------*/
+
+.single-member {
+    text-align: center;
+    font-size: 12px;
+}
+.single-member .member-img {
+    position: relative;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.single-member .member-img > .member-links {
+    position: absolute;
+    left: 0px;
+    bottom: -100px;
+    background-color: #ef4836;
+    text-align: center;
+    width: 100%;
+    opacity: 0;
+}
+.single-member .member-img > .member-links a{
+    color: #fff;
+    display: inline-block;
+    padding: 15px 8px;
+    margin: 0px 3px;
+}
+.single-member > h4 {
+    margin-bottom: 0px;
+}
+.single-member > h4 a {
+    font-size: 20px;
+    font-weight: 400;
+    color: #333333;
+    line-height: 30px;
+    display: inline-block;
+}
+
+.single-member:hover .member-links {
+    opacity: 1;
+    bottom: 0px;
+}
+
+/*
+* 13. Fun Facts Area CSS
+********-------------------*/
+
+.fun-facts-area {
+    background: url(../images/fun-facts-bg-2.jpg) no-repeat scroll center center / cover;
+    position: relative;
+}
+.fun-facts-area:before {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background: rgba(6, 24, 38, 0.90);
+}
+
+.single-facts {
+    overflow: hidden;
+}
+.single-facts > .icon {
+    width: 73px;
+    height: 73px;
+    border-radius: 50%;
+    background-color: #fff;
+    text-align: center;
+    line-height: 73px;
+    font-size: 24px;
+    float: left;
+    margin-right: 15px;
+}
+.single-facts > h2 {
+    padding-left: 88px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 0px;
+    color: #fff;
+}
+.single-facts > h2 span {
+    font-size: 28px;
+    display: block;
+    margin-bottom: 6px;
+    margin-top: 9px;
+}
+
+
+/*
+* 14. Customer Says Area CSS
+********---------------------*/
+
+.client-content {
+    background-color: #fafafa;
+    border: 1px solid #f0f0f0;
+    padding:82px 20px 10px;
+    position: relative;
+    margin-bottom: 30px;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.client-content .comma-client {
+    color: #e7e7e7;
+    display: block;
+    font-family: "Montserrat",sans-serif;
+    font-size: 120px;
+    font-weight: 700;
+    height: 40px;
+    font-style: normal;
+    left: 50%;
+    top: 21px;
+    position: absolute;
+    line-height: 100px;
+    margin-left: -50px;
+    text-align: center;
+    width: 100px;
+}
+
+.author-details {
+    overflow: hidden;
+    padding: 0px 25%;
+}
+.author-details .author-img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    float: left;
+    overflow: hidden;
+    border: 6px solid #f0f0f0;
+    background-color: #f0f0f0;
+}
+.author-details .author-img img {
+    border-radius: 50%;
+    min-height: 100%;
+}
+.author-details h4 {
+    margin-top: 20px;
+    padding-left: 110px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #333;
+    text-align: left;
+}
+.author-details h4 span {
+    display: block;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 300;
+    margin-top: 8px;
+}
+.author-details h4 span a {
+    color: #333;
+}
+
+
+/*
+* 15. Pricing Table CSS
+********-------------------*/
+
+
+.our-pricing-area {
+    background-color: #f7f7f7;
+}
+
+.single-price {
+    background-color: #fff;
+    text-align: center;
+    border: 1px solid #e9e9e9;
+}
+
+.single-price > div.price-head {
+    border-bottom: 1px solid #e9e9e9;
+    padding: 30px;
+}
+
+.single-price > div.price-head h1 {
+    font-weight: 700;
+    font-size: 50px;
+    color: #ef4836;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+}
+.single-price > div.price-head h1 span {
+    font-size: 24px;
+    color: #333;
+    vertical-align: middle;
+    margin-left: 10px;
+    border-left: 1px solid #e9e9e9;
+    padding-left: 20px;
+}
+.single-price > div.price-content {
+    padding: 30px 50px;
+    text-align: left;
+}
+.single-price > div.price-content ul {
+    list-style: none;
+}
+.single-price > div.price-content ul li {
+    margin-bottom: 5px;
+    color: #666666;
+}
+.single-price > a {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #333;
+    display: inline-block;
+    margin-bottom: 24px;
+}
+
+.single-price:hover {
+    box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.11);
+}
+
+.single-price a:hover {
+    color: #ef4836;
+}
+
+
+/*
+* 16. Popular Post CSS
+********-------------------*/
+
+.single-post {}
+
+.single-post .post-img {
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+.single-post .post-details {
+    padding-bottom: 30px;
+}
+.single-post .post-details h4 a, h3.post-title, .single .post-comments h4, .single .leave-comments h4 {
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #333333;
+}
+.single-post .post-details h4 {
+    margin-bottom: 0px;
+}
+.single-post .post-details p {}
+.single-post .post-details > a {
+    margin-top: 20px;
+    display: inline-block;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #45484b;
+    visibility: hidden;
+    opacity: 0;
+}
+.single-post:hover .post-details > a:hover {
+    color: #ef4836;
+}
+.single-post:hover .post-details > a {
+    visibility: visible;
+    opacity: 1;
+}
+.single-post:hover .post-img a > img {
+    transform: scale(1.3) rotate(5deg);
+}
+
+/*
+* 17. Sponsors Area CSS
+********-------------------*/
+
+.sponsors-area {
+    background: url(../images/sponsors-bg.jpg) no-repeat scroll center center / cover;
+    position: relative;
+}
+.sponsors-area:before {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width:100%;
+    height: 100%;
+    background: rgba(6, 24, 38, 0.90);
+    content: "";
+}
+.owl-carousel .owl-item .slide {
+    text-align: center;
+}
+.owl-carousel .owl-item .slide img {
+    width: auto;
+    margin: 0 auto;
+}
+
+
+/*
+* 18. Get In Touch CSS
+********-------------------*/
+
+.get-address {}
+.s-address {
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+.s-address > span {
+    font-size: 50px;
+    float: left;
+    display: inline-block;
+    margin-right: 30px;
+    width: 70px;
+    text-align: center;
+}
+.s-address h4 {
+    padding-left: 100px;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #333;
+    margin-top: 8px;
+}
+.s-address h4 span {
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: none;
+    display: block;
+    line-height: 24px;
+    margin-top: 5px;
+}
+.s-address h4 span a {
+    color: #333
+}
+
+.contact-form {
+    text-align: center;
+}
+/*.contact-form input, .contact-form textarea {
+    width: 100%;
+    border: 1px solid #e9e9e9;
+    padding: 10px;
+    margin-bottom: 15px;
+    color: #b9b9b9;
+    background-color: #fafafa;
+}*/
+.contact-form textarea {
+    min-height: 150px
+}
+/*.contact-form input[type="submit"] {
+    width: auto;
+    border: none;
+    text-align: center;
+    background: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #00b16a;
+}*/
+
+/*.input-submit {
+    position: relative;
+    display: inline-block;
+    padding: 0px 10px;
+}
+
+.input-submit:before {
+    position: absolute;
+    content: "\f178";
+    font-family: "FontAwesome";
+    right: 0;
+    top: 11px;
+    color: #00b16a;
+}
+.input-submit:hover:before {
+    right: -10px;
+}*/
+p.record-data {
+    color: green;
+}
+
+/*
+* 19. Google Maps CSS
+********-------------------*/
+
+.google-maps-area {
+    height: 410px;
+    position: relative;
+}
+.google-maps-area #googleMap {
+    position: absolute;
+    left: -50%;
+    top: 0px;
+    width: 150%;
+    height: 100%;
+}
+/*
+* 20. Footer CSS
+********-------------------*/
+.sa-footer {
+    background-color: #050d13;
+    position: relative;
+    color: #fff;
+}
+#scrollTop {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #ef4836;
+    box-shadow: inset 0 0 0px 5px #fff;
+    left: 50%;
+    top: -35px;
+    margin-left: -35px;
+    color: #fff;
+    text-align: center;
+    line-height: 70px;
+    font-size: 36px;
+    cursor: pointer;
+}
+.footer a {
+    color: #ef4836;
+}
+.sa-links {
+    margin-right: -8px;
+    margin-top: 30px;
+}
+.sa-links a {
+    width: 33px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    display: inline-block;
+    color: #fff;
+    border: 1px solid #fff;
+    margin-right: 8px;
+}
+.sa-links a:hover {
+    background-color: #ef4836;
+}
+
+/*
+* 21. Blog Page CSS
+**** ------------- */
+
+.blog .single-post {
+    border-bottom: 1px solid #e6e6e6;
+    margin-bottom: 30px;
+}
+.blog .single-post .post-details > a {
+    visibility: visible;
+    opacity: 1;
+}
+
+.blog .pagination-list {
+    text-align: center;
+    margin-bottom: 70px;
+    margin-top: 15px;
+}
+.blog .pagination-list ul.pagination{
+    margin-left: -4px;
+}
+.blog .pagination-list ul.pagination li{
+    display: inline-block;
+    margin-left: 4px;
+}
+.blog .pagination-list ul.pagination li a {
+    display: block;
+    padding: 0px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid #ededed;
+    color: #cdcdcd;
+    border-radius: 0px;
+}
+.blog .pagination-list ul.pagination li a:hover {
+    background-color: #ef4836;
+    color: #dfdfdf;
+}
+
+/*
+* 22. Single Page CSS
+****----------------- */
+.single {
+    font-weight: 300;
+    color: #898989;
+}
+
+.single .post-meta {
+    margin-bottom: 40px;
+}
+.single .post-meta ul {
+    list-style: none;
+}
+.single .post-meta ul li {
+    display: inline-block;
+    margin-right: 35px;
+}
+.single .post-meta ul li a {
+    color: #898989;
+}
+.single .post-meta ul li a:hover {
+    color: #ef4836;
+}
+
+.single .post-content {
+    line-height: 30px;
+    font-size: 16px;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e8e8e8;
+    text-align: justify;
+}
+
+.single .post-content blockquote {
+    margin: 40px 0px;
+    border-left: 5px solid #ef4836;
+    padding-left: 34px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-right: 0px;
+}
+
+.share-post {
+    overflow: hidden;
+    margin-bottom: 40px;
+    font-size: 16px;
+}
+.share-post p {
+    float: left;
+    margin-right: 15px;
+}
+.share-post a {
+    font-size: 14px;
+    color: #141e26;
+    width: 30px;
+    display: inline-block;
+}
+.share-post a:hover {
+    color: #ef4836;
+}
+
+.single .post-comments, .single .leave-comments {
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.17);
+    padding:36px 25px;
+    margin-bottom: 40px;
+}
+.single .post-comments h4, .single .leave-comments h4 {
+    font-size: 16px;
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 30px;
+    margin-bottom: 25px;
+    display: block;
+}
+.single .post-comments ul.comment_list {
+    list-style: none;
+}
+.single .post-comments ul.comment_list li.single-comment {
+    margin-bottom: 22px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid #ececec;
+}
+.single .post-comments ul.comment_list li:last-of-type.single-comment {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    border-bottom: 0px solid #ececec;
+}
+.single .post-comments ul.comment_list li.single-comment .comment {
+    padding-left: 90px;
+    font-weight: 300;
+    line-height: 22px;
+}
+.single .post-comments ul.comment_list li.single-comment .comment a.reply {
+    font-weight: 700;
+    color: #141e26;
+}
+.single .post-comments ul.comment_list li.single-comment .comment a.reply:hover {
+    color: #ef4836;
+    text-decoration: underline;
+}
+.single .post-comments ul.comment_list li.single-comment .profile-pic {
+    float: left;
+    width: 70px;
+    height: 70px;
+    margin-right: 20px;
+}
+.single .post-comments ul.comment_list li.single-comment h4  {
+    border-bottom: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 24px;
+}
+.single .post-comments ul.comment_list li.single-comment h4 a {
+    color: #141e26;
+    text-transform: none;
+}
+.single .post-comments ul.comment_list li.single-comment h4 span {
+    display: block;
+    font-size: 12px;
+    font-weight: 300;
+    color: #a5a5a5;
+    text-transform: none;
+    margin-top: 10px;
+}
+
+.single .leave-comments {
+    font-size: 14px;
+}
+.single .leave-comments form {}
+.single .leave-comments form input, .single .leave-comments textarea {
+    width: 100%;
+    background-color: #f4f4f4;
+    color: #999999;
+    padding: 22px;
+    border: none;
+    margin-bottom: 18px;
+}
+.single .leave-comments form input[type="submit"] {
+    background-color: #ef4836;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+}
+
+
+/*
+* 22.1. Right Sidebar CSS
+****-------------------- */
+
+.widget {
+    padding:24px 20px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.17);
+    margin-bottom: 30px;
+}
+
+.widget > ul {
+    margin-bottom: 0px;
+    list-style: none;
+}
+.widget > ul > li {
+    margin-bottom: 20px;
+    display: block;
+}
+.widget > ul > li:last-of-type {
+    margin-bottom: 0px;
+}
+.widget > ul > li a {
+    color: #818181;
+    font-weight: 300;
+    display: block;
+}
+.widget > ul > li a:hover {
+    color: #ef4836;
+    text-decoration: underline;
+}
+
+.widget_search form {
+    overflow: hidden;
+    position: relative;
+}
+.widget_search input[type="text"], .widget_search input[type="submit"]{
+    border: none;
+    background: none;
+}
+.widget_search input[type="text"] {
+    float: left;
+    width: calc(100% - 20px);
+}
+.widget_search input[type="submit"]{
+    float: right;
+    text-indent: -9999px;
+    width: 20px;
+}
+.widget_search span.form-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 20px;
+    color: #333;
+    z-index: -1;
+}
+.widget > .widget-title {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 16px;
+    color: #050d13;
+    padding-bottom: 20px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #f2f2f2;
+}
+.widget_recent_post {}
+.widget_recent_post ul.recent-posts {
+    margin-bottom: 0px;
+    list-style: none;
+}
+.widget_recent_post ul.recent-posts li.single-recent-post {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f2f2f2;
+}
+.widget_recent_post ul.recent-posts li:last-of-type.single-recent-post {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    border-bottom: 0px solid #f2f2f2;
+}
+.widget_recent_post ul.recent-posts li.single-recent-post a {
+    text-transform: uppercase;
+    color: #050d13;
+    font-weight: 700;
+}
+.widget_recent_post ul.recent-posts li.single-recent-post p {
+    margin-bottom: 0px;
+}
+.widget_recent_post ul.recent-posts li.single-recent-post p a {
+    text-transform: none;
+    font-size: 12px;
+    font-weight: 300;
+    color: #a7a7a7;
+}
+.widget_recent_post ul.recent-posts li.single-recent-post p a:hover, .widget_recent_post ul.recent-posts li.single-recent-post a:hover {
+    color: #ef4836;
+    text-decoration: none;
+}
+.widget_recent_post ul.recent-posts li.single-recent-post div.recent-post-img {
+    margin-bottom: 20px;
+}
+.widget_recent_post ul.recent-posts li.single-recent-post div.recent-post-img img{
+    width: 100%;
+}
+
+.sort-btn {
+    font-size: 24px;
+    line-height: 2.3;
+    color: #898989;
+}
+.sort-btn:hover {
+    color: #787474;
+}
+.btn.prev-btn {
+    float: left;
+}
+.btn.next-btn {
+    float: right;
+}
+
+
+/* Index Layout 2 CSS */
+
+/*
+* Top Area CSS
+*/
+.header-two-area {
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    z-index: 3;
+}
+.header-two-area .top-area {
+    background: none;
+}
+header.header-two-area p.text-left, header.header-two-area p.text-right {
+  line-height: 101px;
+  margin-bottom: 0;
+}
+header.header-two-area p a {
+    color: #fff;
+}
+
+/*
+*  Slider CSS
+*/
+.index-layout-2 header + #homeSliderArea {
+    top: 0px;
+}
+.index-layout-2 #homeSlider .slick-arrow {
+    top: 50%;
+}
+.index-layout-2 header + #homeSliderArea .displayTable {
+    padding-top: 0px;
+}
+.index-layout-2 header + #fullscreen-banner {
+  margin-top: 0px;
+  top: 0px;
+  position: static;
+}
+.index-layout-2 #fullscreen-fullscreen-banner.homeControls {
+    margin-top: -21px;
+    top: 50%;
+}
+.index-layout-2 #homeSlider {
+    height: calc(100% - 35px);
+}
+.index-layout-2 #homeSlider .slide {
+    position: relative;
+}
+.index-layout-2 #homeSlider .slide:before {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 20, 38, 0.70);
+}
+
+.slide-text {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+}
+.slide-text h1 {
+    font-size: 70px;
+    font-weight: 800;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+}
+.slide-text h1 span {
+    color: #ef4836
+}
+a.learn-more {
+    display: inline-block;
+    padding: 21px 55px;
+    background-color: #00b16a;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    margin-top: 30px;
+    border-radius: 5px;
+}
+
+.index-layout-2 .banner-area {
+    height: calc(100% - 35px);
+    text-align: center;
+}
+.index-layout-2 .banner {
+    height: 100%;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+
+/*
+* Services CSS
+*/
+
+.index-layout-2 .single-service:hover {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+}
+.index-layout-2 .single-service:hover .icon {
+    color: #ef4836;
+}
+.index-layout-2 .single-service:hover:before, .index-layout-2 .single-service:hover:after {
+    opacity: 0;
+}
+
+
+/*
+* About CSS
+*/
+.index-layout-2 .info:after {
+    display: none;
+}
+
+.index-layout-2 .purchase-text {
+    margin-top: 150px;
+}
+.index-layout-2 .purchase-text blockquote {
+    float: left;
+    font-size: 16px;
+    font-weight: 400;
+    width: 75%;
+}
+
+.index-layout-2 .purchase-text a {
+    color: #fff;
+    font-size: 18px;
+    margin-top: 12px;
+    padding: 22px 50px;
+    border: none;
+    border-radius: 50px;
+}
+
+
+.about-us-content {
+  position: relative;
+}
+.about-us-skill {
+    position: absolute;
+    left: 8px;
+    bottom: -65px;
+    width: 100%;
+    margin: 0px -12px;
+}
+
+.chart-trigger {
+    float: left;
+    padding: 0px 20px;
+    box-sizing: border-box;;
+    width: 20%;
+}
+
+.about-skill {
+    position: relative;
+    line-height: 130px;
+    text-align: center;;
+}
+.about-skill p {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    line-height: 175px;
+    font-size: 12px;
+    font-weight: 300;
+    color: #333333;
+    margin-bottom: 0px;
+    z-index: 1;
+}
+.about-skill div.chart div {
+    font-size: 30px;
+    font-weight: 800;
+    color: #ef4836;
+    background-color: #fff;
+    border-radius: 50%;
+    background-clip: content-box;
+    padding: 10px;
+}
+
+/*
+* How We Work CSS
+*/
+.single-work-item {
+    background: #f0f0f0 none repeat scroll 0 0;
+    float: left;
+    font-weight: 300;
+    height: 100px;
+    margin-left: 181.6px;
+    color: #fff;
+    text-align: center;
+    transform-origin: center center 0;
+    transition: all 0.3s ease 0s;
+    width: 100px;
+    position: relative;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+.single-work-item .icon {
+    width: 90px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    font-size: 34px;
+    color: #383838;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+.single-work-item:hover .icon {
+  font-size: 18px;
+  height: 30px;
+  color: #fff;
+  line-height: 30px;
+}
+.single-work-item:hover {
+    transform: scale(2.5);
+    background-color: #ef5443;
+    box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.7);
+    -webkit-box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.7);
+    -moz-box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.7);
+    z-index: 1;
+}
+.single-work-details {
+    font-size: 7px;
+    line-height: 1.1;
+    padding: 5px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+}
+.single-work-details > h4 {
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    font-family: 'Roboto Slab', serif;
+}
+.single-work-details > p {
+  padding: 0 10px;
+  line-height: 1.4;
+}
+
+/*
+* Видео (Польностью удалять тут!)
+*/
+.index-layout-2 .sa-video {
+    padding: 0px;
+    position: relative;
+    overflow: hidden;
+    height: 600px;
+}
+.index-layout-2 .sa-video video{
+    width: 100%;
+}
+.index-layout-2 #videoPlayerPlay, .index-layout-2 #videoPlayerPause, .home-video span#videoPlayerPause, .home-video span#videoPlayerPlay  {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    line-height: 100px;
+    z-index: 1;
+    color: #ef4836;
+    border-radius: 50%;
+    font-size: 30px;
+    margin-left: -50px;
+    margin-top: -50px;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    cursor: pointer;
+}
+.index-layout-2 #videoPlayerPause {
+    left: 25px;
+    bottom: 25px;
+    top: auto;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+.index-layout-2 #videoPlayerPause, .home-video span#videoPlayerPause {
+    display: none;
+}
+.index-layout-2 .playing #videoPlayerPlay, .home-video .playing span#videoPlayerPlay{
+    display: none;
+}
+.index-layout-2 .playing #videoPlayerPause, .home-video .playing span#videoPlayerPause {
+    display: block;
+    opacity: 0.3;
+}
+.index-layout-2 .playing:hover #videoPlayerPause, .home-video .playing span#videoPlayerPause {
+    opacity: 1;
+}
+
+
+/*
+* Accordion Area CSS
+*/
+.index-layout-2 .single-accordion h5 a {
+    background-color: #fff;
+    border-color: #ddd;
+    border-style: solid;
+    border-width: 1px;
+    color: #000;
+}
+
+.index-layout-2 .accordion-img{
+    left: auto;
+    right: 0px;
+    background-image: url(../images/accordion-img-2.png);
+    background-position: right 0px;
+}
+.index-layout-2 .sa-game {
+    min-height: 650px;
+}
+
+/*
+* Our Work Area CSS
+*/
+.index-layout-2 .single-work {
+    width: 25%;
+    float: left;
+    margin-bottom: 5px;
+    padding: 0px 2.5px;
+}
+
+.index-layout-2 .single-work img {
+    width: 100%;
+}
+.index-layout-2 .single-work .work-hover {
+    left: 2.5px;
+    width: calc(100% - 5px);
+}
+.index-layout-2 .single-work .work-hover .work-details {
+    padding: 20px 0px;
+}
+
+/*
+* Creative Members CSS
+*/
+.creative-member-list {
+    padding-top: 100px;
+}
+.single-creative-member {
+    float: left;
+    width: 33.3333%;
+    position: relative;
+    text-align: center;
+    height: 400px;
+}
+.single-creative-member > .member-img {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 95%;
+    overflow: hidden;
+    top: 0px;
+}
+.single-creative-member:hover > .member-img {
+    top: -30px;
+}
+.single-creative-member > .member-details {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ececec;
+    overflow: hidden;
+}
+.single-creative-member > .member-details h4 {
+    font-weight: 700;
+    color: #333333;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+}
+.single-creative-member > .member-details h4 span {
+    display: block;
+    font-size: 12px;
+    color: #888888;
+    text-transform: none;
+    margin-top: 10px;
+    font-weight: 300;
+}
+.single-creative-member > .member-details > .member-follow {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    bottom: -100%;
+    padding-top: 14px;
+}
+.single-creative-member > .member-details > .member-follow h5{
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 18px;
+}
+.single-creative-member > .member-details > .member-follow ul.member-links {
+    overflow: hidden;
+    list-style: none;
+    border-right: 1px solid #f0f0f0;
+    display: inline-block;
+    display: inline-block;
+    margin-bottom: 0px;
+}
+.single-creative-member > .member-details > .member-follow ul.member-links li {
+    float: left;
+}
+.single-creative-member > .member-details > .member-follow ul.member-links li a {
+    display: inline-block;
+    width: 33px;
+    height: 33px;
+    line-height: 33px;
+    text-align: center;
+    border-left: 1px solid #f0f0f0;
+    border-top: 1px solid #f0f0f0;
+    color: #333333;
+}
+.single-creative-member > .member-details > .member-follow ul.member-links li a:hover {
+    background-color: #ef4836;
+    color: #fff;
+}
+.single-creative-member:hover > .member-details {}
+.single-creative-member:hover > .member-details h4{
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-50px)
+}
+.single-creative-member:hover > .member-details .member-follow {
+    bottom: 0px;
+}
+
+/*
+* HOME TWO VIDEO
+*/
+.index-layout-2.home-two-video .banner-area span#videoPlayerPlay, .index-layout-2.home-two-video .banner-area span#videoPlayerPause, .home-video span#videoPlayerPlay, .home-video span#videoPlayerPause {
+    top: auto;
+    bottom: 30px;
+    background: none;
+    color: #aebcc8;
+}
+.index-layout-2.home-two-video .banner-area span#videoPlayerPause, .home-video span#videoPlayerPause {
+    left: 50%;
+    margin-left: -50px;
+}
+/*
+* Кнопки в "Как начать играть"
+*/
+/*.btn-game {
+    background-color: #000000;
+}
+.btn-game:hover {
+    background-color: #3681ef;
+}
+.btn-2:hover, .btn-game:hover {
+    color: #fff;
+}*/

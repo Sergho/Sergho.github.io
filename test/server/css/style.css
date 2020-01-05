@@ -3,7 +3,7 @@
 	margin: 0;
 }
 .darkness{
-	width: 100%;
+	width: 100vw;
 	height: 100vh;
 	position: absolute;
 	top: 0;
@@ -33,7 +33,6 @@
 		width: 100%;
 		display: block;
 		background-color: #F6F6F9;
-		position: relative;
 	}
 
 	header{
