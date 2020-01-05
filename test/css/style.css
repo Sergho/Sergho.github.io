@@ -669,7 +669,7 @@
 		color: white;
 	}
 
-	#success{
+	#success, #error{
 		display: none;
 		opacity: 0;
 		position: absolute;
@@ -682,19 +682,19 @@
 		border-radius: 40px;
 		transition: .3s ease;
 	}
-	#success img{
+	#success img, #error img{
 		margin-top: 50px;
 		margin-left: 50%;
 		transform: translate(-50%, 0);
 	}
-	#success h1{
+	#success h1, #error h1{
 		font-size: 2em;
 		font-family: Proxima Nova Th;
 		color: #444b61;
 		text-align: center;
 		padding-top: 10px;
 	}
-	#success p{
+	#success p, #error p{
 		font-size: 1em;
 		font-family: Proxima Nova Lt;
 		width: 90%;
@@ -881,18 +881,18 @@
 		margin-top: 10px;
 	}
 
-	#success{
+	#success, #error{
 		width: 515px;
 		height: 350px;
 	}
-	#success img{
+	#success img, #error img{
 		margin-top: 50px;
 	}
-	#success h1{
+	#success h1, #error h1{
 		margin-top: 10px;
 		font-size: 28px;
 	}
-	#success p{
+	#success p, #error p{
 		margin-top: 20px;
 	}
 
@@ -1191,7 +1191,7 @@
 		padding-left: 15px;
 	}
 
-	#success{
+	#success, #error{
 		width: 703px;
 		height: 478px;
 	}
@@ -1199,20 +1199,24 @@
 		width: 150px;
 		margin-top: 80px;
 	}
-	#success h1{
+	#error img{
+		width: 200px;
+		margin-top: 80px;
+	}
+	#success h1, #error h1{
 		margin-top: 30px;
 		font-size: 28px;
 	}
-	#success p{
+	#success p, #error p{
 		margin-top: 20px;
 		font-size: 1.1em;
+		width: 60%;
 	}
 
 }
 
 @media screen and (min-width: 1440px){
 
-	
 	header{
 		margin-left: 50%;
 		transform: translate(-50%, 0);
