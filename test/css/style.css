@@ -761,6 +761,8 @@
 		list-style: none;
 		margin-right: 5px;
 		cursor: pointer;
+		transition: .3s ease;
+		border-bottom: 1px solid white;
 	}
 	#ucp-wrapper .text .stats .pages-nav li.active{
 		color: #2bb673;
@@ -839,6 +841,7 @@
 	}
 	#ucp-wrapper .text .stats .pages .payments-page .slide{
 		list-style: none;
+		transition: .3s ease;
 	}
 	#ucp-wrapper .text .stats .pages .payments-page .slide ul li{
 		font-family: Proxima Nova Rg;
@@ -860,6 +863,7 @@
 		bottom: 30px;
 		left: 130px;
 		cursor: pointer;
+		transition: .3s ease;
 	}
 	#ucp-wrapper .text .stats .pages .payments-page .prev.disabled{
 		opacity: 0.3;
@@ -874,6 +878,7 @@
 		bottom: 30px;
 		left: 170px;
 		cursor: pointer;
+		transition: .3s ease;
 	}
 	#ucp-wrapper .text .stats .pages .payments-page .next.disabled{
 		opacity: 0.3;
@@ -897,6 +902,7 @@
 	#ucp-wrapper .text .stats .pages .leaders-page .slide{
 		display: flex;
 		flex-wrap: wrap;
+		transition: .3s ease;
 	}
 	#ucp-wrapper .text .stats .pages .leaders-page .slide .h{
 		width: 100%;
@@ -943,6 +949,7 @@
 		bottom: 30px;
 		left: 130px;
 		cursor: pointer;
+		transition: .3s ease;
 	}
 	#ucp-wrapper .text .stats .pages .leaders-page .prev.disabled{
 		opacity: 0.3;
@@ -957,6 +964,7 @@
 		bottom: 30px;
 		left: 170px;
 		cursor: pointer;
+		transition: .3s ease;
 	}
 	#ucp-wrapper .text .stats .pages .leaders-page .next.disabled{
 		opacity: 0.3;

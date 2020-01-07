@@ -50,10 +50,10 @@
 				<div class="stats">
 					<h1>Статистика</h1>
 					<ul class="pages-nav">
-						<li class="">Главное</li>
-						<li class="">Имущество</li>
-						<li class="">Платежи</li>
-						<li class="active">Лидеры</li>
+						<li class="active" onclick="PageSwitch(this);">Главное</li>
+						<li class="" onclick="PageSwitch(this);">Имущество</li>
+						<li class="" onclick="PageSwitch(this);">Платежи</li>
+						<li class="" onclick="PageSwitch(this);">Лидеры</li>
 					</ul>
 					<ul class="pages">
 						<li class="page main-page current">
@@ -140,7 +140,7 @@
 							</div>
 							<div class="slider">
 								<ul class="slides">
-									<li class="slide">
+									<li class="slide" style="display: block; opacity: 1;">
 										<ul>
 											<li>1. Пополнение счёта 14.08.2019 (06:52) <span class="sum">+100 RUB</span></li>
 											<li>2. Пополнение счёта 12.08.2019 (15:26) <span class="sum">+250 RUB</span></li>
@@ -161,7 +161,7 @@
 											<li>17. Пополнение счёта 02.01.2018 (07:22) <span class="sum">+300 RUB</span></li>
 										</ul>
 									</li>
-									<li class="slide" style="display: none;">
+									<li class="slide" style="display: none; opacity: 0;">
 										<ul>
 											<li>18. Пополнение счёта 14.08.2019 (06:52) <span class="sum">+100 RUB</span></li>
 											<li>19. Пополнение счёта 12.08.2019 (15:26) <span class="sum">+250 RUB</span></li>
@@ -183,15 +183,109 @@
 										</ul>
 									</li>
 								</ul>
-								<div class="prev disabled"></div>
+								<div class="prev disabled" onclick="SliderPrev(this);"></div>
 								<p class="current">1</p>
-								<div class="next"></div>
+								<div class="next" onclick="SliderNext(this);"></div>
 							</div>
 						</li>
 						<li class="page leaders-page">
 							<div class="slider">
 								<ul class="slides">
-									<li class="slide">
+									<li class="slide" style="display: flex; opacity: 1;">
+										<div class="h">
+											<div class="nick">Nick_Name</div>
+											<div class="organization">Организация</div>
+											<div class="last-enter">Последний вход</div>
+										</div>
+										<ul>
+											<li>
+												<div class="nick online">Ruslan_Budagov</div>
+												<div class="organization">УМВД</div>
+												<div class="last-enter">21.08.2019</div>
+											</li>
+											<li>
+												<div class="nick online">Roman_Samarin</div>
+												<div class="organization">УМВД</div>
+												<div class="last-enter">21.08.2019</div>
+											</li>
+											<li>
+												<div class="nick online">Sergey_Snegirev</div>
+												<div class="organization">УМВД</div>
+												<div class="last-enter">21.08.2019</div>
+											</li>
+											<li>
+												<div class="nick online">Denis_Bilkov</div>
+												<div class="organization">УМВД</div>
+												<div class="last-enter">21.08.2019</div>
+											</li>
+											<li>
+												<div class="nick online">Sergey_Ivanov</div>
+												<div class="organization">УМВД</div>
+												<div class="last-enter">21.08.2019</div>
+											</li>
+											<li>
+												<div class="nick online">Jon_Town</div>
+												<div class="organization">Пра-во</div>
+												<div class="last-enter">21.08.2019</div>
+											</li>
+											<li>
+												<div class="nick">Maxim_Perfilev</div>
+												<div class="organization">Пра-во</div>
+												<div class="last-enter">21.08.2019</div>
+											</li>
+											<li>
+												<div class="nick online">Vadim_Roslin</div>
+												<div class="organization">ФСИН</div>
+												<div class="last-enter">21.08.2019</div>
+											</li>
+											<li>
+												<div class="nick">Gleb_Shapranov</div>
+												<div class="organization">Прокуратура</div>
+												<div class="last-enter">21.08.2019</div>
+											</li>
+											<li>
+												<div class="nick online">Sergey_Snegirev</div>
+												<div class="organization">УМВД</div>
+												<div class="last-enter">21.08.2019</div>
+											</li>
+											<li>
+												<div class="nick online">Denis_Bilkov</div>
+												<div class="organization">УМВД</div>
+												<div class="last-enter">21.08.2019</div>
+											</li>
+											<li>
+												<div class="nick online">Sergey_Ivanov</div>
+												<div class="organization">УМВД</div>
+												<div class="last-enter">21.08.2019</div>
+											</li>
+											<li>
+												<div class="nick online">Jon_Town</div>
+												<div class="organization">Пра-во</div>
+												<div class="last-enter">21.08.2019</div>
+											</li>
+											<li>
+												<div class="nick">Maxim_Perfilev</div>
+												<div class="organization">Пра-во</div>
+												<div class="last-enter">21.08.2019</div>
+											</li>
+											<li>
+												<div class="nick online">Vadim_Roslin</div>
+												<div class="organization">ФСИН</div>
+												<div class="last-enter">21.08.2019</div>
+											</li>
+											<li>
+												<div class="nick">Gleb_Shapranov</div>
+												<div class="organization">Прокуратура</div>
+												<div class="last-enter">21.08.2019</div>
+											</li>
+											<li>
+												<div class="nick online">Jon_Town</div>
+												<div class="organization">Пра-во</div>
+												<div class="last-enter">21.08.2019</div>
+											</li>
+										</ul>
+									</li>
+									<li class="slide" style="display: none; opacity: 0;">
 										<div class="h">
 											<div class="nick">Nick_Name</div>
 											<div class="organization">Организация</div>
@@ -286,9 +380,9 @@
 										</ul>
 									</li>
 								</ul>
-								<div class="prev disabled"></div>
+								<div class="prev disabled" onclick="SliderPrev(this);"></div>
 								<div class="current">1</div>
-								<div class="next"></div>
+								<div class="next" onclick="SliderNext(this);"></div>
 							</div>
 						</li>
 					</ul>
