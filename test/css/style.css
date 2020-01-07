@@ -36,8 +36,12 @@
 		position: relative;
 	}
 
-	header{
+	#main-wrapper header{
 		background-image: url(../img/main-background.jpg);
+		margin-bottom: 120px;
+	}
+
+	header{
 		width: 100%;
 		background-size: cover;
 		background-position: center center;
@@ -49,7 +53,6 @@
 		padding: 15px;
 		max-height: 990px;
 		max-width: 2048px;
-		margin-bottom: 120px;
 	}
 
 	header .logo{
@@ -705,6 +708,270 @@
 		text-align: center;
 	}
 
+	/* --------------------------- UCP ------------------------------ */
+
+	#ucp-wrapper{
+		width: 100%;
+		display: block;
+		background-color: #F6F6F9;
+		position: relative;
+	}
+	#ucp-wrapper header{
+		background-image: url(../img/UCP-background.png);
+		background-position: center bottom;
+		background-size: cover;
+		max-height: 1500px;
+	}
+	#ucp-wrapper header .dropdown-burger span{
+		background-color: #363c4d;
+	}
+	#ucp-wrapper .text{
+		width: 100%;
+		margin-top: 110px;
+	}
+	#ucp-wrapper .text h1{
+		color: #363c4d;
+		font-size: 2em;
+		font-family: Proxima Nova Th;
+	}
+	#ucp-wrapper .text .stats{
+		background-color: white;
+		border-radius: 20px;
+		width: 310px;
+		margin-left: 50%;
+		transform: translate(-50%, 0);
+		height: 455px;
+		margin-top: 65px;
+		box-sizing: border-box;
+		padding: 20px;
+		overflow: hidden;
+	}
+	#ucp-wrapper .text .stats h1{
+		font-size: 1.8em;
+		text-align: left;
+	}
+
+	#ucp-wrapper .text .stats .pages-nav{
+		display: flex;
+		margin-top: 20px;
+	}
+	#ucp-wrapper .text .stats .pages-nav li{
+		color: #aeaeae;
+		font-family: Proxima Nova Rg;
+		list-style: none;
+		margin-right: 5px;
+		cursor: pointer;
+	}
+	#ucp-wrapper .text .stats .pages-nav li.active{
+		color: #2bb673;
+		border-bottom: 1px solid #2bb673;
+	}
+	#ucp-wrapper .text .stats .pages .page{
+		display: none;
+	}
+	#ucp-wrapper .text .stats .pages .page.current{
+		display: block;
+		color: black;
+	}
+
+	/* UCP Main page */
+
+	#ucp-wrapper .text .stats .pages .main-page ul{
+		display: flex;
+		flex-wrap: wrap;
+		margin-top: 15px;
+		color: #444b61;
+		font-family: Proxima Nova Rg;
+	}
+	#ucp-wrapper .text .stats .pages .main-page ul h2{
+		font-size: 0.8em;
+		font-weight: 400;
+	}
+	#ucp-wrapper .text .stats .pages .main-page ul li{
+		font-size: 1em;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	/* UCP Property page */
+
+	#ucp-wrapper .text .stats .pages .property-page ul{
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+		color: #444b61;
+		font-family: Proxima Nova Rg;
+		margin-top: 25px;
+	}
+	#ucp-wrapper .text .stats .pages .property-page ul span{
+		display: block;
+		width: 100%;
+		text-align: left;
+		font-size: 0.8em;
+		margin-bottom: 5px;
+	}
+	#ucp-wrapper .text .stats .pages .property-page ul .empty{
+		font-size: 0.9em;
+	}
+
+	/* UCP Payments page */
+
+	#ucp-wrapper .text .stats .pages .payments-page .sort p{
+		display: flex;
+		flex-wrap: wrap;
+		color: #444b61;
+		font-family: Proxima Nova Rg;
+		font-size: 0.7em;
+		margin-bottom: 0;
+	}
+	#ucp-wrapper .text .stats .pages .payments-page .sort p span{
+		margin: 0 5px;
+	}
+	#ucp-wrapper .text .stats .pages .payments-page .sort p span:nth-child(1){
+		margin-left: 10px;
+	}
+	#ucp-wrapper .text .stats .pages .payments-page .sort p span:not(.enabled){
+		color: #a8a8a8;
+	}
+	#ucp-wrapper .text .stats .pages .payments-page .slider{
+		margin-top: 10px;
+	}
+	#ucp-wrapper .text .stats .pages .payments-page .slide{
+		list-style: none;
+	}
+	#ucp-wrapper .text .stats .pages .payments-page .slide ul li{
+		font-family: Proxima Nova Rg;
+		font-size: 0.7em;
+		text-align: left;
+		list-style: none;
+		margin-top: 2px;
+	}
+	#ucp-wrapper .text .stats .pages .payments-page .slide ul li .sum{
+		color: #2bb673;
+	}
+	#ucp-wrapper .text .stats .pages .payments-page .prev{
+		width: 5px;
+		height: 5px;
+		border-bottom: 2px solid #698cc8;
+		border-left: 2px solid #698cc8;
+		transform: rotate(45deg);
+		position: absolute;
+		bottom: 30px;
+		left: 130px;
+		cursor: pointer;
+	}
+	#ucp-wrapper .text .stats .pages .payments-page .prev.disabled{
+		opacity: 0.3;
+	}
+	#ucp-wrapper .text .stats .pages .payments-page .next{
+		width: 5px;
+		height: 5px;
+		border-bottom: 2px solid #698cc8;
+		border-right: 2px solid #698cc8;
+		transform: rotate(-45deg);
+		position: absolute;
+		bottom: 30px;
+		left: 170px;
+		cursor: pointer;
+	}
+	#ucp-wrapper .text .stats .pages .payments-page .next.disabled{
+		opacity: 0.3;
+	}
+	#ucp-wrapper .text .stats .pages .payments-page .current{
+		margin: 0;
+		position: absolute;
+		bottom: 23px;
+		left: 50%;
+		transform: translate(-50%, 0);
+		color: #698cc8;
+		font-family: Proxima Nova Rg;
+		font-size: 1em;
+	}
+
+	/* UCP Leaders page */
+
+	#ucp-wrapper .text .stats .pages .leaders-page .slider{
+		margin-top: 20px;
+	}
+	#ucp-wrapper .text .stats .pages .leaders-page .slide{
+		display: flex;
+		flex-wrap: wrap;
+	}
+	#ucp-wrapper .text .stats .pages .leaders-page .slide .h{
+		width: 100%;
+		display: flex;
+		font-family: "Proxima Nova Rg";
+		color: #444b61;
+		font-size: 0.7em;
+		margin-bottom: 5px;
+	}
+	#ucp-wrapper .text .stats .pages .leaders-page .slide .h .nick{
+		width: 100px;
+		text-align: left;
+	}
+	#ucp-wrapper .text .stats .pages .leaders-page .slide .h .organization{
+		width: 80px;
+		text-align: left;
+	}
+	#ucp-wrapper .text .stats .pages .leaders-page .slide ul li{
+		list-style: none;
+		display: flex;
+		font-family: "Proxima Nova Rg";
+		color: #444b61;
+		font-size: 0.7em;
+		justify-content: space-between;
+	}
+	#ucp-wrapper .text .stats .pages .leaders-page .slide ul li .nick{
+		width: 70px;
+		text-align: left;
+	}
+	#ucp-wrapper .text .stats .pages .leaders-page .slide ul li .nick.online{
+		color: #2bb673;
+	}
+	#ucp-wrapper .text .stats .pages .leaders-page .slide ul li .organization{
+		width: 140px;
+		text-align: center;
+	}
+	#ucp-wrapper .text .stats .pages .leaders-page .prev{
+		width: 5px;
+		height: 5px;
+		border-bottom: 2px solid #698cc8;
+		border-left: 2px solid #698cc8;
+		transform: rotate(45deg);
+		position: absolute;
+		bottom: 30px;
+		left: 130px;
+		cursor: pointer;
+	}
+	#ucp-wrapper .text .stats .pages .leaders-page .prev.disabled{
+		opacity: 0.3;
+	}
+	#ucp-wrapper .text .stats .pages .leaders-page .next{
+		width: 5px;
+		height: 5px;
+		border-bottom: 2px solid #698cc8;
+		border-right: 2px solid #698cc8;
+		transform: rotate(-45deg);
+		position: absolute;
+		bottom: 30px;
+		left: 170px;
+		cursor: pointer;
+	}
+	#ucp-wrapper .text .stats .pages .leaders-page .next.disabled{
+		opacity: 0.3;
+	}
+	#ucp-wrapper .text .stats .pages .leaders-page .current{
+		margin: 0;
+		position: absolute;
+		bottom: 23px;
+		left: 50%;
+		transform: translate(-50%, 0);
+		color: #698cc8;
+		font-family: Proxima Nova Rg;
+		font-size: 1em;
+	}
+
 }
 
 @media screen and (min-width: 425px){
@@ -762,6 +1029,103 @@
 	#success p{
 		width: 75%;
 		margin-top: 30px;
+	}
+
+	/* --------------------------- UCP ------------------------------ */
+
+	#ucp-wrapper .text .stats{
+		width: 400px;
+		height: 550px;
+		padding: 30px;
+	}
+
+	#ucp-wrapper .text .stats .pages-nav li{
+		margin-right: 20px;
+	}
+
+	/* UCP Main page */
+
+	#ucp-wrapper .text .stats .pages .main-page ul{
+		margin-top: 20px;
+	}
+	#ucp-wrapper .text .stats .pages .main-page ul h2{
+		font-size: 0.9em;
+		margin-bottom: 5px;
+	}
+	#ucp-wrapper .text .stats .pages .main-page ul li{
+		font-size: 1.1em;
+	}
+
+	/* UCP Property page */
+
+	#ucp-wrapper .text .stats .pages .property-page ul{
+		margin-top: 35px;
+	}
+	#ucp-wrapper .text .stats .pages .property-page ul span{
+		font-size: 0.9em;
+	}
+	#ucp-wrapper .text .stats .pages .property-page ul .empty{
+		font-size: 1.1em;
+	}
+
+	/* UCP Payments page */
+
+	#ucp-wrapper .text .stats .pages .payments-page .sort p{
+		font-size: 0.9em;
+	}
+	#ucp-wrapper .text .stats .pages .payments-page .slider{
+		margin-top: 15px;
+	}
+	#ucp-wrapper .text .stats .pages .payments-page .slide ul li{
+		font-size: 0.9em;
+		margin-top: 3px;
+	}
+	#ucp-wrapper .text .stats .pages .payments-page .prev{
+		width: 7px;
+		height: 7px;
+		left: 170px;
+	}
+	#ucp-wrapper .text .stats .pages .payments-page .next{
+		width: 7px;
+		height: 7px;
+		left: 220px;
+	}
+	#ucp-wrapper .text .stats .pages .payments-page .current{
+		font-size: 1.2em;
+	}
+
+	/* UCP Leaders page */
+
+	#ucp-wrapper .text .stats .pages .leaders-page .slide .h{
+		font-size: 0.9em;
+	}
+	#ucp-wrapper .text .stats .pages .leaders-page .slide .h .nick{
+		width: 130px;
+	}
+	#ucp-wrapper .text .stats .pages .leaders-page .slide .h .organization{
+		width: 100px;
+	}
+	#ucp-wrapper .text .stats .pages .leaders-page .slide ul li{
+		font-size: 1em;
+	}
+	#ucp-wrapper .text .stats .pages .leaders-page .slide ul li .nick{
+		width: 100px;
+	}
+	#ucp-wrapper .text .stats .pages .leaders-page .slide ul li .organization{
+		width: 160px;
+	}
+	#ucp-wrapper .text .stats .pages .leaders-page .prev{
+		width: 7px;
+		height: 7px;
+		left: 170px;
+	}
+	#ucp-wrapper .text .stats .pages .leaders-page .next{
+		width: 7px;
+		height: 7px;
+		left: 220px;
+	}
+	#ucp-wrapper .text .stats .pages .leaders-page .current{
+		font-size: 1.2em;
 	}
 
 }
@@ -894,6 +1258,52 @@
 	}
 	#success p, #error p{
 		margin-top: 20px;
+	}
+
+	/* --------------------------- UCP ------------------------------ */
+
+	#ucp-wrapper .text .stats{
+		width: 500px;
+		height: 600px;
+		padding: 40px;
+	}
+
+	#ucp-wrapper .text .stats .pages-nav li{
+		margin-right: 30px;
+	}
+
+	/* UCP Payments page */
+
+	#ucp-wrapper .text .stats .pages .payments-page .slide ul li{
+		font-size: 1em;
+		margin-top: 2px;
+	}
+	#ucp-wrapper .text .stats .pages .payments-page .prev{
+		left: 220px;
+	}
+	#ucp-wrapper .text .stats .pages .payments-page .next{
+		left: 270px;
+	}
+
+	/* UCP Leaders page */
+
+	#ucp-wrapper .text .stats .pages .leaders-page .slide .h .nick{
+		width: 170px;
+	}
+	#ucp-wrapper .text .stats .pages .leaders-page .slide .h .organization{
+		width: 130px;
+	}
+	#ucp-wrapper .text .stats .pages .leaders-page .slide ul li .nick{
+		width: 110px;
+	}
+	#ucp-wrapper .text .stats .pages .leaders-page .slide ul li .organization{
+		width: 220px;
+	}
+	#ucp-wrapper .text .stats .pages .leaders-page .prev{
+		left: 220px;
+	}
+	#ucp-wrapper .text .stats .pages .leaders-page .next{
+		left: 270px;
 	}
 
 }
@@ -1212,6 +1622,8 @@
 		font-size: 1.1em;
 		width: 60%;
 	}
+
+	/* --------------------------- UCP ------------------------------ */
 
 }
 

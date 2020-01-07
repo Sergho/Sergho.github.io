@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../fonts/fonts.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<title>UCP Page - Green Tech</title>
+</head>
+<body>
+	<div id="ucp-wrapper">
+		<div class="darkness" onclick="Auth(); DropdownToggle(this);"></div>
+		<header>
+			<div class="logo">
+				<a href="main.html">
+					<img src="../img/logo.png" alt="logotype">
+				</a>
+			</div>
+			<div class="nav">
+				<div class="dropdown">
+					<div class="dropdown-burger" onclick="DropdownToggle(this);">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+					<ul class="dropdown-menu">
+						<li class="dropdown-item"><a href="main.html">Главная</a></li>
+						<li class="dropdown-item"><a href="#">Ставки BoxBet</a></li>
+						<li class="dropdown-item"><a href="donate.html">Донат</a></li>
+						<li class="dropdown-item"><a href="#">GreenTech FM</a></li>
+						<li class="dropdown-item"><a href="#">Форум</a></li>
+						<li class="dropdown-item lc"><a href="#" onclick="DropdownToggle(this); setTimeout(() => {Auth();}, 550);">Личный кабинет</a></li>
+					</ul>
+				</div>
+				<div class="navbar">
+					<ul class="navbar-menu">
+						<li class="navbar-item"><a href="main.html">Главная</a></li>
+						<li class="navbar-item"><a href="#">Ставки BoxBet</a></li>
+						<li class="navbar-item"><a href="donate.html">Донат</a></li>
+						<li class="navbar-item"><a href="#">GreenTech FM</a></li>
+						<li class="navbar-item"><a href="#">Форум</a></li>
+					</ul>
+					<div class="navbar-personal">
+						<a href="#" class="lc" onclick="Auth();">Личный кабинет</a>
+					</div>
+				</div>
+			</div>
+			<div class="text">
+				<h1>Личный кабинет Igor_Zholobov</h1>
+				<div class="stats">
+					<h1>Статистика</h1>
+					<ul class="pages-nav">
+						<li class="">Главное</li>
+						<li class="">Имущество</li>
+						<li class="">Платежи</li>
+						<li class="active">Лидеры</li>
+					</ul>
+					<ul class="pages">
+						<li class="page main-page current">
+							<ul class="ooc">
+								<h2>OOC Информация</h2>
+								<li>
+									<div class="param">Сервер:</div>
+									<div class="value">GreenTech RolePlay #1</div>
+								</li>
+								<li>
+									<div class="param">Номер аккаунта:</div>
+									<div class="value">#140811</div>
+								</li>
+								<li>
+									<div class="param">Nick_Name:</div>
+									<div class="value">Igor_Zholobov</div>
+								</li>
+								<li>
+									<div class="param">Email:</div>
+									<div class="value">email@gmail.com</div>
+								</li>
+								<li>
+									<div class="param">Уровень:</div>
+									<div class="value">1</div>
+								</li>
+								<li>
+									<div class="param">Донат-очки:</div>
+									<div class="value">0</div>
+								</li>
+								<li>
+									<div class="param">Место появления:</div>
+									<div class="value">#2</div>
+								</li>
+							</ul>
+							<ul class="ic">
+								<h2>IC Информация</h2>
+								<li>
+									<div class="param">Пол:</div>
+									<div class="value">Мужский</div>
+								</li>
+								<li>
+									<div class="param">Номер телефона:</div>
+									<div class="value">-</div>
+								</li>
+								<li>
+									<div class="param">Баланс на телефоне:</div>
+									<div class="value">-</div>
+								</li>
+								<li>
+									<div class="param">Деньги (наличные):</div>
+									<div class="value">5000 RUB</div>
+								</li>
+								<li>
+									<div class="param">Деньги (в банке):</div>
+									<div class="value">0 RUB</div>
+								</li>
+								<li>
+									<div class="param">Организация:</div>
+									<div class="value">-</div>
+								</li>
+								<li>
+									<div class="param">Звание:</div>
+									<div class="value">-</div>
+								</li>
+							</ul>
+						</li>
+						<li class="page property-page">
+							<ul class="houses">
+								<span>Список домов</span>
+								<div class="empty">Дома отсутствуют</div>
+							</ul>
+							<ul class="businesses">
+								<span>Список бизнесов</span>
+								<div class="empty">Бизнесы отсутствуют</div>
+							</ul>
+							<ul class="cars">
+								<span>Список автомобилей</span>
+								<div class="empty">Автомобили отсутствуют</div>
+							</ul>
+						</li>
+						<li class="page payments-page">
+							<div class="sort">
+								<p>Сортировать:<span class="enabled">Сначала новые</span>/<span class="">Сначала старые</span></p>
+							</div>
+							<div class="slider">
+								<ul class="slides">
+									<li class="slide">
+										<ul>
+											<li>1. Пополнение счёта 14.08.2019 (06:52) <span class="sum">+100 RUB</span></li>
+											<li>2. Пополнение счёта 12.08.2019 (15:26) <span class="sum">+250 RUB</span></li>
+											<li>3. Пополнение счёта 10.08.2019 (11:41)	<span class="sum">+50 RUB</span></li>
+											<li>4. Пополнение счёта 02.08.2019 (17:15) <span class="sum">+300 RUB</span></li>
+											<li>5. Пополнение счёта 29.07.2019 (09:07) <span class="sum">+770 RUB</span></li>
+											<li>6. Пополнение счёта 13.07.2019 (12:36) <span class="sum">+100 RUB</span></li>
+											<li>7. Пополнение счёта 15.03.2018 (02:11) <span class="sum">+50 RUB</span></li>
+											<li>8. Пополнение счёта 12.03.2018 (15:26) <span class="sum">+260 RUB</span></li>
+											<li>9. Пополнение счёта 10.03.2018 (11:41)	<span class="sum">+640 RUB</span></li>
+											<li>10. Пополнение счёта 02.03.2018 (12:18) <span class="sum">+320 RUB</span></li>
+											<li>11. Пополнение счёта 29.02.2018 (09:52) <span class="sum">+790 RUB</span></li>
+											<li>12. Пополнение счёта 13.02.2018 (12:59) <span class="sum">+20 RUB</span></li>
+											<li>13. Пополнение счёта 15.02.2018 (06:31) <span class="sum">+60 RUB</span></li>
+											<li>14. Пополнение счёта 12.01.2018 (15:26) <span class="sum">+350 RUB</span></li>
+											<li>15. Пополнение счёта 10.01.2018 (01:51) <span class="sum">+50 RUB</span></li>
+											<li>16. Пополнение счёта 02.01.2018 (07:25) <span class="sum">+300 RUB</span></li>
+											<li>17. Пополнение счёта 02.01.2018 (07:22) <span class="sum">+300 RUB</span></li>
+										</ul>
+									</li>
+									<li class="slide" style="display: none;">
+										<ul>
+											<li>18. Пополнение счёта 14.08.2019 (06:52) <span class="sum">+100 RUB</span></li>
+											<li>19. Пополнение счёта 12.08.2019 (15:26) <span class="sum">+250 RUB</span></li>
+											<li>20. Пополнение счёта 10.08.2019 (11:41)	<span class="sum">+50 RUB</span></li>
+											<li>21. Пополнение счёта 02.08.2019 (17:15) <span class="sum">+300 RUB</span></li>
+											<li>22. Пополнение счёта 29.07.2019 (09:07) <span class="sum">+770 RUB</span></li>
+											<li>23. Пополнение счёта 13.07.2019 (12:36) <span class="sum">+100 RUB</span></li>
+											<li>24. Пополнение счёта 15.03.2018 (02:11) <span class="sum">+50 RUB</span></li>
+											<li>25. Пополнение счёта 12.03.2018 (15:26) <span class="sum">+260 RUB</span></li>
+											<li>26. Пополнение счёта 10.03.2018 (11:41)	<span class="sum">+640 RUB</span></li>
+											<li>27. Пополнение счёта 02.03.2018 (12:18) <span class="sum">+320 RUB</span></li>
+											<li>28. Пополнение счёта 29.02.2018 (09:52) <span class="sum">+790 RUB</span></li>
+											<li>29. Пополнение счёта 13.02.2018 (12:59) <span class="sum">+20 RUB</span></li>
+											<li>30. Пополнение счёта 15.02.2018 (06:31) <span class="sum">+60 RUB</span></li>
+											<li>31. Пополнение счёта 12.01.2018 (15:26) <span class="sum">+350 RUB</span></li>
+											<li>32. Пополнение счёта 10.01.2018 (01:51) <span class="sum">+50 RUB</span></li>
+											<li>33. Пополнение счёта 02.01.2018 (07:25) <span class="sum">+300 RUB</span></li>
+											<li>34. Пополнение счёта 02.01.2018 (07:22) <span class="sum">+300 RUB</span></li>
+										</ul>
+									</li>
+								</ul>
+								<div class="prev disabled"></div>
+								<p class="current">1</p>
+								<div class="next"></div>
+							</div>
+						</li>
+						<li class="page leaders-page">
+							<div class="slider">
+								<ul class="slides">
+									<li class="slide">
+										<div class="h">
+											<div class="nick">Nick_Name</div>
+											<div class="organization">Организация</div>
+											<div class="last-enter">Последний вход</div>
+										</div>
+										<ul>
+											<li>
+												<div class="nick online">Ruslan_Budagov</div>
+												<div class="organization">УМВД</div>
+												<div class="last-enter">21.08.2019</div>
+											</li>
+											<li>
+												<div class="nick online">Roman_Samarin</div>
+												<div class="organization">УМВД</div>
+												<div class="last-enter">21.08.2019</div>
+											</li>
+											<li>
+												<div class="nick online">Sergey_Snegirev</div>
+												<div class="organization">УМВД</div>
+												<div class="last-enter">21.08.2019</div>
+											</li>
+											<li>
+												<div class="nick online">Denis_Bilkov</div>
+												<div class="organization">УМВД</div>
+												<div class="last-enter">21.08.2019</div>
+											</li>
+											<li>
+												<div class="nick online">Sergey_Ivanov</div>
+												<div class="organization">УМВД</div>
+												<div class="last-enter">21.08.2019</div>
+											</li>
+											<li>
+												<div class="nick online">Jon_Town</div>
+												<div class="organization">Пра-во</div>
+												<div class="last-enter">21.08.2019</div>
+											</li>
+											<li>
+												<div class="nick">Maxim_Perfilev</div>
+												<div class="organization">Пра-во</div>
+												<div class="last-enter">21.08.2019</div>
+											</li>
+											<li>
+												<div class="nick online">Vadim_Roslin</div>
+												<div class="organization">ФСИН</div>
+												<div class="last-enter">21.08.2019</div>
+											</li>
+											<li>
+												<div class="nick">Gleb_Shapranov</div>
+												<div class="organization">Прокуратура</div>
+												<div class="last-enter">21.08.2019</div>
+											</li>
+											<li>
+												<div class="nick online">Sergey_Snegirev</div>
+												<div class="organization">УМВД</div>
+												<div class="last-enter">21.08.2019</div>
+											</li>
+											<li>
+												<div class="nick online">Denis_Bilkov</div>
+												<div class="organization">УМВД</div>
+												<div class="last-enter">21.08.2019</div>
+											</li>
+											<li>
+												<div class="nick online">Sergey_Ivanov</div>
+												<div class="organization">УМВД</div>
+												<div class="last-enter">21.08.2019</div>
+											</li>
+											<li>
+												<div class="nick online">Jon_Town</div>
+												<div class="organization">Пра-во</div>
+												<div class="last-enter">21.08.2019</div>
+											</li>
+											<li>
+												<div class="nick">Maxim_Perfilev</div>
+												<div class="organization">Пра-во</div>
+												<div class="last-enter">21.08.2019</div>
+											</li>
+											<li>
+												<div class="nick online">Vadim_Roslin</div>
+												<div class="organization">ФСИН</div>
+												<div class="last-enter">21.08.2019</div>
+											</li>
+											<li>
+												<div class="nick">Gleb_Shapranov</div>
+												<div class="organization">Прокуратура</div>
+												<div class="last-enter">21.08.2019</div>
+											</li>
+											<li>
+												<div class="nick online">Jon_Town</div>
+												<div class="organization">Пра-во</div>
+												<div class="last-enter">21.08.2019</div>
+											</li>
+										</ul>
+									</li>
+								</ul>
+								<div class="prev disabled"></div>
+								<div class="current">1</div>
+								<div class="next"></div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="skin">
+					<h1>Скин (мод-пак)</h1>
+					<p>22id</p>
+					<div class="slider">
+						<div class="back"></div>
+						<ul class="slides">
+							<li class="slide"></li>
+							<li class="slide"></li>
+							<li class="slide"></li>
+						</ul>
+						<div class="forward"></div>
+					</div>
+				</div>
+				<div class="help">
+					<a href="#">Сменить пароль</a>
+					<a href="#">Сменить Email</a>
+					<a href="#">Выйти</a>
+				</div>
+			</div>
+		</header>
+		<footer>
+			<div class="top">
+				<div class="socials">
+					<div class="image">
+						<a href="https://vk.com/greentech_rp" class="blur"><img src="../img/vk_blue.png" alt="VK"></a>
+						<a href="https://vk.com/greentech_rp" class="hover"><img src="../img/vk.png" alt="VK"></a>
+					</div>
+					<div class="image">
+						<a href="https://vk.com/away.php?to=https%3A%2F%2Fwww.youtube.com%2Fchannel%2FUC3Qk5CUeWmucl-HCdsy612Q&cc_key=" class="blur"><img src="../img/youtube_blue.png" alt="YOUTUBE"></a>
+						<a href="https://vk.com/away.php?to=https%3A%2F%2Fwww.youtube.com%2Fchannel%2FUC3Qk5CUeWmucl-HCdsy612Q&cc_key=" class="hover"><img src="../img/youtube.png" alt="YOUTUBE"></a>
+					</div>
+				</div>
+				<div class="scroll-top">
+					<span class="chevron" onclick="ScrollTop()"></span>
+				</div>
+			</div>
+			<div class="bottom">
+				<h1>GreenTech RolePlay © 2012-2019</h1>
+				<span>Made by Kipper Studio</span>
+			</div>
+		</footer>
+		<div id="auth">
+			<div class="exit" onclick="Auth();">
+				<span></span>
+				<span></span>
+			</div>
+			<h1>Авторизация</h1>
+			<p class="error">Ошибка! Логин или пароль введён неверно</p>
+			<form>
+				<input type="text" placeholder="Ник" oninput="CheckInput(this);">
+				<input type="password" placeholder="Пароль" oninput="CheckInput(this);">
+				<img src="../img/eye.png" alt="show" class="show" onclick="ShowPassword(this);">
+				<a href="#">Забыли пароль?</a>
+				<button type="submit">Войти</button>
+			</form>
+		</div>
+		<div id="success">
+			<div class="exit">
+				<span></span>
+				<span></span>
+			</div>
+			<img src="../img/success.png" alt="success">
+			<h1>Всё прошло успешно!</h1>
+			<p>Структура политической науки, как бы это ни казалось парадоксальным, представляет собой гарант. Мажоритарная избирательная система противоречива</p>
+		</div>
+		<div id="error">
+			<div class="exit">
+				<span></span>
+				<span></span>
+			</div>
+			<img src="../img/error.png" alt="success">
+			<h1>Ошибка!</h1>
+			<p>Гений неоднозначен. Гипотеза, как бы это ни казалось парадоксальным, верифицирует гений. Оферта создает современный дедуктивный метод</p>
+		</div>
+	</div>
+
+	<script src="../js/jquery.js"></script>
+	<script src="../js/script.js"></script>
+</body>
+</html>
