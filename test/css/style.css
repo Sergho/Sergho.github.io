@@ -64,7 +64,7 @@
 	header .logo a{
 		display: block;
 		position: absolute;
-		left: 50%;
+		left: 40%;
 		transform: translate(-50%, 0);
 		height: 100%;
 	}
@@ -757,16 +757,20 @@
 	}
 	#ucp-wrapper .text .stats .pages-nav li{
 		color: #aeaeae;
-		font-family: Proxima Nova Rg;
+		font-family: Proxima Nova Lt;
+		font-weight: 300;
 		list-style: none;
 		margin-right: 5px;
 		cursor: pointer;
 		transition: .3s ease;
 		border-bottom: 1px solid white;
+		font-size: 15px;
+		line-height: 20px;
 	}
 	#ucp-wrapper .text .stats .pages-nav li.active{
 		color: #2bb673;
 		border-bottom: 1px solid #2bb673;
+		font-size: 20px;
 	}
 	#ucp-wrapper .text .stats .pages .page{
 		display: none;
@@ -786,11 +790,11 @@
 		font-family: Proxima Nova Rg;
 	}
 	#ucp-wrapper .text .stats .pages .main-page ul h2{
-		font-size: 0.8em;
+		font-size: 12px;
 		font-weight: 400;
 	}
 	#ucp-wrapper .text .stats .pages .main-page ul li{
-		font-size: 1em;
+		font-size: 15px;
 		width: 100%;
 		display: flex;
 		justify-content: space-between;
@@ -876,7 +880,7 @@
 		transform: rotate(-45deg);
 		position: absolute;
 		bottom: 30px;
-		left: 170px;
+		left: 175px;
 		cursor: pointer;
 		transition: .3s ease;
 	}
@@ -978,6 +982,12 @@
 		color: #698cc8;
 		font-family: Proxima Nova Rg;
 		font-size: 1em;
+	}
+
+	/* UCP Skins */
+
+	#ucp-wrapper .text .skin{
+		width: ;
 	}
 
 }
