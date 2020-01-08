@@ -753,6 +753,7 @@
 
 	#ucp-wrapper .text .stats .pages-nav{
 		display: flex;
+		flex-wrap: wrap;
 		margin-top: 20px;
 	}
 	#ucp-wrapper .text .stats .pages-nav li{
@@ -765,12 +766,10 @@
 		transition: .3s ease;
 		border-bottom: 1px solid white;
 		font-size: 15px;
-		line-height: 20px;
 	}
 	#ucp-wrapper .text .stats .pages-nav li.active{
 		color: #2bb673;
 		border-bottom: 1px solid #2bb673;
-		font-size: 20px;
 	}
 	#ucp-wrapper .text .stats .pages .page{
 		display: none;
@@ -1054,11 +1053,18 @@
 	#ucp-wrapper .text .stats{
 		width: 400px;
 		height: 550px;
-		padding: 30px;
+		padding: 20px;
 	}
 
 	#ucp-wrapper .text .stats .pages-nav li{
-		margin-right: 20px;
+		display: block;
+		width: 90px;
+		text-align: center;
+		line-height: 25px;
+		margin: 0;
+	}
+	#ucp-wrapper .text .stats .pages-nav li.active{
+		font-size: 18px;
 	}
 
 	/* UCP Main page */
@@ -1287,7 +1293,10 @@
 	}
 
 	#ucp-wrapper .text .stats .pages-nav li{
-		margin-right: 30px;
+		width: 100px;
+	}
+	#ucp-wrapper .text .stats .pages-nav li.active{
+		font-size: 20px;
 	}
 
 	/* UCP Payments page */
