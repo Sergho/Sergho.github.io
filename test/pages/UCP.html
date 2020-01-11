@@ -388,16 +388,22 @@
 					</ul>
 				</div>
 				<div class="skin">
-					<h1>Скин (мод-пак)</h1>
-					<p>22id</p>
 					<div class="slider">
-						<div class="back"></div>
 						<ul class="slides">
-							<li class="slide"></li>
-							<li class="slide"></li>
-							<li class="slide"></li>
+							<li class="slide" style="display: none; opacity: 0;">
+								<h1>Скин (обычный)</h1>
+								<p>22id</p>
+								<img src="../img/skin-vanile.jpg" alt="skin">
+							</li>
+							<li class="slide" style="display: block; opacity: 1;">
+								<h1>Скин (мод-пак)</h1>
+								<p>22id</p>
+								<img src="../img/skin-mode.jpg" alt="skin">
+							</li>
 						</ul>
-						<div class="forward"></div>
+						<div class="prev" onclick="SliderPrev(this);"></div>
+						<p class="current" style="display: none">2</p>
+						<div class="next disabled" onclick="SliderNext(this);"></div>
 					</div>
 				</div>
 				<div class="help">

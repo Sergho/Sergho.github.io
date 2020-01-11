@@ -720,7 +720,7 @@
 		background-image: url(../img/UCP-background.png);
 		background-position: center bottom;
 		background-size: cover;
-		max-height: 1500px;
+		max-height: 2000px;
 	}
 	#ucp-wrapper header .dropdown-burger span{
 		background-color: #363c4d;
@@ -986,7 +986,73 @@
 	/* UCP Skins */
 
 	#ucp-wrapper .text .skin{
-		width: ;
+		width: 310px;
+		height: 500px;
+		margin-left: 50%;
+		transform: translate(-50%, 0);
+		background-color: white;
+		border-radius: 20px;
+		margin-top: 70px;
+		box-sizing: border-box;
+		padding: 20px;
+	}
+	#ucp-wrapper .text .skin .slide{
+		transition: .3s ease;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	#ucp-wrapper .text .skin h1{
+		text-align: left;
+		color: #363c4d;
+		font-family: Proxima Nova Th;
+		font-size: 2em;
+		width: 100%;
+	}
+	#ucp-wrapper .text .skin p{
+		font-family: Proxima Nova Rg;
+		font-size: 1.1em;
+		color: #363c4d;
+		text-align: left;
+		margin: 0;
+		margin-top: 10px;
+		width: 100%;
+	}
+	#ucp-wrapper .text .skin img{
+		position: absolute;
+		top: 55%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: -1;
+	}
+	#ucp-wrapper .text .skin .prev{
+		width: 15px;
+		height: 15px;
+		border-bottom: 4px solid #698cc8;
+		border-left: 4px solid #698cc8;
+		position: absolute;
+		top: 50%;
+		transform: translate(0, -50%) rotate(45deg);
+		left: 40px;
+		cursor: pointer;
+		transition: .3s ease;
+	}
+	#ucp-wrapper .text .skin .prev.disabled{
+		opacity: 0.3;
+	}
+	#ucp-wrapper .text .skin .next{
+		width: 15px;
+		height: 15px;
+		border-bottom: 4px solid #698cc8;
+		border-right: 4px solid #698cc8;
+		position: absolute;
+		top: 50%;
+		transform: translate(0, -50%) rotate(-45deg);
+		right: 40px;
+		cursor: pointer;
+		transition: .3s ease;
+	}
+	#ucp-wrapper .text .skin .next.disabled{
+		opacity: 0.3;
 	}
 
 }
@@ -1150,6 +1216,72 @@
 	}
 	#ucp-wrapper .text .stats .pages .leaders-page .current{
 		font-size: 1.2em;
+	}
+
+	/* UCP Skins */
+
+	#ucp-wrapper .text .skin{
+		width: 400px;
+		height: 600px;
+		padding: 40px;
+	}
+	#ucp-wrapper .text .skin .slide{
+		transition: .3s ease;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	#ucp-wrapper .text .skin h1{
+		text-align: left;
+		color: #363c4d;
+		font-family: Proxima Nova Th;
+		font-size: 2em;
+		width: 100%;
+	}
+	#ucp-wrapper .text .skin p{
+		font-family: Proxima Nova Rg;
+		font-size: 1.1em;
+		color: #363c4d;
+		text-align: left;
+		margin: 0;
+		margin-top: 10px;
+		width: 100%;
+	}
+	#ucp-wrapper .text .skin img{
+		position: absolute;
+		top: 55%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: -1;
+	}
+	#ucp-wrapper .text .skin .prev{
+		width: 15px;
+		height: 15px;
+		border-bottom: 4px solid #698cc8;
+		border-left: 4px solid #698cc8;
+		position: absolute;
+		top: 50%;
+		transform: translate(0, -50%) rotate(45deg);
+		left: 40px;
+		cursor: pointer;
+		transition: .3s ease;
+	}
+	#ucp-wrapper .text .skin .prev.disabled{
+		opacity: 0.3;
+	}
+	#ucp-wrapper .text .skin .next{
+		width: 15px;
+		height: 15px;
+		border-bottom: 4px solid #698cc8;
+		border-right: 4px solid #698cc8;
+		position: absolute;
+		top: 50%;
+		transform: translate(0, -50%) rotate(-45deg);
+		right: 40px;
+		cursor: pointer;
+		transition: .3s ease;
+	}
+	#ucp-wrapper .text .skin .next.disabled{
+		opacity: 0.3;
 	}
 
 }
