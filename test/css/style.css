@@ -745,6 +745,7 @@
 		box-sizing: border-box;
 		padding: 20px;
 		overflow: hidden;
+		position: relative;
 	}
 	#ucp-wrapper .text .stats h1{
 		font-size: 1.8em;
@@ -983,6 +984,12 @@
 		font-size: 1em;
 	}
 
+	/* UCP buttons */
+
+	#ucp-wrapper .text .stats > .help{
+		display: none;
+	}
+
 	/* UCP Skins */
 
 	#ucp-wrapper .text .skin{
@@ -1053,6 +1060,45 @@
 	}
 	#ucp-wrapper .text .skin .next.disabled{
 		opacity: 0.3;
+	}
+
+	/* UCP help buttons */
+
+	#ucp-wrapper .help{
+		margin-top: 55px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		width: 222px;
+		margin-left: 50%;
+		transform: translate(-50%, 0);
+	}
+	#ucp-wrapper .help a{
+		display: block;
+		border: 2px solid #558DCB;
+		color: #558DCB;
+		width: 222px;
+		height: 50px;
+		font-family: Proxima Nova Rg;
+		font-weight: 700;
+		line-height: 50px;
+		text-align: center;
+		text-decoration: none;
+		border-radius: 15px;
+		margin-top: 35px;
+		transition: .3s ease;
+	}
+	#ucp-wrapper .help a:hover{
+		background-color: #558DCB;
+		color: white;
+	}
+	#ucp-wrapper .help a:nth-child(3){
+		border: 2px solid #30394C;
+		color: #30394C;
+	}
+	#ucp-wrapper .help a:nth-child(3):hover{
+		background-color: #30394C;
+		color: white;
 	}
 
 }
@@ -1224,64 +1270,6 @@
 		width: 400px;
 		height: 600px;
 		padding: 40px;
-	}
-	#ucp-wrapper .text .skin .slide{
-		transition: .3s ease;
-		display: flex;
-		flex-wrap: wrap;
-	}
-	#ucp-wrapper .text .skin h1{
-		text-align: left;
-		color: #363c4d;
-		font-family: Proxima Nova Th;
-		font-size: 2em;
-		width: 100%;
-	}
-	#ucp-wrapper .text .skin p{
-		font-family: Proxima Nova Rg;
-		font-size: 1.1em;
-		color: #363c4d;
-		text-align: left;
-		margin: 0;
-		margin-top: 10px;
-		width: 100%;
-	}
-	#ucp-wrapper .text .skin img{
-		position: absolute;
-		top: 55%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		z-index: -1;
-	}
-	#ucp-wrapper .text .skin .prev{
-		width: 15px;
-		height: 15px;
-		border-bottom: 4px solid #698cc8;
-		border-left: 4px solid #698cc8;
-		position: absolute;
-		top: 50%;
-		transform: translate(0, -50%) rotate(45deg);
-		left: 40px;
-		cursor: pointer;
-		transition: .3s ease;
-	}
-	#ucp-wrapper .text .skin .prev.disabled{
-		opacity: 0.3;
-	}
-	#ucp-wrapper .text .skin .next{
-		width: 15px;
-		height: 15px;
-		border-bottom: 4px solid #698cc8;
-		border-right: 4px solid #698cc8;
-		position: absolute;
-		top: 50%;
-		transform: translate(0, -50%) rotate(-45deg);
-		right: 40px;
-		cursor: pointer;
-		transition: .3s ease;
-	}
-	#ucp-wrapper .text .skin .next.disabled{
-		opacity: 0.3;
 	}
 
 }
@@ -1783,6 +1771,27 @@
 	}
 
 	/* --------------------------- UCP ------------------------------ */
+	
+	#ucp-wrapper .text{
+		display: grid;
+	}
+	#ucp-wrapper .text .stats .pages .main-page > .help{
+		width: 420px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin-top: 10px;
+		position: absolute;
+		bottom: 25px;
+		left: 0;
+	}
+	#ucp-wrapper .text .stats .pages .main-page > .help a{
+		margin-top: 0;
+		width: 200px;
+	}
+	#ucp-wrapper .text > .help a:nth-child(1), #ucp-wrapper .text > .help a:nth-child(2){
+		display: none;
+	}
 
 }
 
