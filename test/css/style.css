@@ -898,6 +898,9 @@
 		font-family: Proxima Nova Rg;
 		font-size: 1em;
 	}
+	#ucp-wrapper .text .stats .pages .payments-page .slider > a{
+		display: none;
+	}
 
 	/* UCP Leaders page */
 
@@ -1955,17 +1958,43 @@
 	}
 	#ucp-wrapper .text .stats .pages .payments-page .slide ul li{
 		font-size: 18px;
+		line-height: 24px;
+		margin-top: 0;
 	}
 	#ucp-wrapper .text .stats .pages .payments-page .prev{
 		left: 270px;
-		bottom: 57px;
+		bottom: 97px;
 	}
 	#ucp-wrapper .text .stats .pages .payments-page .current{
-		bottom: 50px;
+		bottom: 90px;
 	}
 	#ucp-wrapper .text .stats .pages .payments-page .next{
 		left: 320px;
-		bottom: 57px;
+		bottom: 97px;
+	}
+	#ucp-wrapper .text .stats .pages .payments-page .slider > a{
+		display: block;
+		position: absolute;
+		width: 222px;
+		height: 50px;
+		border: 2px solid #558DCB;
+		background-color: rgba(0, 0, 0, 0.0);
+		border-radius: 15px;
+		left: 50%;
+		transform: translate(-50%, 0);
+		bottom: 20px;
+		color: #558DCB;
+		cursor: pointer;
+		transition: .3s ease;
+		font-size: 16px;
+		font-family: Proxima Nova Rg;
+		font-weight: 700;
+		text-decoration: none;
+		line-height: 50px;
+	}
+	#ucp-wrapper .text .stats .pages .payments-page .slider > a:hover{
+		background-color: #558DCB;
+		color: white;
 	}
 
 
@@ -1977,6 +2006,7 @@
 	}
 	#ucp-wrapper .text .stats .pages .leaders-page .slide ul li{
 		font-size: 18px;
+		margin-top: 0;
 		line-height: 24px;
 	}
 	#ucp-wrapper .text .stats .pages .leaders-page .slide ul li .nick{
