@@ -1772,8 +1772,56 @@
 
 	/* --------------------------- UCP ------------------------------ */
 	
+	#ucp-wrapper header{
+		margin-bottom: 0;
+	}
+	#ucp-wrapper header .nav .navbar-menu .navbar-item a{
+		color: #363c4d;
+	}
+	#ucp-wrapper header .nav .navbar-menu .navbar-item a:hover{
+		color: #7E8495;
+	}
+	#ucp-wrapper header .navbar-personal a{
+		background-color: #558DCB;
+		color: white;
+	}
+	#ucp-wrapper header .navbar-personal a:hover{
+		background-color: #558DCB;
+		color: white;
+	}
 	#ucp-wrapper .text{
+		width: auto;
 		display: grid;
+		grid-template-columns: 500px 400px;
+		grid-column-gap: 30px;
+		grid-template-rows: 75px 500px 130px;
+		grid-template-areas:
+		"heading heading"
+		"stats skin"
+		"stats help"
+		;
+	}
+	#ucp-wrapper .text > h1{
+		grid-area: heading;
+		margin-top: 0;
+	}
+	#ucp-wrapper .text .stats{
+		grid-area: stats;
+		height: 100%;
+		width: 100%;
+		margin: 0;
+		transform: translate(0, 0);
+	}
+	#ucp-wrapper .text .skin{
+		grid-area: skin;
+		height: 100%;
+		width: 100%;
+		margin: 0;
+		transform: translate(0, 0);
+	}
+	#ucp-wrapper .text > .help{
+		grid-area: help;
+		margin-top: 0;
 	}
 	#ucp-wrapper .text .stats .pages .main-page > .help{
 		width: 420px;
@@ -1782,7 +1830,7 @@
 		justify-content: space-between;
 		margin-top: 10px;
 		position: absolute;
-		bottom: 25px;
+		bottom: 40px;
 		left: 0;
 	}
 	#ucp-wrapper .text .stats .pages .main-page > .help a{
@@ -1846,6 +1894,31 @@
 	#donate-wrapper header .text{
 		margin-top: 210px;
 		margin-bottom: 210px;
+	}
+
+	/* --------------------------- UCP ------------------------------ */
+
+	#ucp-wrapper .text{
+		grid-template-columns: 600px 400px;
+		grid-column-gap: 45px;
+		grid-template-rows: 75px 610px 160px;
+		grid-template-areas:
+		"heading heading"
+		"stats skin"
+		"stats help"
+		;
+	}
+	#ucp-wrapper .text .stats{
+		padding: 55px;
+	}
+	#ucp-wrapper .text .stats .pages .main-page > .help{
+		bottom: 50px;
+		width: 100%;
+		box-sizing: border-box;
+		padding: 0 55px;
+	}
+	#ucp-wrapper .text > .help{
+		margin-top: 20px;
 	}
 
 }
