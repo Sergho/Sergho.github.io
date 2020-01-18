@@ -853,6 +853,7 @@
 		text-align: left;
 		list-style: none;
 		margin-top: 2px;
+		color: #3F4A62;
 	}
 	#ucp-wrapper .text .stats .pages .payments-page .slide ul li .sum{
 		color: #2bb673;
@@ -1919,6 +1920,81 @@
 	}
 	#ucp-wrapper .text > .help{
 		margin-top: 20px;
+	}
+	#ucp-wrapper .text .stats h1{
+		font-size: 36px;
+	}
+	#ucp-wrapper .text .stats .pages-nav{
+		margin-top: 45px;
+	}
+	#ucp-wrapper .text .stats .pages-nav li{
+		font-size: 18px;
+		line-height: 24px;
+		width: 120px;
+	}
+	#ucp-wrapper .text .stats .pages-nav li.active{
+		font-size: 24px;
+	}
+	#ucp-wrapper .text .stats .pages .main-page ul h2{
+		font-size: 14px;
+	}
+	#ucp-wrapper .text .stats .pages .main-page ul li{
+		font-size: 18px;
+	}
+
+	#ucp-wrapper .text .stats .pages .property-page ul span{
+		font-size: 14px;
+	}
+	#ucp-wrapper .text .stats .pages .property-page ul .empty{
+		font-size: 18px;
+	}
+
+	#ucp-wrapper .text .stats .pages .payments-page .sort p{
+		font-size: 14px;
+		margin-top: 40px;
+	}
+	#ucp-wrapper .text .stats .pages .payments-page .slide ul li{
+		font-size: 18px;
+	}
+	#ucp-wrapper .text .stats .pages .payments-page .prev{
+		left: 270px;
+		bottom: 57px;
+	}
+	#ucp-wrapper .text .stats .pages .payments-page .current{
+		bottom: 50px;
+	}
+	#ucp-wrapper .text .stats .pages .payments-page .next{
+		left: 320px;
+		bottom: 57px;
+	}
+
+
+	#ucp-wrapper .text .stats .pages .leaders-page .slide .h .nick{
+		width: 220px;
+	}
+	#ucp-wrapper .text .stats .pages .leaders-page .slide .h .organization{
+		width: 160px;
+	}
+	#ucp-wrapper .text .stats .pages .leaders-page .slide ul li{
+		font-size: 18px;
+		line-height: 24px;
+	}
+	#ucp-wrapper .text .stats .pages .leaders-page .slide ul li .nick{
+		width: 130px;
+	}
+	#ucp-wrapper .text .stats .pages .leaders-page .slide ul li .organization{
+		width: 275px;
+	}
+	#ucp-wrapper .text .stats .pages .leaders-page .prev{
+		left: 270px;
+		bottom: 57px;
+	}
+	#ucp-wrapper .text .stats .pages .leaders-page .current{
+		bottom: 50px;
+	}
+	#ucp-wrapper .text .stats .pages .leaders-page .next{
+		left: 320px;
+		bottom: 57px;
 	}
 
 }
