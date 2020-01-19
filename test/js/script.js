@@ -160,7 +160,7 @@ function SliderNext(btn){
 function SliderPrev(btn){
 
 	const slider 				= btn.parentNode;											// Весь слайдер
-	const prev					= btn;			// Кнопка "Назад"
+	const prev					= btn;																// Кнопка "Назад"
 	const next 					= slider.querySelector(".next");			// Кнопка "Вперед"
 	const current 			= slider.querySelector(".current");		// Элемент, показывающий номер текущего слайда
 	const slides 				= slider.querySelectorAll(".slide");	// Все слайды
@@ -189,5 +189,108 @@ function SliderPrev(btn){
 	else prev.classList.add("disabled");
 	if(current_index < slides_count) next.classList.remove("disabled");
 	else next.classList.add("disabled");
+
+}
+
+// Активация фильтров платежей
+
+function ActivateFilter(filter){
+	// Массив всех платежей
+	let payments 				= Array.from(document.querySelectorAll(".payments-page .slide ul li"));
+
+	// Массив всех слайдов с платежами
+	const blocks				= document.querySelectorAll(".payments-page .slide ul");
+
+	// Сначала старые - 1; Сначала новые - 0
+	const sort_type			=	filter.innerHTML == "Сначала новые" ? false : true;
+
+	// Все слайды платежей
+	const slides 				= document.querySelectorAll(".payments-page .slide");
+
+	// Элемент, показывающий номер текущего слайда
+	const current 			= document.querySelector(".payments-page .current");
+
+	// Кнопки вперед и назад
+	const prev					= document.querySelector(".payments-page .prev");
+	const next 					= document.querySelector(".payments-page .next");
+
+	// Убираем все слайды
+	slides.forEach((slide) => {
+		slide.style.opacity = "0";
+		setTimeout(() => {
+			slide.style.display = "none";
+		}, 350);
+	});
+
+	// Возвращаемся на первый слайд
+	current.innerHTML = "1";
+
+	// Корректируем кнопки
+	prev.classList.add("disabled");
+	next.classList.remove("disabled");
+
+	// Сортировка платежей
+	payments.sort((a, b) => {
+		// Превращаем DOM элементы в строки, сразу нафиг обрезаем денежное значение платежа, оно нам не важно
+		let a_text = a.innerHTML.split(" <")[0];
+		let b_text = b.innerHTML.split(" <")[0];
+		// Дата платежа в текстовом формате
+		let date_a = a_text.split(" ")[3];
+		let date_b = b_text.split(" ")[3];
+		// Время платежа в текстовом формате
+		let time_a = a_text.split(" ")[4];
+		let time_b = b_text.split(" ")[4];
+		// Убираем скобочки, только будут мешать
+		time_a = time_a.substring(1, time_a.length - 1);
+		time_b = time_b.substring(1, time_b.length - 1);
+		// Переведем дату и время в целочисленную переменную для удобного сравнения
+		date_a = date_a.split(".");
+		date_b = date_b.split(".");
+
+		time_a = time_a.split(":");
+		time_b = time_b.split(":");
+
+		date_a = date_a.reverse();
+		date_b = date_b.reverse();
+
+		int_time_a = date_a.join("") + time_a.join("");
+		int_time_b = date_b.join("") + time_b.join("");
+
+		// Сравниваем те самые целочисленные переменные, та, что больше - новее
+
+		if(sort_type){
+			if(int_time_a < int_time_b) return -1;
+			else return 1;
+		} else {
+			if(int_time_a < int_time_b) return 1;
+			else return -1;
+		}
+
+	});
+
+	// Убираем порядковый номер из каждого платежа, т.к порядок будет новый
+	for(let i = 0; i < payments.length; i++){
+		payments[i] = payments[i].innerHTML.split(". ")[1];
+	}
+	setTimeout(() => {
+
+	// Внедряем платежи в слайды
+	for(let i = 0; i < slides.length; i++){
+			slides[i].querySelector("ul").innerHTML = "";
+			// 17 платежей может быть максимально на одном слайде
+			for(let j = 0; j < 17; j++){
+				if(i * 17 + j > payments.length) break;
+				let elem = document.createElement("li");
+				elem.innerHTML = (i * 17 + j + 1) + ". " + payments[i * 17 + j];
+				slides[i].querySelector("ul").append(elem);
+			}
+		}
+	}, 350);
+
+	// Показываем первый слайд
+	setTimeout(() => {
+		slides[0].style.display = "flex";
+		setTimeout(() => {slides[0].style.opacity = "1";}, 50);
+	}, 400);
 
 }

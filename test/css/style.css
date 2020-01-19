@@ -833,6 +833,7 @@
 	}
 	#ucp-wrapper .text .stats .pages .payments-page .sort p span{
 		margin: 0 5px;
+		cursor: pointer;
 	}
 	#ucp-wrapper .text .stats .pages .payments-page .sort p span:nth-child(1){
 		margin-left: 10px;
