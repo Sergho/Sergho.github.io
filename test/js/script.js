@@ -298,8 +298,17 @@ function ActivateFilter(filter){
 /* Убираем ошибку в поле ввода */
 
 function InputCloseError(input){
+	// Проверяем текстовое поле на соддержание класса ошибки
 	if(input.classList.contains("error")){
+		// Удаляем класс
 		input.classList.remove("error");
-		input.value = input.placeholder;
+		// Получаем новый placeholder и text
+		let placeholder = input.placeholder.split(", ")[0];
+		let text = input.placeholder.split(", ")[1];
+		// Применяем их к полю
+		input.value = text;
+		input.placeholder = placeholder;
+		// Проверим на введенные данные, чтобы оставить поле активным если что
+		if(input.value.length > 0) input.classList.add("filled");
 	}
 }
