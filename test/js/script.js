@@ -294,3 +294,12 @@ function ActivateFilter(filter){
 	}, 400);
 
 }
+
+/* Убираем ошибку в поле ввода */
+
+function InputCloseError(input){
+	if(input.classList.contains("error")){
+		input.classList.remove("error");
+		input.value = input.placeholder;
+	}
+}

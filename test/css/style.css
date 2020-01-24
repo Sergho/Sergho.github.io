@@ -599,6 +599,10 @@
 		opacity: 1;
 		color: rgba(54,60,77, 1);
 	}
+	header form input.error{
+		color: #30394C;
+		opacity: 1;
+	}
 
 	header form .agreement{
 		width: 100%;
