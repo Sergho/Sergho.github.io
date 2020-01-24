@@ -591,11 +591,13 @@
 		color: #363c4d;
 		transition: .3s ease;
 	}
-	header form input:focus, header form input.filled{
+	header form input::placeholder{
+		color: rgba(54,60,77, 0.7);
+	}
+	header form input:focus, header form input.filled, header form input:focus::placeholder, header form input.filled::placeholder{
 		outline: none;
 		opacity: 1;
-		color: white;
-		color: #363c4d;
+		color: rgba(54,60,77, 1);
 	}
 
 	header form .agreement{
@@ -1175,10 +1177,9 @@
 
 	#ucp-wrapper .text .stats .pages-nav li{
 		display: block;
-		width: 90px;
 		text-align: center;
 		line-height: 25px;
-		margin: 0;
+		margin-right: 20px;
 	}
 	#ucp-wrapper .text .stats .pages-nav li.active{
 		font-size: 18px;
@@ -1418,7 +1419,7 @@
 	}
 
 	#ucp-wrapper .text .stats .pages-nav li{
-		width: 100px;
+		margin-right: 20px;
 	}
 	#ucp-wrapper .text .stats .pages-nav li.active{
 		font-size: 20px;
@@ -1745,11 +1746,15 @@
 	#donate-wrapper header .text p{
 		font-size: 1.1em;
 	}
+	header .text .image-pig{
+		margin-bottom: 30px;
+	}
 	header form input{
 		margin-top: 30px;
 		font-size: 1.2em;
 	}
-	header form .agreement p{
+	#donate-wrapper header form .agreement p{
+		font-size: 1em;
 		padding-left: 15px;
 	}
 
@@ -1934,7 +1939,7 @@
 	#ucp-wrapper .text .stats .pages-nav li{
 		font-size: 18px;
 		line-height: 24px;
-		width: 120px;
+		margin-right: 25px;
 	}
 	#ucp-wrapper .text .stats .pages-nav li.active{
 		font-size: 24px;
