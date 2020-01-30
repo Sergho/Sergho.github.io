@@ -605,7 +605,6 @@
 	}
 	header form .agreement .confirm .visible.error{
 		border: 2px solid #507fcd;
-		background-color: crimson;
 	}
 
 	header form .agreement{
