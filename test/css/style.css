@@ -599,9 +599,13 @@
 		opacity: 1;
 		color: rgba(54,60,77, 1);
 	}
-	header form input.error{
+	header form input[type="text"].error{
 		color: #30394C;
 		opacity: 1;
+	}
+	header form .agreement .confirm .visible.error{
+		border: 2px solid #507fcd;
+		background-color: crimson;
 	}
 
 	header form .agreement{
