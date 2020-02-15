@@ -3,13 +3,65 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<meta charset="UTF-8">
-	<title>Physics</title>
+	<title>Physics - School project</title>
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+	<header>
+		<div class="simulate">
+			<button>Start</button>
+		</div>
+		<div class="change_gravy">
+			<label>
+				<div class="visible">
+					<span class="circle"></span>
+				</div>
+				<input type="checkbox" class="gravy_trig">
+			</label>
+		</div>
+	</header>
+	<aside>
+		<div class="closed">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<div class="content">
+			<ul class="pages-nav">
+				<li class="active">Объекты</li>
+				<li>Настройки</li>
+				<li>О нас</li>
+			</ul>
+			<ul class="pages">
+				<li class="page objects-page active">
+					<h1>Объекты</h1>
+					<div class="object-card ball">
+						<h2>Шар</h2>
+						<div class="preview">
+							<span></span>
+						</div>
+					</div>
+					<div class="object-card surface">
+						<h2>Поверхность</h2>
+						<div class="preview">
+							<span></span>
+						</div>
+					</div>
+				</li>
+				<li class="page">
+					<h1>Настройки</h1>
+				</li>
+				<li class="page">
+					<h1>О нас</h1>
+				</li>
+			</ul>
+		</div>
+	</aside>
 	<canvas>Ваш браузер не поддерживает данное приложение</canvas>
 	<script src="js/canvas.js"></script>
 	<script src="js/object.js"></script>
+	<script src="js/constructorUI.js"></script>
+	<script src="js/physic.js"></script>
 	<script src="js/script.js"></script>
 </body>
 </html>
