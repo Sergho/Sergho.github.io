@@ -1250,6 +1250,10 @@
 		font-family: Proxima Nova Rg;
 		font-weight: bold;
 		outline: none;
+		color: #30394C;
+	}
+	#email_change form input::placeholder{
+		color: #D0D1D5;
 	}
 	#email_change form button{
 		width: 183px;
@@ -1470,7 +1474,10 @@
 		margin-top: 5px;
 	}
 	#email_change form{
-		
+		margin-top: 15px;
+	}
+	#email_change form button{
+		margin-top: 30px;
 	}
 
 }
@@ -1670,6 +1677,15 @@
 	#password_change form img.show:nth-child(5){
 		top: 270px;
 		left: 350px;
+	}
+
+	#email_change{
+		width: 442px;
+		height: 309px;
+	}
+	#email_change form input{
+		height: 50px;
+		width: 400px;
 	}
 
 }
@@ -2100,7 +2116,30 @@
 		top: 330px;
 		left: 560px;
 	}
-
+		
+	#email_change{
+		width: 703px;
+		height: 415px;
+	}
+	#email_change p.error{
+		margin-top: 10px;
+		font-size: 18px;
+	}
+	#email_change form{
+		margin-top: 20px;
+	}
+	#email_change form input{
+		width: 549px;
+		font-size: 18px;
+		height: 66px;
+	}
+	#email_change form button{
+		font-size: 18px;
+		width: 253px;
+		height: 66px;
+		border-radius: 15px;
+		margin-top: 50px;
+	}
 
 }
 
