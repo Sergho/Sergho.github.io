@@ -71,8 +71,8 @@ function CheckInput(input){		// Функция проверки заполнен
 	if(input.value.length > 0) input.classList.add("filled");
 	else input.classList.remove("filled");
 }
-function ShowPassword(eye){		// Функция скрытия и показывания пароля
-	const input = document.querySelector("#auth form input:nth-child(2)");
+function ShowPassword(eye, input_index){		// Функция скрытия и показывания пароля
+	const input = eye.parentNode.children[input_index];
 
 	if(input.type == "password"){
 		input.type = "text";

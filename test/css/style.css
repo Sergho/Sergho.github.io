@@ -414,6 +414,7 @@
 		color: #363c4d;
 		opacity: 0.7;
 		transition: .3s ease;
+		box-shadow: 5px 5px 10px #ddd;
 	}
 	#auth form input:focus, #auth form input.filled{
 		outline: none;
@@ -682,6 +683,7 @@
 	}
 
 	#success, #error{
+		z-index: 3;
 		display: none;
 		opacity: 0;
 		position: absolute;
@@ -1115,6 +1117,159 @@
 		color: white;
 	}
 
+	/* UCP Modals */
+
+	#password_change{
+		width: 300px;
+		height: 400px;
+		background-color: #f6f6f9;
+		position: absolute;
+		top: 50vh;
+		left: 50vw;
+		transform: translate(-50%, -50%);
+		z-index: 3;
+		border-radius: 40px;
+	}
+	#password_change h1{
+		color: #3F4A62;
+		font-size: 30px;
+		font-family: Proxima Nova Th;
+		text-align: center;
+		font-weight: bold;
+		margin-top: 45px;
+	}
+	#password_change p.error{
+		font-family: Proxima Nova Lt;
+		text-align: center;
+		font-size: 16px;
+		margin-top: 5px;
+		font-weight: 600;
+		color: #3F4A62;
+	}
+	#password_change form{
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin-top: 15px;
+	}
+	#password_change form input{
+		width: 270px;
+		height: 40px;
+		background-color: white;
+		border: none;
+		border-radius: 15px;
+		margin-top: 15px;
+		box-sizing: border-box;
+		padding: 10px;
+		font-family: Proxima Nova Rg;
+		font-weight: 700;
+		font-size: 16px;
+		color: #30394C;
+		outline: none;
+		box-shadow: 5px 5px 10px #ddd;
+	}
+	#password_change form input::placeholder{
+		color: #D0D1D5;
+	}
+	#password_change form button{
+		margin-top: 25px;
+		width: 176px;
+		height: 43px;
+		border-radius: 10px;
+		background-color: rgba(0, 0, 0, 0.0);
+		border: 2px solid #558DCB;
+		color: #558DCB;
+		font-family: Proxima Nova Rg;
+		font-size: 14px;
+		font-weight: 800;
+		cursor: pointer;
+		transition: .3s ease;
+	}
+	#password_change form button:hover{
+		background-color: #558DCB;
+		color: white;
+	}
+	#password_change form img.show{
+		position: absolute;
+		width: 30px;
+		height: 30px;
+		opacity: 0.5;
+		transition: .3s ease;
+	}
+	#password_change form img.show:nth-child(4){
+		top: 197.5px;
+		left: 240px;
+	}
+	#password_change form img.show:nth-child(5){
+		top: 250px;
+		left: 240px;
+	}
+
+	#email_change{
+		position: absolute;
+		top: 50vh;
+		left: 50vw;
+		transform: translate(-50%, -50%);
+		width: 300px;
+		height: 300px;
+		background-color: #f6f6f9;
+		z-index: 3;
+		border-radius: 40px;
+	}
+	#email_change h1{
+		text-align: center;
+		font-size: 30px;
+		margin-top: 60px;
+		font-family: Proxima Nova Th;
+		font-weight: bold;
+		color: #3F4A62;
+	}
+	#email_change p.error{
+		text-align: center;
+		margin-top: 0;
+		font-family: Proxima Nova Rg;
+		font-weight: bold;
+		font-size: 16px;
+		color: #3F4A62;
+	}
+	#email_change form{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin-top: 10px;
+	}
+	#email_change form input{
+		width: 260px;
+		height: 40px;
+		background-color: white;
+		border: none;
+		border-radius: 15px;
+		box-shadow: 5px 5px 10px #ddd;
+		box-sizing: border-box;
+		padding: 15px;
+		font-family: Proxima Nova Rg;
+		font-weight: bold;
+		outline: none;
+	}
+	#email_change form button{
+		width: 183px;
+		height: 43px;
+		background-color: rgba(0, 0, 0, 0.0);
+		border: 2px solid #558DCB;
+		border-radius: 10px;
+		color: #558DCB;
+		font-size: 16px;
+		font-family: Proxima Nova Rg;
+		font-weight: bold;
+		cursor: pointer;
+		transition: .3s ease;
+		margin-top: 20px;
+	}
+	#email_change form button:hover{
+		color: white;
+		background-color: #558DCB;
+	}
+
 }
 
 @media screen and (min-width: 425px){
@@ -1283,6 +1438,39 @@
 		width: 400px;
 		height: 600px;
 		padding: 40px;
+	}
+
+	/* UCP Modals */
+
+	#password_change{
+		width: 400px;
+	}
+	#password_change form{
+		margin-top: 5px;
+	}
+	#password_change form input{
+		width: 345px;
+		height: 50px;
+		padding: 15px;
+	}
+	#password_change form img.show:nth-child(4){
+		top: 200px;
+		left: 320px;
+	}
+	#password_change form img.show:nth-child(5){
+		top: 265px;
+		left: 320px;
+	}
+
+	#email_change{
+		width: 400px;
+		height: 300px;
+	}
+	#email_change p.error{
+		margin-top: 5px;
+	}
+	#email_change form{
+		
 	}
 
 }
@@ -1464,6 +1652,24 @@
 	}
 	#ucp-wrapper .text .stats .pages .leaders-page .next{
 		left: 270px;
+	}
+
+	/* UCP Modals */
+
+	#password_change{
+		width: 442px;
+		height: 437px;
+	}
+	#password_change form{
+		margin-top: 10px;
+	}
+	#password_change form img.show:nth-child(4){
+		top: 205px;
+		left: 350px;
+	}
+	#password_change form img.show:nth-child(5){
+		top: 270px;
+		left: 350px;
 	}
 
 }
@@ -1857,6 +2063,44 @@
 	#ucp-wrapper .text > .help a:nth-child(1), #ucp-wrapper .text > .help a:nth-child(2){
 		display: none;
 	}
+
+	/* UCP Modals */
+
+	#password_change{
+		width: 703px;
+		height: 592px;
+	}
+	#password_change form{
+		margin-top: 20px;
+	}
+	#password_change form input{
+		width: 549px;
+		height: 66px;
+		margin-top: 20px;
+		padding: 30px;
+		font-size: 18px;
+	}
+	#password_change form button{
+		margin-top: 50px;
+		width: 253px;
+		height: 66px;
+		border-radius: 15px;
+		border: 3px solid #558DCB;
+		font-size: 18px;
+	}
+	#password_change form img.show{
+		width: 40px;
+		height: 40px;
+	}
+	#password_change form img.show:nth-child(4){
+		top: 245px;
+		left: 560px;
+	}
+	#password_change form img.show:nth-child(5){
+		top: 330px;
+		left: 560px;
+	}
+
 
 }
 

@@ -9,7 +9,7 @@
 </head>
 <body>
 	<div id="ucp-wrapper">
-		<div class="darkness" onclick="Auth(); DropdownToggle(this);"></div>
+		<div class="darkness" onclick="Auth(); DropdownToggle(this);" style="display: block; opacity: 1;"></div>
 		<header>
 			<div class="logo">
 				<a href="main.html">
@@ -439,38 +439,43 @@
 				<span>Made by Kipper Studio</span>
 			</div>
 		</footer>
-		<div id="auth">
-			<div class="exit" onclick="Auth();">
+		<div id="password_change" style="display: none; opacity: 0;">
+			<div class="exit">
 				<span></span>
 				<span></span>
 			</div>
-			<h1>Авторизация</h1>
-			<p class="error">Ошибка! Логин или пароль введён неверно</p>
+			<h1>Смена пароля</h1>
+			<p class="error">Ошибка блэт!!!</p>
 			<form>
-				<input type="text" placeholder="Ник" oninput="CheckInput(this);">
-				<input type="password" placeholder="Пароль" oninput="CheckInput(this);">
-				<img src="../img/eye.png" alt="show" class="show" onclick="ShowPassword(this);">
-				<a href="#">Забыли пароль?</a>
-				<button type="submit">Войти</button>
+				<input type="text" name="" placeholder="Введите свой никнейм">
+				<input type="password" name="" placeholder="Введите новый пароль">
+				<input type="password" name="" placeholder="Повторите новый пароль">
+				<img src="../img/eye.png" alt="eye" class="show" onclick="ShowPassword(this, 1);">
+				<img src="../img/eye.png" alt="eye" class="show" onclick="ShowPassword(this, 2);">
+				<button type="submit" name="">Сменить пароль</button>
 			</form>
 		</div>
-		<div id="success">
+		<div id="email_change">
+			<div class="exit">
+				<span></span>
+				<span></span>
+			</div>
+			<h1>Смена E-mail</h1>
+			<p class="error">Ошибка епта блин!!!</p>
+			<form>
+				<input type="text" name="" placeholder="Введите вашу почту">
+				<button type="submit" name="">Отправить письмо</button>
+			</form>
+		</div>
+		<div id="success" style="display: none; opacity: 0;">
 			<div class="exit">
 				<span></span>
 				<span></span>
 			</div>
 			<img src="../img/success.png" alt="success">
-			<h1>Всё прошло успешно!</h1>
+			<h1>Пароль сменён успешно!</h1>
 			<p>Структура политической науки, как бы это ни казалось парадоксальным, представляет собой гарант. Мажоритарная избирательная система противоречива</p>
 		</div>
-		<div id="error">
-			<div class="exit">
-				<span></span>
-				<span></span>
-			</div>
-			<img src="../img/error.png" alt="success">
-			<h1>Ошибка!</h1>
-			<p>Гений неоднозначен. Гипотеза, как бы это ни казалось парадоксальным, верифицирует гений. Оферта создает современный дедуктивный метод</p>
 		</div>
 	</div>
 
