@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
@@ -9,7 +8,7 @@
 </head>
 <body>
 	<div id="ucp-wrapper">
-		<div class="darkness" onclick="Auth(); DropdownToggle(this);" style="display: block; opacity: 1;"></div>
+		<div class="darkness" onclick="Auth(); DropdownToggle(this);" style="display: none; opacity: 0;"></div>
 		<header>
 			<div class="logo">
 				<a href="main.html">
@@ -82,10 +81,12 @@
 								<li>
 									<div class="param">Донат-очки:</div>
 									<div class="value">0</div>
+									<button class="donate-btn"><img src="../img/plus.png" alt=""></button>
 								</li>
 								<li>
 									<div class="param">Место появления:</div>
 									<div class="value">#2</div>
+									<button class="spawn_reset"><img src="../img/reset.png" alt=""></button>
 								</li>
 							</ul>
 							<ul class="ic">
@@ -440,7 +441,7 @@
 			</div>
 		</footer>
 		<div id="password_change" style="display: none; opacity: 0;">
-			<div class="exit">
+			<div class="exit" onclick="CloseModal(this);">
 				<span></span>
 				<span></span>
 			</div>
@@ -456,7 +457,7 @@
 			</form>
 		</div>
 		<div id="email_change" style="display: none; opacity: 0;">
-			<div class="exit">
+			<div class="exit" onclick="CloseModal(this);">
 				<span></span>
 				<span></span>
 			</div>
@@ -468,12 +469,12 @@
 			</form>
 		</div>
 		<div id="success" style="display: none; opacity: 0;">
-			<div class="exit">
+			<div class="exit" onclick="CloseModal(this);">
 				<span></span>
 				<span></span>
 			</div>
 			<img src="../img/mail.png" alt="success">
-			<h1>Письмо отправлено</h1>
+			<h1>Письмо с подтверждением отправлено</h1>
 			<p>Структура политической науки, как бы это ни казалось парадоксальным, представляет собой гарант. Мажоритарная избирательная система противоречива</p>
 		</div>
 		</div>

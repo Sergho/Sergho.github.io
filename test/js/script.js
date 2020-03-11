@@ -312,3 +312,19 @@ function InputCloseError(input){
 		if(input.value.length > 0) input.classList.add("filled");
 	}
 }
+
+/* Скрытие модального окна */
+
+function CloseModal(close){
+	// Модальное окно
+	let modal = close.parentNode;
+	// Темнота
+	let darkness = document.querySelector('.darkness');
+
+	// Закрываем модальное окно
+	modal.style.opacity = "0";
+	setTimeout(() => {modal.style.display = "none"}, 300);
+	// Закрываем темноту
+	darkness.style.opacity = "0";
+	setTimeout(() => {darkness.style.display = "none"}, 300);
+}
