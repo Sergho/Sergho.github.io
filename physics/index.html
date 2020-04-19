@@ -11,14 +11,6 @@
 		<div class="simulate">
 			<button>Start</button>
 		</div>
-		<div class="change_gravy">
-			<label>
-				<div class="visible">
-					<span class="circle"></span>
-				</div>
-				<input type="checkbox" class="gravy_trig">
-			</label>
-		</div>
 	</header>
 	<aside>
 		<div class="closed">
@@ -48,8 +40,32 @@
 						</div>
 					</div>
 				</li>
-				<li class="page">
+				<li class="page settings-page">
 					<h1>Настройки</h1>
+					<ul>
+						<li>
+							<div class="trig">
+								<label>
+									<p>Гравитация: </p>
+									<div class="gravy_trig visible">
+										<span class="circle"></span>
+									</div>
+									<input type="checkbox" class="gravy_trig">
+								</label>
+							</div>
+						</li>
+						<li>
+							<div class="trig">
+								<label>
+									<p>Сила трения: </p>
+									<div class="friction_force visible">
+										<span class="circle"></span>
+									</div>
+									<input type="checkbox" class="friction_force_trig">
+								</label>
+							</div>
+						</li>
+					</ul>
 				</li>
 				<li class="page">
 					<h1>О нас</h1>
@@ -58,6 +74,24 @@
 		</div>
 	</aside>
 	<canvas>Ваш браузер не поддерживает данное приложение</canvas>
+	<div class="settings" style="display: none; opacity: 0;">
+		<button class="move">Переместить</button>
+		<button class="size">Изменить размер</button>
+		<button class="speed">Задать движение</button>
+		<button class="delete">Удалить</button>
+	</div>
+	<div class="changeSA" style="display: none; opacity: 0;">
+		<h4>Скорость: </h4>
+		<p>X: </p>
+		<input type="number" placeholder="Скорость по X" class="speedX">
+		<p>Y: </p>
+		<input type="number" placeholder="Скорость по Y" class="speedY">
+		<h4>Ускорение: </h4>
+		<p>X: </p>
+		<input type="number" placeholder="Ускорение по X" class="accelX">
+		<p>Y: </p>
+		<input type="number" placeholder="Ускорение по Y" class="accelY">
+	</div>
 	<script src="js/canvas.js"></script>
 	<script src="js/object.js"></script>
 	<script src="js/constructorUI.js"></script>

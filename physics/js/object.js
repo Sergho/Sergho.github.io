@@ -6,7 +6,7 @@ class Obj{
 	static canvas;
 	// Flag if object is first object (will returned to false after each object construct)
 	static first = true;
-	constructor(posX, posY, color, form, fixed, canvas){
+	constructor(posX, posY, color, form, size, fixed, canvas){
 		// Bind canvas
 		this.BindCanvas(canvas);
 		// Start postion of objects to return after simulating
@@ -27,11 +27,12 @@ class Obj{
 		// Speed x and y
 		this.speedX = 0;
 		this.speedY = 0;
-		// Acceleration x and y
+		// Acceleration x and y 
 		this.accelX = 0;
 		this.accelY = 0;
 		// Size of object;
-		this.size = Obj.canvas.zoom;
+		this.sizeX = +size.split(":")[0];
+		this.sizeY = +size.split(":")[1];
 		// Setting static coord of start point
 		if(this.first){
 			Obj.StartX = posX;

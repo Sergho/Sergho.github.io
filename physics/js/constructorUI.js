@@ -5,17 +5,36 @@ class UI{
 		this.canvas = physic.canvas;
 		this.objects = physic.objects;
 		this.control = "mouse";
+		// Object in setting process
+		this.obj_clicked = undefined;
+		// Move mode trigger
+		this.move = false;
+		// Sizing mode trigger
+		this.sizing = false;
+		// Setting speed and acceleration mode trigger
+		this.setSA = false;
 		// Functions of moving or changing zoom (add event listeners)
 		this.MoveDesktop();
 		this.MoveMobile();
 		this.ZoomDesktop();
 		this.UpdateCanv();
 		this.ChangeGravy();
+		this.ChangeFrictionForce();
 		// Aside panel
 		this.AsidePanel();
 		this.AsidePanelPages();
 		// Hover objects
 		this.HoverObject();
+		// Settings of objects
+		this.ObjectSettings();
+		// Move of object
+		this.ObjectMove();
+		// Sizing of object
+		this.ObjectSizing();
+		// Setting speed and acceleration for object
+		this.ObjectSetSpeedAccel();
+		// Delete object
+		this.ObjectDelete();
 	}
 	MoveDesktop(){
 		// Moving by arrows (transition)
@@ -86,9 +105,9 @@ class UI{
 	}
 	ChangeGravy(){
 		// trigger to gravitation
-		const trig 		= document.querySelector(".change_gravy .gravy_trig");
+		const trig 		= document.querySelector(".trig input.gravy_trig");
 		// visible part of trigger
-		const visible = document.querySelector(".change_gravy .visible");
+		const visible = document.querySelector(".trig .gravy_trig.visible");
 		// catching click on it
 		trig.addEventListener("click", () => {
 			// Switch class to visible part of trigger
@@ -96,6 +115,17 @@ class UI{
 			// Inverting trig of gravitation
 			this.physic.gravTrig = trig.checked;
 			this.physic.ChangeGravitation();
+		});
+	}
+	ChangeFrictionForce(){
+		const trig 		= document.querySelector(".trig .friction_force_trig");
+		const visible = document.querySelector(".trig .visible.friction_force");
+
+		trig.addEventListener("click", () => {
+			// Switch class to visible part of trigger
+			visible.classList.toggle("active");
+			// Inverting trig of gravitation
+			this.physic.FFTrig = trig.checked;
 		});
 	}
 	// Aside panel open-close
@@ -175,12 +205,12 @@ class UI{
 					if(!this.physic.simulate){
 						// Creating a (shadow) of the object
 						if(objects.indexOf(object) == 0){ 
-							this.objects.push(new Obj(1, 1, "rgba(255, 0, 0, 0.3)", "circle"));
+							this.objects.push(new Obj(1, 1, "rgba(255, 0, 0, 0.3)", "circle", "1:1"));
 							this.objects[this.objects.length - 1].first = true;
 							this.canvas.DrawAll(this.objects);
 						}
 						if(objects.indexOf(object) == 1){
-							this.objects.push(new Obj(4, 4, "rgba(0, 255, 0, 0.3)", "rect4:4", true));
+							this.objects.push(new Obj(4, 4, "rgba(0, 255, 0, 0.3)", "rect", "5:5", true));
 							this.objects[this.objects.length - 1].first = true;
 							this.canvas.DrawAll(this.objects);
 						}
@@ -219,8 +249,8 @@ class UI{
 				this.canvas.canvas.addEventListener("mousemove", (e) => {
 					if(startTouch && !this.physic.simulate){
 						// Updating coordinates of shadow
-						this.objects[this.objects.length - 1].posX = e.clientX / this.canvas.zoom;
-						this.objects[this.objects.length - 1].posY = e.clientY / this.canvas.zoom;
+						this.objects[this.objects.length - 1].posX = Math.floor(e.clientX / this.canvas.zoom);
+						this.objects[this.objects.length - 1].posY = Math.floor(e.clientY / this.canvas.zoom);
 						this.canvas.DrawAll(this.objects);
 					}
 				});
@@ -239,6 +269,240 @@ class UI{
 			});
 		}
 	});
+	}
+	// Changing object settings
+	ObjectSettings(){
+		this.canvas.canvas.addEventListener("click", (e) => {
+			if(!this.move && !this.sizing){
+				let obj_clicked = undefined;
+				this.objects.forEach((object) => {
+					if(!this.physic.simulate){
+						// Checking clicking on each object
+						if(!object.first){
+							let objX = object.posX + this.objects[0].posX;
+							let objY = object.posY + this.objects[0].posY;
+							const clickX = e.clientX / this.canvas.zoom;
+							const clickY = e.clientY / this.canvas.zoom;
+							if(object.form == "circle"){
+								let radius = object.sizeX / 2;
+								objX += 0.5;
+								objY += 0.5;
+								if(Math.pow(objX - clickX, 2) + Math.pow(objY - clickY, 2) < Math.pow(radius, 2)) obj_clicked = object;
+							}
+							if(object.form == "rect"){
+								if(clickX > objX && clickX < objX + object.sizeX && clickY > objY && clickY < objY + object.sizeY) obj_clicked = object;
+							}
+						}
+					}
+				});
+				if(obj_clicked){
+					this.obj_clicked = obj_clicked;
+					// Draw modal menu
+					const modal = document.querySelector(".settings");
+
+					// Setting true position of modal menu
+					modal.style.left = e.clientX + this.canvas.zoom + "px";
+					modal.style.top = e.clientY + this.canvas.zoom + "px";
+					// Showing modal menu
+					modal.style.display = "flex";
+					setTimeout(() => {modal.style.opacity = "1";}, 50);
+				} else {
+					// Hide modal menu
+					const modal = document.querySelector(".settings");
+
+					modal.style.opacity = "0";
+					setTimeout(() => {modal.style.display = "none"}, 300);
+					// Delay is necessary to inject some time for some actions in end of correction like move sizing or color change
+					setTimeout(() => {this.obj_clicked = undefined;}, 50);
+				}
+			}
+		});
+	}
+	ObjectMove(){
+		const btn = document.querySelector(".move");
+		const modal = document.querySelector(".settings");
+		// Checking click on button "Переместить"
+		btn.addEventListener("click", () => {
+			let last_color;
+			if(!this.move){
+				this.move = true;
+				// Close modal with settings
+				modal.style.opacity = "0";
+				setTimeout(() => {modal.style.display = "none"}, 300);
+				// Change color of object
+				last_color = this.obj_clicked.color;
+				this.obj_clicked.color = "rgba(0, 0, 0, 0.3)";
+				this.canvas.DrawAll(this.objects);
+				this.canvas.canvas.addEventListener("mousemove", (e) => {
+					if(this.move){
+						if(this.obj_clicked.first){
+							this.obj_clicked.posX = Math.floor(e.clientX / this.canvas.zoom);
+							this.obj_clicked.posY = Math.floor(e.clientY / this.canvas.zoom);
+							this.canvas.DrawAll(this.objects);
+						} else {
+							this.obj_clicked.posX = Math.floor((e.clientX - (this.objects[0].posX + this.obj_clicked.sizeX / 2) * this.canvas.zoom) / this.canvas.zoom);
+							this.obj_clicked.posY = Math.floor((e.clientY - (this.objects[0].posY + this.obj_clicked.sizeY / 2) * this.canvas.zoom) / this.canvas.zoom);
+							this.canvas.DrawAll(this.objects);
+						}
+					}
+				});
+			}
+			this.canvas.canvas.addEventListener("click", (e) => {
+				if(this.move){
+					// Changing trigger
+					this.move = false;
+					// Correcting start position
+					this.obj_clicked.StartPosX = this.obj_clicked.posX;
+					this.obj_clicked.StartPosY = -this.obj_clicked.posY;
+					// Installing start color
+					this.obj_clicked.color = last_color;
+					// Drawing all to see changes
+					this.canvas.DrawAll(this.objects);
+				}
+			});
+		});
+	}
+	ObjectSizing(){
+		const btn = document.querySelector(".size");
+		const modal = document.querySelector(".settings");
+
+		btn.addEventListener("click", () => {
+			// close modal
+			let last_color = this.obj_clicked.color;
+			if(!this.sizing){
+				modal.style.opacity = "0";
+				setTimeout(() => {modal.style.display = "none"}, 300);
+
+				this.sizing = true;
+				this.obj_clicked.color = "rgba(0, 0, 0, 0.3)";
+				this.canvas.DrawAll(this.objects);
+				this.canvas.canvas.addEventListener("mousemove", (e) => {
+					if(this.sizing){
+						// Ball sizing
+						if(this.obj_clicked.form == "circle"){
+							let objX = this.objects[0].posX + this.obj_clicked.posX + 0.5;
+							this.obj_clicked.sizeX = Math.floor(Math.abs(objX - e.clientX / this.canvas.zoom));
+							if(this.obj_clicked.sizeX < 1) this.obj_clicked.sizeX = 1;
+							this.canvas.DrawAll(this.objects);
+						}
+						if(this.obj_clicked.form == "rect"){
+							let objX = this.obj_clicked.StartPosX;
+							let objY = this.obj_clicked.StartPosY;
+
+							let mouseX = e.clientX / this.canvas.zoom;
+							let mouseY = e.clientY / this.canvas.zoom;
+
+							if(mouseX - this.objects[0].posX - objX <= 0){
+								this.obj_clicked.posX = Math.floor(mouseX - this.objects[0].posX);
+								this.obj_clicked.sizeX = this.obj_clicked.StartPosX - this.obj_clicked.posX;
+								if(this.obj_clicked.sizeX < 1) this.obj_clicked.sizeX = 1;
+							}
+							if(mouseX - this.objects[0].posX - objX > 0){
+								this.obj_clicked.posX = this.obj_clicked.StartPosX;
+								this.obj_clicked.sizeX = Math.floor(mouseX - objX - this.objects[0].posX);
+								if(this.obj_clicked.sizeX < 1) this.obj_clicked.sizeX = 1;
+							}
+							if(mouseY - this.objects[0].posY + objY <= 0){
+								this.obj_clicked.posY = Math.floor(mouseY - this.objects[0].posY);
+								this.obj_clicked.sizeY = -this.obj_clicked.StartPosY - this.obj_clicked.posY;
+								if(this.obj_clicked.sizeY < 1) this.obj_clicked.sizeY = 1;
+							}
+							if(mouseY - this.objects[0].posY + objY > 0){
+								this.obj_clicked.posY = -this.obj_clicked.StartPosY;
+								this.obj_clicked.sizeY = Math.floor(mouseY + objY - this.objects[0].posY);
+								if(this.obj_clicked.sizeY < 1) this.obj_clicked.sizeY = 1;
+							}
+
+							this.canvas.DrawAll(this.objects);
+						}
+					}
+				});
+			}
+			this.canvas.canvas.addEventListener("click", () => {
+				this.sizing = false;
+
+				this.obj_clicked.color = last_color;
+
+				this.obj_clicked.StartPosX = this.obj_clicked.posX;
+				this.obj_clicked.StartPosY = -this.obj_clicked.posY;
+
+				this.canvas.DrawAll(this.objects);
+			});
+		});
+	}
+	ObjectSetSpeedAccel(){
+		const btn = document.querySelector(".speed");
+		const close_modal = document.querySelector(".settings");
+		const modal = document.querySelector(".changeSA");
+
+		btn.addEventListener("click", (e) => {
+			if(!this.setSA){
+				this.setSA = true;
+				// close modal
+				close_modal.style.opacity = 0;
+				setTimeout(() => {close_modal.style.display = "none"}, 300);
+				// Open change menu
+				// Setting coordinates
+				modal.style.top = close_modal.style.top;
+				modal.style.left = close_modal.style.left;
+
+				// Setting current speed and acceleration values on input
+				let sx = modal.querySelector(".speedX");
+				let sy = modal.querySelector(".speedY");
+				let ax = modal.querySelector(".accelX");
+				let ay = modal.querySelector(".accelY");
+
+				sx.value = this.obj_clicked.speedX;
+				sy.value = this.obj_clicked.speedY;
+				ax.value = this.obj_clicked.accelX;
+				ay.value = this.obj_clicked.accelY;
+
+				// Showing modal
+				modal.style.display = "flex";
+				setTimeout(() => {modal.style.opacity = 1;}, 50);
+
+				// Changing speed and acceleration of object
+				sx.addEventListener("change", () => {
+					this.obj_clicked.StartSpeedX = this.obj_clicked.speedX = +sx.value;
+				});
+				sy.addEventListener("change", () => {
+					this.obj_clicked.StartSpeedY = this.obj_clicked.speedY = +sy.value;
+				});
+				ax.addEventListener("change", () => {
+					this.obj_clicked.accelX = +ax.value;
+				});
+				ay.addEventListener("change", () => {
+					this.obj_clicked.accelY = +ay.value;
+				});
+
+			}
+		});
+		this.canvas.canvas.addEventListener("click", () => {
+			if(this.setSA){
+				this.setSA = false;
+				modal.style.opacity = 0;
+				setTimeout(() => {modal.style.display = "none"}, 350);
+			}
+		});
+	}
+	ObjectDelete(){
+		const btn 			= document.querySelector(".delete");
+		const close_modal 	= document.querySelector(".settings");
+		btn.addEventListener("click", () => {
+			// close modal window with settings
+			close_modal.style.opacity = "0";
+			setTimeout(() => {close_modal.style.display = "none"}, 350);
+			// deleting object
+			// selecting object
+			this.objects.forEach((object) => {
+				if(object === this.obj_clicked){
+					const index = this.objects.indexOf(object);
+					// deleting current object
+					this.objects.splice(index, 1);
+					this.canvas.DrawAll(this.objects);
+				}
+			});
+		});
 	}
 
 }

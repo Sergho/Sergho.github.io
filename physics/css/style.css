@@ -3,6 +3,9 @@ body > .ball.shadow{
 	border-radius: 50%;
 	position: absolute;
 }
+button{
+	outline: none;
+}
 
 @media screen and (min-width: 320px){
 	
@@ -12,6 +15,7 @@ body > .ball.shadow{
 	}
 	body{
 		overflow: hidden;
+		user-select: none;
 	}
 	canvas{
 		display: block;
@@ -58,47 +62,6 @@ body > .ball.shadow{
 		color: black;
 	}
 
-	.change_gravy{
-		margin: 0 10px;
-		display: flex;
-	}
-
-	.change_gravy .visible {
-		width: 70px;
-		height: 30px;
-		position: absolute;
-		top: 50%;
-		transform: translate(0, -50%);
-		background-color: gray;
-		border-radius: 30px;
-		transition: .3s;
-		cursor: pointer;
-	}
-
-	.change_gravy .visible .circle {
-		position: absolute;
-		top: 3px;
-		left: 3px;
-		background-color: #fff;
-		display: block;
-		width: 24px;
-		height: 24px;
-		border-radius: 50%;
-		transition: .3s;
-	}
-
-	.change_gravy .visible.active {
-		background-color: aqua;
-	}
-
-	.change_gravy .visible.active .circle{
-		transform: translate(40px, 0);
-	}
-
-	.change_gravy .gravy_trig{
-		display: none;
-	}
-
 	/* Aside panel */
 
 	aside{
@@ -107,11 +70,10 @@ body > .ball.shadow{
 		right: 0;
 		z-index: 3;
 		background-color: white;
-		width: 200px;
+		width: 50%;
 		height: 100vh;
 		transform: translate(75%, 0);
 		transition: .5s ease;
-		user-select: none;
 	}
 	aside .opened, aside .closed{
 		width: 30px;
@@ -195,7 +157,6 @@ body > .ball.shadow{
 		display: none;
 		opacity: 0;
 		list-style: none;
-		transition: .3s;
 	}
 	aside .content .pages .page.active{
 		display: flex;
@@ -250,7 +211,7 @@ body > .ball.shadow{
 	}
 	aside .content .pages .objects-page .object-card.surface .preview span{
 		display: block;
-		width: 130px;
+		width: 100px;
 		height: 30px;
 		background-color: lime;
 		position: absolute;
@@ -258,6 +219,139 @@ body > .ball.shadow{
 		left: 50%;
 		transform: translate(-50%, -50%);
 		cursor: pointer;
+	}
+
+	aside .content .pages .settings-page{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	aside .content .pages .settings-page h1{
+		width: 100%;
+		text-align: center;
+		font-size: 32px;
+	}
+	aside .content .pages .settings-page ul{
+		width: 95%;
+		margin-top: 30px;
+	}
+	aside .content .pages .settings-page ul li{
+		list-style: none;
+		display: flex;
+		justify-content: center;
+	}
+	aside .content .pages .settings-page ul li .trig{
+		width: 100%;
+	}
+	aside .content .pages .settings-page ul li .trig label{
+		display: flex;
+		justify-content: center;
+	}
+	aside .content .pages .settings-page ul li .trig p{
+		width: 50%;
+		font-size: 14px;
+		line-height: 30px;
+	}
+
+	aside .content .pages .settings-page ul li .trig .visible {
+		width: 50px;
+		height: 25px;
+		position: relative;
+		background-color: gray;
+		border-radius: 25px;
+		transition: .3s;
+		cursor: pointer;
+	}
+
+	aside .content .pages .settings-page ul li .trig .visible .circle {
+		position: absolute;
+		top: 3px;
+		left: 3px;
+		background-color: #fff;
+		display: block;
+		width: 19px;
+		height: 19px;
+		border-radius: 50%;
+		transition: .3s;
+	}
+
+	aside .content .pages .settings-page ul li .trig .visible.active {
+		background-color: aqua;
+	}
+
+	aside .content .pages .settings-page ul li .trig .visible.active .circle{
+		transform: translate(25px, 0);
+	}
+
+	aside .content .pages .settings-page ul li .trig input{
+		display: none;
+	}
+
+	.settings{
+		position: absolute;
+		top: 500px;
+		left: 500px;
+		box-sizing: border-box;
+		background-color: white;
+		box-shadow: 5px 5px 15px #ddd;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		width: 150px;
+		transition: .3s ease;
+	}
+	.settings button{
+		width: 120px;
+		padding: 10px;
+		background-color: rgba(0, 0, 0, 0.0);
+		border: 2px solid #38858d;
+		color: #38858d;
+		border-radius: 10px;
+		font-size: 1em;
+		transition: .3s ease;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		cursor: pointer;
+	}
+	.settings button:hover{
+		background-color: #38858d;
+		color: white;
+	}
+
+	.changeSA{
+		background-color: white;
+		position: absolute;
+		top: 500px;
+		left: 500px;
+		box-shadow: 5px 5px 15px #ddd;
+		padding: 20px;
+		width: 230px;
+		height: 280px;
+		box-sizing: border-box;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		transition: .3s ease;
+	}
+	.changeSA h4{
+		width: 100%;
+		margin-top: 15px;
+	}
+	.changeSA p{
+		width: 20%;
+		line-height: 30px;
+		margin-top: 10px;
+	}
+	.changeSA input{
+		width: 80%;
+		height: 30px;
+		border: none;
+		background-color: #ddd;
+		padding: 5px;
+		box-sizing: border-box;
+		color: black;
+		outline: none;
+		margin-top: 10px;
 	}
 
 }
@@ -310,6 +404,31 @@ body > .ball.shadow{
 	aside .content .pages .objects-page .object-card.ball .preview span{
 		width: 70px;
 		height: 70px;
+	}
+
+	aside .content .pages .settings-page ul{
+		width: 80%;
+	}
+	aside .content .pages .settings-page ul li{
+		margin-bottom: 15px;
+	}
+	aside .content .pages .settings-page ul li .trig p{
+		font-size: 22px;
+	}
+
+	aside .content .pages .settings-page ul li .trig .visible {
+		width: 70px;
+		height: 30px;
+		border-radius: 30px;
+	}
+
+	aside .content .pages .settings-page ul li .trig .visible .circle {
+		width: 24px;
+		height: 24px;
+	}
+
+	aside .content .pages .settings-page ul li .trig .visible.active .circle{
+		transform: translate(40px, 0);
 	}
 
 }
