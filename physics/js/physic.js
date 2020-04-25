@@ -81,9 +81,14 @@ class Physic{
 									obj1.speedX = -obj1.speedX * 0.5;
 									// friction force
 									if(this.FFTrig){
-										if(obj1.speedY > 0) obj1.speedY -= 0.1;
-										if(obj1.speedY < 0) obj1.speedY += 0.1;
-										if(Math.abs(obj1.speedY - 0.1) < 0) obj1.speedY = 0;
+										if(obj1.speedY > 0){
+											obj1.speedY -= 0.1;
+											if(obj1.speedY * (obj1.speedY - 0.1)) obj.speedY = 0;
+										}
+										if(obj1.speedY < 0){
+											obj1.speedY += 0.1;
+											if(obj1.speedY * (obj1.speedY + 0.1)) obj.speedY = 0;
+										}
 									}
 									this.canvas.DrawAll(this.objects, true);
 								}
@@ -104,9 +109,14 @@ class Physic{
 									obj1.speedY = -obj1.speedY * 0.7;
 									// friction force
 									if(this.FFTrig){
-										if(obj1.speedX > 0) obj1.speedX -= 0.1;
-										if(obj1.speedX < 0) obj1.speedX += 0.1;
-										if(Math.abs(obj1.speedX - 0.1) < 0) obj1.speedX = 0;
+										if(obj1.speedX > 0){
+											obj1.speedX -= 0.1;
+											if(obj1.speedX * (obj1.speedX - 0.1)) obj.speedX = 0;
+										}
+										if(obj1.speedX < 0){
+											obj1.speedX += 0.1;
+											if(obj1.speedX * (obj1.speedX + 0.1)) obj.speedX = 0;
+										}
 									}
 									this.canvas.DrawAll(this.objects, true);
 								}
