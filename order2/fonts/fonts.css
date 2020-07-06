@@ -1,0 +1,30 @@
+@font-face{
+	font-family: Source;
+	src: url(Source/SourceSansPro-Regular.ttf);
+}
+@font-face{
+	font-family: Source Lt;
+	src: url(Source/SourceSansPro-Light.ttf);
+}
+@font-face{
+	font-family: Source Sb;
+	src: url(Source/SourceSansPro-SemiBold.ttf);
+}
+
+@font-face{
+	font-family: Roboto;
+	src: url(Roboto/Roboto-Regular.ttf);
+}
+@font-face{
+	font-family: Roboto Lt;
+	src: url(Roboto/Roboto-Light.ttf);
+}
+@font-face{
+	font-family: Roboto Sb;
+	src: url(Roboto/Roboto-Medium.ttf);
+}
+@font-face{
+	font-family: Roboto Lt;
+	src: url(Roboto/Roboto-LightItalic.ttf);
+	font-style: italic;
+}
