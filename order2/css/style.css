@@ -458,7 +458,7 @@ body{
 		width: 100%;
 		border-radius: 15px;
 	}
-	main .projects .videos-mobile .video .play{
+	main .projects .videos-mobile .video .play, main .projects .videos-mobile .video .pause{
 		width: 40px;
 		height: 40px;
 		background-color: #ACE125;
@@ -468,7 +468,7 @@ body{
 		left: 50%;
 		transform: translate(-50%, -50%);
 	}
-	main .projects .videos-mobile .video .play img{
+	main .projects .videos-mobile .video .play img, main .projects .videos-mobile .video .pause img{
 		width: 15px;
 		position: absolute;
 		top: 50%;
@@ -1130,6 +1130,7 @@ body{
 		left: 0;
 		height: 100px;
 		transform: translate(500%, 0);
+		transition: .3s ease;
 	}
 	main .partners .items .item img{
 		width: 80%;
