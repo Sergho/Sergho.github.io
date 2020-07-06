@@ -1380,6 +1380,9 @@ body{
 		margin-top: 10px;
 		margin-bottom: 15px;
 	}
+	main .about .numbers .number{
+		text-align: left;
+	}
 	main .about .numbers .number h1{
 		margin-top: 50px;
 		font-size: 54px;
@@ -1391,6 +1394,19 @@ body{
 
 	main .code-decision{
 		padding: 40px;
+		position: relative;
+	}
+	main .code-decision .bg img{
+		position: absolute;
+		width: 50%;
+	}
+	main .code-decision .bg img:nth-child(1){
+		left: 0;
+		top: 0;
+	}
+	main .code-decision .bg img:nth-child(2){
+		bottom: 0;
+		right: 0;
 	}
 	main .code-decision nav .nav-item img{
 		width: 250px;
@@ -1518,10 +1534,299 @@ body{
 		margin-top: 60px;
 	}
 
+	main .contacts .content{
+		width: 380px;
+		padding: 25px 35px;
+	}
+	main .contacts .content h1{
+		font-size: 42px;
+	}
+	main .contacts .content .line{
+		margin-bottom: 35px;
+	}
+	main .contacts .content .icons img:nth-child(1){
+		left: 80%;
+	}
+	main .contacts .content .icons img:nth-child(2){
+		left: 95%;
+	}
+
+	footer .upper .navbar .navbar-item{
+		margin-right: 20px;
+		margin-left: 20px;
+	}
+
 }
 @media screen and (min-width: 1440px){
-	
-}
-@media screen and (min-width: 2000px){
-	
+
+	header{
+		padding: 45px 70px;
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	header nav .navbar .navbar-item{
+		font-size: 16px;
+		margin-right: 25px;
+		margin-left: 25px;
+	}
+	header .main h2{
+		margin-top: 90px;
+		font-size: 62px;
+	}
+	header .main h1{
+		font-size: 85px;
+		letter-spacing: 5px;
+		line-height: 65px;
+	}
+	header .main p{
+		font-size: 20px;
+		margin-top: 45px;
+	}
+	header .main img{
+		width: 25px;
+		margin-top: 90px;
+		margin-bottom: 100px;
+	}
+
+	main{
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	main .about{
+		margin-bottom: 30px;
+		padding: 40px 70px;
+	}
+	main .about .text{
+		padding: 0;
+	}
+	main .about .text img.about-us{
+		width: 400px;
+	}
+	main .about .text h2{
+		font-size: 54px;
+		margin-top: 30px;
+	}
+	main .about .text .line{
+		width: 180px;
+	}
+	main .about .text .line{
+		margin-top: 15px;
+		margin-bottom: 30px;
+	}
+	main .about .text p{
+		font-size: 16px;
+		line-height: 24px;
+		margin-bottom: 40px;
+	}
+	main .about .numbers .number h1{
+		font-size: 70px;
+	}
+	main .about .numbers .number span{
+		font-size: 20px;
+	}
+
+	main .code-decision{
+		padding-bottom: 20px;
+	}
+	main .code-decision nav .nav-item img{
+		width: 400px;
+	}
+	main .code-decision nav .nav-item h2{
+		font-size: 54px;
+		margin-top: 40px;
+	}
+	main .code-decision .cards{
+		margin-top: 40px;
+		margin-bottom: 110px;
+	}
+	main .code-decision .cards .card{
+		padding: 0;
+	}
+	main .code-decision .cards .card h3{
+		margin-top: 35px;
+		margin-bottom: 15px;
+		font-size: 22px;
+	}
+	main .code-decision .cards .card p{
+		font-size: 16px;
+	}
+	main .code-decision .quote{
+		padding: 0;
+	}
+	main .code-decision .quote .text{
+		font-size: 44px;
+	}
+	main .code-decision .quote .author{
+		margin-top: 30px;
+		font-size: 24px;
+	}
+
+	main .benefits{
+		padding: 130px 70px;
+	}
+	main .benefits > img{
+		width: 380px;
+	}
+	main .benefits h1{
+		font-size: 54px;
+		margin-top: 40px;
+	}
+	main .benefits .line{
+		width: 180px;
+		margin-top: 20px;
+		margin-bottom: 115px;
+	}
+	main .benefits .cards{
+		margin-top: 0;
+		margin-bottom: 70px;
+	}
+	main .benefits .cards .card{
+		margin: 0;
+	}
+	main .benefits .cards .card h2{
+		margin-top: 20px;
+		margin-bottom: 15px;
+		font-size: 22px;
+	}
+	main .benefits .cards .card p{
+		font-size: 16px;
+	}
+
+	main .projects{
+		margin-top: -80px;
+		padding: 0px 70px;
+	}
+	main .projects > img{
+		width: 380px;
+	}
+	main .projects h1{
+		font-size: 54px;
+		padding-top: 50px;
+	}
+	main .projects .line{
+		width: 180px;
+		margin-top: 20px;
+		margin-bottom: 75px;
+	}
+	main .projects .videos-desktop .main-video{
+		height: 560px;
+	}
+	main .projects .videos-desktop .other-videos{
+		height: 560px;
+		width: 147px;
+	}
+	main .projects .videos-desktop .other-videos .other-video{
+		width: 147px;
+		height: 147px;
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+	main .projects .videos-desktop .control .list{
+		margin-left: -40px;
+		padding-top: 56px;
+		padding-bottom: 56px;
+	}
+	main .projects .videos-desktop .control .list .item{
+		line-height: 75px;
+		font-size: 24px;
+		height: 75px;
+	}
+	main .projects .videos-desktop .control .list .item span{
+		right: -40px;
+		height: 75px;
+	}
+	main .projects .read-more{
+		margin-top: 40px;
+	}
+
+	main .partners{
+		margin-top: 20px;
+		padding: 40px 70px;
+		margin-bottom: 0;
+	}
+	main .partners > img{
+		width: 400px;
+	}
+	main .partners h1{
+		font-size: 54px;
+		margin-top: 40px;
+	}
+	main .partners .line{
+		width: 180px;
+		margin-top: 20px;
+		margin-bottom: 60px;
+	}
+	main .partners .slider .items .item img{
+		width: 70%;
+	}
+
+	main .news{
+		padding: 20px 70px;
+		margin-bottom: 60px;
+	}
+	main .news > img{
+		width: 250px;
+	}
+	main .news h1{
+		font-size: 54px;
+		margin-top: 40px;
+	}
+	main .news .line{
+		width: 180px;
+		margin-top: 20px;
+		margin-bottom: 75px;
+	}
+	main .news .list .item .description .date{
+		font-size: 14px;
+		margin-bottom: 10px;
+	}
+	main .news .list .item .description h2{
+		font-size: 16px;
+	}
+
+	main .request{
+		padding: 40px 70px;
+	}
+	main .request .content > img{
+		width: 380px;
+	}
+	main .request .content h1{
+		font-size: 54px;
+		margin-top: 30px;
+	}
+	main .request .content .line{
+		width: 180px;
+		margin-top: 5px;
+		margin-bottom: 30px;
+	}
+	main .request .content p{
+		font-size: 16px;
+		line-height: 24px;
+	}
+	main .request .content form input{
+		padding: 25px 0;
+		font-size: 16px;
+	}
+	main .request .content form button{
+		margin-top: 80px;
+	}
+
+	main .contacts .content{
+		width: 460px;
+	}
+	main .contacts .content h1{
+		font-size: 50px;
+	}
+	main .contacts .content .list .item .text{
+		font-size: 16px;
+	}
+
+	footer{
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
 }
