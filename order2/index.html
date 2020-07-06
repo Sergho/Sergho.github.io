@@ -8,30 +8,55 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<header>
-		<div id="dropdown">
-			<div class="bg"></div>
-			<div class="dropdown-close">
-				<span></span>
-				<span></span>
-			</div>
-			<ul class="dropdown-items">
-				<li class="dropdown-item">Главная</li>
-				<li class="dropdown-item">Студия</li>
-				<li class="dropdown-item">Проекты</li>
-				<li class="dropdown-item">Новости</li>
-			</ul>
+	<div id="dropdown">
+		<div class="dropdown-close">
+			<span></span>
+			<span></span>
 		</div>
+		<ul class="dropdown-items">
+			<li class="dropdown-item active">
+				Главная
+				<img src="img/Chevron.png" alt="chevron">
+			</li>
+			<li class="dropdown-item">
+				Студия
+				<img src="img/Chevron.png" alt="chevron">
+			</li>
+			<li class="dropdown-item">
+				Проекты
+				<img src="img/Chevron.png" alt="chevron">
+			</li>
+			<li class="dropdown-item">
+				Новости
+				<img src="img/Chevron.png" alt="chevron">
+			</li>
+		</ul>
+		<div class="buttons">
+			<div class="button">
+				<button>
+					<img src="img/Be.png" alt="be">
+					Behance
+				</button>
+			</div>
+			<div class="button">
+				<button>
+					<img src="img/Ball-g.png" alt="ball">
+					Dribble
+				</button>
+			</div>
+		</div>
+	</div>
+	<header>
 		<div class="logo">
 			<img src="img/logo.png">
 			<span>Video-Make<b>PRO</b></span>
 		</div>
 		<nav>
 			<ul class="navbar">
-				<li class="navbar-item">Главная</li>
-				<li class="navbar-item">Студия</li>
-				<li class="navbar-item">Проекты</li>
-				<li class="navbar-item">Новости</li>
+				<li class="navbar-item"><a href="">Главная</a></li>
+				<li class="navbar-item"><a href="">Студия</a></li>
+				<li class="navbar-item"><a href="">Проекты</a></li>
+				<li class="navbar-item"><a href="">Новости</a></li>
 			</ul>
 			<div class="dropdown-menu">
 				<span></span>
@@ -39,7 +64,16 @@
 				<span></span>
 			</div>
 		</nav>
-		<div class="buttons"></div>
+		<div class="buttons">
+			<button>
+				<img src="img/Be.png" alt="be">
+				Behance
+			</button>
+			<button>
+				<img src="img/Ball-g.png" alt="ball">
+				Dribble
+			</button>
+		</div>
 		<div class="main">
 			<h2>Создание видео</h2>
 			<h1>это искусство</h1>
@@ -139,7 +173,7 @@
 			<img src="img/Projects.png" alt="projects">
 			<h1>Успешные проекты</h1>
 			<div class="line"></div>
-			<ul class="videos">
+			<ul class="videos-mobile">
 				<li class="video">
 					<video src="img/video.mp4"></video>
 					<div class="play">
@@ -165,6 +199,65 @@
 					</div>
 				</li>
 			</ul>
+			<div class="videos-desktop">
+				<div class="main-video">
+					<video src="img/video.mp4"></video>
+				</div>
+				<ul class="other-videos">
+					<li class="other-video">
+						<video src="img/video.mp4"></video>
+					</li>
+					<li class="other-video">
+						<video src="img/video.mp4"></video>
+					</li>
+					<li class="other-video">
+						<video src="img/video.mp4"></video>
+					</li>
+					<li class="other-video">
+						<video src="img/video.mp4"></video>
+					</li>
+					<li class="other-video">
+						<video src="img/video.mp4"></video>
+					</li>
+					<li class="other-video">
+						<video src="img/video.mp4"></video>
+					</li>
+				</ul>
+				<div class="control">
+					<div class="prev">
+						<span></span>
+					</div>
+					<ul class="list">
+						<li class="item">
+							<div class="num">01</div>
+							<span></span>
+						</li>
+						<li class="item active">
+							<div class="num">02</div>
+							<span></span>
+						</li>
+						<li class="item">
+							<div class="num">03</div>
+							<span></span>
+						</li>
+						<li class="item">
+							<div class="num">04</div>
+							<span></span>
+						</li>
+						<li class="item">
+							<div class="num">05</div>
+							<span></span>
+						</li>
+						<li class="item">
+							<div class="num">06</div>
+							<span></span>
+						</li>
+					</ul>
+					<div class="next">
+						<span></span>
+					</div>
+				</div>
+			</div>
 			<div class="read-more">
 				<img src="img/Read more.png" alt="read-more">
 			</div>
@@ -193,6 +286,52 @@
 					<img src="img/partner6.png" alt="partner6">
 				</li>
 			</ul>
+			<div class="slider">
+				<div class="prev">
+					<span></span>
+				</div>
+				<ul class="items">
+					<li class="item">
+						<img src="img/partner1.png" alt="partner1">
+					</li>
+					<li class="item">
+						<img src="img/partner2.png" alt="partner2">
+					</li>
+					<li class="item">
+						<img src="img/partner3.png" alt="partner3">
+					</li>
+					<li class="item">
+						<img src="img/partner4.png" alt="partner4">
+					</li>
+					<li class="item">
+						<img src="img/partner5.png" alt="partner5">
+					</li>
+					<li class="item">
+						<img src="img/partner6.png" alt="partner6">
+					</li>
+					<li class="item">
+						<img src="img/partner1.png" alt="partner1">
+					</li>
+					<li class="item">
+						<img src="img/partner2.png" alt="partner2">
+					</li>
+					<li class="item">
+						<img src="img/partner3.png" alt="partner3">
+					</li>
+					<li class="item">
+						<img src="img/partner4.png" alt="partner4">
+					</li>
+					<li class="item">
+						<img src="img/partner5.png" alt="partner5">
+					</li>
+					<li class="item">
+						<img src="img/partner6.png" alt="partner6">
+					</li>
+				</ul>
+				<div class="next">
+					<span></span>
+				</div>
+			</div>
 		</div>
 		<div class="news">
 			<img src="img/News.png" alt="news">
@@ -229,41 +368,55 @@
 			</div>
 		</div>
 		<div class="request">
-			<img src="img/Request.png" alt="request">
-			<h1>Каждое сотрудничество начинается с диалога</h1>
-			<div class="line"></div>
-			<p>Если у вас возникли вопросы по нашим услугам, вы можете заполнить заявку ниже и мы перезвоним вам!</p>
-			<form>
-				<input type="text" placeholder="Имя">
-				<input type="text" placeholder="Телефон">
-				<input type="text" placeholder="Сообщение">
-				<button>ОТПРАВИТЬ</button>
-			</form>
+			<div class="content">
+				<img src="img/Request.png" alt="request">
+				<h1>Каждое сотрудничество начинается с диалога</h1>
+				<div class="line"></div>
+				<p>Если у вас возникли вопросы по нашим услугам, вы можете заполнить заявку ниже и мы перезвоним вам!</p>
+				<form>
+					<input type="text" placeholder="Имя">
+					<input type="text" placeholder="Телефон">
+					<input type="text" placeholder="Сообщение">
+					<button>ОТПРАВИТЬ</button>
+				</form>
+			</div>
+			<div class="image">
+				<img src="img/Request-image.png" alt="image">
+			</div>
 		</div>
 		<div class="contacts">
-			<img src="img/Contacts.png" alt="contacts">
-			<h1>Контакты</h1>
-			<div class="line"></div>
-			<ul class="list">
-				<li class="item">
-					<div class="image">
-						<img src="img/Address.png" alt="address">
-					</div>
-					<div class="text">Harrison Street, San Francisco, 94143,CA, USA</div>
-				</li>
-				<li class="item">
-					<div class="image">
-						<img src="img/Call.png" alt="call">
-					</div>
-					<div class="text">+(800) 777 777 77/ + (800) 700 000 00</div>
-				</li>
-				<li class="item">
-					<div class="image">
-						<img src="img/Mail.png" alt="mail">
-					</div>
-					<div class="text">info@mail.com</div>
-				</li>
-			</ul>
+			<div class="map">
+				<img src="img/Map.png" alt="map">
+			</div>
+			<div class="content">
+				<img src="img/Contacts.png" alt="contacts">
+				<h1>Контакты</h1>
+				<div class="line"></div>
+				<ul class="list">
+					<li class="item">
+						<div class="image">
+							<img src="img/Address.png" alt="address">
+						</div>
+						<div class="text">Harrison Street, San Francisco, 94143,CA, USA</div>
+					</li>
+					<li class="item">
+						<div class="image">
+							<img src="img/Call.png" alt="call">
+						</div>
+						<div class="text">+(800) 777 777 77/ + (800) 700 000 00</div>
+					</li>
+					<li class="item">
+						<div class="image">
+							<img src="img/Mail.png" alt="mail">
+						</div>
+						<div class="text">info@mail.com</div>
+					</li>
+				</ul>
+				<div class="icons">
+					<img src="img/Be.png" alt="Be">
+					<img src="img/Ball.png" alt="Ball">
+				</div>
+			</div>
 		</div>
 	</main>
 	<footer>
@@ -276,6 +429,12 @@
 				<img src="img/Be.png" alt="Be">
 				<img src="img/Ball.png" alt="Ball">
 			</div>
+			<ul class="navbar">
+				<li class="navbar-item"><a href="">Главная</a></li>
+				<li class="navbar-item"><a href="">Студия</a></li>
+				<li class="navbar-item"><a href="">Проекты</a></li>
+				<li class="navbar-item"><a href="">Новости</a></li>
+			</ul>
 		</div>
 		<div class="lower">
 			<p>© 2020 IDesign. Design by Zemez</p>
