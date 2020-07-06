@@ -8,8 +8,8 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<div id="dropdown">
-		<div class="dropdown-close">
+	<div id="dropdown" style="display: none; opacity: 0;">
+		<div class="dropdown-close" onclick="DropdownClose();">
 			<span></span>
 			<span></span>
 		</div>
@@ -58,7 +58,7 @@
 				<li class="navbar-item"><a href="">Проекты</a></li>
 				<li class="navbar-item"><a href="">Новости</a></li>
 			</ul>
-			<div class="dropdown-menu">
+			<div class="dropdown-menu" onclick="DropdownOpen();">
 				<span></span>
 				<span></span>
 				<span></span>
@@ -444,5 +444,6 @@
 			<p>© 2020 IDesign. Design by Zemez</p>
 		</div>
 	</footer>
+	<script src="js/script.js"></script>
 </body>
 </html>

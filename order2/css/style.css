@@ -19,6 +19,7 @@ body{
 		left: 0;
 		z-index: 10;
 		background-color: rgba(0, 0, 0, 0.5);
+		transition: .5s ease;
 	}
 	#dropdown .dropdown-close{
 		position: absolute;
@@ -129,7 +130,7 @@ body{
 		box-sizing: border-box;
 		padding: 20px;
 		justify-content: space-between;
-		/*filter: blur(2px);*/
+		transition: .5s ease;
 	}
 
 	header .logo{
@@ -283,6 +284,9 @@ body{
 		margin-bottom: 30px;
 	}
 
+	main .code-decision .bg{
+		display: none;
+	}
 	main .code-decision nav{
 		display: flex;
 		box-sizing: border-box;
@@ -1395,6 +1399,9 @@ body{
 	main .code-decision{
 		padding: 40px;
 		position: relative;
+	}
+	main .code-decision .bg{
+		display: block;
 	}
 	main .code-decision .bg img{
 		position: absolute;
