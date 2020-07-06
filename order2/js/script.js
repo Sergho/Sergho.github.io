@@ -1,3 +1,7 @@
+function Setup(){
+	NewsStart();
+}
+
 function DropdownOpen(){
 	const dropdown 	= document.querySelector("#dropdown");
 	const header 		= document.querySelector("header");
@@ -73,3 +77,36 @@ function PartnersNext(button){
 		}
 	}
 }
+
+function NewsStart(){
+	const descriptions = document.querySelectorAll("main .news .description");
+
+	descriptions.forEach((description) => {
+		const primary = description.querySelector(".primary");
+		description.style.height = primary.offsetHeight + "px";
+		description.style.bottom = "-" + (primary.offsetHeight - 4) + "px";
+		console.log(description.style.height);
+	})
+}
+
+function NewsHoverIn(item){
+	const description = item.querySelector(".description");
+	const primary			= item.querySelector(".primary");
+	const secondary 	= item.querySelector(".secondary");
+
+	console.log(secondary.offsetHeight);
+
+	description.style.height = primary.offsetHeight + secondary.offsetHeight + "px";
+	description.style.bottom = -primary.offsetHeight + "px" + 4;
+}
+
+function NewsHoverOut(item){
+	const description = item.querySelector(".description");
+	const primary			= item.querySelector(".primary");
+	const secondary 	= item.querySelector(".secondary");
+
+	description.style.height = primary.offsetHeight + "px";
+	description.style.bottom = "-" + (primary.offsetHeight - 4) + "px";
+}
+
+Setup();

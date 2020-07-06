@@ -562,18 +562,35 @@ body{
 	main .news .list .item{
 		list-style: none;
 		width: 100%;
-		margin-bottom: 30px;
+		margin-bottom: 110px;
+		position: relative;
+		cursor: pointer;
 	}
 	main .news .list .item img{
 		width: 100%;
 		border-radius: 5px 5px 0 0;
+		z-index: -1;
 	}
 	main .news .list .item .description{
 		border: 1px solid white;
 		width: 100%;
 		box-sizing: border-box;
-		margin-top: -5px;
-		padding: 15px;
+		padding: 0 15px;
+		overflow: hidden;
+		margin-top: -4px;
+		transition: .3s ease;
+		background-color: #161423;
+		z-index: 187;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
+	main .news .list .item .description .primary{
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+	main .news .list .item .description p{
+		margin-top: 0;
 	}
 	main .news .list .item .description .date{
 		color: white;
@@ -599,6 +616,9 @@ body{
 	}
 	main .news .read-more img{
 		width: 120px;
+	}
+	main .news .secondary{
+		display: none;
 	}
 
 	main .request{
@@ -1218,9 +1238,26 @@ body{
 	}
 	main .news .list .item{
 		width: 30%;
+		margin-bottom: 80px;
 	}
 	main .news > .read-more{
 		display: none;
+	}
+	main .news .secondary{
+		display: block;
+		padding-bottom: 15px;
+	}
+	main .news .list .item .description p{
+		color: white;
+		font-size: 14px;
+		font-family: Roboto Lt;
+	}
+	main .news .list .item .description .read-more{
+		width: 40%;
+		margin-top: 15px;
+	}
+	main .news .list .item .description .read-more img{
+		width: 100%;
 	}
 
 	main .request{
@@ -1516,6 +1553,10 @@ body{
 	}
 	main .news .list{
 		margin-bottom: 70px;
+	}
+	main .news .list .item{
+		width: 30%;
+		margin-bottom: 10px;
 	}
 
 	main .request{
