@@ -1214,6 +1214,9 @@ body{
 	main .news .list .item{
 		width: 30%;
 	}
+	main .news > .read-more{
+		display: none;
+	}
 
 	main .request{
 		display: flex;
@@ -1477,6 +1480,42 @@ body{
 
 	main .news{
 		padding: 40px;
+	}
+	main .news > img{
+		width: 210px;	
+	}
+	main .news h1{
+		font-size: 50px;
+	}
+	main .news .line{
+		margin-bottom: 50px;
+	}
+	main .news .list{
+		margin-bottom: 70px;
+	}
+
+	main .request{
+		padding: 40px;
+		justify-content: space-between;
+	}
+	main .request .content > img{
+		width: 250px;
+	}
+	main .request .content h1{
+		font-size: 36px;
+	}
+	main .request .content p{
+		font-size: 16px;
+	}
+	main .request .content form input{
+		margin-top: 40px;
+		padding: 20px 0;
+	}
+	main .request .content form button{
+		margin-left: 0;
+		width: 220px;
+		height: 50px;
+		margin-top: 60px;
 	}
 
 }
