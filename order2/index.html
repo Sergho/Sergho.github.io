@@ -15,34 +15,25 @@
 		</div>
 		<ul class="dropdown-items">
 			<li class="dropdown-item active">
-				Главная
+				<a href="#" onclick="DropdownClose();">Главная</a>
 				<img src="img/Chevron.png" alt="chevron">
 			</li>
 			<li class="dropdown-item">
-				Студия
+				<a href="#studio" onclick="DropdownClose();">Студия</a>
 				<img src="img/Chevron.png" alt="chevron">
 			</li>
 			<li class="dropdown-item">
-				Проекты
+				<a href="#projects" onclick="DropdownClose();">Проекты</a>
 				<img src="img/Chevron.png" alt="chevron">
 			</li>
 			<li class="dropdown-item">
-				Новости
+				<a href="#news" onclick="DropdownClose();">Новости</a>
 				<img src="img/Chevron.png" alt="chevron">
 			</li>
 		</ul>
 		<div class="buttons">
 			<div class="button">
-				<button>
-					<img src="img/Be.png" alt="be">
-					Behance
-				</button>
-			</div>
-			<div class="button">
-				<button>
-					<img src="img/Ball-g.png" alt="ball">
-					Dribble
-				</button>
+				<button>Заказать звонок</button>
 			</div>
 		</div>
 	</div>
@@ -53,10 +44,10 @@
 		</div>
 		<nav>
 			<ul class="navbar">
-				<li class="navbar-item"><a href="">Главная</a></li>
-				<li class="navbar-item"><a href="">Студия</a></li>
-				<li class="navbar-item"><a href="">Проекты</a></li>
-				<li class="navbar-item"><a href="">Новости</a></li>
+				<li class="navbar-item"><a href="#">Главная</a></li>
+				<li class="navbar-item"><a href="#studio">Студия</a></li>
+				<li class="navbar-item"><a href="#projects">Проекты</a></li>
+				<li class="navbar-item"><a href="#news">Новости</a></li>
 			</ul>
 			<div class="dropdown-menu" onclick="DropdownOpen();">
 				<span></span>
@@ -65,14 +56,7 @@
 			</div>
 		</nav>
 		<div class="buttons">
-			<button>
-				<img src="img/Be.png" alt="be">
-				Behance
-			</button>
-			<button>
-				<img src="img/Ball-g.png" alt="ball">
-				Dribble
-			</button>
+			<button>Заказать звонок</button>
 		</div>
 		<div class="main">
 			<h2>Создание видео</h2>
@@ -109,7 +93,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="code-decision">
+		<div class="code-decision" id="studio">
 			<div class="bg">
 				<img src="img/code-decision-bg.png" alt="bg">
 				<img src="img/code-decision-bg.png" alt="bg">
@@ -173,19 +157,19 @@
 				</li>
 			</ul>
 		</div>
-		<div class="projects">
+		<div class="projects" id="projects">
 			<img src="img/Projects.png" alt="projects">
 			<h1>Успешные проекты</h1>
 			<div class="line"></div>
 			<ul class="videos-mobile">
 				<li class="video">
-					<video src="img/video.mp4" onclick="VideoPauseMobile(this);"></video>
+					<video src="img/video1.mp4" onclick="VideoPauseMobile(this);"></video>
 					<div class="play" onclick="VideoPlayMobile(this);">
 						<img src="img/play.png">
 					</div>
 				</li>
 				<li class="video">
-					<video src="img/video.mp4" onclick="VideoPauseMobile(this);"></video>
+					<video src="img/video2.mp4" onclick="VideoPauseMobile(this);"></video>
 					<div class="play" onclick="VideoPlayMobile(this);">
 						<img src="img/play.png">
 					</div>
@@ -205,17 +189,17 @@
 			</ul>
 			<div class="videos-desktop">
 				<div class="main-video">
-					<video src="img/video.mp4" onclick="VideoPauseDesktop(this);"></video>
+					<video src="img/video1.mp4" onclick="VideoPauseDesktop(this);"></video>
 					<div class="play" onclick="VideoPlayDesktop(this);">
 						<img src="img/play.png" alt="play">
 					</div>
 				</div>
 				<ul class="other-videos">
 					<li class="other-video" style="transform: translate(0, 0%);">
-						<video src="img/video.mp4"></video>
+						<video src="img/video2.mp4"></video>
 					</li>
 					<li class="other-video" style="transform: translate(0, 0%);">
-						<video src="img/video.mp4"></video>
+						<video src="img/video1.mp4"></video>
 					</li>
 					<li class="other-video" style="transform: translate(0, 0%);">
 						<video src="img/video.mp4"></video>
@@ -340,7 +324,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="news">
+		<div class="news" id="news">
 			<img src="img/News.png" alt="news">
 			<h1>Последние события</h1>
 			<div class="line"></div>

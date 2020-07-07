@@ -61,14 +61,17 @@ video{
 		list-style: none;
 		padding: 10px 25px;
 		text-transform: uppercase;
-		color: white;
 		text-align: right;
 		font-family: Source Sb;
 		font-size: 24px;
 		position: relative;
 		cursor: pointer;
 	}
-	#dropdown .dropdown-items .dropdown-item.active{
+	#dropdown .dropdown-items .dropdown-item a{
+		color: white;
+		text-decoration: none;
+	}
+	#dropdown .dropdown-items .dropdown-item.active a{
 		color: #ACE125;
 	}
 	#dropdown .dropdown-items .dropdown-item img{
@@ -92,34 +95,20 @@ video{
 		justify-content: center;
 	}
 	#dropdown .buttons .button button{
-		width: 160px;
+		width: 200px;
 		height: 50px;
-		display: flex;
-		justify-content: space-around;
 		border-radius: 10px;
-		border: none;
-		line-height: 50px;
+		border: 2px solid #ACE125;
+		font-size: 20px;
+		font-family: Source Sb;
+		color: #ACE125;
 		cursor: pointer;
-		margin-bottom: 15px;
+		background-color: rgba(0, 0, 0, 0.0);
+		transition: .3s ease;
 	}
-	#dropdown .buttons .button:nth-child(1) button{
+	#dropdown .buttons .button button:hover{
 		background-color: #ACE125;
 		color: white;
-		font-size: 18px;
-		font-family: Roboto Sb;
-	}
-	#dropdown .buttons .button:nth-child(2) button{
-		background-color: rgba(0, 0, 0, 0.0);
-		color: #ACE125;
-		font-size: 18px;
-		font-family: Roboto Sb;
-		border: 2px solid #ACE125;
-	}
-	#dropdown .buttons .button button img{
-		width: 30px;
-		position: relative;
-		top: 50%;
-		transform: translate(0, -50%);
 	}
 
 	header{
@@ -871,44 +860,23 @@ video{
 		justify-content: space-between;
 	}
 	header .buttons button{
-		width: 120px;
+		width: 200px;
 		height: 40px;
-		display: flex;
-		justify-content: space-around;
 		border-radius: 10px;
-		margin-right: 10px;
-		margin-left: 10px;
 		position: relative;
 		top: 50%;
 		transform: translate(0, -50%);
 		cursor: pointer;
-		line-height: 40px;
 		font-family: Roboto Sb;
 		font-size: 16px;
-	}
-	header .buttons button:nth-child(1){
-		border: none;
-		background-color: #ACE125;
-		color: white;
-	}
-	header .buttons button:nth-child(2){
 		border: 2px solid #ACE125;
 		background-color: rgba(0, 0, 0, 0.0);
 		color: #ACE125;
+		transition: .3s ease;
 	}
-	header .buttons button:nth-child(1) img{
-		height: 16px;
-		width: 25px;
-	}
-	header .buttons button:nth-child(2) img{
-		height: 25px;
-		width: 25px;
-	}
-	header .buttons button img{
-		width: 25px;
-		position: relative;
-		top: 20px;
-		transform: translate(0, -50%);
+	header .buttons button:hover{
+		background-color: #ACE125;
+		color: white;
 	}
 
 	header .main{
@@ -1427,7 +1395,7 @@ video{
 	}
 	header .buttons button{
 		height: 50px;
-		width: 160px;
+		width: 220px;
 		line-height: 50px;
 		font-size: 20px;
 	}
