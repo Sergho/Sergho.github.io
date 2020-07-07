@@ -179,56 +179,59 @@
 			<div class="line"></div>
 			<ul class="videos-mobile">
 				<li class="video">
-					<video src="img/video.mp4"></video>
-					<div class="play" onclick="VideoToggleMobile(this);">
+					<video src="img/video.mp4" onclick="VideoPauseMobile(this);"></video>
+					<div class="play" onclick="VideoPlayMobile(this);">
 						<img src="img/play.png">
 					</div>
 				</li>
 				<li class="video">
-					<video src="img/video.mp4"></video>
-					<div class="play" onclick="VideoToggleMobile(this);">
+					<video src="img/video.mp4" onclick="VideoPauseMobile(this);"></video>
+					<div class="play" onclick="VideoPlayMobile(this);">
 						<img src="img/play.png">
 					</div>
 				</li>
 				<li class="video">
-					<video src="img/video.mp4"></video>
-					<div class="play" onclick="VideoToggleMobile(this);">
+					<video src="img/video.mp4" onclick="VideoPauseMobile(this);"></video>
+					<div class="play" onclick="VideoPlayMobile(this);">
 						<img src="img/play.png">
 					</div>
 				</li>
 				<li class="video">
-					<video src="img/video.mp4"></video>
-					<div class="play" onclick="VideoToggleMobile(this);">
+					<video src="img/video.mp4" onclick="VideoPauseMobile(this);"></video>
+					<div class="play" onclick="VideoPlayMobile(this);">
 						<img src="img/play.png">
 					</div>
 				</li>
 			</ul>
 			<div class="videos-desktop">
 				<div class="main-video">
-					<video src="img/video.mp4"></video>
+					<video src="img/video.mp4" onclick="VideoPauseDesktop(this);"></video>
+					<div class="play" onclick="VideoPlayDesktop(this);">
+						<img src="img/play.png" alt="play">
+					</div>
 				</div>
 				<ul class="other-videos">
-					<li class="other-video">
+					<li class="other-video" style="transform: translate(0, 0%);">
 						<video src="img/video.mp4"></video>
 					</li>
-					<li class="other-video">
+					<li class="other-video" style="transform: translate(0, 0%);">
 						<video src="img/video.mp4"></video>
 					</li>
-					<li class="other-video">
+					<li class="other-video" style="transform: translate(0, 0%);">
 						<video src="img/video.mp4"></video>
 					</li>
-					<li class="other-video">
+					<li class="other-video" style="transform: translate(0, 0%);">
 						<video src="img/video.mp4"></video>
 					</li>
-					<li class="other-video">
+					<li class="other-video" style="transform: translate(0, 0%);">
 						<video src="img/video.mp4"></video>
 					</li>
-					<li class="other-video">
+					<li class="other-video" style="transform: translate(0, 0%);">
 						<video src="img/video.mp4"></video>
 					</li>
 				</ul>
 				<div class="control">
-					<div class="prev">
+					<div class="prev" onclick="VideoPrev();">
 						<span></span>
 					</div>
 					<ul class="list">
@@ -257,7 +260,7 @@
 							<span></span>
 						</li>
 					</ul>
-					<div class="next">
+					<div class="next" onclick="VideoNext();">
 						<span></span>
 					</div>
 				</div>
