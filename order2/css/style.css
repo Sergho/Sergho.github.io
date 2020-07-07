@@ -6,11 +6,91 @@ body{
 	background-color: #161423;
 	/*overflow: hidden;*/
 }
-video{
+video, button{
 	outline: none;
 }
 
 @media screen and (min-width: 320px){
+
+	#call-modal{
+		width: 100vw;
+		height: 100vh;
+		background-color: rgba(0, 0, 0, 0.6);
+		z-index: 10;
+		position: absolute;
+		top: 0;
+		left: 0;
+		transition: .5s ease;
+	}
+	#call-modal .content{
+		width: 280px;
+		background-color: rgba(0, 0, 0, 0.0);
+		border-radius: 10px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		box-sizing: border-box;
+		padding: 10px;
+	}
+	#call-modal .content .close{
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		top: -30px;
+		right: 0;
+		cursor: pointer;
+	}
+	#call-modal .content .close span{
+		display: block;
+		width: 20px;
+		height: 3px;
+		background-color: white;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transition: .3s ease;
+	}
+	#call-modal .content .close span:nth-child(1){
+		transform: translate(-50%, -50%) rotate(45deg);
+	}
+	#call-modal .content .close span:nth-child(2){
+		transform: translate(-50%, -50%) rotate(135deg);
+	}
+	#call-modal .content .close:hover span{
+		background-color: #ccc;
+	}
+	#call-modal .content p{
+		color: white;
+		font-family: Source;
+	}
+	#call-modal .content form{
+		margin-top: 10px;
+	}
+	#call-modal .content form input{
+		width: 100%;
+		background-color: rgba(0, 0, 0, 0.0);
+		box-sizing: border-box;
+		border: none;
+		border-bottom: 2px solid #ACE125;
+		color: #ACE125;
+		padding: 10px 0;
+		margin-top: 15px;
+		outline: none;
+		font-family: Source;
+	}
+	#call-modal .content form button{
+		width: 100%;
+		background-color: rgba(0, 0, 0, 0.0);
+		border: 2px solid #ACE125;
+		border-radius: 10px;
+		box-sizing: border-box;
+		padding: 10px;
+		font-size: 18px;
+		color: #ACE125;
+		margin-top: 25px;
+		font-family: Source;
+	}
 
 	#dropdown{
 		opacity: 0;
@@ -1621,6 +1701,36 @@ video{
 
 }
 @media screen and (min-width: 1440px){
+
+	#call-modal .content{
+		width: 350px;
+		border-radius: 20px;
+		padding: 20px;
+	}
+	#call-modal .content .close{
+		width: 30px;
+		height: 30px;
+	}
+	#call-modal .content .close span{
+		width: 30px;
+		height: 4px;
+	}
+	#call-modal .content p{
+		font-size: 18px;
+	}
+	#call-modal .content form{
+		margin-top: 15px;
+	}
+	#call-modal .content form input{
+		padding: 15px 0;
+		margin-top: 20px;
+		font-size: 16px;
+	}
+	#call-modal .content form button{
+		border-radius: 15px;
+		padding: 15px;
+		font-size: 20px;
+	}
 
 	header{
 		padding: 45px 70px;

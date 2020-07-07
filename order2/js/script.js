@@ -194,4 +194,24 @@ function NewsHoverOut(item){
 	description.style.bottom = "-" + (primary.offsetHeight - 4) + "px";
 }
 
+function OpenModal(){
+	const modal = document.querySelector("#call-modal");
+	const header = document.querySelector("header");
+
+	header.style.filter = "blur(5px)";
+	modal.style.display = "block";
+	document.body.style.overflow = "hidden";
+	setTimeout(() => {modal.style.opacity = "1"}, 50);
+}
+
+function CloseModal(){
+	const modal = document.querySelector("#call-modal");
+	const header = document.querySelector("header");
+
+	header.style.filter = "none";
+	modal.style.opacity = "0";
+	document.body.style.overflow = "visible";
+	setTimeout(() => {modal.style.display = "none"}, 550);
+}
+
 Setup();

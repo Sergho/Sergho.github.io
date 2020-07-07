@@ -56,7 +56,7 @@
 			</div>
 		</nav>
 		<div class="buttons">
-			<button>Заказать звонок</button>
+			<button onclick="OpenModal();">Заказать звонок</button>
 		</div>
 		<div class="main">
 			<h2>Создание видео</h2>
@@ -65,6 +65,20 @@
 			<img src="img/mouse.png" alt="mouse">
 		</div>
 	</header>
+	<div id="call-modal" style="display: none; opacity: 0;">
+		<div class="content">
+			<div class="close" onclick="CloseModal();">
+				<span></span>
+				<span></span>
+			</div>
+			<p>Введите ваше имя и телефон. Специалист компании свяжется с вами, чтобы ответить на ваши вопросы.</p>
+			<form>
+				<input type="text" placeholder="Номер телефона">
+				<input type="text" placeholder="Ваше имя">
+				<button>Отправить</button>
+			</form>
+		</div>
+	</div>
 	<main>
 		<div class="about">
 			<div class="text">
