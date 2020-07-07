@@ -898,6 +898,7 @@ video{
 	}
 	header .buttons button img{
 		width: 25px;
+		height: 25px;
 		position: relative;
 		top: 50%;
 		transform: translate(0, -50%);
