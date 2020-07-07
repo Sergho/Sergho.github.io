@@ -896,9 +896,16 @@ video{
 		background-color: rgba(0, 0, 0, 0.0);
 		color: #ACE125;
 	}
+	header .buttons button:nth-child(1) img{
+		height: 16px;
+		width: 25px;
+	}
+	header .buttons button:nth-child(2) img{
+		height: 25px;
+		width: 25px;
+	}
 	header .buttons button img{
 		width: 25px;
-		height: 25px;
 		position: relative;
 		top: 20px;
 		transform: translate(0, -50%);
@@ -1423,6 +1430,9 @@ video{
 		width: 160px;
 		line-height: 50px;
 		font-size: 20px;
+	}
+	header .buttons button img{
+		top: 25px;
 	}
 	header .main h2{
 		font-size: 52px;
