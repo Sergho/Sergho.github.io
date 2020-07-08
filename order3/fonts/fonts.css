@@ -1,0 +1,27 @@
+@font-face{
+	font-family: Ubuntu;
+	src: url(Ubuntu/Ubuntu-Regular.ttf);
+}
+@font-face{
+	font-family: Ubuntu Sb;
+	src: url(Ubuntu/Ubuntu-Medium.ttf);
+}
+
+@font-face{
+	font-family: Montserrat;
+	src: url(Montserrat/Montserrat-Thin.ttf);
+	font-weight: thin;
+}
+@font-face{
+	font-family: Montserrat Sb;
+	src: url(Montserrat/Montserrat-SemiBold.ttf);
+}
+@font-face{
+	font-family: Montserrat Bd;
+	src: url(Montserrat/Montserrat-Bold.ttf);
+}
+
+@font-face{
+	font-family: Norican;
+	src: url(Norical/Norican-Regular.ttf);
+}
