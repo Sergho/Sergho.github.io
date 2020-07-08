@@ -324,9 +324,6 @@ video, button{
 		font-size: 12px;
 		margin-bottom: 20px;
 	}
-	main .about .text .read-more{
-		width: 120px;
-	}
 	main .about .numbers{
 		background-image: url(../img/map.png);
 		background-repeat: no-repeat;
@@ -548,16 +545,6 @@ video, button{
 		left: 52%;
 		transform: translate(-50%, -50%);
 	}
-	main .projects .read-more{
-		margin-left: auto;
-		margin-right: auto;
-		width: 90%;
-		display: flex;
-		justify-content: flex-end;
-	}
-	main .projects .read-more img{
-		width: 120px;
-	}
 
 	main .partners{
 		box-sizing: border-box;
@@ -681,14 +668,6 @@ video, button{
 		height: 2px;
 		margin-top: 5px;
 		margin-bottom: 5px;
-	}
-	main .news .read-more{
-		width: 100%;
-		display: flex;
-		justify-content: flex-end;
-	}
-	main .news .read-more img{
-		width: 120px;
 	}
 	main .news .secondary{
 		display: none;
@@ -1192,10 +1171,6 @@ video, button{
 	main .projects .videos-desktop .control .list .item.active span{
 		background-color: #ACE125;
 	}
-	main .projects .read-more{
-		width: 100%;
-		margin-top: 20px;
-	}
 
 	main .partners > img{
 		width: 200px;
@@ -1324,9 +1299,6 @@ video, button{
 		width: 30%;
 		margin-bottom: 80px;
 	}
-	main .news > .read-more{
-		display: none;
-	}
 	main .news .secondary{
 		display: block;
 		padding-bottom: 15px;
@@ -1335,13 +1307,6 @@ video, button{
 		color: white;
 		font-size: 14px;
 		font-family: Roboto Lt;
-	}
-	main .news .list .item .description .read-more{
-		width: 40%;
-		margin-top: 15px;
-	}
-	main .news .list .item .description .read-more img{
-		width: 100%;
 	}
 
 	main .request{
@@ -1607,9 +1572,6 @@ video, button{
 	}
 	main .projects .videos-desktop .other-videos{
 		margin-left: -20px;
-	}
-	main .projects .read-more{
-		margin-top: 30px;
 	}
 
 	main .partners{
@@ -1916,9 +1878,6 @@ video, button{
 	main .projects .videos-desktop .control .list .item span{
 		right: -40px;
 		height: 75px;
-	}
-	main .projects .read-more{
-		margin-top: 40px;
 	}
 
 	main .partners{
