@@ -6,6 +6,10 @@
 	font-family: Ubuntu Sb;
 	src: url(Ubuntu/Ubuntu-Medium.ttf);
 }
+@font-face{
+	font-family: Ubuntu Bd;
+	src: url(Ubuntu/Ubuntu-Bold.ttf);
+}
 
 @font-face{
 	font-family: Montserrat;

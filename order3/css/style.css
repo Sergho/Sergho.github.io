@@ -264,6 +264,8 @@ p{
 		margin-top: -10px;
 		display: flex;
 		flex-wrap: wrap;
+		box-sizing: border-box;
+		padding: 0 30px;
 	}
 	#projects .cards .card{
 		margin-top: 50px;
@@ -399,6 +401,7 @@ p{
 	}
 	#blog .slider .slides{
 		height: 200px;
+		width: 100%;
 	}
 	#blog .slider .slides .slide{
 		background-color: #EBF6FF;
@@ -417,6 +420,7 @@ p{
 	#blog .slider .slides .slide p{
 		margin-top: 30px;
 		font-size: 12px;
+		font-family: Montserrat;
 	}
 	#blog .slider .slides .slide .date{
 		margin-top: 15px;
@@ -630,6 +634,9 @@ p{
 		width: 45%;
 		text-align: right;
 	}
+	header .main h1 b{
+		color: #58B3E1;
+	}
 	header .main p{
 		width: 35%;
 		text-align: right;
@@ -840,8 +847,268 @@ p{
 
 @media screen and (min-width: 1024px){
 	
+	header{
+		padding: 40px 50px;
+	}
+	header .logo{
+		width: 200px;
+	}
+	header .logo img{
+		width: 35px;
+		height: 35px;
+	}
+	header .logo span{
+		font-family: Ubuntu Bd;
+		font-size: 28px;
+		line-height: 35px;
+	}
+	header .main h1{
+		margin-top: 90px;
+	}
+	header .main p{
+		margin-top: 10px;
+	}
+	header .main button{
+		margin-top: 20px;
+	}
+
+	#welcome{
+		margin-top: 120px;
+	}
+	#welcome .top{
+		width: 50%;
+		padding: 10% 50px;
+	}
+	#welcome .image{
+		width: 50%;
+	}
+	#welcome .image img{
+		position: relative;
+	}
+	#welcome .top p{
+		margin-top: 20px;
+	}
+	#welcome .top .cards .card{
+		position: relative;
+	}
+	#welcome .top .cards .card .image{
+		width: 10%;
+	}
+	#welcome .top .cards .card .text{
+		width: 90%;
+		padding-right: 10%;
+	}
+
+	#services .text .cards .card{
+		width: 50%;
+	}
+	#services .text .cards .card .number h1{
+		transform: rotate(-90deg);
+		text-align: right;
+		padding-right: 5px;
+	}
+
+	#projects .cards{
+		padding: 0 50px;
+	}
+
+	#it-company .text{
+		box-sizing: border-box;
+		padding: 30px;
+	}
+
+	footer .top .logo{
+		width: 200px;
+	}
+	footer .top .logo img{
+		width: 35px;
+		height: 35px;
+	}
+	footer .top .logo span{
+		font-size: 28px;
+	}
+
 }
 
 @media screen and (min-width: 1440px){
-	
+	header{
+		padding: 40px 75px;
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	header .navbar .navbar-item{
+		margin-left: 25px;
+		margin-right: 25px;
+	}
+	header .main h1{
+		margin-top: 125px;
+		font-size: 60px;
+	}
+	header .main p{
+		margin-top: 25px;
+		font-size: 18px;
+		width: 30%;
+		margin-left: 15%;
+	}
+	header .main button{
+		font-size: 18px;
+		margin-top: 45px;
+	}
+
+	#welcome{
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#welcome .top h1{
+		font-size: 30px;
+	}
+	#welcome .top p{
+		font-size: 18px;
+		margin-top: 35px;
+	}
+
+	#services{
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 140px;
+	}
+	#services .image{
+		width: 40%;
+	}
+	#services .text{
+		width: 60%;
+	}
+	#services .text h1{
+		font-size: 30px;
+	}
+	#services .text .cards{
+		margin-top: 0;
+	}
+	#services .text .cards .card{
+		margin-top: 60px;
+	}
+	#services .text .cards .card .number h1{
+		font-size: 50px;
+	}
+	#services .text .cards .card .text h3{
+		font-size: 20px;
+	}
+	#services .text .cards .card .text p{
+		font-size: 18px;
+		margin-top: 40px;
+	}
+
+	#projects{
+		margin-top: 140px;
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#projects .top h1{
+		font-size: 30px;
+	}
+	#projects .top p{
+		font-size: 18px;
+	}
+	#projects .cards .card .text h1{
+		font-size: 20px;
+	}
+	#projects .cards .card .text p{
+		font-size: 18px;
+	}
+	#projects .more{
+		margin-top: 55px;
+	}
+
+	#it-company{
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#it-company .text{
+		padding: 60px;
+	}
+	#it-company .text h1{
+		font-size: 30px;
+	}
+	#it-company .text p{
+		font-size: 18px;
+	}
+
+	#blog{
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#blog .top h1{
+		font-size: 30px;
+	}
+	#blog .slider .slides{
+		height: 240px;
+	}
+	#blog .slider .slides .slide{
+		height: 240px;
+		padding: 35px 15px;
+	}
+	#blog .slider .slides .slide h1{
+		font-size: 20px;
+	}
+	#blog .slider .slides .slide p{
+		font-size: 18px;
+		margin-top: 20px;
+	}
+	#blog .slider .slides .slide .date{
+		font-size: 14px;
+		margin-top: 25px;
+	}
+
+	#partners{
+		margin-top: 170px;
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	#subscribe{
+		margin-top: 200px;
+		padding-top: 50px;
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+		background-size: 15%;
+	}
+	#subscribe h1{
+		font-size: 30px;
+	}
+	#subscribe p{
+		font-size: 18px;
+		margin-top: 15px;
+	}
+	#subscribe form{
+		margin-top: 60px;
+	}
+	#subscribe form input{
+		width: 30%;
+	}
+	#subscribe form button{
+		width: 15%;
+	}
+
+	footer{
+		margin-top: 85px;
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	footer .top .navbar .navbar-item{
+		margin-right: 25px;
+		margin-left: 25px;
+	}
+	footer .top .navbar .navbar-item a{
+		font-size: 18px;
+	}
+
 }
