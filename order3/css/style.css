@@ -84,7 +84,8 @@ p{
 		font-family: Montserrat;
 		width: 70%;
 	}
-	header .main button{
+	header .main a{
+		display: block;
 		width: 180px;
 		height: 50px;
 		margin-top: 60px;
@@ -96,8 +97,11 @@ p{
 		font-family: Montserrat Sb;
 		margin-bottom: 40px;
 		transition: .3s ease;
+		text-align: center;
+		line-height: 50px;
+		text-decoration: none;
 	}
-	header .main button:hover{
+	header .main a:hover{
 		opacity: 0.8;
 	}
 
@@ -398,6 +402,7 @@ p{
 		display: flex;
 		flex-wrap: wrap;
 		position: relative;
+		overflow: hidden;
 	}
 	#blog .slider .slides{
 		height: 200px;
@@ -410,8 +415,11 @@ p{
 		box-sizing: border-box;
 		padding: 35px 30px;
 		position: absolute;
+		list-style: none;
 		top: 0;
-		left: 0;
+		left: 50%;
+		transform: translate(-50%, 0);
+		transition: .5s ease;
 	}
 	#blog .slider .slides .slide h1{
 		font-size: 16px;
@@ -443,9 +451,10 @@ p{
 		border-radius: 50%;
 		border: 1px solid #C4C4C4;
 		cursor: pointer;
+		transition: .5s ease;
 	}
 	#blog .slider .points .point.active{
-		border: none;
+		border: 1px solid #58B3E1;
 		background-color: #58B3E1;
 	}
 
@@ -642,7 +651,7 @@ p{
 		text-align: right;
 		margin-left: 10%;
 	}
-	header .main button{
+	header .main a{
 		margin-left: calc(45% - 180px);
 	}
 
@@ -765,6 +774,9 @@ p{
 		transform: translate(-50%, 0);
 		list-style: none;
 	}
+	#blog .slider .slides .slide p{
+		margin-top: 10px;
+	}
 
 	#partners{
 		margin-top: 80px;
@@ -868,7 +880,7 @@ p{
 	header .main p{
 		margin-top: 10px;
 	}
-	header .main button{
+	header .main a{
 		margin-top: 20px;
 	}
 
@@ -917,6 +929,10 @@ p{
 		padding: 30px;
 	}
 
+	#blog .slider .slides .slide p{
+		margin-top: 30px;
+	}
+
 	footer .top .logo{
 		width: 200px;
 	}
@@ -951,7 +967,7 @@ p{
 		width: 30%;
 		margin-left: 15%;
 	}
-	header .main button{
+	header .main a{
 		font-size: 18px;
 		margin-top: 45px;
 	}

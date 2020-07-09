@@ -29,7 +29,7 @@
 		<div class="main">
 			<h1>Finance <b>Co.</b></h1>
 			<p>Finance and Jurisprudence are our main directions, we know how to deal with.</p>
-			<button>Подробнее</button>
+			<a href="#welcome">Подробнее</a>
 		</div>
 	</header>
 	<main>
@@ -163,9 +163,6 @@
 					</div>
 				</li>
 			</ul>
-			<div class="more">
-				<button>Еще</button>
-			</div>
 		</div>
 		<div id="it-company">
 			<div class="image">
@@ -175,9 +172,6 @@
 				<h2>it company</h2>
 				<h1>Мы хотим рассказать о себе немного больше</h1>
 				<p>Компания работает на рынке информационных технологий России с 2010 года и является лидирующим глобальным поставщиком IT-решений и сервисов.</p>
-				<div class="more">
-					<button>Подробнее</button>
-				</div>
 			</div>
 		</div>
 		<div id="blog">
@@ -187,32 +181,32 @@
 			</div>
 			<div class="slider">
 				<ul class="slides">
-					<li class="slide">
+					<li class="slide" style="transform: translate(-50%, 0px);">
 						<h1>КОНФЕРЕНЦИЯ TAdviser</h1>
 						<p>27 мая 2020 года аналитический центр TAdviser провел онлайн конференцию «Удаленная работа: организационные и технические решения». </p>
 						<div class="date">02.02.20</div>
 					</li>
-					<li class="slide">
+					<li class="slide" style="transform: translate(50%, 0px);">
 						<h1>КОНФЕРЕНЦИЯ TAdviser</h1>
 						<p>27 мая 2020 года аналитический центр TAdviser провел онлайн конференцию «Удаленная работа: организационные и технические решения». </p>
 						<div class="date">02.02.20</div>
 					</li>
-					<li class="slide">
+					<li class="slide" style="transform: translate(150%, 0px);">
 						<h1>КОНФЕРЕНЦИЯ TAdviser</h1>
 						<p>27 мая 2020 года аналитический центр TAdviser провел онлайн конференцию «Удаленная работа: организационные и технические решения». </p>
 						<div class="date">02.02.20</div>
 					</li>
-					<li class="slide">
+					<li class="slide" style="transform: translate(150%, 0px);">
 						<h1>КОНФЕРЕНЦИЯ TAdviser</h1>
 						<p>27 мая 2020 года аналитический центр TAdviser провел онлайн конференцию «Удаленная работа: организационные и технические решения». </p>
 						<div class="date">02.02.20</div>
 					</li>
 				</ul>
 				<div class="points">
-					<div class="point active"></div>
-					<div class="point"></div>
-					<div class="point"></div>
-					<div class="point"></div>
+					<div class="point active" onclick="SlideTo(0)"></div>
+					<div class="point" onclick="SlideTo(1)"></div>
+					<div class="point" onclick="SlideTo(2)"></div>
+					<div class="point" onclick="SlideTo(3)"></div>
 				</div>
 			</div>
 		</div>
@@ -270,5 +264,6 @@
 			<span>(c) Сайт разработан Market Pro</span>
 		</div>
 	</footer>
+	<script src="js/script.js"></script>
 </body>
 </html>
