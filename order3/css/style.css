@@ -149,7 +149,10 @@ p{
 		font-size: 16px;
 		font-family: Montserrat Sb;
 	}
-	#welcome img{
+	#welcome > .image{
+		width: 100%;
+	}
+	#welcome > .image img{
 		width: 100%;
 	}
 	#welcome .bottom{
@@ -185,49 +188,52 @@ p{
 		width: 100%;
 		margin-top: 10px;
 	}
-
-	#services{
+	
+	#services .image{
+		display: none;
+	}
+	#services > .text{
 		margin-top: 50px;
 		width: 100%;
 		box-sizing: border-box;
 		padding: 0 30px;
 	}
-	#services h2{
+	#services .text h2{
 		font-family: Norican;
 		color: #58B3E1;
 		font-size: 20px;
 	}
-	#services h1{
+	#services .text h1{
 		font-family: Montserrat Sb;
 		font-size: 20px;		
 	}
-	#services .cards{
+	#services .text .cards{
 		display: flex;
 		flex-wrap: wrap;
 		margin-top: 40px;
 	}
-	#services .cards .card{
+	#services .text .cards .card{
 		width: 100%;
 		display: flex;
 		list-style: none;
 		justify-content: space-between;
 	}
-	#services .cards .card .number{
+	#services .text .cards .card .number{
 		width: 20%;
 	}
-	#services .cards .card .number h1{
+	#services .text .cards .card .number h1{
 		color: #B6B6B6;
 		font-size: 30px;
 		font-family: Montserrat Bd;
 	}
-	#services .cards .card .text{
+	#services .text .cards .card .text{
 		width: 80%;
 	}
-	#services .cards .card .text h3{
+	#services .text .cards .card .text h3{
 		font-size: 16px;
 		font-family: Montserrat Sb;
 	}
-	#services .cards .card .text p{
+	#services .text .cards .card .text p{
 		font-size: 12px;
 		font-family: Montserrat;
 		margin-top: 15px;
@@ -261,6 +267,7 @@ p{
 	}
 	#projects .cards .card{
 		margin-top: 50px;
+		list-style: none;
 	}
 	#projects .cards .card .image{
 		width: 100%;
@@ -309,38 +316,49 @@ p{
 	#projects .more button:hover{
 		opacity: 0.8;
 	}
-	#projects > img{
-		width: 100%;
-		margin-top: 45px;
-	}
 
 	#it-company{
 		width: 100%;
+	}
+	#it-company .image{
+		width: 100%;
+		margin-top: 45px;
+		height: 130px;
+		overflow: hidden;
+		position: relative;
+	}
+	#it-company .image img{
+		width: 100%;
+		position: absolute;
+		top: 50%;
+		transform: translate(0, -50%);
+	}
+	#it-company .text{
 		box-sizing: border-box;
 		padding: 0 30px;
 		margin-top: 30px;
 	}
-	#it-company h2{
+	#it-company .text h2{
 		font-family: Norican;
 		color: #58B3E1;
 		font-size: 20px;
 	}
-	#it-company h1{
+	#it-company .text h1{
 		font-family: Montserrat Sb;
 		font-size: 20px;
 	}
-	#it-company p{
+	#it-company .text p{
 		margin-top: 30px;
 		font-family: Montserrat;
 		font-size: 12px;
 	}
-	#it-company .more{
+	#it-company .text .more{
 		margin-top: 45px;
 		width: 100%;
 		display: flex;
 		justify-content: center;
 	}
-	#it-company .more button{
+	#it-company .text .more button{
 		width: 180px;
 		height: 50px;
 		border-radius: 5px;
@@ -352,7 +370,7 @@ p{
 		cursor: pointer;
 		transition: .3s ease;
 	}
-	#it-company .more button:hover{
+	#it-company .text .more button:hover{
 		opacity: 0.8;
 	}
 
@@ -379,8 +397,8 @@ p{
 		flex-wrap: wrap;
 		position: relative;
 	}
-	#blog .slider .slides .slide:nth-child(1){
-		position: relative;
+	#blog .slider .slides{
+		height: 200px;
 	}
 	#blog .slider .slides .slide{
 		background-color: #EBF6FF;
@@ -459,10 +477,12 @@ p{
 		width: 100%;
 		box-sizing: border-box;
 		padding: 0 30px;
-		margin-top: 120px;
+		margin-top: 60px;
+		padding-top: 60px;
 		background-image: url(../img/subscribe-bg.png);
 		background-size: 100%;
 		background-position: center right;
+		padding-bottom: 45px;
 	}
 	#subscribe h2{
 		font-family: Norican;
@@ -511,7 +531,6 @@ p{
 	}
 
 	footer .top{
-		margin-top: 45px;
 		width: 100%;
 		box-sizing: border-box;
 		padding: 35px 30px;
@@ -536,6 +555,9 @@ p{
 		color: #424B5A;
 		font-size: 20px;
 		line-height: 60px;
+	}
+	footer .top .navbar{
+		display: none;
 	}
 	footer .top .scroll-top{
 		width: 60px;
@@ -573,12 +595,247 @@ p{
 
 }
 
-@media screen and (min-width: 425px){
-	
-}
-
 @media screen and (min-width: 768px){
 	
+	header{
+		background-image: url(../img/header-bg-desktop.jpg);
+	}
+	header .dropdown-menu{
+		display: none;
+	}
+	header .navbar{
+		display: block;
+		display: flex;
+	}
+	header .navbar .navbar-item{
+		list-style: none;
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+	header .navbar .navbar-item.active{
+		border-bottom: 3px solid #58B3E1
+	}
+	header .navbar .navbar-item a{
+		font-size: 14px;
+		line-height: 25px;
+		font-family: Montserrat Sb;
+		text-decoration: none;
+		color: black;
+		transition: .3s ease;
+	}
+	header .navbar .navbar-item:hover a{
+		color: #777;
+	}
+	header .main h1{
+		width: 45%;
+		text-align: right;
+	}
+	header .main p{
+		width: 35%;
+		text-align: right;
+		margin-left: 10%;
+	}
+	header .main button{
+		margin-left: calc(45% - 180px);
+	}
+
+	#welcome{
+		display: flex;
+		flex-wrap: wrap;
+	}
+	#welcome .top{
+		width: 45%;
+	}
+	#welcome > .image{
+		width: 55%;
+		position: relative;
+	}
+	#welcome > .image img{
+		position: absolute;
+		top: 50%;
+		transform: translate(0, -50%);
+	}
+	#welcome .bottom .cards .card{
+		width: 25%;
+		position: relative;
+	}
+	#welcome .bottom .cards .card::after{
+		content: "";
+		width: 1px;
+		height: 80px;
+		background-color: #B6B6B6;
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translate(0, -50%);
+	}
+	#welcome .bottom .cards .card:nth-child(4)::after{
+		display: none;
+	}
+
+	#services{
+		margin-top: 80px;
+		display: flex;
+	}
+	#services > .text{
+		width: 50%;
+	}
+	#services > .image{
+		display: block;
+		width: 50%;
+		position: relative;
+	}
+	#services > .image img{
+		width: 100%;
+		position: absolute;
+		top: 50%;
+		transform: translate(0, -50%);
+	}
+
+	#projects{
+		margin-top: 50px;
+	}
+	#projects .top{
+		width: 100%;
+		box-sizing: border-box;
+		padding: 0 30px;
+	}
+	#projects .top h2{
+		text-align: center;
+	}
+	#projects .top h1{
+		text-align: center;
+	}
+	#projects .top p{
+		text-align: center;
+	}
+	#projects .cards{
+		justify-content: space-between;
+	}
+	#projects .cards .card{
+		width: 30%;
+	}
+	#projects .cards .card .text{
+		padding: 0;
+	}
+	#projects .cards .card .text h1{
+		font-size: 14px;
+		margin-top: 10px;
+	}
+	#projects .cards .card .text p{
+		margin-top: 10px;
+	}
+
+	#it-company{
+		display: flex;
+		justify-content: space-between;
+		margin-top: 100px;
+	}
+	#it-company .image{
+		width: 50%;
+		height: auto;
+	}
+	#it-company .text{
+		width: 50%;
+	}
+
+	#blog{
+		margin-top: 115px;
+	}
+	#blog .top h1{
+		text-align: center;
+	}
+	#blog .top h2{
+		text-align: center;
+	}
+	#blog .slider .slides{
+		height: 220px;
+	}
+	#blog .slider .slides .slide{
+		width: 30%;
+		height: 220px;
+		left: 50%;
+		transform: translate(-50%, 0);
+		list-style: none;
+	}
+
+	#partners{
+		margin-top: 80px;
+	}
+	#partners .items{
+		justify-content: space-between;
+		overflow: visible;
+	}
+	#partners .items .item{
+		width: 15%;
+		margin: 0;
+		position: relative;
+	}
+	#partners .items .item img{
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%, 0);
+	}
+
+	#subscribe{
+		padding-top: 0;
+		margin-top: 120px;
+		background-image: url(../img/subscribe-bg-desktop.png);
+		background-position: center left;
+		background-size: 20%;
+		background-repeat: no-repeat;
+	}
+	#subscribe h2{
+		text-align: center;
+	}
+	#subscribe h1{
+		text-align: center;
+	}
+	#subscribe p{
+		text-align: center;
+	}
+	#subscribe form input{
+		width: 40%;
+	}
+	#subscribe form{
+		justify-content: center;
+	}
+	#subscribe form button{
+		width: 20%;
+		margin: 0;
+		margin-left: 30px;
+	}
+
+	footer .top{
+		padding-bottom: 10px;
+	}
+	footer .top .scroll-top{
+		display: none;
+	}
+	footer .top .navbar{
+		display: block;
+		display: flex;
+	}
+	footer .top .navbar .navbar-item{
+		list-style: none;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	footer .top .navbar .navbar-item a{
+		line-height: 60px;
+		font-family: Montserrat Sb;
+		font-size: 12px;
+		transition: .3s ease;
+		text-decoration: none;
+		color: black;
+	}
+	footer .top .navbar .navbar-item:hover a{
+		color: #777;
+	}
+	footer .bottom span{
+		font-family: Montserrat Sb;
+	}
+
 }
 
 @media screen and (min-width: 1024px){

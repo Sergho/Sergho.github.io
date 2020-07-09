@@ -14,12 +14,12 @@
 			<span>Logotype</span>
 		</div>
 		<ul class="navbar">
-			<li class="navbar-item">Главная</li>
-			<li class="navbar-item">О компании</li>
-			<li class="navbar-item">Услуги</li>
-			<li class="navbar-item">Проекты</li>
-			<li class="navbar-item">Блог</li>
-			<li class="navbar-item">Контакты</li>
+			<li class="navbar-item active"><a href="#">Главная</a></li>
+			<li class="navbar-item"><a href="#">О компании</a></li>
+			<li class="navbar-item"><a href="#">Услуги</a></li>
+			<li class="navbar-item"><a href="#">Проекты</a></li>
+			<li class="navbar-item"><a href="#">Блог</a></li>
+			<li class="navbar-item"><a href="#">Контакты</a></li>
 		</ul>
 		<div class="dropdown-menu">
 			<span></span>
@@ -59,7 +59,7 @@
 					</li>
 				</ul>
 			</div>
-			<img src="img/about-img.png" alt="image">
+			<div class="image"><img src="img/about-img.png" alt="image"></div>
 			<div class="bottom">
 				<ul class="cards">
 					<li class="card">
@@ -82,46 +82,51 @@
 			</div>
 		</div>
 		<div id="services">
-			<h2>Services</h2>
-			<h1>Лучшие услуги</h1>
-			<ul class="cards">
-				<li class="card">
-					<div class="number">
-						<h1>01</h1>
-					</div>
-					<div class="text">
-						<h3>Защита онлайн-сервисов</h3>
-						<p>Компания Softline предлагает несколько вариантов решений для защиты важных веб-приложений.</p>
-					</div>
-				</li>
-				<li class="card">
-					<div class="number">
-						<h1>02</h1>
-					</div>
-					<div class="text">
-						<h3>Защита веб и почты</h3>
-						<p>Вы получите действующие механизмы внедрения политик обработки почты, мониторинг и отчетность.</p>
-					</div>
-				</li>
-				<li class="card">
-					<div class="number">
-						<h1>03</h1>
-					</div>
-					<div class="text">
-						<h3>Управление доступом</h3>
-						<p>IDM-системы позволяют повысить уровень информационной безопасности и одновременно упростить бизнес-процессы.</p>
-					</div>
-				</li>
-				<li class="card">
-					<div class="number">
-						<h1>04</h1>
-					</div>
-					<div class="text">
-						<h3>Защита сети, ATP</h3>
-						<p>Услуги по внедрению специализированных средств обнаружения современных атак, а также эффективное противодействие целевым атакам.</p>
-					</div>
-				</li>
-			</ul>
+			<div class="image">
+				<img src="img/services-bg.png" alt="bg">
+			</div>
+			<div class="text">
+				<h2>Services</h2>
+				<h1>Лучшие услуги</h1>
+				<ul class="cards">
+					<li class="card">
+						<div class="number">
+							<h1>01</h1>
+						</div>
+						<div class="text">
+							<h3>Защита онлайн-сервисов</h3>
+							<p>Компания Softline предлагает несколько вариантов решений для защиты важных веб-приложений.</p>
+						</div>
+					</li>
+					<li class="card">
+						<div class="number">
+							<h1>02</h1>
+						</div>
+						<div class="text">
+							<h3>Защита веб и почты</h3>
+							<p>Вы получите действующие механизмы внедрения политик обработки почты, мониторинг и отчетность.</p>
+						</div>
+					</li>
+					<li class="card">
+						<div class="number">
+							<h1>03</h1>
+						</div>
+						<div class="text">
+							<h3>Управление доступом</h3>
+							<p>IDM-системы позволяют повысить уровень информационной безопасности и одновременно упростить бизнес-процессы.</p>
+						</div>
+					</li>
+					<li class="card">
+						<div class="number">
+							<h1>04</h1>
+						</div>
+						<div class="text">
+							<h3>Защита сети, ATP</h3>
+							<p>Услуги по внедрению специализированных средств обнаружения современных атак, а также эффективное противодействие целевым атакам.</p>
+						</div>
+					</li>
+				</ul>
+			</div>
 		</div>
 		<div id="projects">
 			<div class="top">
@@ -161,14 +166,18 @@
 			<div class="more">
 				<button>Еще</button>
 			</div>
-			<img src="img/projects-img.png" alt="projects">
 		</div>
 		<div id="it-company">
-			<h2>it company</h2>
-			<h1>Мы хотим рассказать о себе немного больше</h1>
-			<p>Компания работает на рынке информационных технологий России с 2010 года и является лидирующим глобальным поставщиком IT-решений и сервисов.</p>
-			<div class="more">
-				<button>Подробнее</button>
+			<div class="image">
+				<img src="img/it-company-img.png" alt="it-company">
+			</div>
+			<div class="text">
+				<h2>it company</h2>
+				<h1>Мы хотим рассказать о себе немного больше</h1>
+				<p>Компания работает на рынке информационных технологий России с 2010 года и является лидирующим глобальным поставщиком IT-решений и сервисов.</p>
+				<div class="more">
+					<button>Подробнее</button>
+				</div>
 			</div>
 		</div>
 		<div id="blog">
@@ -245,6 +254,14 @@
 				<img src="img/logo.png" alt="logo">
 				<span>Logotype</span>
 			</div>
+			<ul class="navbar">
+				<li class="navbar-item"><a href="#">Главная</a></li>
+				<li class="navbar-item"><a href="#">О компании</a></li>
+				<li class="navbar-item"><a href="#">Услуги</a></li>
+				<li class="navbar-item"><a href="#">Проекты</a></li>
+				<li class="navbar-item"><a href="#">Блог</a></li>
+				<li class="navbar-item"><a href="#">Контакты</a></li>
+			</ul>
 			<div class="scroll-top">
 				<span></span>
 			</div>
