@@ -1,0 +1,25 @@
+@font-face{
+	font-family: Montserrat;
+	src: url(Montserrat/Montserrat-Regular.ttf);
+}
+@font-face{
+	font-family: Montserrat I;
+	src: url(Montserrat/Montserrat-Italic.ttf);
+}
+@font-face{
+	font-family: Montserrat Sb;
+	src: url(Montserrat/Montserrat-SemiBold.ttf);
+}
+@font-face{
+	font-family: Montserrat Bd;
+	src: url(Montserrat/Montserrat-Bold.ttf);
+}
+
+@font-face{
+	font-family: Nunito;
+	src: url(Nunito/Nunito-Regular.ttf);
+}
+@font-face{
+	font-family: Nunito Bd;
+	src: url(Nunito/Nunito-Bold.ttf);
+}
