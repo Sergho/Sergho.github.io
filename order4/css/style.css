@@ -1078,46 +1078,46 @@ body{
 		text-align: left;
 	}
 	#projects .cards .card:nth-child(1){
-		background-image: url(../img/projects-bg.png),
-											url(../img/projects-card-bg.png),
+		background-image: url(../img/projects-card-bg.png),
+											url(../img/projects-bg.png),
 											url(../img/projects-card1.png);
-		background-size: auto 100%, 60%, auto 100%;
-		background-position: center right, 85% 10%, center left;
+		background-size: 30%,auto 100%, auto 100%;
+		background-position: 85% 10%, center right, center left;
 	}
 	#projects .cards .card:nth-child(2){
-		background-image: url(../img/projects-bg.png),
-											url(../img/projects-card-bg.png),
+		background-image: url(../img/projects-card-bg.png),
+											url(../img/projects-bg.png),
 											url(../img/projects-card2.png);
-		background-size: auto 100%, 60%, auto 70%;
-		background-position: center right, 85% 10%, center left;
+		background-size: 30%, auto 100%, auto 70%;
+		background-position: 85% 10%, center right, center left;
 	}
 	#projects .cards .card:nth-child(3){
-		background-image: url(../img/projects-bg.png),
-											url(../img/projects-card-bg.png),
+		background-image: url(../img/projects-card-bg.png),
+											url(../img/projects-bg.png),
 											url(../img/projects-card3.png);
-		background-size: auto 100%, 60%, auto 50%;
-		background-position: center right, 85% 10%, center left;
+		background-size: 30%, auto 100%, auto 50%;
+		background-position: 85% 10%, center right, center left;
 	}
 	#projects .cards .card:nth-child(4){
-		background-image: url(../img/projects-bg.png),
-											url(../img/projects-card-bg.png),
+		background-image: url(../img/projects-card-bg.png),
+											url(../img/projects-bg.png),
 											url(../img/projects-card4.png);
-		background-size: auto 100%, 60%, auto 60%;
-		background-position: center right, 85% 10%, center left;
+		background-size: 30%, auto 100%, auto 60%;
+		background-position: 85% 10%, center right, center left;
 	}
 	#projects .cards .card:nth-child(5){
-		background-image: url(../img/projects-bg.png),
-											url(../img/projects-card-bg.png),
+		background-image: url(../img/projects-card-bg.png),
+											url(../img/projects-bg.png),
 											url(../img/projects-card5.png);
-		background-size: auto 100%, 60%, auto 60%;
-		background-position: center right, 85% 10%, center left;
+		background-size: 30%, auto 100%, auto 60%;
+		background-position: 85% 10%, center right, center left;
 	}
 	#projects .cards .card:nth-child(6){
-		background-image: url(../img/projects-bg.png),
-											url(../img/projects-card-bg.png),
+		background-image: url(../img/projects-card-bg.png),
+											url(../img/projects-bg.png),
 											url(../img/projects-card6.png);
-		background-size: auto 100%, 60%, auto 50%;
-		background-position: center right, 85% 10%, center left;
+		background-size: 30%, auto 100%, auto 50%;
+		background-position: 85% 10%, center right, center left;
 	}
 	#projects .cards .card h1{
 		width: 45%;
@@ -1391,6 +1391,10 @@ body{
 		transform: translate(0, -50%);
 	}
 	#app .text{
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+	#app .text{
 		width: 55%;
 		justify-content: space-between;
 	}
@@ -1425,10 +1429,10 @@ body{
 	#app .text .num{
 		width: 30%;
 		margin-top: 30px;
+		margin-bottom: 30px;
 	}
 	#app .text .num h2{
 		font-size: 16px;
-		margin-bottom: 30px;
 	}
 	#app .text .num span{
 		font-size: 14px;
@@ -1493,7 +1497,507 @@ body{
 }
 @media screen and (min-width: 1024px){
 	
+	header{
+		padding: 45px;
+		padding-top: 30px;
+	}
+	header .logo{
+		height: 40px;
+	}
+	header .navbar .navbar-item{
+		height: 40px;
+	}
+	header .navbar .navbar-item a{
+		line-height: 40px;
+	}
+	header .buttons a{
+		height: 40px;
+	}
+	header .buttons a:nth-child(2){
+		line-height: 40px;
+	}
+
+	#main{
+		padding: 45px;
+	}
+	#main h1{
+		font-size: 30px;
+	}
+	#main p{
+		font-size: 16px;
+	}
+	#main button{
+		margin-top: 50px;
+		font-size: 16px;
+	}
+
+	#about{
+		margin-top: 100px;
+	}
+	#about .text h1{
+		font-size: 30px;
+	}
+	#about .text p{
+		font-size: 16px;
+		margin-top: 30px;
+	}
+	#about .text ul{
+		margin-top: 30px;
+	}
+	#about .text ul li{
+		font-size: 15px;
+	}
+
+	#stats{
+		margin-top: 70px;
+	}
+	#stats h1{
+		font-size: 30px;
+	}
+	#stats .cards{
+		margin-top: 25px;
+		margin-bottom: 20px;
+	}
+	#stats .cards .card h1{
+		font-size: 18px;
+	}
+
+	#projects{
+		margin-top: 60px;
+	}
+	#projects h1{
+		font-size: 30px;
+	}
+	#projects .cards .card{
+		padding: 30px;
+	}
+	#projects .cards .card p{
+		font-size: 12px;
+	}
+
+	#what-is{
+		padding: 45px;
+		margin-top: 60px;
+	}
+	#what-is .text h1{
+		font-size: 30px;
+	}
+	#what-is .text p{
+		font-size: 13px;
+	}
+	#what-is .text button{
+		margin-top: 30px;
+	}
+
+	#adv{
+		margin-top: 70px;
+	}
+	#adv h1{
+		font-size: 30px;
+	}
+	#adv .cards .card{
+		padding: 30px;
+	}
+	#adv .cards .card h1{
+		font-size: 18px;
+	}
+	#adv .cards .card p{
+		margin-top: 10px;
+		font-size: 13px;
+	}
+	#adv .cards .card img{
+		margin-top: 15px;
+	}
+
+	#news{
+		padding: 45px;
+	}
+	#news h1{
+		font-size: 30px;
+	}
+	#news .slider .buttons{
+		top: 50px;
+		right: 50px;
+		width: 70px;
+	}
+	#news .slider .buttons > div{
+		width: 25px;
+		height: 25px;
+	}
+	#news .slider .buttons span{
+		width: 7px;
+		height: 7px;
+	}
+	#news .slider .slides{
+		margin: 0;
+	}
+
+	#partners .slider .slides{
+		padding: 10px 0;
+	}
+
+	#info{
+		padding: 45px;
+	}
+	#info .text h1{
+		font-size: 30px;
+	}
+
+	#app .text h1{
+		font-size: 30px;
+	}
+	#app .text p{
+		font-size: 16px;
+	}
+	#app .text button{
+		margin-top: 40px;
+	}
+	#app .text .num{
+		margin-top: 40px;
+	}
+
+	#callback{
+		padding: 45px;
+	}
+	#callback .text h1{
+		font-size: 30px;
+	}
+	#callback .text form{
+		margin-top: 20px;
+	}
+	#callback .text form button{
+		margin-top: 30px;
+	}
+
+	footer .top .buttons{
+		width: 240px;
+		justify-content: flex-end;
+	}
+	footer .top .buttons button:nth-child(1){
+		width: 120px;
+		margin-right: 10px;
+	}
+	footer .top .buttons button:nth-child(2){
+		width: 80px;
+	}
+
 }
 @media screen and (min-width: 1440px){
 	
+	header{
+		padding: 55px 80px;
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	header .logo{
+		width: 140px;
+	}
+	header .navbar .navbar-item{
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+	header .navbar .navbar-item a{
+		font-size: 18px;
+	}
+	header .buttons{
+		width: 230px;
+	}
+	header .buttons a img{
+		width: 40px;
+	}
+	header .buttons a:nth-child(2){
+		font-size: 18px;
+		padding: 0 30px;
+		height: 50px;
+		line-height: 50px;
+		margin-top: -5px;
+	}
+
+	#main{
+		max-width: 1440px;
+		padding: 80px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 30px;
+	}
+	#main h1{
+		font-size: 40px;
+	}
+	#main p{
+		font-size: 18px;
+		margin-top: 40px;
+	}
+	#main .button button{
+		margin-top: 80px;
+		width: 170px;
+		height: 60px;
+		font-size: 18px;
+	}
+	#main .coins img:nth-child(1){
+		width: 30px;
+	}
+	#main .coins img:nth-child(2){
+		width: 60px;
+	}
+	#main .coins img:nth-child(3){
+		width: 40px;
+	}
+
+	#about{
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 80px;
+	}
+	#about .text h1{
+		font-size: 36px;
+	}
+	#about .text p{
+		font-size: 18px;
+	}
+	#about .text ul li{
+		font-size: 18px;
+	}
+
+	#stats{
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 80px;
+	}
+	#stats h1{
+		font-size: 36px;
+	}
+	#stats .cards .card h1{
+		font-size: 30px;
+	}
+	#stats .cards .card h2{
+		font-size: 18px;
+	}
+
+	#projects{
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 80px;
+	}
+	#projects h1{
+		font-size: 36px;
+	}
+	#projects .cards{
+		margin-top: 50px;
+	}
+	#projects .cards .card{
+		height: 340px;
+	}
+	#projects .cards .card:nth-child(1){
+		background-size: 40%, auto 100%, auto 100%;
+	}
+	#projects .cards .card:nth-child(2){
+		background-size: 40%, auto 100%, auto 70%;
+	}
+	#projects .cards .card:nth-child(3){
+		background-size: 40%, auto 100%, auto 50%;
+	}
+	#projects .cards .card:nth-child(4){
+		background-size: 40%, auto 100%, auto 60%;
+	}
+	#projects .cards .card:nth-child(5){
+		background-size: 40%, auto 100%, auto 60%;
+	}
+	#projects .cards .card:nth-child(6){
+		background-size: 40%, auto 100%, auto 50%;
+	}
+	#projects .cards .card h1{
+		font-size: 24px;
+	}
+	#projects .cards .card p{
+		font-size: 16px;
+		margin-top: 20px;
+	}
+	#projects .cards .card img{
+		width: 140px;
+	}
+
+	#what-is{
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 80px;
+	}
+	#what-is .text h1{
+		font-size: 36px;
+	}
+	#what-is .text p{
+		font-size: 16px;
+		line-height: 26px;
+	}
+	#what-is .text button{
+		margin-top: 40px;
+		width: 170px;
+		height: 60px;
+		font-size: 18px;
+	}
+
+	#adv{
+		margin-top: 110px;
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#adv .cards .card h1{
+		font-size: 24px;
+	}
+	#adv .cards .card p{
+		font-size: 16px;
+	}
+
+	#news{
+		margin-top: 80px;
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#news .slider .slides{
+		height: 500px;
+	}
+	#news .slider .slides .slide{
+		box-sizing: border-box;
+		padding: 15px;
+	}
+	#news .slider .slides .slide .date{
+		padding: 15px;
+		font-size: 18px;
+	}
+	#news .slider .slides .slide h1{
+		font-size: 17px;
+		text-align: left;
+	}
+	#news .slider .slides .slide p{
+		text-align: left;
+		font-size: 16px;
+	}
+
+	#partners{
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 50px;
+	}
+	#partners h1{
+		font-size: 36px;
+	}
+	#partners .slider{
+		margin-top: 70px;
+		padding: 40px 0px;
+	}
+	#partners .slider .slides{
+		height: 100px;
+	}
+	#partners .slider .slides .slide{
+		height: 100px;
+	}
+
+	#info{
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 80px;
+	}
+	#info .text{
+		margin-top: 50px;
+	}
+	#info .image{
+		margin-top: 50px;
+	}
+	#info .text h1{
+		font-size: 36px;
+	}
+	#info .text p{
+		font-size: 18px;
+		margin-top: 30px;
+	}
+
+	#app{
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 80px;
+	}
+	#app .image{
+		width: 40%;
+	}
+	#app .text h1{
+		font-size: 36px;
+	}
+	#app .text .rating{
+		width: 30%;
+	}
+	#app .text p{
+		margin-top: 40px;
+		font-size: 18px;
+	}
+	#app .text button{
+		margin-top: 65px;
+		width: 170px;
+		height: 60px;
+		font-size: 18px;
+	}
+	#app .text .num{
+		margin-top: 65px;
+	}
+	#app .text .num h2{
+		font-size: 30px;
+	}
+	#app .text .num span{
+		font-size: 20px;
+	}
+
+	#callback{
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 60px;
+		padding: 80px;
+	}
+	#callback .text h1{
+		font-size: 36px;
+	}
+	#callback .text form{
+		margin-top: 10px;
+	}
+	#callback .text input{
+		margin-top: 30px;
+	}
+	#callback .text form button{
+		width: 170px;
+		height: 60px;
+		font-size: 18px;
+		margin-top: 45px;
+	}
+
+	footer{
+		margin-top: 50px;
+	}
+	footer .top{
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	footer .top .navbar .navbar-item{
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+	footer .bottom{
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+		height: 40px;
+	}
+	footer .bottom span{
+		font-size: 14px;
+		line-height: 40px;
+	}
+
 }
