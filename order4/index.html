@@ -10,15 +10,15 @@
 <body>
 	<div id="dropdown-menu" style="display: none; opacity: 0;">
 		<div class="content">
-			<div class="close">
+			<div class="close" onclick="CloseModal();">
 				<span></span>
 				<span></span>
 			</div>
 			<ul class="dropdown-items">
-				<li class="dropdown-item"><a href="#">О нас</a></li>
-				<li class="dropdown-item"><a href="#">Проекты</a></li>
-				<li class="dropdown-item"><a href="#">Новости</a></li>
-				<li class="dropdown-item"><a href="#">Контакты</a></li>
+				<li class="dropdown-item"><a href="#" onclick="CloseModal();">О нас</a></li>
+				<li class="dropdown-item"><a href="#" onclick="CloseModal();">Проекты</a></li>
+				<li class="dropdown-item"><a href="#" onclick="CloseModal();">Новости</a></li>
+				<li class="dropdown-item"><a href="#" onclick="CloseModal();">Контакты</a></li>
 			</ul>
 			<div class="buttons">
 				<a href="#">
@@ -44,7 +44,7 @@
 			</a>
 			<a href="#">Купить DLX</a>
 		</div>
-		<div class="dropdown-menu">
+		<div class="dropdown-menu" onclick="OpenModal();">
 			<span></span>
 			<span></span>
 			<span></span>
@@ -232,10 +232,10 @@
 			</ul>
 			<div class="slider">
 				<div class="buttons">
-					<div class="prev">
+					<div class="prev" onclick="NewsPrev();">
 						<span></span>
 					</div>
-					<div class="next">
+					<div class="next" onclick="NewsNext();">
 						<span></span>
 					</div>
 				</div>
@@ -312,11 +312,11 @@
 				</li>
 			</ul>
 			<div class="slider">
-				<div class="prev">
+				<div class="prev" onclick="PartnersPrev();">
 					<span></span>
 				</div>
 				<ul class="slides">
-					<li class="slide" style="transform: translate(0, 0);">
+					<li class="slide" style="transform: translate(0%, 0);">
 						<img src="img/partner1.png" alt="partner1">
 					</li>
 					<li class="slide" style="transform: translate(100%, 0);">
@@ -338,7 +338,7 @@
 						<img src="img/partner1.png" alt="partner1">
 					</li>
 				</ul>
-				<div class="next">
+				<div class="next" onclick="PartnersNext();">
 					<span></span>
 				</div>
 			</div>

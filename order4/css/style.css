@@ -17,6 +17,7 @@ body{
 		height: 100vh;
 		background-color: rgba(0, 0, 0, 0.5);
 		z-index: 10;
+		transition: .5s ease;
 	}
 	#dropdown-menu .content{
 		width: 300px;
@@ -123,6 +124,7 @@ body{
 		padding: 30px;
 		display: flex;
 		justify-content: space-between;
+		transition: .5s ease;
 	}
 	header .logo{
 		width: 80px;
@@ -1206,6 +1208,7 @@ body{
 		top: 50%;
 		left: 1%;
 		transform: translate(0, -50%);
+		transition: .5s ease;
 	}
 	#news .slider .slides .slide .date{
 		position: absolute;
@@ -1310,6 +1313,7 @@ body{
 		position: relative;
 		list-style: none;
 		position: absolute;
+		transition: .5s ease;
 	}
 	#partners .slider .slides .slide img{
 		width: 60%;
@@ -1325,6 +1329,8 @@ body{
 		transform: translate(0, -50%);
 		width: 30px;
 		height: 30px;
+		cursor: pointer;
+		z-index: 1;
 	}
 	#partners .slider .prev span{
 		width: 15px;
@@ -1344,6 +1350,7 @@ body{
 		transform: translate(0, -50%);
 		width: 30px;
 		height: 30px;
+		cursor: pointer;
 	}
 	#partners .slider .next span{
 		width: 15px;
@@ -1356,7 +1363,7 @@ body{
 		transform: translate(-50%, -50%) rotate(-45deg);
 		transition: .3s ease;
 	}
-	#partners .slider span:hover{
+	#partners .slider > div:hover span{
 		border-color: #777;
 	}
 
