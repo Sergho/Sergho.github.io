@@ -8,6 +8,23 @@
 	<title>Main Page</title>
 </head>
 <body>
+	<div id="dropdown" style="display: none; opacity: 0;">
+		<div class="content">
+			<div class="close" onclick="DropdownClose();">
+				<span></span>
+				<span></span>
+			</div>
+			<ul class="items">
+				<li class="item"><a href="#">Главная</a></li>
+				<li class="item"><a href="#">Мухоморы</a></li>
+				<li class="item"><a href="#">О нас</a></li>
+				<li class="item"><a href="#">Доставка</a></li>
+			</ul>
+			<div class="button">
+				<button>Купить</button>
+			</div>
+		</div>
+	</div>
 	<header>
 		<div class="logo">
 			<img src="img/logo.png" alt="logo">
@@ -18,7 +35,7 @@
 			<li class="navbar-item"><a href="#">О нас</a></li>
 			<li class="navbar-item"><a href="#">Доставка</a></li>
 		</ul>
-		<div class="dropdown-menu">
+		<div class="dropdown-menu" onclick="DropdownOpen();">
 			<span></span>
 			<span></span>
 			<span></span>
@@ -154,7 +171,7 @@
 				</li>
 			</ul>
 			<div class="more">
-				<button>SHOW ALL</button>
+				<button onclick="AdvShowAll(this);">SHOW ALL</button>
 			</div>
 			<div class="circles">
 				<span></span>
@@ -424,5 +441,6 @@
 			</div>
 		</div>
 	</footer>
+	<script src="js/script.js"></script>
 </body>
 </html>
