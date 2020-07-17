@@ -1,5 +1,5 @@
 function Setup(){
-	AdvCardsHide();
+	if(window.innerWidth < 720) AdvCardsHide();
 }
 
 function DropdownOpen(){
@@ -35,7 +35,6 @@ function AdvShowAll(button){
 	const cards = document.querySelectorAll("#adv .cards .card");
 
 	const scroll = window.pageYOffset;
-	console.log(scroll);
 
 	for(let i = 3; i < cards.length; i++){
 		cards[i].style.display = "block";
