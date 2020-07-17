@@ -806,6 +806,9 @@ button, input, textarea{
 		background-position: center left;
 		position: relative;
 	}
+	#doctors .h .line{
+		margin-bottom: 30px;
+	}
 	#doctors .image{
 		width: 45%;
 		position: relative;
@@ -1157,11 +1160,175 @@ button, input, textarea{
 }
 @media screen and (min-width: 1024px){
 
+	header{
+		padding: 40px;
+	}
+	header .logo{
+		width: 135px;
+	}
+	header .navbar .navbar-item a{
+		font-size: 16px;
+	}
+	header .button{
+		width: 40%;
+	}
 
+	#main .bg{
+		width: 40%;
+	}
+	#main .buttons{
+		justify-content: flex-start;
+	}
+	#main .buttons button{
+		margin-right: 15px;
+	}
+
+	#doctors{
+		justify-content: space-around;
+	}
+	#doctors .image{
+		width: 40%;
+	}
+	#doctors .text{
+		width: 50%;
+	}
+	#doctors .text p{
+		line-height: 1.8;
+		font-size: 16px;
+	}
+
+	#articles .cards .card .cat button{
+		font-size: 14px;
+	}
 
 }
 @media screen and (min-width: 1440px){
 
+	header{
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+	}
 
+	#main{
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#main .bg{
+		width: 47%;
+	}
+	#main .content h1{
+		font-size: 64px;
+		width: 60%;
+	}
+	#main .content p{
+		font-size: 16px;
+		line-height: 1.8;
+		width: 60%;
+	}
+
+	#adv{
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 120px;
+	}
+	#adv .cards .h{
+		width: 370px;
+		height: 370px;
+	}
+	#adv .cards .card{
+		width: 370px;
+		height: 370px;
+		padding: 75px 50px;
+	}
+	#adv .circles span:nth-child(1){
+		left: 40%;
+	}
+
+	#doctors{
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#doctors .h .line{
+		margin-bottom: 60px;
+	}
+	#doctors .text h2{
+		font-size: 24px;
+		margin-bottom: 30px;
+		margin-top: 60px;
+	}
+	#doctors .image{
+		width: 45%;
+	}
+	#doctors .text{
+		width: 45%;
+	}
+	#doctors .image img{
+		width: 80%;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	#parts{
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	#buy{
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#buy .pages .page .cards .card span{
+		margin-top: 30px;
+		font-size: 16px;
+	}
+
+	#articles{
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#articles .cards .card{
+		padding: 0;
+	}
+	#articles .cards .card h2{
+		padding: 0 15px;
+	}
+	#articles .cards .card p{
+		padding: 0 15px;
+	}
+	#articles .cards .card .cat{
+		padding: 0 15px;
+	}
+	#articles .cards .card .cat{
+		justify-content: flex-start;
+	}
+	#articles .cards .card .cat button{
+		margin-right: 25px;
+	}
+
+	#callback{
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 150px;
+	}
+	#callback form{
+		width: 50%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	footer{
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+	}
 
 }
