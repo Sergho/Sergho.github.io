@@ -445,6 +445,7 @@ button, input, textarea{
 		top: 0;
 		left: 0;
 		list-style: none;
+		transition: .3s ease;
 	}
 	#buy .pages .page .cards{
 		display: flex;

@@ -44,5 +44,29 @@ function AdvShowAll(button){
 	scrollTo(0, scroll);
 	button.parentNode.style.display = "none";
 }
+function OpenPage(index){
+	const pages = document.querySelectorAll("#buy .pages .page");
+	const nav_items = document.querySelectorAll("#buy .navbar .navbar-item");
+
+	pages.forEach((page, key) => {
+		if(key == index){
+			page.style.display = "block";
+			page.style.position = "relative";
+			setTimeout(() => {page.style.opacity = "1";}, 50);
+		} else {
+			page.style.opacity = "0";
+			page.style.display = "none";
+			page.style.position = "absolute";
+		}
+	});
+
+	nav_items.forEach((item, key) => {
+		if(key == index){
+			item.classList.add("active");
+		} else {
+			item.classList.remove("active");
+		}
+	})
+}
 
 Setup();
