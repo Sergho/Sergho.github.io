@@ -1,0 +1,25 @@
+@font-face{
+	src: url(Fredoka/FredokaOne-Regular.ttf);
+	font-family: Fredoka;
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face{
+	src: url(Ubuntu/Ubuntu-Regular.ttf);
+	font-family: Ubuntu;
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face{
+	src: url(Ubuntu/Ubuntu-Medium.ttf);
+	font-family: Ubuntu;
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face{
+	src: url(Ubuntu/Ubuntu-Bold.ttf);
+	font-family: Ubuntu;
+	font-weight: bold;
+	font-style: normal;
+}

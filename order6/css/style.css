@@ -1,0 +1,485 @@
+*{
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+.gradient{
+	background: linear-gradient(to right, #370075, #00f5e9);
+	-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+button{
+	cursor: pointer;
+}
+
+@media screen and (min-width: 320px){
+	
+	header{
+		width: 100%;
+		box-sizing: border-box;
+		padding: 20px;
+		background-image: url(../img/header-bg.png);
+		background-size: 60%;
+		background-position: top right;
+		background-repeat: no-repeat;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	header .logo{
+		display: flex;
+		justify-content: space-between;
+		width: 130px;
+		align-items: center;
+	}
+	header .logo img{
+		width: 40px;
+	}
+	header .logo span{
+		font-family: Fredoka;
+		color: #241A6E;
+	}
+	header .navbar{
+		display: none;
+	}
+	header .dropdown-menu{
+		width: 30px;
+		height: 30px;
+		position: relative;
+		cursor: pointer;
+	}
+	header .dropdown-menu span{
+		width: 30px;
+		height: 5px;
+		background-color: white;
+		position: absolute;
+		left: 0;
+		transition: .3s ease;
+	}
+	header .dropdown-menu span:nth-child(1){
+		top: 0;
+	}
+	header .dropdown-menu span:nth-child(2){
+		top: 50%;
+		transform: translate(0, -50%);
+	}
+	header .dropdown-menu span:nth-child(3){
+		bottom: 0;
+	}
+	header .dropdown-menu:hover span{
+		background-color: #ccc;
+	}
+	header .main{
+		width: 90%;
+		box-sizing: border-box;
+		margin-top: 30px;
+	}
+	header .main h1{
+		font-family: Ubuntu;
+		font-size: 40px;
+	}
+	header .main ul{
+		margin-top: 15px;
+	}
+	header .main ul li{
+		list-style: none;
+		font-family: Ubuntu;
+		font-size: 12px;
+		color: #909090;
+		line-height: 1.4;
+	}
+	header .main ul li b{
+		color: #42E9E1;
+	}
+	header .main button{
+		width: 235px;
+		height: 55px;
+		box-sizing: border-box;
+		margin-top: 20px;
+		border: none;
+		background-color: #1C1264;
+		color: white;
+		font-size: 20px;
+		font-family: Ubuntu;
+		border-radius: 5px;
+	}
+	header .circle{
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		background-color: #42E9E1;
+		position: absolute;
+		top: 55px;
+		left: -25px;
+		z-index: -1;
+	}
+	header .planes .plane{
+		position: absolute;
+		z-index: -1;
+	}
+	header .planes .plane:nth-child(1){
+		width: 40px;
+		top: 20%;
+		left: 45%;
+	}
+	header .planes .plane:nth-child(2){
+		width: 30px;
+		top: 30%;
+		left: 75%;
+	}
+	header .planes .plane:nth-child(3){
+		width: 30px;
+		top: 30%;
+		left: 50%;
+	}
+
+	#about{
+		width: 100%;
+		box-sizing: border-box;
+		padding: 20px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin-top: 20px;
+	}
+	#about h1{
+		width: 100%;
+		color: #22196D;
+		font-family: Ubuntu;
+		text-transform: uppercase;
+		font-size: 28px;
+		text-align: center;
+	}
+	#about .cards{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		margin-top: 15px;
+	}
+	#about .cards .card{
+		width: 45%;
+		list-style: none;
+		margin-top: 20px;
+	}
+	#about .cards .card .image{
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+	#about .cards .card .image img{
+		width: 50px;
+		height: auto;
+	}
+	#about .cards .card h2{
+		margin-top: 15px;
+		text-align: center;
+		font-size: 14px;
+		font-family: Ubuntu;
+		color: #1C1264;
+	}
+	#about .cards .card p{
+		margin-top: 10px;
+		font-size: 12px;
+		color: #747474;
+		font-family: Ubuntu;
+		text-align: center;
+	}
+	#about .text{
+		width: 100%;
+		margin-top: 25px;
+	}
+	#about .text p{
+		font-family: Ubuntu;
+		color: rgba(34, 34, 34, 0.5);
+		font-size: 12px;
+		margin-top: 10px;
+	}
+
+	#numbers{
+		width: 100%;
+		box-sizing: border-box;
+		padding: 20px;
+	}
+	#numbers .cards{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+	#numbers .cards .card{
+		list-style: none;
+		width: 45%;
+		margin-top: 10px;
+	}
+	#numbers .cards .card h1{
+		text-align: center;
+		font-family: Ubuntu;
+		font-size: 28px;
+	}
+	#numbers .cards .card span{
+		display: block;
+		width: 100%;
+		margin-top: 5px;
+		font-family: Ubuntu;
+		color: #1C1264;
+		font-size: 10px;
+		text-align: center;
+		font-weight: 600;
+	}
+
+	#work{
+		width: 100%;
+		box-sizing: border-box;
+		padding: 20px;
+		margin-top: 20px;
+		position: relative;
+		overflow: hidden;
+	}
+	#work h1{
+		text-align: center;
+		font-size: 28px;
+		font-family: Ubuntu;
+		color: #22196D;
+		text-transform: uppercase;
+	}
+	#work .image{
+		width: 100%;
+		margin-top: 30px;
+	}
+	#work .image img{
+		width: 100%;
+	}
+	#work .text{
+		width: 100%;
+		margin-top: 20px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	#work .text h2{
+		color: #1C1264;
+		text-align: center;
+		font-family: Ubuntu;
+		font-size: 16px;
+	}
+	#work .text h2 b{
+		color: #42E9E1;
+	}
+	#work .text p{
+		color: rgba(34, 34, 34, 0.5);
+		margin-top: 10px;
+		text-align: center;
+		font-family: Ubuntu;
+		font-size: 14px;
+	}
+	#work .text button{
+		margin-top: 10px;
+		width: 170px;
+		height: 55px;
+		border: none;
+		background-color: #1C1264;
+		color: white;
+		font-family: Ubuntu;
+		font-size: 18px;
+		border-radius: 5px;
+	}
+	#work .circles .circle{
+		position: absolute;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		background-color: #42E9E1;
+		z-index: -1;
+	}
+	#work .circles .circle:nth-child(1){
+		right: -25px;
+		top: 50px;
+	}
+	#work .circles .circle:nth-child(2){
+		left: -25px;
+		bottom: 50px;
+	}
+	#work .planes .plane{
+		position: absolute;
+		z-index: -1;
+	}
+	#work .planes .plane:nth-child(1){
+		top: 5%;
+		left: 10%;
+		width: 35px;
+	}
+	#work .planes .plane:nth-child(2){
+		top: 15%;
+		right: 2%;
+		width: 40px;
+	}
+	#work .planes .plane:nth-child(3){
+		bottom: 20%;
+		left: 10%;
+		width: 35px;
+	}
+	#work .planes .plane:nth-child(4){
+		bottom: 15%;
+		left: 60%;
+		width: 40px;
+	}
+	#work .planes .plane:nth-child(5){
+		bottom: 10%;
+		left: 10%;
+		width: 30px;
+	}
+
+	#prog{
+		width: 100%;
+		box-sizing: border-box;
+		margin-top: 10px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	#prog h1{
+		width: 100%;
+		text-transform: uppercase;
+		font-family: Ubuntu;
+		font-size: 28px;
+		color: #1C1264;
+		text-align: center;
+	}
+	#prog .text{
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		box-sizing: border-box;
+		padding: 20px;
+	}
+	#prog .text h3{
+		text-transform: uppercase;
+		font-family: Ubuntu;
+		font-size: 14px;
+		color: #1C1264;
+		text-align: center;
+		margin-top: 15px;
+	}
+	#prog .text h3 b{
+		color: #42E9E1;
+	}
+	#prog .text .levels{
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		margin-top: 20px;
+	}
+	#prog .text .levels .level{
+		width: 50%;
+		list-style: none;
+	}
+	#prog .text .levels .level p{
+		color: rgba(34, 34, 34, 0.5);
+		font-family: Ubuntu;
+		font-size: 12px;
+		line-height: 1.6;
+	}
+	#prog .text h2{
+		font-size: 16px;
+		font-family: Ubuntu;
+		text-transform: uppercase;
+		color: #1C1264;
+		text-align: center;
+		margin-top: 15px;
+	}
+	#prog .text button{
+		margin-top: 15px;
+		width: 170px;
+		height: 55px;
+		background-color: #1C1264;
+		border: none;
+		color: white;
+		font-family: Ubuntu;
+		border-radius: 5px;
+		font-size: 18px;
+	}
+	#prog .image{
+		width: 100%;
+		box-sizing: border-box;
+	}
+	#prog .image img{
+		width: 100%;
+	}
+
+	#news{
+		width: 100%;
+		box-sizing: border-box;
+		padding: 20px;
+		margin-top: 10px;
+	}
+	#news h1{
+		font-family: Ubuntu;
+		text-transform: uppercase;
+		font-size: 24px;
+		color: #22196D;
+		text-align: center;
+	}
+	#news .slider{
+		display: none;
+	}
+	#news .items{
+		display: flex;
+		margin-top: 20px;
+		overflow: auto;
+	}
+	#news .items .item{
+		min-width: 90%;
+		box-sizing: border-box;
+		margin-left: 5%;
+		margin-right: 5%;
+		list-style: none;
+		display: flex;
+		align-items: center;
+		border: 0.5px solid white;
+		transition: .3s ease;
+	}
+	#news .items .item img{
+		width: 100%;
+	}
+	#news .items .item:hover{
+		border: 0.5px solid rgba(0, 0, 0, 0.25);
+	}
+
+	footer{
+		margin-top: 20px;
+		background-color: #22196D;
+		width: 100%;
+		box-sizing: border-box;
+		padding: 20px;
+		display: flex;
+		justify-content: center;
+	}
+	footer .logo{
+		width: 130px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	footer .logo img{
+		width: 40px;
+	}
+	footer .logo span{
+		color: white;
+		font-family: Fredoka;
+		text-transform: uppercase;
+		font-size: 16px;
+	}
+	footer .navbar{
+		display: none;
+	}
+
+}
+@media screen and (min-width: 768px){
+	
+}
+@media screen and (min-width: 1024px){
+	
+}
+@media screen and (min-width: 1440px){
+	
+}
