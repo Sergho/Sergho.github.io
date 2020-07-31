@@ -11,9 +11,78 @@
 button{
 	cursor: pointer;
 }
+header, main{
+	transition: .3s ease;
+}
 
 @media screen and (min-width: 320px){
 	
+	#dropdown{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.7);
+		z-index: 10;
+		transition: .3s ease;
+	}
+	#dropdown .content{
+		width: 300px;
+		background-color: white;
+		border-radius: 20px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		box-sizing: border-box;
+		padding: 20px;
+	}
+	#dropdown .content .close{
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		width: 15px;
+		height: 15px;
+		cursor: pointer;
+	}
+	#dropdown .content .close:hover span{
+		background-color: #777;
+	}
+	#dropdown .content .close span{
+		width: 20px;
+		height: 3px;
+		background-color: #333;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transition: .3s ease;
+	}
+	#dropdown .content .close span:nth-child(1){
+		transform: translate(-50%, -50%) rotate(45deg);
+	}
+	#dropdown .content .close span:nth-child(2){
+		transform: translate(-50%, -50%) rotate(-45deg);
+	}
+	#dropdown .content .navbar{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin-top: 20px;
+	}
+	#dropdown .content .navbar .navbar-item{
+		width: 100%;
+		list-style: none;
+		text-align: center;
+		line-height: 40px;
+	}
+	#dropdown .content .navbar .navbar-item a{
+		color: #333;
+		font-family: Ubuntu;
+		font-size: 16px;
+		text-decoration: none;
+	}
+
 	header{
 		width: 100%;
 		box-sizing: border-box;
@@ -25,6 +94,7 @@ button{
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
+		position: relative;
 	}
 	header .logo{
 		display: flex;
@@ -124,12 +194,12 @@ button{
 	}
 	header .planes .plane:nth-child(2){
 		width: 30px;
-		top: 30%;
+		top: 40%;
 		left: 75%;
 	}
 	header .planes .plane:nth-child(3){
 		width: 30px;
-		top: 30%;
+		top: 60%;
 		left: 50%;
 	}
 

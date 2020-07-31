@@ -8,6 +8,20 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+	<div id="dropdown" style="display: none; opacity: 0;">
+		<div class="content">
+			<div class="close" onclick="CloseMenu();">
+				<span></span>
+				<span></span>
+			</div>
+			<ul class="navbar">
+				<li class="navbar-item" onclick="CloseMenu();"><a href="#">О боте</a></li>
+				<li class="navbar-item" onclick="CloseMenu();"><a href="#">Как работает</a></li>
+				<li class="navbar-item" onclick="CloseMenu();"><a href="#">Новости</a></li>
+				<li class="navbar-item" onclick="CloseMenu();"><a href="#">Партнерская программа</a></li>
+			</ul>
+		</div>
+	</div>
 	<header>
 		<div class="logo">
 			<img src="img/logo.png" alt="logo">
@@ -19,7 +33,7 @@
 			<li class="navbar-item"><a href="#">Новости</a></li>
 			<li class="navbar-item"><a href="#">Партнерская программа</a></li>
 		</ul>
-		<div class="dropdown-menu">
+		<div class="dropdown-menu" onclick="OpenMenu();">
 			<span></span>
 			<span></span>
 			<span></span>
@@ -224,5 +238,6 @@
 			<li class="navbar-item"><a href="#">Партнерская программа</a></li>
 		</ul>
 	</footer>
+	<script src="js/script.js"></script>
 </body>
 </html>
