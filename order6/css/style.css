@@ -6,7 +6,7 @@
 .gradient{
 	background: linear-gradient(to right, #370075, #00f5e9);
 	-webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+	-webkit-text-fill-color: transparent;
 }
 button{
 	cursor: pointer;
@@ -260,6 +260,7 @@ button{
 		text-align: center;
 		font-family: Ubuntu;
 		font-size: 16px;
+		text-transform: uppercase;
 	}
 	#work .text h2 b{
 		color: #42E9E1;
@@ -386,6 +387,7 @@ button{
 		color: #1C1264;
 		text-align: center;
 		margin-top: 15px;
+		width: 100%;
 	}
 	#prog .text button{
 		margin-top: 15px;
@@ -474,8 +476,316 @@ button{
 	}
 
 }
+@media screen and (min-width: 425px){
+	
+	#work .image{
+		width: 80%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+}
 @media screen and (min-width: 768px){
 	
+	header{
+		padding: 40px;
+		background-size: 675px;
+	}
+	header .navbar{
+		display: flex;
+	}
+	header .navbar .navbar-item{
+		list-style: none;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	header .navbar .navbar-item a{
+		color: white;
+		font-family: Ubuntu;
+		font-size: 16px;
+		text-decoration: none;
+	}
+	header .dropdown-menu{
+		display: none;
+	}
+	header .main{
+		margin-top: 80px;
+	}
+	header .main ul{
+		margin-top: 30px;
+	}
+	header .main button{
+		margin-top: 30px;
+	}
+
+	#about{
+		margin-top: 60px;
+		justify-content: space-between;
+		align-items: center;
+		padding: 40px;
+	}
+	#about .cards{
+		width: 50%;
+	}
+	#about .cards .card .image{
+		width: 50px;
+	}
+	#about .cards .card .image img{
+		width: 100%;
+	}
+	#about .cards .card h2{
+		text-align: left;
+	}
+	#about .cards .card p{
+		text-align: left;
+	}
+	#about .text{
+		width: 45%;
+	}
+	#about .text p{
+		line-height: 1.5;
+	}
+
+	#numbers{
+		margin-top: 20px;
+		padding: 40px;
+	}
+	#numbers .cards .card{
+		width: 25%;
+		position: relative;
+	}
+	#numbers .cards .card::before{
+		content: "";
+		display: block;
+		height: 100%;
+		width: 1px;
+		background-color: rgba(34, 34, 34, 0.2);
+		position: absolute;
+	}
+	#numbers .cards .card:nth-child(1)::before{
+		display: none;
+	}
+	#numbers .cards .card span{
+		font-size: 12px;
+	}
+
+	#work{
+		padding: 40px;
+		margin-top: 40px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+	}
+	#work h1{
+		width: 100%;
+	}
+	#work .image{
+		width: 35%;
+	}
+	#work .text{
+		width: 55%;
+		display: block;
+	}
+	#work .text h2{
+		text-align: left;
+		font-size: 18px;
+	}
+	#work .text p{
+		font-size: 16px;
+		text-align: left;
+		margin-top: 20px;
+	}
+	#work .text button{
+		margin-top: 20px;
+	}
+	#work .image:nth-child(2){
+		order: 0;
+		margin-top: 40px;
+	}
+	#work .image:nth-child(4){
+		order: 3;	
+	}
+	#work .image:nth-child(6){
+		order: 4;
+	}
+	#work .text:nth-child(3){
+		order: 1;
+		margin-top: 40px;
+	}
+	#work .text:nth-child(5){
+		order: 2;
+	}
+	#work .text:nth-child(7){
+		order: 5;
+	}
+
+	#prog{
+		align-items: center;
+	}
+	#prog .text{
+		width: 50%;
+		padding: 40px;
+		justify-content: flex-start;
+		padding-right: 0;
+	}
+	#prog .text h3{
+		text-align: left;
+	}
+	#prog .text h2{
+		text-align: left;
+	}
+	#prog .image{
+		width: 50%;
+	}
+
+	#news{
+		padding: 40px;
+		position: relative;
+	}
+	#news .items{
+		display: none;
+	}
+	#news .slider{
+		display: block;
+	}
+	#news .slider .slides{
+		display: flex;
+		overflow: hidden;
+	}
+	#news .slider .slides .slide{
+		list-style: none;
+		min-width: 30%;
+		box-sizing: border-box;
+		margin: 30px 1.5%;
+		display: flex;
+		align-items: center;
+		border: 0.5px solid white;
+		transition: .3s ease;
+	}
+	#news .slider .slides .slide:hover{
+		border: 0.5px solid rgba(0, 0, 0, 0.25);
+	}
+	#news .slider .slides .slide img{
+		width: 100%;
+	}
+	#news .slider .buttons{
+		width: 60px;
+		height: 20px;
+		position: absolute;
+		top: 50px;
+		right: 80px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	#news .slider .buttons .prev{
+		width: 20px;
+		height: 20px;
+		margin-left: 2px;
+		margin-right: 2px;
+		position: relative;
+		cursor: pointer;
+		transition: .3s ease;
+	}
+	#news .slider .buttons .prev span:nth-child(1){
+		width: 100%;
+		height: 1px;
+		background-color: #222;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translate(0, -50%);
+		transition: .3s ease;
+	}
+	#news .slider .buttons .prev span:nth-child(2){
+		width: 5px;
+		height: 5px;
+		position: absolute;
+		border-top: 1px solid #222222;
+		border-left: 1px solid #222222;
+		top: 50%;
+		left: 0;
+		transform: translate(0, -50%) rotate(-45deg);
+		transition: .3s ease;
+	}
+	#news .slider .buttons .prev:hover{
+		width: 30px;
+	}
+	#news .slider .buttons .prev:hover span:nth-child(1){
+		height: 3px;
+		background-color: #42E9E1;
+	}
+	#news .slider .buttons .prev:hover span:nth-child(2){
+		width: 7px;
+		height: 7px;
+		border-color: #42E9E1;
+		border-width: 2px;
+	}
+	#news .slider .buttons .next{
+		width: 20px;
+		height: 20px;
+		margin-left: 2px;
+		margin-right: 2px;
+		position: relative;
+		cursor: pointer;
+		transition: .3s ease;
+	}
+	#news .slider .buttons .next span:nth-child(1){
+		width: 100%;
+		height: 1px;
+		background-color: #222;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translate(0, -50%);
+		transition: .3s ease;
+	}
+	#news .slider .buttons .next span:nth-child(2){
+		width: 5px;
+		height: 5px;
+		position: absolute;
+		border-top: 1px solid #222222;
+		border-right: 1px solid #222222;
+		top: 50%;
+		right: 0;
+		transform: translate(0, -50%) rotate(45deg);
+		transition: .3s ease;
+	}
+	#news .slider .buttons .next:hover{
+		width: 30px;
+	}
+	#news .slider .buttons .next:hover span:nth-child(1){
+		height: 3px;
+		background-color: #42E9E1;
+	}
+	#news .slider .buttons .next:hover span:nth-child(2){
+		width: 7px;
+		height: 7px;
+		border-color: #42E9E1;
+		border-width: 2px;
+	}
+
+	footer{
+		padding: 30px;
+		justify-content: space-between;
+		align-items: center;
+	}
+	footer .navbar{
+		display: flex;
+	}
+	footer .navbar .navbar-item{
+		list-style: none;
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+	footer .navbar .navbar-item a{
+		color: white;
+		text-decoration: none;
+		font-size: 16px;
+		font-family: Ubuntu;
+	}
+
 }
 @media screen and (min-width: 1024px){
 	
