@@ -1,0 +1,30 @@
+@font-face{
+	src: url(Amour/font.ttf);
+	font-family: Amour;
+}
+
+@font-face{
+	src: url(IBM/IBMPlexSans-Regular.ttf);
+	font-family: IBM;
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face{
+	src: url(IBM/IBMPlexSans-Bold.ttf);
+	font-family: IBM;
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face{
+	src: url(Roboto/Roboto-Regular.ttf);
+	font-family: Roboto;
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face{
+	src: url(Roboto/Roboto-Bold.ttf);
+	font-family: Roboto;
+	font-weight: bold;
+	font-style: normal;
+}

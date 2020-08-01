@@ -1,0 +1,644 @@
+*{
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+
+@media screen and (min-width: 320px){
+	
+	header{
+		position: relative;
+		width: 100%;
+		box-sizing: border-box;
+		padding: 20px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		background: linear-gradient(-205.76deg, rgba(255, 255, 255, 0.9) 10.15%, rgba(255, 255, 255, 0) 47.43%), url(../img/main-bg.png);
+		background-repeat: no-repeat;
+		background-size: auto 100%;
+		background-position: center;
+	}
+	header .logo{
+		width: 100px;
+	}
+	header .logo img{
+		width: 100%;
+	}
+	header .navbar{
+		display: none;
+	}
+	header .socials{
+		display: none;
+	}
+	header .dropdown-menu{
+		width: 30px;
+		height: 30px;
+		position: relative;
+		cursor: pointer;
+	}
+	header .dropdown-menu span{
+		display: block;
+		position: absolute;
+		left: 0;
+		width: 30px;
+		height: 5px;
+		background-color: #333;
+		transition: .3s ease;
+	}
+	header .dropdown-menu:hover span{
+		background-color: #777;
+	}
+	header .dropdown-menu span:nth-child(1){
+		top: 0;
+	}
+	header .dropdown-menu span:nth-child(2){
+		top: 50%;
+		transform: translate(0, -50%);
+	}
+	header .dropdown-menu span:nth-child(3){
+		bottom: 0;
+	}
+	header .main{
+		width: 100%;
+		margin-top: 20px;
+	}
+	header .main h1{
+		font-family: Amour;
+		color: #F05C80;
+		font-size: 24px;
+	}
+	header .main p{
+		margin-top: 10px;
+		font-family: IBM;
+		color: #103641;
+		font-size: 14px;
+	}
+	header .main button{
+		background: linear-gradient(115.49deg, #F05C80 21.39%, #FFA5B9 86.95%);
+		border: none;
+		width: 170px;
+		height: 50px;
+		border-radius: 25px;
+		margin-top: 20px;
+		margin-bottom: 15px;
+		text-transform: uppercase;
+		font-family: IBM;
+		color: white;
+		font-size: 16px;
+		cursor: pointer;
+	}
+	header .blur{
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		height: 40px;
+		background-color: white;
+		filter: blur(20px);
+		transform: translate(0, 50%);
+	}
+	header .flowers img{
+		position: absolute;
+		z-index: 1;
+		right: -0px;
+		bottom: 20px;
+		width: 80px;
+		transform: rotate(-90deg);
+	}
+
+	#services{
+		width: 100%;
+		box-sizing: border-box;
+		padding: 20px;
+		margin-top: 20px;
+		position: relative;
+	}
+	#services h1{
+		font-size: 28px;
+		font-family: Amour;
+		color: #F05C80;
+		text-align: center;
+	}
+	#services .cards{
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin-top: 20px;
+	}
+	#services .cards .card{
+		width: 100%;
+		list-style: none;
+		position: relative;
+		cursor: pointer;
+	}
+	#services .cards .card .image{
+		width: 100%;
+		margin-top: -5px;
+	}
+	#services .cards .card .image img{
+		width: 100%;
+	}
+	#services .cards .card .text{
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		transition: .5s ease;
+		z-index: 1;
+		box-sizing: border-box;
+		padding: 15px;
+	}
+	#services .cards .card .text h2{
+		text-align: center;
+		font-family: IBM;
+		font-size: 24px;
+		color: white;
+		letter-spacing: 1px;
+	}
+	#services .cards .card .text p{
+		font-size: 12px;
+		text-align: center;
+		font-family: Amour;
+		color: white;
+		margin-top: 10px;
+		margin-bottom: 20px;
+	}
+	#services .cards .card:hover .text{
+		opacity: 0;
+		z-index: 0;
+	}
+	#services .cards .card .hover{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		opacity: 0;
+		z-index: 0;
+		box-sizing: border-box;
+		transition: .5s ease;
+		padding: 15px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	#services .cards .card .hover h2{
+		color: white;
+		text-align: center;
+		font-family: IBM;
+		font-size: 24px;
+		margin-top: 30px;
+	}
+	#services .cards .card .hover .price{
+		margin-top: 10px;
+		width: 100%;
+	}
+	#services .cards .card .hover .price li{
+		color: white;
+		font-size: 14px;
+		font-family: IBM;
+		list-style: none;
+	}
+	#services .cards .card .hover button{
+		margin-top: 30px;
+		width: 170px;
+		height: 50px;
+		border: none;
+		background: linear-gradient(115.49deg, #F05C80 21.39%, #FFA5B9 86.95%);
+		color: white;
+		text-transform: uppercase;
+		font-size: 16px;
+		font-family: IBM;
+		border-radius: 25px;
+		cursor: pointer;
+	}
+	#services .cards .card:hover .hover{
+		opacity: 1;
+		z-index: 1;
+	}
+	#services .flowers img{
+		position: absolute;
+		z-index: -1;
+	}
+	#services .flowers img:nth-child(1){
+		width: 80px;
+		top: -40px;
+		right: 0;
+		z-index: 0;
+	}
+	#services .flowers img:nth-child(2){
+		width: 100px;
+		top: 5px;
+		right: 40px;
+	}
+
+	#about{
+		margin-top: 20px;
+		width: 100%;
+		box-sizing: border-box;
+		padding: 20px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	#about .text{
+		width: 100%;
+	}
+	#about .text h1{
+		text-align: center;
+		font-family: Amour;
+		color: #F05C80;
+		font-size: 28px;
+	}
+	#about .text p{
+		text-align: center;
+		margin-top: 10px;
+		font-family: IBM;
+		color: #103641;
+		font-size: 16px;
+	}
+	#about .image{
+		width: 100%;
+		margin-top: 20px;
+	}
+	#about .image img{
+		width: 100%;
+	}
+	#about .image img:nth-child(2){
+		display: none;
+	}
+
+	#adv{
+		width: 100%;
+		box-sizing: border-box;
+		padding: 20px;
+		padding-top: 0;
+	}
+	#adv .cards{
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	#adv .cards .card{
+		list-style: none;
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin-top: 30px;
+	}
+	#adv .cards .card img{
+		width: 100px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#adv .cards .card span{
+		display: block;
+		width: 100%;
+		text-align: center;
+		font-family: IBM;
+		color: #103641;
+		font-size: 16px;
+		margin-top: 10px;
+	}
+
+	#cards{
+		width: 100%;
+		box-sizing: border-box;
+		padding: 20px;
+	}
+	#cards .cards{
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	#cards .cards .card{
+		width: 100%;
+		list-style: none;
+		margin-top: 10px;
+	}
+	#cards .cards .card img{
+		width: 100%;
+	}
+
+	#callback{
+		width: 100%;
+		box-sizing: border-box;
+		margin-top: 20px;
+		background-image: url(../img/callback.png);
+		background-repeat: no-repeat;
+		background-size: auto 100%;
+		background-position: center;
+		position: relative;
+		padding: 10% 0%;
+	}
+	#callback .content{
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+		background-color: #EAE0E2;
+		border-radius: 20px;
+		box-sizing: border-box;
+		padding: 20px;
+	}
+	#callback .content h1{
+		color: #F05C80;
+		font-family: Amour;
+		text-align: center;
+		font-size: 24px;
+	}
+	#callback .content p{
+		color: #103641;
+		font-family: IBM;
+		text-align: center;
+		margin-top: 10px;
+		font-size: 16px;
+	}
+	#callback .content form{
+		margin-top: 10px;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	#callback .content form input{
+		margin-top: 10px;
+		width: 100%;
+		border: none;
+		background-color: white;
+		height: 50px;
+		border-radius: 25px;
+		box-sizing: border-box;
+		padding: 0 20px;
+		font-family: IBM;
+		font-size: 16px;
+	}
+	#callback .content form button{
+		margin-top: 10px;
+		width: 100%;
+		background: linear-gradient(118.57deg, #F05C80 21.39%, #FFA5B9 86.95%);
+		border: none;
+		height: 50px;
+		border-radius: 25px;
+		font-family: IBM;
+		color: white;
+		font-size: 16px;
+		text-transform: uppercase;
+		cursor: pointer;
+	}
+
+	#reviews{
+		width: 100%;
+		box-sizing: border-box;
+		padding: 20px;
+		margin-top: 10px;
+		background-image: url(../img/reviews-bg.png),
+											url(../img/reviews-bg2.png);
+		background-size: 30%, 30%;
+		background-repeat: no-repeat;
+		background-position: top left, bottom right;
+	}
+	#reviews h1{
+		font-size: 24px;
+		font-family: Amour;
+		color: #F05C80;
+		text-align: center;
+	}
+	#reviews .review{
+		margin-top: 20px;
+		margin-bottom: 30px;
+		background-color: white;
+		box-shadow: 0px 0px 35px rgba(255, 200, 177, 0.4);
+		box-sizing: border-box;
+		padding: 20px;
+		position: relative;
+	}
+	#reviews .review::before{
+		content: ''; 
+    position: absolute;
+    left: calc(50% - 30px);
+    bottom: -30px;
+    border: 15px solid transparent;
+    border-right: 15px solid white;
+    transform: translate(0, -50%) rotate(45deg);
+	}
+	#reviews .review .image{
+		display: none;
+	}
+	#reviews .review .text p{
+		font-size: 16px;
+		font-family: IBM;
+		color: #103641;
+	}
+	#reviews .authors{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	#reviews .authors .left{
+		display: none;
+	}
+	#reviews .authors .main{
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		align-items: center;
+	}
+	#reviews .authors .main .image{
+		width: 70px;
+	}
+	#reviews .authors .main .image img{
+		width: 100%;
+	}
+	#reviews .authors .main .text{
+		margin-left: 20px;
+	}
+	#reviews .authors .main .text h3{
+		font-family: IBM;
+		color: #103641;
+		font-size: 14px;
+	}
+	#reviews .authors .main .text span{
+		font-size: 10px;
+		font-family: Roboto;
+		color: #103641;
+	}
+	#reviews .authors .right{
+		display: none;
+	}
+
+	#articles{
+		width: 100%;
+		box-sizing: border-box;
+		padding: 20px;
+		margin-top: 10px;
+	}
+	#articles h1{
+		text-align: center;
+		font-family: Amour;
+		color: #F05C80;
+		font-size: 28px;
+	}
+	#articles .cards{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin-top: 10px;
+	}
+	#articles .cards .card{
+		margin-top: 10px;
+		list-style: none;
+		position: relative;
+		overflow: hidden;
+		border-bottom: 1px solid #C2D1D9;
+		border-radius: 5px 5px 0 0;
+	}
+	#articles .cards .card .image{
+		width: 100%;
+		padding-bottom: 50px;
+	}
+	#articles .cards .card .image img{
+		width: 100%;
+	}
+	#articles .cards .card .text{
+		border: 1px solid #C2D1D9;
+		border-bottom: none;
+		position: absolute;
+		bottom: 50px;
+		left: 0;
+		transform: translate(0, calc(100% - 5px));
+		box-sizing: border-box;
+		padding: 10px;
+		transition: .3s ease;
+		background-color: white;
+	}
+	#articles .cards .card .text .date{
+		font-family: Roboto;
+		color: #575757;
+		font-size: 12px;
+	}
+	#articles .cards .card .text h2{
+		font-family: Roboto;
+		font-size: 13px;
+		font-weight: normal;
+		color: #575757;
+		transition: .3s ease;
+	}
+	#articles .cards .card .text .line{
+		width: 30px;
+		height: 2px;
+		background-color: #FF164A;
+		margin-top: 5px;
+		margin-bottom: 10px;
+	}
+	#articles .cards .card .text p{
+		font-family: Roboto;
+		font-size: 12px;
+		color: #575757;
+	}
+	#articles .cards .card .text a{
+		font-family: Roboto;
+		font-weight: bold;
+		color: #FF164A;
+		text-decoration: none;
+		font-size: 14px;
+		margin-top: 10px;
+	}
+	#articles .cards .card .text a b{
+		font-size: 24px;
+	}
+	#articles .cards .card:hover .text{
+		bottom: 0;
+		transform: translate(0, 0);
+	}
+	#articles .cards .card:hover .text h2{
+		font-family: IBM;
+		color: black;
+		font-weight: bold;
+	}
+
+	#contact{
+		width: 100%;
+		box-sizing: border-box;
+	}
+	#contact .map{
+		display: none;
+	}
+	#contact .content{
+		width: 100%;
+		box-sizing: border-box;
+		padding: 20px;
+	}
+	#contact .content h1{
+		font-family: Amour;
+		font-size: 28px;
+		color: #F05C80;
+		text-align: center;
+	}
+	#contact .content span{
+		display: block;
+		text-align: center;
+		font-family: IBM;
+		color: #103641;
+		margin-top: 10px;
+		font-size: 18px;
+	}
+	#contact .content .data{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin-top: 10px;
+	}
+	#contact .content .data li{
+		width: 100%;
+		list-style: none;
+		margin-top: 15px;
+		display: flex;
+	}
+	#contact .content .data li .icon{
+		margin-right: 15px;
+		width: 20px;
+		position: relative;
+	}
+	#contact .content .data li .icon img{
+		width: 100%;
+		position: absolute;
+	}
+	#contact .content .data li .text{
+		color: #103641;
+		font-family: Roboto;
+		font-size: 14px;
+	}
+
+	footer{
+		width: 100%;
+		box-sizing: border-box;
+		padding: 20px;
+		display: flex;
+		justify-content: center;
+	}
+	footer .logo{
+		width: 100px;
+	}
+	footer .logo img{
+		width: 100%;
+	}
+	footer .navbar{
+		display: none;
+	}
+	footer .socials{
+		display: none;
+	}
+
+}
+@media screen and (min-width: 768px){
+	
+}
+@media screen and (min-width: 1024px){
+	
+}
+@media screen and (min-width: 1440px){
+	
+}
