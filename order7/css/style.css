@@ -19,6 +19,7 @@
 		background-repeat: no-repeat;
 		background-size: auto 100%;
 		background-position: center;
+		overflow: hidden;
 	}
 	header .logo{
 		width: 100px;
@@ -175,21 +176,19 @@
 		top: 0;
 		left: 0;
 		width: 100%;
+		height: 100%;
 		opacity: 0;
 		z-index: 0;
 		box-sizing: border-box;
 		transition: .5s ease;
 		padding: 15px;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
 	}
 	#services .cards .card .hover h2{
 		color: white;
 		text-align: center;
 		font-family: IBM;
-		font-size: 24px;
-		margin-top: 30px;
+		font-size: 20px;
+		margin-top: 15px;
 	}
 	#services .cards .card .hover .price{
 		margin-top: 10px;
@@ -202,7 +201,7 @@
 		list-style: none;
 	}
 	#services .cards .card .hover button{
-		margin-top: 30px;
+		position: absolute;
 		width: 170px;
 		height: 50px;
 		border: none;
@@ -213,6 +212,9 @@
 		font-family: IBM;
 		border-radius: 25px;
 		cursor: pointer;
+		left: 50%;
+		bottom: 30px;
+		transform: translate(-50%, 0);
 	}
 	#services .cards .card:hover .hover{
 		opacity: 1;
@@ -633,11 +635,486 @@
 	}
 
 }
+@media screen and (min-width: 425px){
+
+	header .main{
+		margin-top: 50px;
+	}
+	header .main p{
+		margin-top: 30px;
+	}
+	header .main button{
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+
+	#services .cards .card{
+		max-width: 385px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#services .cards .card .hover h2{
+		font-size: 22px;
+		margin-top: 70px;
+	}
+	#services .cards .card .hover .price{
+		margin-top: 30px;
+	}
+	#services .cards .card .hover .price li{
+		font-size: 16px;
+	}
+	#services .cards .card .hover button{
+		margin-top: 40px;
+	}
+
+}
 @media screen and (min-width: 768px){
 	
+	header{
+		background-size: 100%;
+	}
+	header .navbar{
+		display: flex;
+	}
+	header .navbar .navbar-item{
+		list-style: none;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	header .navbar .navbar-item a{
+		font-size: 16px;
+		font-family: IBM;
+		color: #103641;
+		text-decoration: none;
+	}
+	header .socials{
+		display: flex;
+	}
+	header .socials .social{
+		margin-left: 10px;
+		margin-right: 10px;
+		list-style: none;
+		width: 25px;
+	}
+	header .socials .social img{
+		width: 100%;
+	}
+	header .dropdown-menu{
+		display: none;
+	}
+	header .main{
+		margin-top: 20px;
+	}
+	header .main h1{
+		font-size: 32px;
+		width: 50%;
+		line-height: 1.1;
+	}
+	header .main p{
+		font-size: 16px;
+		margin-top: 10px;
+		width: 50%;
+	}
+	header .main button{
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+	header .flowers img{
+		right: -15px;
+		width: 135px;
+	}
+
+	#services{
+		margin-top: 30px;
+	}
+	#services h1{
+		font-size: 32px;
+	}
+	#services .cards{
+		margin-top: 30px;
+	}
+	#services .cards .card{
+		width: 50%;
+		max-width: none;
+	}
+	#services .cards .card .text h2{
+		font-size: 28px;
+	}
+	#services .cards .card .text p{
+		font-size: 16px;
+	}
+	#services .cards .card .hover h2{
+		font-size: 28px;
+		margin-top: 30px;
+	}
+	#services .flowers img:nth-child(1){
+		width: 160px;
+		top: -80px;
+		right: 0;
+	}
+	#services .flowers img:nth-child(2){
+		width: 220px;
+		top: -50px;
+		right: 70px;
+	}
+
+	#about{
+		margin-top: 30px;
+		align-items: center;
+		justify-content: space-between;
+		overflow: hidden;
+	}
+	#about .text{
+		width: 50%;
+	}
+	#about .text h1{
+		font-size: 20px;
+		text-align: left;
+	}
+	#about .text p{
+		font-size: 14px;
+		text-align: left;
+	}
+	#about .image{
+		width: 45%;
+		position: relative;
+	}
+	#about .image img:nth-child(2){
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 20%;
+		transform: translate(0, -50%);
+	}
+
+	#adv{
+		margin-top: 30px;
+		justify-content: space-between;
+	}
+	#adv .cards .card{
+		width: 25%;
+		align-items: center;
+	}
+	#adv .cards .card img{
+		width: auto;
+		height: 120px;
+	}
+
+	#cards{
+		margin-top: 30px;
+	}
+	#cards .cards{
+		justify-content: space-around;
+	}
+	#cards .cards .card{
+		width: 45%;
+	}
+
+	#callback{
+		background-size: 150%;
+	}
+	#callback .content h1{
+		font-size: 32px;
+	}
+	#callback .content p{
+		margin-top: 20px;
+	}
+	#callback .content form{
+		justify-content: space-between;
+		margin-top: 20px;
+	}
+	#callback .content form input{
+		width: 30%;
+	}
+	#callback .content form button{
+		width: 30%;
+	}
+
+	#reviews{
+		margin-top: 30px;
+		background-size: 20%, 20%;
+	}
+	#reviews h1{
+		font-size: 32px;
+	}
+	#reviews .review{
+		width: 60%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#reviews .authors{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	#reviews .authors .left{
+		display: flex;
+		justify-content: space-around;
+		width: 20%;
+	}
+	#reviews .authors .left img{
+		width: 60px;
+	}
+	#reviews .authors .main{
+		width: 40%;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	#reviews .authors .right{
+		display: flex;
+		justify-content: space-around;
+		width: 20%;
+	}
+	#reviews .authors .right img{
+		width: 60px;
+	}
+
+	#articles{
+		margin-top: 30px;
+	}
+	#articles h1{
+		font-size: 32px;
+	}
+	#articles .cards{
+		justify-content: space-between;
+	}
+	#articles .cards .card{
+		width: 30%;
+	}
+	#articles .cards .card .text h2{
+		font-size: 10px;
+		margin-top: 5px;
+	}
+	#articles .cards .card .text p{
+		font-size: 9px;
+	}
+	#articles .cards .card .text a{
+		font-size: 10px;
+	}
+	#articles .cards .card .text a b{
+		font-size: 20px;
+	}
+
+	#contact{
+		margin-top: 30px;
+		position: relative;
+	}
+	#contact .map{
+		width: 100%;
+		display: block;
+	}
+	#contact .map img{
+		display: block;
+		width: 100%;
+	}
+	#contact .content{
+		width: 30%;
+		position: absolute;
+		top: 50%;
+		left: 20%;
+		transform: translate(0, -50%);
+		background-color: white;
+		border-radius: 5px;
+	}
+	#contact .content h1{
+		font-size: 20px;
+	}
+	#contact .content span{
+		font-size: 14px;
+	}
+
+	footer{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	footer .navbar{
+		display: flex;
+	}
+	footer .navbar .navbar-item{
+		list-style: none;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	footer .navbar .navbar-item a{
+		font-size: 16px;
+		font-family: IBM;
+		color: #103641;
+		text-decoration: none;
+	}
+	footer .socials{
+		display: flex;
+	}
+	footer .socials .social{
+		margin-left: 10px;
+		margin-right: 10px;
+		list-style: none;
+		width: 25px;
+	}
+	footer .socials .social img{
+		width: 100%;
+	}
+
 }
 @media screen and (min-width: 1024px){
 	
+	header{
+		padding: 20px 80px;
+	}
+	header .logo{
+		width: 200px;
+	}
+	header .navbar .navbar-item a{
+		font-size: 18px;
+	}
+	header .main{
+		margin-top: 45px;
+	}
+	header .main h1{
+		font-size: 40px;
+		width: 60%;
+	}
+	header .main p{
+		font-size: 18px;
+		margin-top: 25px;
+	}
+	header .main button{
+		margin-top: 25px;
+		margin-bottom: 25px;
+	}
+	header .blur{
+		height: 60px;
+		filter: blur(18px);
+	}
+
+	#services{
+		margin-top: 40px;
+	}
+	#services h1{
+		font-size: 40px;
+	}
+	#services .cards .card{
+		width: 33.33%;
+	}
+	#services .cards .card .text h2{
+		font-size: 20px;
+	}
+	#services .cards .card .hover h2{
+		font-size: 20px;
+	}
+
+	#about{
+		margin-top: 30px;
+		justify-content: flex-start;
+	}
+	#about .text{
+		width: 45%;
+		margin-right: 15px;
+	}
+	#about .text h1{
+		font-size: 40px;
+	}
+	#about .text p{
+		font-size: 16px;
+	}
+	#about .image{
+		width: 45%;
+	}
+
+	#callback .content{
+		width: 700px;
+	}
+	#callback .content h1{
+		font-size: 40px;
+	}
+
+	#reviews{
+		margin-top: 40px;
+	}
+	#reviews h1{
+		font-size: 40px;
+	}
+	#reviews .review{
+		display: flex;
+		justify-content: space-around;
+	}
+	#reviews .review .image{
+		display: block;
+		margin-right: 30px;
+		position: relative;
+	}
+	#reviews .review .image img{
+		width: 40px;
+		margin-top: 20px;
+	}
+	#reviews .review .image::after{
+		content: "";
+		display: block;
+		width: 1px;
+		height: 80%;
+		background-color: rgba(0, 0, 0, 0.1);
+		position: absolute;
+		right: -14.5px;
+		top: 10%;
+	}
+	#reviews .authors .left, #reviews .authors .right{
+		width: 15%;
+	}
+	#reviews .authors .main{
+		width: 30%;
+	}
+
+	#articles{
+		margin-top: 40px;
+	}
+	#articles .cards .card .image{
+		padding-bottom: 60px;
+	}
+	#articles .cards .card .text{
+		bottom: 60px;
+	}
+	#articles .cards .card .text h2{
+		font-size: 14px;
+	}
+	#articles .cards .card .text .line{
+		margin-top: 10px;
+		margin-bottom: 15px;
+	}
+	#articles .cards .card .text p{
+		font-size: 12px;
+	}
+	#articles .cards .card .text a{
+		font-size: 14px;
+	}
+	#articles .cards .card .text a b{
+		font-size: 28px;
+	}
+
+	#contact{
+		margin-top: 40px;
+	}
+	#contact .content{
+		left: 10%;
+		width: 400px;
+		padding: 20px 60px;
+	}
+	#contact .content h1{
+		font-size: 40px;
+	}
+	#contact .content span{
+		font-size: 18px;
+	}
+	#contact .content .data li .text{
+		font-size: 16px;
+	}
+
+	footer .logo{
+		width: 200px;
+	}
+	footer .navbar .navbar-item a{
+		font-size: 18px;
+	}
+
 }
 @media screen and (min-width: 1440px){
 	
