@@ -254,11 +254,10 @@
 		padding: 20px;
 		margin-top: 20px;
 		box-sizing: border-box;
-		background-image: url(../img/alg-1.png),
-											url(../img/alg-2.png);
-		background-size: 40%, 50%;
+		background-image: url(../img/alg-1.png);
+		background-size: 40%;
 		background-repeat: no-repeat;
-		background-position: left bottom, right bottom;
+		background-position: left bottom;
 	}
 	#alg h1{
 		text-align: center;
@@ -351,6 +350,222 @@
 }
 @media screen and (min-width: 768px){
 	
+	header{
+		padding: 30px;
+	}
+	header .logo{
+		width: 60px;
+	}
+	header .navbar{
+		display: flex;
+	}
+	header .navbar .navbar-item{
+		margin-left: 10px;
+		margin-right: 10px;
+		list-style: none;
+	}
+	header .navbar .navbar-item a{
+		font-size: 16px;
+		font-family: Noto;
+		text-decoration: none;
+		color: black;
+	}
+	header .icons{
+		display: flex;
+	}
+	header .icons .icon{
+		margin-left: 10px;
+		margin-right: 10px;
+		width: 20px;
+		list-style: none;
+	}
+	header .icons .icon img{
+		width: 100%;
+	}
+	header .dropdown-menu{
+		display: none;
+	}
+	header .main{
+		align-items: center;
+		margin-top: 20px;
+	}
+	header .main .text{
+		width: 50%;
+		margin-right: 15px;
+	}
+	header .main .text h1{
+		text-align: left;
+		font-size: 28px;
+	}
+	header .main .text p{
+		text-align: left;
+		margin-top: 20px;
+		font-size: 14px;
+	}
+	header .main .image{
+		width: 40%;
+	}
+
+	#webs{
+		padding: 30px;
+		justify-content: flex-start;
+		align-items: center;
+	}
+	#webs h1{
+		font-size: 28px;
+		margin-top: 30px;
+	}
+	#webs .image{
+		margin-top: 40px;
+		width: 50%;
+		margin-right: 15px;
+	}
+	#webs .text{
+		margin-top: 40px;
+		width: 40%;	
+	}
+	#webs .text .items .item{
+		margin-top: 10px;
+	}
+	#webs .text .items .item .question{
+		font-size: 12px;
+	}
+	#webs .text .items .item .answer{
+		font-size: 10px;
+		margin-top: 5px;
+	}
+
+	#elems{
+		padding: 30px;
+	}
+	#elems h1{
+		font-size: 28px;
+	}
+	#elems .items .item{
+		margin-top: 70px;
+	}
+	#elems .items .item .image{
+		position: absolute;
+		z-index: -1;
+	}
+	#elems .items .item .text{
+		margin-top: 50px;
+	}
+	#elems .items .item:nth-child(1) .text{
+		width: 50%;
+		margin-left: 10%;
+	}
+	#elems .items .item:nth-child(1) .image{
+		width: 60%;
+		left: 40%;
+		top: 50%;
+		transform: translate(0, -50%);
+	}
+	#elems .items .item:nth-child(2) .text{
+		width: 50%;
+		margin-left: 45%;
+	}
+	#elems .items .item:nth-child(2) .image{
+		width: 40%;
+		left: 0;
+		top: 50%;
+		transform: translate(0, -50%);
+	}
+	#elems .items .item:nth-child(3) .text{
+		width: 50%;
+		margin-left: 10%;
+	}
+	#elems .items .item:nth-child(3) .image{
+		width: 40%;
+		left: 60%;
+		top: 50%;
+		transform: translate(0, -50%);
+	}
+	#elems .items .item:nth-child(4) .text{
+		width: 50%;
+		margin-left: 45%;
+	}
+	#elems .items .item:nth-child(4) .image{
+		width: 50%;
+		left: 0%;
+		top: 50%;
+		transform: translate(0, -50%);
+	}
+	#elems .items .item:nth-child(5) .text{
+		width: 50%;
+		margin-left: 15%;
+	}
+	#elems .items .item:nth-child(5) .text:nth-child(3){
+		margin-left: 35%;
+	}
+	#elems .items .item:nth-child(5) .image{
+		width: 90%;
+		left: 5%;
+		top: 50%;
+		transform: translate(0, -50%);
+	}
+	#elems .items .item:nth-child(6) .text{
+		width: 50%;
+		margin-left: 45%;
+	}
+	#elems .items .item:nth-child(6) .image{
+		width: 50%;
+		left: 10%;
+		top: 50%;
+		transform: translate(0, -50%);
+	}
+
+	#reviews{
+		padding: 30px;
+		margin-top: 30px;
+		background-size: 30%;
+	}
+	#reviews h1{
+		font-size: 28px;
+	}
+	#reviews .cards{
+		margin-top: 20px;
+	}
+	#reviews .cards .card{
+		width: 300px;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+
+	#alg{
+		padding: 30px;
+		margin-top: 30px;
+		background-image: url(../img/alg-1.png),
+											url(../img/alg-2.png);
+		background-size: 20%, 30%;
+		background-position: left bottom, right bottom;
+	}
+	#alg h1{
+		font-size: 28px;
+	}
+	#alg .cards .card{
+		align-items: center;
+		justify-content: center;
+	}
+	#alg .cards .card .image{
+		width: 30%;
+		margin-right: 10px;
+	}
+	#alg .cards .card .text{
+		width: 50%;
+		margin-right: 10px;
+	}
+	#alg .cards .card:nth-child(2) .text{
+		order: 0;
+	}
+	#alg .cards .card:nth-child(2) .image{
+		order: 1;
+	}
+	#alg .cards .card .number{
+		top: -40%;
+		z-index: 1;
+	}
+
 }
 @media screen and (min-width: 1024px){
 	
