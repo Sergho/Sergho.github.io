@@ -1,0 +1,360 @@
+*{
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+
+@media screen and (min-width: 320px){
+	
+	header{
+		width: 100%;
+		box-sizing: border-box;
+		padding: 20px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		background-image: url(../img/main-bg.png);
+		background-repeat: no-repeat;
+		background-size: 100%;
+		background-position: top left;
+	}
+	header .logo{
+		width: 50px;
+	}
+	header .logo img{
+		width: 100%;
+	}
+	header .navbar{
+		display: none;
+	}
+	header .icons{
+		display: none;
+	}
+	header .dropdown-menu{
+		width: 30px;
+		height: 30px;
+		position: relative;
+		cursor: pointer;
+	}
+	header .dropdown-menu span{
+		width: 30px;
+		height: 5px;
+		background-color: #333;
+		position: absolute;
+		left: 0;
+		transition: .3s ease;
+	}
+	header .dropdown-menu span:nth-child(1){
+		top: 0;
+	}
+	header .dropdown-menu span:nth-child(2){
+		top: 50%;
+		transform: translate(0, -50%);
+	}
+	header .dropdown-menu span:nth-child(3){
+		bottom: 0;
+	}
+	header .dropdown-menu:hover span{
+		background-color: #777;
+	}
+	header .main{
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		margin-top: 20px;
+	}
+	header .main .text{
+		width: 100%;
+	}
+	header .main .text h1{
+		text-align: center;
+		font-family: Noto;
+		font-size: 28px;
+	}
+	header .main .text p{
+		margin-top: 10px;
+		font-family: Noto;
+		font-size: 16px;
+		text-align: center;
+	}
+	header .main .image{
+		width: 100%;
+		margin-top: 20px;
+	}
+	header .main .image img{
+		width: 100%;
+	}
+
+	#webs{
+		width: 100%;
+		box-sizing: border-box;
+		padding: 20px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	#webs h1{
+		width: 100%;
+		text-align: center;
+		font-family: Noto;
+		font-size: 22px;
+	}
+	#webs .image{
+		width: 100%;
+		margin-top: 20px;
+	}
+	#webs .image img{
+		width: 100%;
+	}
+	#webs .text{
+		margin-top: 10px;
+		width: 100%;
+	}
+	#webs .text .items{
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	#webs .text .items .item{
+		list-style: none;
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: 20px;
+	}
+	#webs .text .items .item::before{
+		content: "";
+		display: block;
+		width: 9.5px;
+		height: 15px;
+		background-image: url(../img/ruby.png);
+		background-size: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	#webs .text .items .item .question{
+		width: calc(100% - 20px);
+		font-size: 14px;
+		font-weight: bold;
+		font-family: Noto;
+	}
+	#webs .text .items .item .answer{
+		width: 100%;
+		padding-left: 20px;
+		font-size: 12px;
+		font-family: Noto;
+		margin-top: 10px;
+	}
+
+	#elems{
+		width: 100%;
+		box-sizing: border-box;
+		padding: 20px;
+		margin-top: 20px;
+		overflow: hidden;
+	}
+	#elems h1{
+		font-size: 22px;
+		font-family: Noto;
+		text-align: center;
+	}
+	#elems .items .item{
+		list-style: none;
+		position: relative;
+		margin-top: 40px;
+	}
+	#elems .items .item .image{
+		width: 100%;
+	}
+	#elems .items .item .image img{
+		width: 100%;
+	}
+	#elems .items .item .text{
+		margin-top: 10px;
+	}
+	#elems .items .item .text p{
+		font-size: 12px;
+		margin-top: 10px;
+		font-family: Noto;
+	}
+	#elems .items .item .text p b{
+		color: #ff041f;
+	}
+	#elems .items .item .text span{
+		font-size: 12px;
+		font-family: Noto;
+		font-weight: bold;
+		margin-top: 10px;
+		color: #ff041f;
+		display: block;
+	}
+	#elems .items .item .text h2{
+		font-size: 14px;
+		font-weight: bold;
+		font-family: Noto;
+	}
+
+	#reviews{
+		width: 100%;
+		box-sizing: border-box;
+		padding: 20px;
+		background-image: url(../img/reviews-img.png);
+		background-size: 50%;
+		background-position: right center;
+		background-repeat: no-repeat;
+	}
+	#reviews h1{
+		text-align: center;
+		font-size: 22px;
+		font-family: Noto;
+	}
+	#reviews .cards{
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin-top: 10px;
+	}
+	#reviews .cards .card{
+		width: 100%;
+		position: relative;
+		margin-top: 20px;
+		list-style: none;
+	}
+	#reviews .cards .card .image{
+		width: 100%;
+	}
+	#reviews .cards .card .image img{
+		width: 100%;
+	}
+	#reviews .cards .card .text{
+		width: 80%;
+		position: absolute;
+		left: 20px;
+		bottom: 20px;
+		color: white;
+		font-family: Noto;
+		font-size: 14px;
+	}
+	#reviews .cards .card a{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	#reviews .cards .card a img{
+		width: 25px;
+	}
+
+	#alg{
+		width: 100%;
+		padding: 20px;
+		margin-top: 20px;
+		box-sizing: border-box;
+		background-image: url(../img/alg-1.png),
+											url(../img/alg-2.png);
+		background-size: 40%, 50%;
+		background-repeat: no-repeat;
+		background-position: left bottom, right bottom;
+	}
+	#alg h1{
+		text-align: center;
+		font-family: Noto;
+		font-size: 22px;
+	}
+	#alg .cards{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin-top: 10px;
+	}
+	#alg .cards .card{
+		width: 100%;
+		list-style: none;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin-top: 20px;
+		position: relative;
+	}
+	#alg .cards .card .image{
+		width: 100%;
+	}
+	#alg .cards .card .image img{
+		width: 100%;
+	}
+	#alg .cards .card .text{
+		width: 100%;
+		margin-top: 10px;
+		text-align: center;
+		font-size: 16px;
+		font-family: Noto;
+	}
+	#alg .cards .card .number{
+		font-size: 100px;
+		font-family: Noto;
+		position: absolute;
+		font-weight: bold;
+		z-index: -1;
+	}
+	#alg .cards .card:nth-child(1) .number{
+		color: #FFE8BB;
+		bottom: -10px;
+		right: 20px;
+	}
+	#alg .cards .card:nth-child(2) .number{
+		color: #D9EEFF;
+		bottom: -10px;
+		left: 20px;
+	}
+	#alg .cards .card:nth-child(3) .number{
+		color: #C0C0F6;
+		bottom: -10px;
+		right: 20px;
+	}
+
+	footer{
+		padding: 20px;
+		width: 100%;
+		box-sizing: border-box;
+		margin-top: 30px;
+		background-color: #2E2D2D;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	footer .text{
+		font-family: Noto;
+		font-size: 14px;
+		color: white;
+	}
+	footer .icons{
+		display: flex;
+	}
+	footer .icons .icon{
+		width: 20px;
+		margin-left: 10px;
+		margin-right: 10px;
+		list-style: none;
+		position: relative;
+	}
+	footer .icons .icon img{
+		width: 100%;
+		position: absolute;
+		top: 50%;
+		transform: translate(0, -50%);
+	}
+
+}
+@media screen and (min-width: 768px){
+	
+}
+@media screen and (min-width: 1024px){
+	
+}
+@media screen and (min-width: 1440px){
+	
+}
