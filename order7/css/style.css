@@ -1118,4 +1118,172 @@
 }
 @media screen and (min-width: 1440px){
 	
+	header{
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	header .navbar .navbar-item{
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+	header .main{
+		margin-top: 65px;
+	}
+	header .main h1{
+		width: 40%;
+		font-size: 48px;
+		line-height: 1.2;
+	}
+	header .main p{
+		margin-top: 25px;
+		width: 40%;
+	}
+	header .main button{
+		margin-top: 55px;
+		margin-bottom: 120px;
+	}
+	header .blur{
+		margin-left: -10%;
+		width: 120%;
+		height: 80px;
+	}
+
+	#services{
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 50px;
+	}
+	#services h1{
+		font-size: 48px;
+	}
+	#services .cards .card .text h2{
+		font-size: 34px;
+	}
+	#services .cards .card .text p{
+		font-size: 14px;
+	}
+	#services .cards .card .hover{
+		padding: 30px;
+	}
+	#services .cards .card .hover h2{
+		font-size: 34px;
+		margin-top: 40px;
+	}
+	#services .cards .card .hover .price{
+		margin-top: 40px;
+	}
+	#services .cards .card .hover .price li{
+		font-size: 20px;
+	}
+	#services .flowers img:nth-child(2){
+		right: 80px;
+	}
+
+	#about{
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#about .text h1{
+		font-size: 48px;
+	}
+	#about .text p{
+		font-size: 18px;
+		margin-top: 20px;
+	}
+	#about .image img:nth-child(2){
+		width: 80%;
+		left: 30%;
+	}
+
+	#adv{
+		margin-top: 40px;
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	#cards{
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	#callback{
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#callback .content{
+		width: 850px;
+		padding: 40px;
+	}
+	#callback .content h1{
+		font-size: 48px;
+	}
+	#callback .content p{
+		font-size: 18px;
+	}
+
+	#reviews{
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 40px;
+		background-size: 15%, 15%;
+	}
+	#reviews h1{
+		font-size: 48px;
+	}
+	#reviews .review{
+		padding: 30px;
+		margin-top: 40px;
+	}
+	#reviews .review .image img{
+		width: 70px;
+	}
+	#reviews .review .text p{
+		font-size: 18px;
+	}
+	#reviews .authors .main{
+		width: 20%;
+	}
+	#reviews .authors .main .text h3{
+		font-size: 18px;
+	}
+	#reviews .authors .main .text p{
+		font-size: 16px;
+	}
+
+	#articles{
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#articles h1{
+		margin-top: 40px;
+		font-size: 48px;
+	}
+	#articles .cards{
+		margin-top: 30px;
+	}
+
+	#contact{
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	footer{
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	footer .navbar .navbar-item{
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+
 }
