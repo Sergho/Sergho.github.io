@@ -8,16 +8,42 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+	<div id="dropdown" style="display: none; opacity: 0;">
+		<div class="content">
+			<div class="close" onclick="CloseMenu();">
+				<span></span>
+				<span></span>
+			</div>
+			<ul class="navbar">
+				<li class="navbar-item" onclick="CloseMenu();"><a href="#services">Услуги</a></li>
+				<li class="navbar-item" onclick="CloseMenu();"><a href="#cards">Акции</a></li>
+				<li class="navbar-item" onclick="CloseMenu();"><a href="#articles">Статьи</a></li>
+				<li class="navbar-item" onclick="CloseMenu();"><a href="#reviews">Отзывы</a></li>
+				<li class="navbar-item" onclick="CloseMenu();"><a href="#contact">Контакты</a></li>
+			</ul>
+			<ul class="socials">
+				<li class="icon">
+					<img src="img/whatsapp.svg" alt="whatsapp">
+				</li>
+				<li class="icon">
+					<img src="img/vk.png" alt="vk">
+				</li>
+				<li class="icon">
+					<img src="img/instagram.svg" alt="instagram">
+				</li>
+			</ul>
+		</div>
+	</div>
 	<header>
 		<div class="logo">
 			<img src="img/logo.png" alt="logo">
 		</div>
 		<ul class="navbar">
-			<li class="navbar-item"><a href="#">Услуги</a></li>
-			<li class="navbar-item"><a href="#">Акции</a></li>
-			<li class="navbar-item"><a href="#">Статьи</a></li>
-			<li class="navbar-item"><a href="#">Отзывы</a></li>
-			<li class="navbar-item"><a href="#">Контакты</a></li>
+			<li class="navbar-item"><a href="#services">Услуги</a></li>
+			<li class="navbar-item"><a href="#cards">Акции</a></li>
+			<li class="navbar-item"><a href="#articles">Статьи</a></li>
+			<li class="navbar-item"><a href="#reviews">Отзывы</a></li>
+			<li class="navbar-item"><a href="#contact">Контакты</a></li>
 		</ul>
 		<ul class="socials">
 			<li class="social">
@@ -30,7 +56,7 @@
 				<img src="img/instagram.svg" alt="instagram">
 			</li>
 		</ul>
-		<div class="dropdown-menu">
+		<div class="dropdown-menu" onclick="OpenMenu();">
 			<span></span>
 			<span></span>
 			<span></span>
@@ -330,11 +356,11 @@
 			<img src="img/logo.png" alt="logo">
 		</div>
 		<ul class="navbar">
-			<li class="navbar-item"><a href="#">Услуги</a></li>
-			<li class="navbar-item"><a href="#">Акции</a></li>
-			<li class="navbar-item"><a href="#">Статьи</a></li>
-			<li class="navbar-item"><a href="#">Отзывы</a></li>
-			<li class="navbar-item"><a href="#">Контакты</a></li>
+			<li class="navbar-item"><a href="#services">Услуги</a></li>
+			<li class="navbar-item"><a href="#cards">Акции</a></li>
+			<li class="navbar-item"><a href="#articles">Статьи</a></li>
+			<li class="navbar-item"><a href="#reviews">Отзывы</a></li>
+			<li class="navbar-item"><a href="#contact">Контакты</a></li>
 		</ul>
 		<ul class="socials">
 			<li class="social">
