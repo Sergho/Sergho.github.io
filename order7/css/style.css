@@ -9,6 +9,93 @@ header, main{
 
 @media screen and (min-width: 320px){
 	
+	#form{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: rgba(0, 0, 0, 0.7);
+		z-index: 10;
+		transition: .3s ease;
+	}
+	#form .content{
+		background-color: #EAE0E2;
+		width: 300px;
+		border-radius: 20px;
+		box-sizing: border-box;
+		padding: 20px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	#form .content .close{
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		cursor: pointer;
+	}
+	#form .content .close:hover span{
+		background-color: #777;
+	}
+	#form .content .close span{
+		width: 20px;
+		height: 4px;
+		background-color: #333;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transition: .3s ease;
+	}
+	#form .content .close span:nth-child(1){
+		transform: translate(-50%, -50%) rotate(45deg);
+	}
+	#form .content .close span:nth-child(2){
+		transform: translate(-50%, -50%) rotate(-45deg);
+	}
+	#form .content h1{
+		font-size: 20px;
+		font-family: IBM;
+		margin-top: 20px;
+		text-align: center;
+	}
+	#form .content p{
+		font-size: 14px;
+		font-family: IBM;
+		margin-top: 5px;
+		text-align: center;
+	}
+	#form .content form{
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin-top: 10px;
+	}
+	#form .content form input{
+		width: 100%;
+		height: 40px;
+		border: none;
+		border-radius: 20px;
+		box-sizing: border-box;
+		padding: 0 20px;
+		margin-top: 10px;
+	}
+	#form .content form button{
+		cursor: pointer;
+		border: none;
+		margin-top: 15px;
+		width: 100%;
+		background: linear-gradient(118.57deg, #F05C80 21.39%, #FFA5B9 86.95%);
+		height: 40px;
+		border-radius: 20px;
+		color: white;
+		text-transform: uppercase;
+		font-size: 16px;
+		font-family: IBM;
+	}
 	#dropdown{
 		width: 100%;
 		height: 100%;
@@ -756,7 +843,31 @@ header, main{
 
 }
 @media screen and (min-width: 768px){
-	
+
+	#form .content{
+		width: 700px;
+		border-radius: 25px;
+		padding: 30px;
+	}
+	#form .content h1{
+		font-size: 28px;
+	}
+	#form .content p{
+		font-size: 16px;
+	}
+	#form .content form{
+		margin-top: 15px;
+		justify-content: space-between;
+	}
+	#form .content form input{
+		width: 30%;
+		height: 50px;
+		font-size: 16px;
+	}
+	#form .content form button{
+		width: 30%;
+		height: 50px;
+	}
 	header{
 		background-size: 100%;
 	}

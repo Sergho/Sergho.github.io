@@ -8,6 +8,21 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+	<div id="form" style="display: none; opacity: 0;">
+		<div class="content">
+			<div class="close" onclick="CloseForm();">
+				<span></span>
+				<span></span>
+			</div>
+			<h1>Оставьте заявку</h1>
+			<p>Наши специалисты обязательно свяжутся с Вами, чтобы ответить на все вопросы.</p>
+			<form>
+				<input type="text" placeholder="Ваше имя">
+				<input type="text" placeholder="Ваш телефон">
+				<button>Отправить</button>
+			</form>
+		</div>
+	</div>
 	<div id="dropdown" style="display: none; opacity: 0;">
 		<div class="content">
 			<div class="close" onclick="CloseMenu();">
@@ -64,7 +79,7 @@
 		<div class="main">
 			<h1>Уютный кабинет косметологии в Сочи</h1>
 			<p>Великолепная возможность приобрести здоровый приятный цвет лица, бархатную гладкость, вернуть коже молодость и красоту</p>
-			<button>Записаться</button>
+			<button onclick="OpenForm();">Записаться</button>
 		</div>
 		<div class="blur"></div>
 		<div class="flowers">
@@ -243,7 +258,7 @@
 			<div class="content">
 				<h1>Оставьте заявку</h1>
 				<p>Наши специалисты обязательно свяжутся с Вами, чтобы ответить на все вопросы.</p>
-				<form>
+				<form action="./form.php">
 					<input type="text" placeholder="Ваше имя">
 					<input type="text" placeholder="Ваш телефон">
 					<button>Отправить</button>
