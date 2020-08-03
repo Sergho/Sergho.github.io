@@ -522,7 +522,7 @@
 		font-size: 28px;
 	}
 	#elems .items .item{
-		margin-top: 70px;
+		margin-top: 15%;
 	}
 	#elems .items .item .image{
 		position: absolute;
@@ -593,6 +593,9 @@
 		left: 10%;
 		top: 50%;
 		transform: translate(0, -50%);
+	}
+	#elems .items .item:nth-child(6){
+		margin-top: 20%;
 	}
 
 	#reviews{
@@ -708,7 +711,7 @@
 		font-size: 32px;
 	}
 	#elems .items .item{
-		margin-top: 90px;
+		margin-top: 10%;
 	}
 	#elems .items .item .text{
 		margin-top: 70px;
@@ -723,6 +726,12 @@
 	}
 	#elems .items .item .text h2{
 		font-size: 22px;
+	}
+	#elems .items .item:nth-child(5){
+		margin-top: 20%;
+	}
+	#elems .items .item:nth-child(6){
+		margin-top: 25%;
 	}
 
 	#reviews{
