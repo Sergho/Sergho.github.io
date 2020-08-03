@@ -8,6 +8,32 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+	<div id="dropdown">
+		<div class="content">
+			<div class="close" onclick="CloseMenu();">
+				<span></span>
+				<span></span>
+			</div>
+			<ul class="navbar">
+				<li class="navbar-item"><a href="#">Главная</a></li>
+				<li class="navbar-item"><a href="#">О системе</a></li>
+				<li class="navbar-item"><a href="#">Элементы</a></li>
+				<li class="navbar-item"><a href="#">Элементы</a></li>
+				<li class="navbar-item"><a href="#">Контакты</a></li>
+			</ul>
+			<ul class="icons">
+				<li class="icon">
+					<img src="img/youtube.png" alt="youtube">
+				</li>
+				<li class="icon">
+					<img src="img/vk.png" alt="vk">
+				</li>
+				<li class="icon">
+					<img src="img/telegram.png" alt="telegram">
+				</li>
+			</ul>
+		</div>
+	</div>
 	<header>
 		<div class="logo">
 			<img src="img/logo.png" alt="logo">
@@ -30,7 +56,7 @@
 				<img src="img/telegram.png" alt="telegram">
 			</li>
 		</ul>
-		<div class="dropdown-menu">
+		<div class="dropdown-menu" onclick="OpenMenu();">
 			<span></span>
 			<span></span>
 			<span></span>
@@ -208,5 +234,6 @@
 			</li>
 		</ul>
 	</footer>
+	<script src="js/script.js"></script>
 </body>
 </html>

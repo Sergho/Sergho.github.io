@@ -6,6 +6,86 @@
 
 @media screen and (min-width: 320px){
 	
+	#dropdown{
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.7);
+		z-index: 10;
+		transition: .3s ease;
+	}
+	#dropdown .content{
+		width: 300px;
+		border-radius: 20px;
+		background-color: white;
+		box-sizing: border-box;
+		padding: 20px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	#dropdown .content .close{
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		width: 20px;
+		height: 20px;
+		cursor: pointer;
+	}
+	#dropdown .content .close:hover span{
+		background-color: #777;
+	}
+	#dropdown .content .close span{
+		width: 20px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		height: 5px;
+		background-color: #333;
+		transition: .3s ease;
+	}
+	#dropdown .content .close span:nth-child(1){
+		transform: translate(-50%, -50%) rotate(45deg);
+	}
+	#dropdown .content .close span:nth-child(2){
+		transform: translate(-50%, -50%) rotate(-45deg);
+	}
+	#dropdown .content .navbar{
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin-top: 30px;
+	}
+	#dropdown .content .navbar .navbar-item{
+		width: 100%;
+		text-align: center;
+		list-style: none;
+		height: 30px;
+	}
+	#dropdown .content .navbar .navbar-item a{
+		font-size: 16px;
+		font-family: Noto;
+		color: black;
+		text-decoration: none;
+	}
+	#dropdown .icons{
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		margin-top: 30px;
+	}
+	#dropdown .icons .icon{
+		margin-left: 15px;
+		margin-right: 15px;
+		width: 30px;
+		list-style: none;
+	}
+	#dropdown .icons .icon img{
+		width: 100%;
+	}
 	header{
 		width: 100%;
 		box-sizing: border-box;
@@ -569,7 +649,267 @@
 }
 @media screen and (min-width: 1024px){
 	
+	header{
+		padding: 30px 60px;
+	}
+	header .logo{
+		width: 80px;
+	}
+	header .navabar .navbar-item{
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+	header .navbar .navbar-item a{
+		font-size: 18px;
+	}
+	header .icons .icon{
+		width: 30px;
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+	header .main .text{
+		width: 45%;
+	}
+	header .main .text h1{
+		font-size: 36px;
+	}
+	header .main .text p{
+		font-size: 16px;
+	}
+	header .main .image{
+		width: 45%;
+	}
+
+	#webs{
+		margin-top: 50px;
+	}
+	#webs h1{
+		font-size: 32px;
+	}
+	#webs .image{
+		width: 45%;
+		margin-top: 50px;
+	}
+	#webs .text{
+		width: 50%;
+		margin-top: 50px;
+	}
+	#webs .text .items .item .question{
+		font-size: 18px;
+	}
+	#webs .text .items .item .answer{
+		font-size: 14px;
+	}
+
+	#elems{
+		margin-top: 50px;
+	}
+	#elems h1{
+		font-size: 32px;
+	}
+	#elems .items .item{
+		margin-top: 90px;
+	}
+	#elems .items .item .text{
+		margin-top: 70px;
+	}
+	#elems .items .item .text p{
+		margin-top: 30px;
+		font-size: 14px;
+	}
+	#elems .items .item .text span{
+		font-size: 14px;
+		margin-top: 30px;
+	}
+	#elems .items .item .text h2{
+		font-size: 22px;
+	}
+
+	#reviews{
+		margin-top: 30px;
+	}
+	#reviews h1{
+		font-size: 32px;
+	}
+
+	#alg{
+		margin-top: 30px;
+	}
+	#alg h1{
+		font-size: 32px;
+	}
+	#alg .cards .card{
+		justify-content: center;
+	}
+	#alg .cards .card .image{
+		width: 35%;
+		margin-right: 5%;
+	}
+	#alg .cards .card .text{
+		width: 50%;
+		font-size: 18px;
+		text-align: left;
+		margin-right: 5%;
+	}
+	#alg .cards .card .number{
+		font-size: 150px;
+	}
+	#alg .cards .card:nth-child(1) .number{
+		right: 20px;
+		top: -70px;
+	}
+	#alg .cards .card:nth-child(2) .number{
+		left: -20px;
+	}
+
+	footer{
+		padding: 30px 60px;
+	}
+	footer .text{
+		font-size: 18px;
+	}
+	footer .icons .icon{
+		width: 30px;
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+
 }
 @media screen and (min-width: 1440px){
 	
+	header{
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	header .main{
+		margin-bottom: 50px;
+	}
+	header .main .text h1{
+		font-size: 64px;
+	}
+	header .main .text p{
+		font-size: 22px;
+		margin-top: 50px;
+	}
+
+	#webs{
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 130px;
+	}
+	#webs h1{
+		font-size: 48px;
+	}
+	#webs .image{
+		margin-right: 50px;
+	}
+	#webs .text .items .item{
+		margin-top: 30px;
+	}
+	#webs .text .items .item .question{
+		font-size: 22px;
+		width: calc(100% - 30px);
+		padding-left: 20px;
+		box-sizing: border-box;
+	}
+	#webs .text .items .item::before{
+		width: 19px;
+		height: 30px;
+		margin-right: 0;
+	}
+	#webs .text .items .item .answer{
+		font-size: 20px;
+		padding-left: 50px;
+		box-sizing: border-box;
+	}
+
+	#elems{
+		margin-top: 130px;
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#elems h1{
+		font-size: 48px;
+	}
+	#elems .items .item{
+		margin-top: 160px;
+	}
+	#elems .items .item .text p{
+		font-size: 20px;
+		margin-top: 50px;
+	}
+	#elems .items .item .text span{
+		font-size: 20px;
+	}
+	#elems .items .item:nth-child(5) .text:nth-child(3){
+		width: 40%;
+	}
+	#elems .items .item:nth-child(6){
+		margin-top: 200px;
+	}
+
+	#reviews{
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 130px;
+	}
+	#reviews h1{
+		font-size: 48px;
+	}
+	#reviews .cards .card{
+		width: 550px;
+	}
+	#reviews .cards .card .text{
+		font-size: 24px;
+	}
+	#reviews .cards .card a img{
+		width: 50px;
+	}
+
+	#alg{
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 130px;
+	}
+	#alg h1{
+		font-size: 48px;
+	}
+	#alg .cards .card{
+		margin-top: 50px;
+	}
+	#alg .cards .card .image{
+		width: 30%;
+	}
+	#alg .cards .card .text{
+		width: 40%;
+		font-size: 22px;
+	}
+	#alg .cards .card .number{
+		font-size: 250px;
+	}
+	#alg .cards .card:nth-child(1) .number{
+		top: -110px;
+		right: 70px;
+	}
+	#alg .cards .card:nth-child(2) .number{
+		top: -180px;
+		left: 10px;
+	}
+	#alg .cards .card:nth-child(3) .number{
+		top: -180px;
+		right: 70px;
+	}
+
+	footer{
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 30px 100px;
+	}
+
 }
