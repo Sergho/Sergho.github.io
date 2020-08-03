@@ -3,6 +3,9 @@
 	padding: 0;
 	outline: none;
 }
+.icon{
+	cursor: pointer;
+}
 
 @media screen and (min-width: 320px){
 	
@@ -304,29 +307,10 @@
 		margin-top: 20px;
 		list-style: none;
 	}
-	#reviews .cards .card .image{
+	#reviews .cards .card iframe{
+		display: block;
 		width: 100%;
-	}
-	#reviews .cards .card .image img{
-		width: 100%;
-	}
-	#reviews .cards .card .text{
-		width: 80%;
-		position: absolute;
-		left: 20px;
-		bottom: 20px;
-		color: white;
-		font-family: Noto;
-		font-size: 14px;
-	}
-	#reviews .cards .card a{
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-	}
-	#reviews .cards .card a img{
-		width: 25px;
+		height: 50vw;
 	}
 
 	#alg{
@@ -381,7 +365,7 @@
 	}
 	#alg .cards .card:nth-child(1) .number{
 		color: #FFE8BB;
-		bottom: -10px;
+		bottom: -30px;
 		right: 20px;
 	}
 	#alg .cards .card:nth-child(2) .number{
@@ -614,6 +598,9 @@
 		margin-left: 10px;
 		margin-right: 10px;
 	}
+	#reviews .cards .card iframe{
+		height: 200px;
+	}
 
 	#alg{
 		padding: 30px;
@@ -743,6 +730,9 @@
 	}
 	#reviews h1{
 		font-size: 32px;
+	}
+	#reviews .cards .card iframe{
+		height: 360px;
 	}
 
 	#alg{
