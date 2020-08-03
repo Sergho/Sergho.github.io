@@ -12,6 +12,7 @@ function OpenMenu(){
 		menu.style.opacity = "1";
 	}, 50);
 }
+
 function CloseMenu(){
 	const menu = document.querySelector("#dropdown");
 	const header = document.querySelector("header");
