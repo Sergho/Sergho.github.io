@@ -15,11 +15,11 @@
 				<span></span>
 			</div>
 			<ul class="navbar">
-				<li class="navbar-item"><a href="#">Главная</a></li>
-				<li class="navbar-item"><a href="#webs">О системе</a></li>
-				<li class="navbar-item"><a href="#elems">Элементы</a></li>
-				<li class="navbar-item"><a href="#reviews">Отзывы</a></li>
-				<li class="navbar-item"><a href="#">Контакты</a></li>
+				<li class="navbar-item" onclick="CloseMenu();"><a href="#main">Главная</a></li>
+				<li class="navbar-item" onclick="CloseMenu();"><a href="#webs">О системе</a></li>
+				<li class="navbar-item" onclick="CloseMenu();"><a href="#elems">Элементы</a></li>
+				<li class="navbar-item" onclick="CloseMenu();"><a href="#reviews">Отзывы</a></li>
+				<li class="navbar-item" onclick="CloseMenu();"><a href="#footer">Контакты</a></li>
 			</ul>
 			<ul class="icons">
 				<li class="icon">
@@ -39,11 +39,11 @@
 			<img src="img/logo.png" alt="logo">
 		</div>
 		<ul class="navbar">
-			<li class="navbar-item"><a href="#">Главная</a></li>
+			<li class="navbar-item"><a href="#main">Главная</a></li>
 			<li class="navbar-item"><a href="#webs">О системе</a></li>
 			<li class="navbar-item"><a href="#elems">Элементы</a></li>
 			<li class="navbar-item"><a href="#reviews">Отзывы</a></li>
-			<li class="navbar-item"><a href="#">Контакты</a></li>
+			<li class="navbar-item"><a href="#footer">Контакты</a></li>
 		</ul>
 		<ul class="icons">
 			<li class="icon">
@@ -61,7 +61,7 @@
 			<span></span>
 			<span></span>
 		</div>
-		<div class="main">
+		<div class="main" id="main">
 			<div class="text">
 				<h1>Moneys.System</h1>
 				<p>— это система позволяющая строить сто-тысячные сети в разных проектах.</p>
@@ -208,7 +208,7 @@
 			</ul>
 		</div>
 	</main>
-	<footer>
+	<footer id="footer">
 		<div class="text">Moneys.System | 2020</div>
 		<ul class="icons">
 			<li class="icon">
