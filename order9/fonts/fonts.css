@@ -1,0 +1,18 @@
+@font-face{
+	src: url(Open/OpenSansCondensed-Bold.ttf);
+	font-family: Open;
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face{
+	src: url(Roboto/Roboto-Regular.ttf);
+	font-family: Roboto;
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face{
+	src: url(Roboto/Roboto-Bold.ttf);
+	font-family: Roboto;
+	font-weight: bold;
+	font-style: normal;
+}
