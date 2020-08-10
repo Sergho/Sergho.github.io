@@ -225,6 +225,8 @@
 		flex-wrap: wrap;
 	}
 	#order .text h1{
+		width: 100%;
+		text-align: center;
 		text-transform: uppercase;
 		font-size: 28px;
 		font-family: Roboto;
@@ -580,6 +582,7 @@
 		background: linear-gradient(111.14deg, #ECECEC 19.94%, #FFFFFF 55.98%);
 		display: flex;
 		flex-wrap: wrap;
+		justify-content: space-between;
 	}
 	#card .text{
 		width: 100%;
@@ -839,6 +842,7 @@
 
 	#card{
 		margin-top: 20px;
+		align-items: center;
 	}
 	#card .image{
 		order: 1;
@@ -900,7 +904,386 @@
 }
 @media screen and (min-width: 1024px){
 	
+	header{
+		padding: 20px 60px;
+	}
+	header .navbar .navbar-item a{
+		font-size: 18px;
+	}
+	header .main{
+		margin-top: 40px;
+	}
+	header .main button{
+		margin-bottom: 130px;
+		font-size: 18px;
+	}
+
+	#cards{
+		margin-top: -80px;
+	}
+	#cards .cards .card{
+		width: 160px;
+		height: 180px;
+	}
+	#cards .cards .card .text span{
+		display: block;
+	}
+
+	#about{
+		margin-top: 40px;
+	}
+	#about .text h1{
+		font-size: 36px;
+	}
+	#about .text p{
+		font-size: 16px;
+		margin-top: 15px;
+		line-height: 1.4;
+	}
+	#about .text .data .col h2{
+		font-size: 16px;
+	}
+	#about .text .data .col a{
+		font-size: 14px;
+	}
+	#about .text .data .col span{
+		font-size: 14px;
+	}
+
+	#order{
+		margin-top: 40px;
+	}
+	#order .text h1{
+		font-size: 36px;
+	}
+	#order .text button{
+		font-size: 18px;
+	}
+
+	#adv{
+		margin-top: 40px;
+	}
+	#adv h1{
+		font-size: 36px;
+	}
+	#adv .cards .card .medal img{
+		width: 150px;
+	}
+	#adv .cards .card .text{
+		padding-left: 35px;
+	}
+	#adv .cards .card .text ul li{
+		font-size: 16px;
+	}
+	#adv .cards .card .text ul li::before{
+		left: -25px;
+	}
+
+	#order2{
+		margin-top: 40px;
+		align-items: center;
+	}
+	#order2 .text .logo{
+		font-size: 36px;
+	}
+	#order2 .text .phone{
+		font-size: 46px;
+	}
+	#order2 .text button{
+		font-size: 18px;
+	}
+
+	#works{
+		margin-top: 40px;
+	}
+	#works h1{
+		font-size: 36px;
+	}
+
+	#reviews{
+		margin-top: 40px;
+	}
+	#reviews h1{
+		font-size: 36px;
+	}
+	#reviews .slider .slides .slide .cards .card .author{
+		font-size: 14px;
+	}
+	#reviews .slider .slides .slide .cards .card p{
+		font-size: 12px;
+	}
+
+	#contact{
+		margin-top: 40px;
+		padding: 20px;
+	}
+	#contact .text{
+		width: 40%;
+	}
+	#contact .text .logo{
+		font-size: 26px;
+	}
+	#contact .text .phone{
+		font-size: 36px;
+	}
+	#contact .text .mail{
+		display: block;
+		margin-top: 10px;
+		font-size: 16px;
+	}
+	#contact .text .address{
+		margin-top: 15px;
+	}
+	#contact .text .address span{
+		font-size: 14px;
+	}
+	#contact .text .address span b{
+		font-size: 16px;
+	}
+	#contact .map{
+		width: 60%;
+	}
+
+	#card .text .logo{
+		font-size: 28px;
+	}
+	#card .text .phone{
+		font-size: 36px;
+	}
+	#card .text span{
+		font-size: 18px;
+	}
+
+	footer .col .phone{
+		font-size: 16px;
+	}
+	footer .col a{
+		font-size: 14px;
+	}
+	footer .col span{
+		font-size: 14px;
+	}
+	footer .col span b{
+		font-size: 16px;
+	}
+
 }
 @media screen and (min-width: 1440px){
 	
+	header{
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	header .main{
+		margin-top: 55px;
+	}
+	header .main h1{
+		font-size: 36px;
+	}
+	header .main button{
+		margin-top: 40px;
+		margin-bottom: 200px;
+	}
+
+	#cards{
+		max-width: 1360px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: -180px;
+	}
+	#cards .cards .card{
+		width: 160px;
+		height: 180px;
+		margin-left: 10px;
+		margin-right: 10px;
+		display: block;
+		padding: 25px 10px;
+	}
+	#cards .cards .card .image{
+		position: relative;
+		height: 50px;
+	}
+	#cards .cards .card .image img{
+		height: 100%;
+		width: auto;
+	}
+	#cards .cards .card .text p{
+		font-size: 13px;
+	}
+	#cards .cards .card .text span{
+		font-size: 11px;
+		margin-top: 5px;
+	}
+
+	#about{
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 30px;
+		justify-content: center;
+	}
+	#about .text{
+		width: 50%;
+		margin-left: 40px;
+	}
+	#about .text h1{
+		margin-bottom: 15px;
+	}
+	#about .text p{
+		margin-top: 25px;
+		font-size: 18px;
+	}
+	#about .text .data{
+		margin-top: 40px;
+	}
+	#about .text .data .col h2{
+		font-size: 18px;
+	}
+	#about .text .data .col a{
+		font-size: 18px;
+		margin-top: 10px;
+		display: block;
+	}
+	#about .text .data .col span{
+		font-size: 18px;
+		margin-top: 0;
+	}
+	#about .image{
+		width: 40%;
+	}
+
+	#order{
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 50px;
+		padding: 30px;
+	}
+	#order .image{
+		width: 40%;
+	}
+	#order .text{
+		width: 55%;
+	}
+	#order .text h1{
+		font-size: 60px;
+	}
+	#order .text button{
+		margin-top: 7px;
+		font-size: 18px;
+	}
+
+	#adv{
+		margin-top: 50px;
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#adv .cards{
+		margin-top: 30px;
+	}
+	#adv .cards .card{
+		margin-top: 0;
+	}
+	#adv .cards .card .text ul li{
+		font-size: 18px;
+	}
+
+	#order2{
+		margin-top: 50px;
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#order2 .text{
+		padding-right: 75px;
+	}
+	#order2 .text .logo{
+		font-size: 36px;
+	}
+	#order2 .text .phone{
+		font-size: 64px;
+	}
+	#order2 .text span{
+		font-size: 24px;
+	}
+	#order2 .text button{
+		margin-top: 25px;
+		font-size: 18px;
+	}
+
+	#works{
+		margin-top: 50px;
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	#reviews{
+		margin-top: 50px;
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#reviews .slider .slides .slide .cards .card{
+		padding: 20px 25px;
+	}
+	#reviews .slider .slides .slide .cards .card .author{
+		font-size: 16px;
+	}
+	#reviews .slider .slides .slide .cards .card p{
+		font-size: 12px;
+		margin-top: 25px;
+	}
+
+	#contact{
+		margin-top: 50px;
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#contact .text{
+		padding: 45px 110px;
+	}
+	#contact .text .logo{
+		font-size: 18px;
+	}
+	#contact .text  .phone{
+		font-size: 36px;
+	}
+	#contact .text a{
+		font-size: 18px;
+	}
+	#contact .text .address span{
+		font-size: 18px;
+	}
+	#contact .text .address span b{
+		font-size: 18px;
+	}
+
+	#card{
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 50px;
+	}
+	#card .text .logo{
+		font-size: 36px;
+	}
+	#card .text .phone{
+		font-size: 64px;
+	}
+	#card .text span{
+		font-size: 24px;
+	}
+
+	footer{
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 50px;
+		justify-content: space-around;
+	}
+
 }
