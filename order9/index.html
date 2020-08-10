@@ -8,6 +8,21 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+	<div id="dropdown" style="display: none; opacity: 0;">
+		<div class="content">
+			<div class="close" onclick="CloseMenu();">
+				<span></span>
+				<span></span>
+			</div>
+			<ul class="navbar">
+				<li class="navbar-item" onclick="CloseMenu();"><a href="#">О нас</a></li>
+				<li class="navbar-item" onclick="CloseMenu();"><a href="#">Услуги</a></li>
+				<li class="navbar-item" onclick="CloseMenu();"><a href="#">Наши работы</a></li>
+				<li class="navbar-item" onclick="CloseMenu();"><a href="#">Контакты</a></li>
+			</ul>
+			<div class="phone">+7 903 627 77 66</div>
+		</div>
+	</div>
 	<header>
 		<div class="logo">
 			<span>Гидро<b>Рем</b>Сервис</span>
@@ -19,7 +34,7 @@
 			<li class="navbar-item"><a href="#">Контакты</a></li>
 		</ul>
 		<div class="phone">+7 903 627 77 66</div>
-		<div class="dropdown-menu">
+		<div class="dropdown-menu" onclick="OpenMenu();">
 			<span></span>
 			<span></span>
 			<span></span>
@@ -265,9 +280,9 @@
 					</li>
 				</ul>
 				<ul class="points">
-					<li class="point active"></li>
-					<li class="point"></li>
-					<li class="point"></li>
+					<li class="point active" onclick="SlideTo(0, this);"></li>
+					<li class="point" onclick="SlideTo(1, this);"></li>
+					<li class="point" onclick="SlideTo(2, this);"></li>
 				</ul>
 			</div>
 		</div>
@@ -338,9 +353,9 @@
 					</li>
 				</ul>
 				<ul class="points">
-					<li class="point active"></li>
-					<li class="point"></li>
-					<li class="point"></li>
+					<li class="point active" onclick="SlideTo(0, this);"></li>
+					<li class="point" onclick="SlideTo(1, this);"></li>
+					<li class="point" onclick="SlideTo(2, this);"></li>
 				</ul>
 			</div>
 		</div>
