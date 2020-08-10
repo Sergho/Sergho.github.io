@@ -347,6 +347,7 @@
 		margin-top: 5px;
 	}
 	#order2 .text span{
+		display: block;
 		font-size: 16px;
 		font-family: Roboto;
 		color: #ADADAD;
@@ -640,8 +641,262 @@
 	}
 
 }
+@media screen and (min-width: 425px){
+	
+	header{
+		background-size: 200%;
+	}
+
+}
 @media screen and (min-width: 768px){
 	
+	header{
+		background-size: 100%;
+		align-items: center;
+	}
+	header .navbar{
+		display: flex;
+		justify-content: center;
+	}
+	header .navbar .navbar-item{
+		margin-left: 10px;
+		margin-right: 10px;
+		list-style: none;
+		line-height: 1.5;
+	}
+	header .navbar .navbar-item a{
+		text-decoration: none;
+		font-size: 16px;
+		font-family: Roboto;
+		color: #4F4F4F;
+		text-transform: uppercase;
+		cursor: pointer;
+		transition: .3s ease;
+	}
+	header .navbar .navbar-item a:hover{
+		color: #777;
+	}
+	header .phone{
+		display: block;
+		font-size: 22px;
+		font-family: Open;
+		color: #898987;
+	}
+	header .dropdown-menu{
+		display: none;
+	}
+	header .main{
+		margin-top: 20px;
+	}
+	header .main h1{
+		color: #4F4F4F;
+	}
+	header .main button{
+		margin-top: 35px;
+		margin-bottom: 60px;
+	}
+
+	#cards{
+		margin-top: -60px;
+	}
+	#cards .cards .card{
+		width: 180px;
+		height: 200px;
+	}
+	#cards .cards .card .text p{
+		font-size: 12px;
+	}
+	#cards .cards .card .text span{
+		font-size: 11px;
+	}
+
+	#about{
+		align-items: center;
+		justify-content: space-between;
+	}
+	#about .image{
+		width: 50%;
+	}
+	#about .text{
+		width: 45%;
+	}
+	#about .text h1{
+		font-size: 32px;
+	}
+	#about .text p{
+		font-size: 13px;
+	}
+	#about .text .data .col a{
+		font-size: 10px;
+	}
+	#about .text .data .col span{
+		font-size: 10px;
+	}
+
+	#order{
+		margin-top: 15px;
+		align-items: center;
+		justify-content: space-between;
+	}
+	#order .image{
+		width: 50%;
+	}
+	#order .text{
+		width: 45%;
+	}
+
+	#adv{
+		margin-top: 15px;
+	}
+	#adv h1{
+		font-size: 32px;
+	}
+	#adv .cards{
+		justify-content: space-between;
+	}
+	#adv .cards .card{
+		width: 30%;
+	}
+	#adv .cards .card .medal img{
+		width: 50px;
+	}
+	#adv .cards .card .text ul li{
+		font-size: 12px;
+	}
+
+	#order2{
+		margin-top: 20px;
+		justify-content: space-between;
+	}
+	#order2 .image{
+		width: 50%;
+	}
+	#order2 .text{
+		width: 45%;
+		text-align: right;
+		box-sizing: border-box;
+		padding-right: 30px;
+	}
+
+	#works{
+		margin-top: 15px;
+	}
+	#works h1{
+		font-size: 32px;
+	}
+	#works .slider .top .slide .cards{
+		display: flex;
+		justify-content: space-between;
+	}
+	#works .slider .top .slide .cards .card{
+		display: block;
+		width: 30%;
+	}
+	#works .slider .bottom .slide .cards{
+		display: flex;
+		justify-content: space-between;
+	}
+	#works .slider .bottom .slide .cards .card{
+		display: block;
+		width: 30%;
+	}
+
+	#reviews{
+		margin-top: 15px;
+	}
+	#reviews h1{
+		font-size: 32px;
+		margin-top: 30px;
+	}
+	#reviews .slider .slides .slide .cards{
+		display: flex;
+		justify-content: space-between;
+	}
+	#reviews .slider .slides .slide .cards .card{
+		display: block;
+		width: 23%;
+	}
+	#reviews .slider .slides .slide .cards .card .author{
+		font-size: 12px;
+	}
+	#reviews .slider .slides .slide .cards .card p{
+		font-size: 10px;
+	}
+
+	#contact{
+		margin-top: 20px;
+		align-items: center;
+	}
+	#contact .text{
+		width: 45%;
+		border-left: 1px solid #E5E5E5;
+		box-sizing: border-box;
+		padding: 20px;
+	}
+	#contact .map{
+		width: 50%;
+	}
+
+	#card{
+		margin-top: 20px;
+	}
+	#card .image{
+		order: 1;
+		width: 50%;
+	}
+	#card .text{
+		order: 0;
+		width: 45%;
+		text-align: right;
+	}
+
+	footer{
+		margin-top: 20px;
+		justify-content: space-between;
+		align-items: center;
+	}
+	footer .logo{
+		font-size: 20px;
+	}
+	footer .navbar{
+		display: flex;
+		justify-content: center;
+	}
+	footer .navbar .navbar-item{
+		margin-left: 10px;
+		margin-right: 10px;
+		list-style: none;
+	}
+	footer .navbar .navbar-item a{
+		text-transform: uppercase;
+		text-decoration: none;
+		font-size: 16px;
+		font-family: Roboto;
+		color: white;
+	}
+	footer .col{
+		display: block;
+	}
+	footer .col .phone{
+		font-size: 12px;
+		font-family: Open;
+		color: white;
+	}
+	footer .col a{
+		font-size: 10px;
+		font-family: Roboto;
+		color: #F8DD17;
+	}
+	footer .col span{
+		display: block;
+		font-size: 10px;
+		font-family: Roboto;
+		color: white;
+	}
+	footer .col span b{
+		font-size: 12px;
+	}
+
 }
 @media screen and (min-width: 1024px){
 	
