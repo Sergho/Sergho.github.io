@@ -9,6 +9,72 @@ body{
 
 @media screen and (min-width: 320px){
 	
+	#dropdown{
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.7);
+		z-index: 10;
+		transition: .3s ease;
+	}
+	#dropdown .content{
+		width: 300px;
+		border-radius: 20px;
+		background-color: white;
+		box-sizing: border-box;
+		padding: 20px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	#dropdown .content .close{
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		width: 20px;
+		height: 20px;
+		cursor: pointer;
+	}
+	#dropdown .content .close:hover span{
+		background-color: #777;
+	}
+	#dropdown .content .close span{
+		width: 20px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		height: 5px;
+		background-color: #333;
+		transition: .3s ease;
+	}
+	#dropdown .content .close span:nth-child(1){
+		transform: translate(-50%, -50%) rotate(45deg);
+	}
+	#dropdown .content .close span:nth-child(2){
+		transform: translate(-50%, -50%) rotate(-45deg);
+	}
+	#dropdown .content .navbar{
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin-top: 30px;
+	}
+	#dropdown .content .navbar .navbar-item{
+		width: 100%;
+		text-align: center;
+		list-style: none;
+		height: 30px;
+	}
+	#dropdown .content .navbar .navbar-item a{
+		font-size: 16px;
+		font-family: Noto;
+		color: black;
+		text-decoration: none;
+	}
+	
 	header{
 		width: 100%;
 		box-sizing: border-box;
@@ -394,6 +460,8 @@ body{
 		justify-content: center;
 		margin-top: 15px;
 		border: 1px solid rgba(0, 0, 0, 0.55);
+		transition: .5s ease;
+		transform-origin: 50% 50%;
 	}
 	#reviews .slider .slides .slide .author{
 		display: flex;
@@ -516,6 +584,7 @@ body{
 		width: 100%;
 		list-style: none;
 		position: relative;
+		transition: .5s ease;
 	}
 	#other .slider .content .slides .slide .play{
 		position: absolute;
@@ -528,6 +597,7 @@ body{
 	}
 	#other .slider .content .slides .slide .play img{
 		width: 100%;
+		transition: .3s ease;
 	}
 	#other .slider .content .slides .slide.active .play{
 		opacity: 1;
@@ -535,10 +605,12 @@ body{
 	#other .slider .content .slides .slide video{
 		width: 100%;
 		height: auto;
+		transition: .3s ease;
 	}
 	#other .slider .content .slides .slide img{
 		width: 100%;
 		height: auto;
+		transition: .3s ease;
 	}
 	#other .slider .prev{
 		width: 20px;
@@ -829,10 +901,10 @@ body{
 		border: none;
 		background-color: rgba(3, 26, 60, 0.8);
 		box-shadow: 0px 4px 34px rgba(0, 0, 0, 0.55);
+		transition: .5s ease;
 	}
 	#reviews .slider .content .slides .slide.active{
 		background-color: #031A3C;
-		transform: scale(1.1);
 	}
 	#reviews .slider .content .slides .slide .review p{
 		font-size: 10px;
@@ -849,6 +921,7 @@ body{
 		width: 33.33%;
 		border: none;
 		background-color: rgba(0, 0, 0, 0.0);
+		transition: .5s ease;
 	}
 	#other .slider .content .slides .slide video{
 		box-shadow: 0px 4px 34px rgba(0, 0, 0, 0.55);
@@ -857,10 +930,6 @@ body{
 	#other .slider .content .slides .slide img{
 		box-shadow: 0px 4px 34px rgba(0, 0, 0, 0.55);
 		opacity: 0.6;
-	}
-	#other .slider .content .slides .slide.active{
-		transform: scale(1.1);
-		z-index: 3;
 	}
 	#other .slider .content .slides .slide.active video{
 		opacity: 1;
