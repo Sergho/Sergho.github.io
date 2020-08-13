@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">	
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;700&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="http://kenwheeler.github.io/slick/slick/slick-theme.css"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
+
+	<script type="text/javascript" src="slick/slick.min.js"></script>
+	<script src="js/app.js"></script>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	<script src="js/jquery.flipper-responsive.js"></script>
+	<title>ЮрЦех</title>	
+</head>
+	<body>
+		<header class="header" id="header">
+			<div class="header-image"></div>	
+			<div class="container">
+				<div class="header__inner">
+					<div class="logo">
+						<img src="img/header/logo.png" alt="">
+					</div>
+
+					<nav class="nav" id="nav">
+						<a class="nav__link" href="#" data-scroll="#header">Главная</a>
+						<a class="nav__link" href="#" data-scroll="#work">Услуги</a>
+						<a class="nav__link" href="#" data-scroll="#lawyer">Консультация</a>
+						<a class="nav__link" href="#" data-scroll="#reviews">Отзывы</a>
+						<a class="nav__link" href="#" data-scroll="#contacts">Контакты</a>
+					</nav>
+
+					<button class="nav-toggle" id="nav-toggle" type="button">
+						<span class="nav-toggle__item">Menu</span>
+					</button> <!--/.Меню-бургер-->
+
+					<div class="phone">
+						+7 (912) 500 00 05
+					</div>
+				</div>
+
+				<div class="header__intro">
+					<div class="header__intro-title">
+						<h1 class="intro__title">Юридические услуги</h1>
+						<p class="intro__suptitle">для физических и юридических лиц</p>
+					</div>
+					<div class="header__intro-content">
+						<h2 class="intro__text">Взыскание задолженности</h2>
+						<p class="intro__content">
+							Юристы нашей компании оказывают услуги по взысканию долгов, как с юридических, так и с физических лиц, в том числе в претензионном и судебном порядке
+						</p>
+						<a class="btn" href="#openModal">Заказать консультацию
+						</a>
+					</div>
+				</div>
+			</div>
+		</header> <!--/.Header-->
+
+		 <section class="lawyer" id="lawyer">
+			<div class="container">
+				<div class="lawyer__inner">
+					<div class="lawyer__inner-image">
+						<img class="lawyer__inner-img" src="img/lawyer/lawyer-1.png" alt="">
+					</div>
+
+					<div class="lawyer__inner-content">
+						<div class="lawyer__inner-content-info">
+							<div class="lawyer__inner-content-name">Евгения Цагарати</div>
+							<div class="lawyer__inner-content-prof">
+								Судебный юрист 
+								<p>Глава компании «ЮрЦЕХ»</p>
+							</div>
+							<div class="lawyer__inner-content-text">
+								«Мне нравится выигрывать дела и видеть своих клиентов довольными и удовлетворенными исходом судебного процесса.  <p>Буду рада вам помочь!»</p>
+							</div>
+							<a class="btn lawyer-btn" href="#openModal">Заказать консультацию</a>
+						</div>
+
+						<div class="lawyer__inner-content-insruction">
+							<div class="lawyer__inner-content-insruction-title">
+								Инструкция: Как вести себя в суде
+							</div>
+							<p class="lawyer__inner-content-insruction-text">
+								Завтра суд, а у вас трясутся коленки как у школьника перед экзаменом?<span>Тогда срочно читайте мою инструкцию!</span> 
+							</p>
+							<p class="lawyer__inner-content-insruction-info">
+								Получите инструкцию, чтобы знать как правильно вести себя в суде
+							</p>
+							<a class="btn  insruction-btn" href="#openModal">
+								Бесплатная консультация «Как вести себя в суде»
+							</a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section> <!--/.Lawyer-->
+
+		<section class="work" id="work">
+			<div class="container">
+				<div class="work__items-block">
+					<div class="work__item">
+						<img class="work__item-img" src="img/work/icon-1.png" alt="">
+						<div class="work__item-title">
+							Споры с банками
+						</div>
+						<div class="work__item-text">
+							(вытекающие из кредитных договоров)
+						</div>
+					</div>
+					<div class="work__item">
+						<img class="work__item-img" src="img/work/icon-2.png" alt="">
+						<div class="work__item-title">
+							Долговые споры
+						</div>
+						<div class="work__item-text">
+							(по договорам займа)
+						</div>
+					</div>
+					<div class="work__item">
+						<img class="work__item-img" src="img/work/icon-3.png" alt="">
+						<div class="work__item-title">
+							Семейные споры
+						</div>
+						<div class="work__item-text">
+							(развод, взыскание алиментов, усыновление, порядок общения с ребенком)
+						</div>
+					</div>
+					<div class="work__item">
+						<img class="work__item-img" src="img/work/icon-4.png" alt="">
+						<div class="work__item-title">
+							Жилищные споры
+						</div>
+						<div class="work__item-text">
+							(выселение, раздел имущества)
+						</div>
+					</div>
+					<div class="work__item">
+						<img class="work__item-img" src="img/work/icon-5.png" alt="">
+						<div class="work__item-title">
+							Трудовые споры
+						</div>
+						<div class="work__item-text">
+							(незаконное увольнение, взыскание заработной платы)
+						</div>
+					</div>
+					<div class="work__item">
+						<img class="work__item-img" src="img/work/icon-6.png" alt="">
+						<div class="work__item-title">
+							Арбитраж
+						</div>
+						<div class="work__item-text">
+							(строительные споры, взыскание дебиторской задолженности,  убытков, оспаривание сделок)
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section> <!--/.Work-->
+
+		<section class="package">
+			<div class="container">
+				<div class="package__inner">
+					<div class="package__inner-info">
+						<div class="package__inner-info-title">
+							Пакет образцов юридических документов для взыскания долга
+						</div>
+						<div class="package__inner-info-text">
+							<p>
+								- Претензия и алгоритм работы с ней
+							</p>
+							<p>
+								- Иск и алгоритм работы с иском
+							</p>
+							<p>
+								- Перечень прилагаемых документов
+							</p>
+						</div>
+						<div class="package__inner-info-text-service">
+							Вы получите полностью отработанный шаблон, который при условии, если услуги оказываем мы — стоит от 50 000 руб.
+						</div>
+					</div>
+
+					<div class="package__inner-time">
+						<div class="package__inner-time-text">
+							Пакет образцов юридических документов для взыскания долга
+						</div>
+						<div class="package__inner-time-title">
+							Получи до конца дня всего за 299 руб
+						</div>
+
+
+						<!--/.flipper-->
+						<div class="flipper-block">
+							<div class="flipper" data-reverse="true" data-datetime="2020-08-21 00:00:00" data-template="dd|HH|ii|ss" data-labels="|||" id="myFlipper"></div>
+						</div>
+						
+
+						<script>
+						  jQuery(function ($) {
+							  $('#myFlipper').flipper('init');
+							  $('#modalFlipper').flipper('init');
+							});
+						</script>
+						<!--/.flipper-->
+
+
+						<a class="btn package-btn" href="#openModal">
+							Заказать пакет документов
+						</a>
+					</div>
+				</div>
+			</div>
+		</section> <!--/.Package-->
+		
+		<section class="contacts" id="contacts">
+			<div class="container">
+				<div class="contacts__items">
+					<div class="contacts__item-price">
+						<div class="contacts__item-price-title">
+							Получить прайс лист на оказание юридических услуг
+						</div>
+						<div class="contacts__item-price-block">
+							<div class="contacts__item-price-content">
+								<form class="contacts__item-price-form" action="/">
+									<input class="contacts__item-price-form-input" type="text" name="name" placeholder="Имя">
+									<input class="contacts__item-price-form-input" type="text" name="email" placeholder="Почта*">
+									<div class="contacts__item-price-form-number">
+										<select class="contacts__item-price-form-select">
+											<option>+7</option>
+										</select>
+										<input class="contacts__item-price-form-input-select" type="tel" name="phone" placeholder="50 555 00 05">
+									</div>
+								</form>
+							</div>
+							<div class="contacts__item-price-btn">
+								<a class="btn price-btn">Получить Прайс лист</a>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="contacts__item-social">
+						<div class="contacts__item-social-title">
+							Связаться с нами
+						</div>
+						<div class="contacts__item-social-text">
+							Выберите удобный способ связи
+						</div>
+						<div class="social">
+							<a href="#" class="social__link">
+								<img class="social__link-img" src="img/contacts/whatsapp.svg" alt="">
+							</a>
+							<a href="#" class="social__link">
+								<img class="social__link-img" src="img/contacts/viber.svg" alt="">
+							</a>
+							<a href="#" class="social__link">
+								<img class="social__link-img" src="img/contacts/telegram.svg" alt="">
+							</a>
+							<a href="#" class="social__link">
+								<img class="social__link-img" src="img/contacts/vk.svg" alt="">
+							</a>
+							<a href="#" class="social__link">
+								<img class="social__link-img" src="img/contacts/facebook.svg" alt="">
+							</a>
+							<a href="#" class="social__link">
+								<img class="social__link-img" src="img/contacts/youtube.svg" alt="">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section> <!--/.Contacts-->
+
+		<section class="reviews" id="reviews">
+			<div class="container">
+				<div class="reviews__inner">
+					<div class="reviews__title">
+						отзывы
+					</div>
+					<div class="reviews__block">
+						<div class="reviews__block-item">
+							<div class="reviews__block-item-name">
+								Вера Савельева
+							</div>
+							<div class="reviews__block-item-rating">
+								<img class="reviews__block-item-rating-star" src="img/reviews/star-gold.png" alt="">
+								<img class="reviews__block-item-rating-star" src="img/reviews/star-gold.png" alt="">
+								<img class="reviews__block-item-rating-star" src="img/reviews/star-gold.png" alt="">
+								<img class="reviews__block-item-rating-star" src="img/reviews/star-gold.png" alt="">
+								<img class="reviews__block-item-rating-star" src="img/reviews/star-grey.png" alt="">
+							</div>
+							<div class="reviews__block-item-text">
+								<b>Тщательно проверяют вопрос, все понятно объясняли, было приятно и легко работать</b>
+								<p>
+									Только закончила с ними работать по банкротству физического лица. Они помогли списать долги через суд.
+								</p>
+
+								<p>
+									В процессе меня вели 3 юриста. Со всеми работалось очень легко. Не знаю, что без Вас бы делала! Спасибо!
+								</p>
+							</div>
+						</div>
+
+						<div class="reviews__block-item">
+							<div class="reviews__block-item-name">
+								Илья Литвиновский
+							</div>
+							<div class="reviews__block-item-rating">
+								<img class="reviews__block-item-rating-star" src="img/reviews/star-gold.png" alt="">
+								<img class="reviews__block-item-rating-star" src="img/reviews/star-gold.png" alt="">
+								<img class="reviews__block-item-rating-star" src="img/reviews/star-gold.png" alt="">
+								<img class="reviews__block-item-rating-star" src="img/reviews/star-gold.png" alt="">
+								<img class="reviews__block-item-rating-star" src="img/reviews/star-gold.png" alt="">
+							</div>
+							<div class="reviews__block-item-text">
+								<b>Компетентность в семейных вопросах, порядочность!</b>
+								<p>
+									Обращался в данную компанию по семейному вопросу (порядок общения с ребёнком). Процесс затянулся почти на год, но в итоге в суде было подписано нужное мне соглашение. Хочу выразить благодарность юристу, который вёл моё дело, оказывал поддержку, избавил меня личного посещения судов и других инстанций, которые я не мог посещать из-за плотного графика.
+								</p>
+
+							</div>
+						</div>
+
+						<div class="reviews__block-item">
+							<div class="reviews__block-item-name">
+								Сергей Терехин
+							</div>
+							<div class="reviews__block-item-rating">
+								<img class="reviews__block-item-rating-star" src="img/reviews/star-gold.png" alt="">
+								<img class="reviews__block-item-rating-star" src="img/reviews/star-gold.png" alt="">
+								<img class="reviews__block-item-rating-star" src="img/reviews/star-gold.png" alt="">
+								<img class="reviews__block-item-rating-star" src="img/reviews/star-gold.png" alt="">
+								<img class="reviews__block-item-rating-star" src="img/reviews/star-grey.png" alt="">
+							</div>
+							<div class="reviews__block-item-text">
+								<b>Долги списали, приветливый персонал!</b>
+								<p>
+									Работают они очень хорошо, никаких проблем не возникало серьезных. Я решил воспользоваться услугами “ЮрЦЕХ”, потому что было уже некуда деваться, а компанию эту мне посоветовали.
+								</p>
+								<p>
+									Но прошло все  достаточно гладко, доги списали и я теперь стараюсь забыть то все и больше в такие ситуации точно не попадать.
+								</p>
+							</div>
+						</div>
+
+						<div class="reviews__block-item">
+							<div class="reviews__block-item-name">
+								Вера Савельева
+							</div>
+							<div class="reviews__block-item-rating">
+								<img class="reviews__block-item-rating-star" src="img/reviews/star-gold.png" alt="">
+								<img class="reviews__block-item-rating-star" src="img/reviews/star-gold.png" alt="">
+								<img class="reviews__block-item-rating-star" src="img/reviews/star-gold.png" alt="">
+								<img class="reviews__block-item-rating-star" src="img/reviews/star-gold.png" alt="">
+								<img class="reviews__block-item-rating-star" src="img/reviews/star-grey.png" alt="">
+							</div>
+							<div class="reviews__block-item-text">
+								<b>Тщательно проверяют вопрос, все понятно объясняли, было приятно и легко работать</b>
+								<p>
+									Только закончила с ними работать по банкротству физического лица. Они помогли списать долги через суд.
+								</p>
+
+								<p>
+									В процессе меня вели 3 юриста. Со всеми работалось очень легко. Не знаю, что без Вас бы делала! Спасибо!
+								</p>
+							</div>
+						</div>
+
+						<div class="reviews__block-item">
+							<div class="reviews__block-item-name">
+								Илья Литвиновский
+							</div>
+							<div class="reviews__block-item-rating">
+								<img class="reviews__block-item-rating-star" src="img/reviews/star-gold.png" alt="">
+								<img class="reviews__block-item-rating-star" src="img/reviews/star-gold.png" alt="">
+								<img class="reviews__block-item-rating-star" src="img/reviews/star-gold.png" alt="">
+								<img class="reviews__block-item-rating-star" src="img/reviews/star-gold.png" alt="">
+								<img class="reviews__block-item-rating-star" src="img/reviews/star-gold.png" alt="">
+							</div>
+							<div class="reviews__block-item-text">
+								<b>Компетентность в семейных вопросах, порядочность!</b>
+								<p>
+									Обращался в данную компанию по семейному вопросу (порядок общения с ребёнком). Процесс затянулся почти на год, но в итоге в суде было подписано нужное мне соглашение. Хочу выразить благодарность юристу, который вёл моё дело, оказывал поддержку, избавил меня личного посещения судов и других инстанций, которые я не мог посещать из-за плотного графика.
+								</p>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section> <!--/.Reviews-->
+
+		<section class="map">
+			<div class="container">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2242.526212281399!2d37.6386892157613!3d55.801464480566395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b535efac459dbd%3A0xceaba75a5c0ecdea!2z0JPRgNCw0YTRgdC60LjQuSDQv9C10YAuLCAxMtCQINGB0YLRgNC-0LXQvdC40LUgMSwg0JzQvtGB0LrQstCwLCDQoNC-0YHRgdC40Y8sIDEyOTYyNg!5e0!3m2!1sru!2sua!4v1597138103434!5m2!1sru!2sua" width="100%" height="300px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+			</div>
+		</section> <!--/.Map-->
+
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__inner">
+					<div class="footer__inner-logo">
+						<img src="img/header/logo-white.png" alt="">
+					</div>
+					<div class="footer__inner-content">
+						<div class="footer__inner-nav">
+							<a class="nav__link  footer__inner-nav-link" href="#" data-scroll="#header">Главная</a>
+							<a class="nav__link  footer__inner-nav-link" href="#" data-scroll="#work">Услуги</a>
+							<a class="nav__link  footer__inner-nav-link" href="#" data-scroll="#lawyer">Консультация</a>
+							<a class="nav__link  footer__inner-nav-link" href="#" data-scroll="#reviews">Отзывы</a>
+							<a class="nav__link  footer__inner-nav-link" href="#" data-scroll="#contacts">Контакты</a>
+						</div>
+						<div class="footer__inner-copy">
+							Copyright все права защищены
+						</div>
+					</div>
+					<div class="footer__inner-social">
+						<div class="phone  footer-phone">
+							+7 (912) 500 00 05
+						</div>
+						<div class="social  footer-social">
+							<a href="#" class="social__link">
+								<img class="social__link-img  footer-img" src="img/contacts/whatsapp.svg" alt="">
+							</a>
+							<a href="#" class="social__link  footer-link">
+								<img class="social__link-img  footer-img" src="img/contacts/viber.svg" alt="">
+							</a>
+							<a href="#" class="social__link">
+								<img class="social__link-img  footer-img" src="img/contacts/telegram.svg" alt="">
+							</a>
+							<a href="#" class="social__link">
+								<img class="social__link-img  footer-img" src="img/contacts/vk.svg" alt="">
+							</a>
+							<a href="#" class="social__link">
+								<img class="social__link-img  footer-img" src="img/contacts/facebook.svg" alt="">
+							</a>
+							<a href="#" class="social__link">
+								<img class="social__link-img  footer-img" src="img/contacts/youtube.svg" alt="">
+							</a>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</footer> <!--/.Footer-->
+
+		<div id="openModal" class="modal">
+		    <div class="modal-dialog">
+		        <div class="modal-content">
+		        	<a class="close" href="#close" title="Close">×</a>
+		         	<div class="modal-header">
+		         		<form class="contacts__item-price-form  modal-form" action="/">
+							<input class="contacts__item-price-form-input  modal-input" type="text" name="name" placeholder="Имя">
+							<input class="contacts__item-price-form-input  modal-input" type="tel" name="phone" placeholder="Телефон">
+							<button class="btn modal-btn" type="submit">Заказать</button>
+						</form>
+					</div>
+		        </div>
+		    </div>
+	    </div> <!--/.Modal-->
+
+	</body>
+</html>
