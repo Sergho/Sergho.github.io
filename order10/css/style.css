@@ -694,6 +694,14 @@ body{
 		font-family: Gotham;
 		font-size: 14px;
 		text-decoration: none;
+		transition: .3s ease;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.0);
+		display: block;
+		padding-bottom: 3px;
+	}
+	header .navbar .navbar-item:hover a{
+		color: #F0E530;
+		border-bottom: 1px solid #F0E530;
 	}
 	header .dropdown-menu{
 		display: none;
@@ -900,7 +908,418 @@ body{
 }
 @media screen and (min-width: 1024px){
 	
+	header{
+		padding: 30px 100px;
+	}
+	header .navbar{
+		margin-left: 30px;
+	}
+	header .navbar .navbar-item{
+		margin-left: 13px;
+		margin-right: 15px;
+	}
+	header .main{
+		margin-top: 60px;
+	}
+	header .main h1{
+		font-size: 40px;
+	}
+	header .main p:nth-child(2){
+		font-size: 24px;
+		line-height: 26px;
+		margin-top: 25px;
+		width: 65%;
+	}
+	header .main p:nth-child(3){
+		font-size: 24px;
+		line-height: 26px;
+		margin-top: 25px;
+		width: 50%;
+	}
+	header .main .more{
+		margin-top: 20px;
+		width: 400px;
+	}
+	header .main .more .videos img:nth-child(1){
+		width: 270px;
+	}
+	header .main .more .videos img:nth-child(2){
+		width: 250px;
+		margin-top: -120px;
+		margin-left: 140px;
+	}
+	header .main .more a{
+		left: 30px;
+		bottom: 45px;
+		font-size: 16px;
+	}
+
+	#about .image{
+		width: 45%;
+		max-width: 700px;
+	}
+	#about .image .person{
+		width: 40%;
+	}
+	#about .image .person .name{
+		font-size: 18px;
+	}
+	#about .image .person span{
+		font-size: 16px;
+		line-height: 18px;
+		margin-top: 10px;
+	}
+	#about .image .person:nth-child(2) img{
+		width: 100px;
+	}
+	#about .image .person:nth-child(3) img{
+		width: 90px;
+	}
+	#about .text{
+		margin-left: 50px;
+		width: 45%;
+		max-width: 700px;
+	}
+	#about .text h1{
+		font-size: 40px;
+		text-align: left;
+	}
+	#about .text p{
+		font-size: 18px;
+		line-height: 20px;
+	}
+
+	#repr{
+		margin-top: 50px;
+		padding: 30px 100px;
+	}
+	#repr h1{
+		font-size: 40px;
+	}
+	#repr span{
+		font-size: 20px;
+	}
+	#repr p{
+		font-size: 18px;
+		line-height: 20px;
+	}
+	#repr .cards{
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 50px;
+		margin-bottom: 70px;
+	}
+	#repr .cards .card h2{
+		font-size: 18px;
+	}
+	#repr .cards .card span{
+		font-size: 18px;
+		line-height: 20px;
+	}
+	#repr p:nth-child(8){
+		width: 75%;
+		margin-left: 25%;
+	}
+	#repr .questions .text p{
+		font-size: 18px;
+	}
+	#repr .questions .text ul li{
+		font-size: 18px;
+		padding-left: 50px;
+	}
+	#repr .questions .text ul li::before{
+		width: 25px;
+		height: 25px;
+		left: 0;
+	}
+	#repr .questions .image img{
+		max-width: 250px;
+	}
+	#repr .questions .image button{
+		font-size: 18px;
+	}
+
+	#reviews{
+		margin-top: 50px;
+	}
+	#reviews h1{
+		font-size: 40px;
+	}
+	#reviews .slider .content .slides .slide .author .text .name{
+		font-size: 16px;
+	}
+	#reviews .slider .content .slides .slide .author .text span{
+		font-size: 14px;
+	}
+	#reviews .slider .content .slides .slide .review p{
+		font-size: 12px;
+	}
+
+	#other .slider .content .slides .slide .play{
+		width: 50px;
+	}
+
+	#coop{
+		padding: 30px 100px;
+		margin-top: 50px;
+	}
+	#coop .text{
+		width: 45%;
+		margin-left: 55%;
+	}
+	#coop .text h1{
+		font-size: 40px;
+	}
+	#coop .text span{
+		font-size: 22px;
+		margin-top: 20px;
+		line-height: 24px;
+	}
+	#coop .text ul{
+		margin-top: 25px;
+		margin-bottom: 40px;
+	}
+	#coop .text ul li{
+		font-size: 22px;
+		line-height: 24px;
+	}
+
+	footer{
+		padding: 30px 100px;
+		align-items: center;
+	}
+	footer .text{
+		width: 50%;
+	}
+	footer .text h1{
+		font-size: 40px;
+	}
+	footer .text span{
+		font-size: 22px;
+		line-height: 24px;
+		margin-top: 20px;
+	}
+	footer .text ul{
+		margin-top: 20px;
+	}
+	footer .text ul li{
+		font-size: 22px;
+		line-height: 24px;
+	}
+	footer .logo img{
+		width: 240px;
+	}
+
 }
 @media screen and (min-width: 1440px){
-	
+
+	header{
+		padding: 40px 200px;
+	}
+	header .logo{
+		width: 110px;
+	}
+	header .navbar .navbar-item a{
+		font-size: 22px;
+		border-bottom: 2px solid rgba(0, 0, 0, 0.0);
+	}
+	header .navbar .navbar-item a:hover{
+		border-bottom: 2px solid #F0E530;
+	}
+	header .main{
+		margin-top: 100px;
+	}
+	header .main h1{
+		font-size: 44px;
+	}
+	header .main p:nth-child(2){
+		font-size: 30px;
+		line-height: 32px;
+	}
+	header .main p:nth-child(3){
+		font-size: 30px;
+		line-height: 32px;
+	}
+	header .main .more{
+		width: 500px;
+	}
+	header .main .more .videos img:nth-child(1){
+		width: 400px;
+	}
+	header .main .more .videos img:nth-child(2){
+		width: 400px;
+		margin-top: -160px;
+		margin-left: 230px;
+	}
+	header .main .more a{
+		font-size: 28px;
+		bottom: 85px;
+	}
+
+	#about .image .person:nth-child(2) img{
+		width: 200px;
+	}
+	#about .image .person:nth-child(3) img{
+		width: 180px;
+	}
+	#about .image .person .name{
+		font-size: 28px;
+		line-height: 30px;
+	}
+	#about .image .person span{
+		font-size: 24px;
+		line-height: 26px;
+	}
+	#about .text h1{
+		font-size: 44px;
+	}
+	#about .text p{
+		font-size: 24px;
+		line-height: 26px;
+		margin-top: 25px;
+	}
+
+	#repr{
+		padding: 40px 200px;
+	}
+	#repr h1{
+		font-size: 44px;
+	}
+	#repr span{
+		font-size: 26px;
+		line-height: 29px;
+	}
+	#repr p{
+		font-size: 28px;
+		line-height: 31px;
+	}
+	#repr .cards{
+		max-width: 1200px;
+	}
+	#repr .cards .card h2{
+		font-size: 28px;
+		line-height: 31px;
+	}
+	#repr .cards .card span{
+		font-size: 24px;
+		line-height: 27px;
+	}
+	#repr p:nth-child(7){
+		margin-top: 35px;
+	}
+	#repr .questions .text p{
+		font-size: 28px;
+		line-height: 31px;
+	}
+	#repr .questions .text ul{
+		margin-top: 30px;
+	}
+	#repr .questions .text ul li{
+		margin-top: 10px;
+		font-size: 26px;
+		line-height: 28px;
+	}
+	#repr .questions .text ul li::before{
+		width: 30px;
+		height: 30px;
+	}
+	#repr .questions .image img{
+		max-width: 300px;
+	}
+
+	#reviews{
+		margin-top: 50px;
+		padding: 40px 180px;
+	}
+	#reviews .slider .content .slides .slide .review p{
+		font-size: 14px;
+		line-height: 16px;
+	}
+
+	#other{
+		padding: 40px 180px;
+	}
+
+	#coop{
+		padding: 110px 200px;
+		background-size: 100%, auto 100%, 100%;
+	}
+	#coop .text h1{
+		font-size: 44px;
+	}
+	#coop .text span{
+		font-size: 28px;
+		line-height: 31px;
+		margin-top: 25px;
+	}
+	#coop .text ul li{
+		font-size: 28px;
+		line-height: 33px;
+	}
+
+	footer .text h1{
+		font-size: 44px;
+	}
+	footer .text span{
+		font-size: 28px;
+		line-height: 30px;
+	}
+	footer .text ul li{
+		font-size: 28px;
+		line-height: 33px;
+	}
+	footer .logo img{
+		max-width: 300px;
+	}
+
+}
+
+@media screen and (min-width: 1920px){
+
+	header{
+		max-width: 1920px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	#about{
+		max-width: 1920px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	#repr{
+		max-width: 1920px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	#reviews{
+		max-width: 1920px;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 40px 200px;
+	}
+
+	#other{
+		max-width: 1920px;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 40px 200px;
+	}
+
+	#coop{
+		max-width: 1920px;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 40px 200px;
+	}
+
+	footer{
+		max-width: 1920px;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 40px 200px;
+	}
+
 }
