@@ -1,0 +1,44 @@
+@font-face {
+	font-family: Montserrat;
+	src: url(Montserrat/Montserrat-Regular.ttf);
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: Montserrat;
+	src: url(Montserrat/Montserrat-Medium.ttf);
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: Montserrat;
+	src: url(Montserrat/Montserrat-Black.ttf);
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: Roboto;
+	src: url(Roboto/Roboto-Regular.ttf);
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: Roboto;
+	src: url(Roboto/Roboto-Bold.ttf);
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: Open;
+	src: url(Open/OpenSans-Regular.ttf);
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: Open;
+	src: url(Open/OpenSans-Bold.ttf);
+	font-weight: bold;
+	font-style: normal;
+}
