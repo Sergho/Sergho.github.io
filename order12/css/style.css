@@ -292,6 +292,7 @@
 		font-weight: bold;
 		font-size: 20px;
 		text-align: center;
+		color: #333;
 	}
 	#adv .cards .card .text p{
 		text-align: center;
@@ -842,8 +843,420 @@
 	}
 
 }
+
 @media screen and (min-width: 768px){
 	
+	header{
+		padding: 10px 20px;
+		background-size: 120%;
+		padding-bottom: 60px;
+	}
+	header .phone{
+		display: block;
+		order: 0;
+		width: 100%;
+		text-align: right;
+		font-family: Montserrat;
+		font-weight: 500;
+		color: #78542D;
+	}
+	header .navbar-left{
+		display: flex;
+		width: 45%;
+		justify-content: flex-end;
+		padding-right: 7px;
+		box-sizing: border-box;
+	}
+	header .navbar-left .navbar-item{
+		margin-left: 4px;
+		margin-right: 4px;
+		list-style: none;
+	}
+	header .navbar-left .navbar-item a{
+		font-size: 11px;
+		font-family: Montserrat;
+		font-weight: 500;
+		text-transform: uppercase;
+		color: #432E17;
+		text-decoration: none;
+	}
+	header .navbar-right{
+		display: flex;
+		width: 45%;
+		padding-left: 7px;
+		box-sizing: border-box;
+	}
+	header .navbar-right .navbar-item{
+		margin-left: 4px;
+		margin-right: 4px;
+		list-style: none;
+	}
+	header .navbar-right .navbar-item a{
+		font-size: 11px;
+		font-family: Montserrat;
+		font-weight: 500;
+		text-transform: uppercase;
+		color: #432E17;
+		text-decoration: none;
+	}
+	header .logo{
+		width: 60px;
+	}
+	header .dropdown-menu{
+		display: none;
+	}
+	header .main{
+		margin-top: 40px;
+	}
+	header .main h1{
+		font-size: 32px;
+	}
+	header .main span{
+		font-size: 18px;
+	}
+
+	#form{
+		width: 630px;
+		padding: 25px 30px;
+	}
+	#form span{
+		text-align: left;
+	}
+	#form form{
+		display: flex;
+		justify-content: space-between;
+	}
+	#form form .item{
+		width: 30%;
+	}
+	#form form button{
+		width: 30%;
+	}
+
+	#services .cards .card{
+		width: 120px;	
+	}
+	#services .cards .card img{
+		height: 50px;
+	}
+	#services .cards .card span{
+		font-size: 14px;
+	}
+
+	#about .content{
+		width: 95%;
+		margin-left: auto;
+		margin-right: auto;
+		display: flex;
+		align-items: center;
+	}
+	#about .content .text{
+		width: 50%;
+		margin-right: 5%;
+	}
+	#about .content .text h1{
+		font-size: 32px;
+	}
+	#about .content .text span{
+		font-size: 16px;
+		line-height: 18px;
+		margin-top: 0;
+	}
+	#about .content .line{
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	#about .content .text p{
+		font-size: 12px;
+		line-height: 14px;
+		margin-top: 5px;
+	}
+	#about .content .text .adv{
+		display: flex;
+		justify-content: space-between;
+	}
+	#about .content .text .adv .item{
+		width: 30%;
+	}
+	#about .content .text .adv .item h3{
+		font-size: 24px;
+	}
+	#about .content .text .adv .item span{
+		font-size: 12px;
+		line-height: 14px;
+	}
+	#about .content .image{
+		width: 45%;
+		display: block;
+	}
+	#about .content .image img{
+		width: 100%;
+	}
+
+	#adv .cards{
+		justify-content: space-between;
+	}
+	#adv .cards .card{
+		width: 30%;
+		display: block;
+	}
+	#adv .cards .card .image{
+		width: 60px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#adv .cards .card .text h1{
+		font-size: 16px;
+	}
+
+	#equipment{
+		background-color: #E0E0E0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-image: url(../img/equipment-bg.png);
+		background-size: auto 100%;
+		background-position: top left;
+		background-repeat: no-repeat;
+	}
+	#equipment .image{
+		width: 40%;
+	}
+	#equipment .text{
+		width: 50%;
+		margin-left: 30px;
+	}
+	#equipment .text h1{
+		font-size: 32px;
+		text-align: left;
+	}
+	#equipment .text p{
+		margin-top: 10px;
+		font-size: 12px;
+		line-height: 14px;
+		text-align: left;
+	}
+
+	#plans{
+		margin-top: 30px;
+	}
+	#plans h1{
+		font-size: 32px;
+	}
+	#plans span{
+		font-size: 18px;
+	}
+	#plans .groups .group{
+		width: 100%;
+		padding-bottom: 20px;
+		border-bottom: 1px solid #C7C7C7;
+	}
+	#plans .groups .group .items{
+		justify-content: space-between;
+	}
+	#plans .groups .group .items > .item{
+		width: 33.33%;
+		border: none;
+		border-left: 1px solid #C7C7C7;
+		padding: 15px;
+		box-sizing: border-box
+	}
+	#plans .groups .group .items > .item:nth-child(1){
+		border: none;
+	}
+	#plans .groups .group .items .item h2{
+		font-size: 20px;
+	}
+	#plans .groups .group .items .item .services .service{
+		font-size: 12px;
+		line-height: 14px;
+	}
+	#plans .groups .group .items .item .adv .item{
+		font-size: 12px;
+		line-height: 14px;
+	}
+
+	#works h1{
+		font-size: 32px;
+	}
+	#works .slider .slides .slide .top{
+		display: flex;
+		justify-content: center;
+	}
+	#works .slider .slides .slide .top img{
+		display: block;
+		width: 30%;
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+	#works .slider .slides .slide .top img:nth-child(1){
+		width: 30%;
+	}
+	#works .slider .slides .slide .bottom{
+		display: flex;
+		justify-content: center;
+		margin-top: 10px;
+	}
+	#works .slider .slides .slide .bottom img{
+		width: calc((90% + 20px) / 2 - 5px);
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+
+	#calc{
+		margin-top: 30px;
+		align-items: center;
+	}
+	#calc .top{
+		padding: 15px;
+	}
+	#calc .top span{
+		font-size: 18px;
+	}
+	#calc .image{
+		width: 52%;
+	}
+	#calc .text{
+		width: 48%;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		padding: 5px 10px;
+	}
+	#calc .text h1{
+		font-size: 24px;
+		width: 50%;
+	}
+	#calc .text span{
+		display: block;
+		width: 50%;
+		font-size: 14px;
+		margin-top: 0;
+		text-align: right;
+	}
+	#calc .text .select{
+		width: 48%;
+		margin-top: 10px;
+	}
+	#calc .text .select span{
+		margin: 0;
+		font-size: 11px;
+		padding: 0 5px;
+	}
+	#calc .text input{
+		width: 48%;
+		margin-top: 10px;
+		font-size: 11px;
+		padding: 0 5px;
+	}
+	#calc .text .result{
+		width: 48%;
+		padding: 0 5px;
+		font-size: 11px;
+		margin-top: 5px;
+	}
+	#calc .text p{
+		display: none;
+	}
+	#calc .text .result .price{
+		font-size: 14px;
+		width: 100%;
+		margin: 0;
+		text-align: center;
+	}
+	#calc .text button{
+		width: 48%;
+		font-size: 12px;
+		margin-top: 5px;
+	}
+
+	#clients{
+		margin-top: 30px;
+	}
+	#clients h1{
+		font-size: 32px;
+	}
+	#clients .slider{
+		margin-top: 20px;
+	}
+	#clients .slider .content .slides .slide{
+		min-width: 22%;
+		margin-left: 1.5%;
+		margin-right: 1.5%;
+	}
+	#clients .slider .prev{
+		transform: translate(0, -50%);
+	}
+	#clients .slider .next{
+		transform: translate(0, -50%);
+	}
+
+	#reviews h1{
+		font-size: 32px;
+	}
+	#reviews .slider{
+		margin-top: 20px;
+	}
+	#reviews .slider .slides .slide{
+		min-width: 30.33%;
+		margin-left: 1.5%;
+		margin-right: 1.5%;
+	}
+	#reviews .slider .points{
+		margin-top: 15px;
+	}
+
+	#map iframe{
+		height: 250px;
+	}
+
+	footer{
+		align-items: center;
+	}
+	footer .navbar-left{
+		display: flex;
+		width: 45%;
+		justify-content: flex-end;
+		padding-right: 7px;
+		box-sizing: border-box;
+	}
+	footer .navbar-left .navbar-item{
+		margin-left: 4px;
+		margin-right: 4px;
+		list-style: none;
+	}
+	footer .navbar-left .navbar-item a{
+		font-size: 11px;
+		font-family: Montserrat;
+		font-weight: 500;
+		text-transform: uppercase;
+		color: #F2F2F2;
+		text-decoration: none;
+	}
+	footer .navbar-right{
+		display: flex;
+		width: 45%;
+		padding-left: 7px;
+		box-sizing: border-box;
+	}
+	footer .navbar-right .navbar-item{
+		margin-left: 4px;
+		margin-right: 4px;
+		list-style: none;
+	}
+	footer .navbar-right .navbar-item a{
+		font-size: 11px;
+		font-family: Montserrat;
+		font-weight: 500;
+		text-transform: uppercase;
+		color: #F2F2F2;
+		text-decoration: none;
+	}
+	footer .logo{
+		width: 60px;
+	}
+
 }
 @media screen and (min-width: 1024px){
 	
