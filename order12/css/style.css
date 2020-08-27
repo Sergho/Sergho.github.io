@@ -418,8 +418,8 @@
 		height: 20px;
 	}
 	#plans .groups .group .items .item .cost .image img{
-		width: 100%;
-		height: auto;
+		width: 20px;
+		height: 20px;
 	}
 	#plans .groups .group .items .item .cost .text{
 		color: #2F3647;
@@ -1258,9 +1258,471 @@
 	}
 
 }
+
 @media screen and (min-width: 1024px){
 	
+	header{
+		padding: 10px 60px;
+		padding-bottom: 60px;
+	}
+	header .phone{
+		font-size: 24px;
+	}
+	header .logo{
+		width: 100px;
+	}
+	header .navbar-left{
+		width: 43%;
+	}
+	header .navbar-left .navbar-item a{
+		font-size: 14px;
+	}
+	header .navbar-right{
+		width: 43%;
+	}
+	header .navbar-right .navbar-item a{
+		font-size: 14px;
+	}
+	header .main{
+		margin-top: 60px;
+	}
+	header .main h1{
+		font-size: 54px;
+	}
+	header .main span{
+		font-size: 24px;
+	}
+
+	#services .cards .card{
+		width: 160px;
+	}
+	#services .cards .card img{
+		height: 60px;
+	}
+	#services .cards .card span{
+		font-size: 16px;
+	}
+
+	#about .content{
+		padding: 30px;
+	}
+	#about .content .text h1{
+		font-size: 36px;
+	}
+	#about .content .text h2{
+		font-size: 24px;
+	}
+	#about .content .text .line{
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+	#about .content .text p{
+		margin-top: 10px;
+		font-size: 14px;
+		line-height: 16px;
+	}
+	#about .content .text .adv .item h3{
+		font-size: 32px;
+	}
+	#about .content .text .adv .item span{
+		font-size: 14px;
+	}
+
+	#adv .cards .card{
+		display: flex;
+		justify-content: space-between;
+	}
+	#adv .cards .card .image{
+		width: 70px;
+		margin: 0;
+	}
+	#adv .cards .card .text{
+		width: calc(100% - 85px);
+	}
+	#adv .cards .card .text h1{
+		font-size: 18px;
+		text-align: left;
+	}
+	#adv .cards .card .text p{
+		font-size: 12px;
+		line-height: 14px;
+		text-align: left;
+	}
+
+	#equipment{
+		margin-top: 30px;
+	}
+	#equipment h1{
+		font-size: 36px;
+	}
+
+	#plans h1{
+		font-size: 36px;
+	}
+	#plans span{
+		font-size: 24px;
+	}
+	#plans .groups .group .items .item h2{
+		font-size: 28px;
+	}
+	#plans .groups .group .items .item span{
+		font-size: 14px;
+	}
+
+	#works h1{
+		font-size: 36px;
+	}
+
+	#calc .text{
+		padding: 15px;
+	}
+	#calc .text h1{
+		font-size: 28px;
+	}
+	#calc .text .select span{
+		font-size: 14px;
+		padding: 0 10px;
+	}
+	#calc .text input{
+		font-size: 14px;
+		padding: 0 10px;
+	}
+	#calc .text .result p{
+		display: block;
+		margin-right: 10px;
+		font-size: 12px;
+	}
+	#calc .text .result .price{
+		font-size: 12px;
+		width: auto;
+	}
+	#calc .text button{
+		font-size: 14px;
+	}
+
+	#clients h1{
+		font-size: 36px;
+	}
+
+	#reviews h1{
+		font-size: 36px;
+	}
+	#reviews .slider .slides .slide .play{
+		width: 80px;
+	}
+
+	#map iframe{
+		height: 300px;
+	}
+
+	footer .logo{
+		width: 100px;
+	}
+	footer .navbar-left{
+		width: 43%;
+	}
+	footer .navbar-left .navbar-item a{
+		font-size: 14px;
+	}
+	footer .navbar-right{
+		width: 43%;
+	}
+	footer .navbar-right .navbar-item a{
+		font-size: 14px;
+	}
+	footer .socials .social{
+		width: 40px;
+	}
+
 }
+
 @media screen and (min-width: 1440px){
 	
+	header{
+		max-width: 1920px;
+		padding: 10px 10%;
+		padding-bottom: 110px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	header .logo{
+		width: 115px;
+	}
+	header .navbar-left{
+		width: 43%;
+	}
+	header .navbar-left .navbar-item{
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	header .navbar-left .navbar-item a{
+		font-size: 16px;
+	}
+	header .navbar-right{
+		width: 43%;
+	}
+	header .navbar-right .navbar-item{
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	header .navbar-right .navbar-item a{
+		font-size: 16px;
+	}
+	header .main{
+		margin-top: 80px;
+	}
+	header .main h1{
+		font-size: 64px;
+	}
+
+	#form{
+		margin-top: -80px;
+	}
+
+	#services .cards .card{
+		width: 240px;
+		margin-left: 12.5px;
+		margin-right: 12.5px;
+		padding: 20px 10px;
+	}
+	#services .cards .card img{
+		height: 110px;
+	}
+	#services .cards .card span{
+		font-size: 22px;
+	}
+
+	#about{
+		padding: 30px;
+	}
+	#about .content{
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#about .content .text{
+		padding: 55px;
+		box-sizing: border-box;
+		width: 55%;
+	}
+	#about .content .image{
+		width: 45%;
+	}
+	#about .content .text h1{
+		font-size: 30px;
+	}
+	#about .content .text h2{
+		font-size: 24px;
+	}
+	#about .content .text .line{
+		margin-top: 25px;
+		margin-bottom: 0;
+	}
+	#about .content .text p{
+		margin-top: 25px;
+		font-size: 16px;
+		line-height: 1.55;
+	}
+	#about .content .text .adv .item h3{
+		font-size: 52px;
+	}
+	#about .content .text .adv .item span{
+		font-size: 14px;
+		line-height: 1.55;
+		text-align: left;
+	}
+
+	#adv{
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#adv .cards .card .image{
+		width: 100px;
+	}
+	#adv .cards .card .text{
+		width: calc(100% - 120px);
+	}
+	#adv .cards .card .text h2{
+		font-size: 22px;
+	}
+	#adv .cards .card .text p{
+		font-size: 14px;
+		line-height: 1.55;
+	}
+
+	#equipment{
+		max-width: 1920px;
+		padding: 30px 5%;
+		margin-top: 40px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#equipment .image{
+		max-width: 550px;
+	}
+	#equipment .text{
+		max-width: 650px;
+	}
+	#equipment .text h1{
+		font-size: 30px;
+	}
+	#equipment .text p{
+		font-size: 14px;
+		line-height: 1.55;
+		margin-top: 25px;
+	}
+
+	#plans{
+		max-width: 1920px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#plans h1{
+		font-size: 30px;
+	}
+	#plans span{
+		font-size: 18px;
+	}
+	#plans .groups{
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 30px;
+	}
+	#plans .groups .group .items .item span{
+		font-size: 16px;
+	}
+	#plans .groups .group .items .item .adv{
+		margin-top: 20px;
+	}
+
+	#works{
+		max-width: 1920px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#works h1{
+		font-size: 30px;
+	}
+	#works .slider{
+		margin-top: 30px;
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	#calc{
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#calc .text{
+		padding: 40px 30px;
+	}
+	#calc .text h1{
+		font-size: 36px;
+	}
+	#calc .text span{
+		font-size: 18px;
+	}
+	#calc .text .select{
+		width: 47%;
+		margin-top: 25px;
+	}
+	#calc .text input{
+		width: 47%;
+		margin-top: 25px;
+	}
+	#calc .text .result{
+		margin-top: 20px;
+		width: 47%;
+		font-size: 14px;
+	}
+	#calc .text .result .price{
+		font-size: 16px;
+	}
+	#calc .text button{
+		margin-top: 20px;
+		width: 47%;
+	}
+
+	#clients{
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#clients h1{
+		font-size: 30px;
+	}
+	#clients .slider .content{
+		width: 95%;
+		margin-left: 2.5%;
+	}
+	#clients .slider .prev span{
+		border-width: 2px;
+	}
+	#clients .slider .next span{
+		border-width: 2px;
+	}
+
+	#reviews{
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#reviews h1{
+		font-size: 30px;
+	}
+	#reviews .slider{
+		width: 95%;
+		margin-left: 2.5%;
+	}
+
+	#map{
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#map iframe{
+		height: 310px;
+	}
+
+	footer{
+		max-width: 1920px;
+		padding: 20px 10%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	footer .logo{
+		width: 115px;
+		margin-right: 15px;
+		margin-left: 15px;
+	}
+	footer .navbar-left{
+		width: 43%;
+	}
+	footer .navbar-left .navbar-item{
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	footer .navbar-left .navbar-item a{
+		font-size: 16px;
+	}
+	footer .navbar-right{
+		width: 43%;
+	}
+	footer .navbar-right .navbar-item{
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	footer .navbar-right .navbar-item a{
+		font-size: 16px;
+	}
+	footer .socials .social{
+		width: 60px;
+		margin-left: 11px;
+		margin-right: 11px;
+	}
+
 }
