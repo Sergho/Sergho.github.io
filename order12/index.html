@@ -8,6 +8,24 @@
 	<title>Main page</title>
 </head>
 <body>
+	<div id="dropdown" style="display: none; opacity: 0;">
+		<div class="content">
+			<div class="close" onclick="CloseMenu();">
+				<span></span>
+				<span></span>
+			</div>
+			<ul class="navbar">
+				<li class="navbar-item" onclick="CloseMenu();"><a href="#">О компании</a></li>
+				<li class="navbar-item" onclick="CloseMenu();"><a href="#">наши услуги</a></li>
+				<li class="navbar-item" onclick="CloseMenu();"><a href="#">оборудование</a></li>
+				<li class="navbar-item" onclick="CloseMenu();"><a href="#">наши работы</a></li>
+				<li class="navbar-item" onclick="CloseMenu();"><a href="#">отзывы</a></li>
+				<li class="navbar-item" onclick="CloseMenu();"><a href="#">цены</a></li>
+				<li class="navbar-item" onclick="CloseMenu();"><a href="#">контакты</a></li>
+			</ul>
+			<div class="phone">+7 (499) 390 38 81</div>
+		</div>
+	</div>
 	<header>
 		<div class="phone">+7 (499) 390 38 81</div>
 		<ul class="navbar-left">
@@ -24,7 +42,7 @@
 			<li class="navbar-item"><a href="#">цены</a></li>
 			<li class="navbar-item"><a href="#">контакты</a></li>
 		</ul>
-		<div class="dropdown-menu">
+		<div class="dropdown-menu" onclick="OpenMenu();">
 			<span></span>
 			<span></span>
 			<span></span>
@@ -436,9 +454,9 @@
 					</li>
 				</ul>
 				<ul class="points">
-					<li class="point active"></li>
-					<li class="point"></li>
-					<li class="point"></li>
+					<li class="point active" onclick="SlideTo(this, 0);"></li>
+					<li class="point" onclick="SlideTo(this, 1);"></li>
+					<li class="point" onclick="SlideTo(this, 2);"></li>
 				</ul>
 			</div>
 		</div>
@@ -453,54 +471,54 @@
 				<h1>Калькулятор</h1>
 				<span>Расчет стоимости работ по циклевке паркета</span>
 				<div class="select">
-					<span>Выберите тарифный план <img src="img/chevron.png"></span>
+					<span onclick="OpenSelect();">Выберите тарифный план <img src="img/chevron.png"></span>
 					<ul class="options" style="display: none; opacity: 0;">
-						<li>«ЭКОНОМ»</li>
-						<li>«СТАНДАРТ»</li>
-						<li>«ЕВРО»</li>
-						<li>«АЛКИДНЫЙ»</li>
-						<li>«ЕВРО 2»</li>
-						<li>«ПРАЙМ»</li>
-						<li>«ПРЕМИУМ»</li>
-						<li>«ТОНИРОВКА ПАРКЕТА»</li>
-						<li>«ПАРКЕТНАЯ ДОСКА»</li>
+						<li onclick="CloseSelect(); Select(0);">«ЭКОНОМ»</li>
+						<li onclick="CloseSelect(); Select(1);">«СТАНДАРТ»</li>
+						<li onclick="CloseSelect(); Select(2);">«ЕВРО»</li>
+						<li onclick="CloseSelect(); Select(3);">«АЛКИДНЫЙ»</li>
+						<li onclick="CloseSelect(); Select(4);">«ЕВРО 2»</li>
+						<li onclick="CloseSelect(); Select(5);">«ПРАЙМ»</li>
+						<li onclick="CloseSelect(); Select(6);">«ПРЕМИУМ»</li>
+						<li onclick="CloseSelect(); Select(7);">«ТОНИРОВКА ПАРКЕТА»</li>
+						<li onclick="CloseSelect(); Select(8);">«ПАРКЕТНАЯ ДОСКА»</li>
 					</ul>
 				</div>
 				<input type="number" placeholder="Введите вашу площадь, м2">
-				<div class="result"><p>Стоимость работ: </p><div class="price">1 870 000 руб</div></div>
-				<button>Расчитать стоимость работ</button>
+				<div class="result"><p>Стоимость работ: </p><div class="price"></div></div>
+				<button onclick="Count();">Расчитать стоимость работ</button>
 				<button>Заказать</button>
 			</div>
 		</div>
 		<div id="clients">
 			<h1>Наши клиенты</h1>
 			<div class="slider">
-				<div class="prev">
+				<div class="prev" onclick="PrevSlide(this);">
 					<span></span>
 				</div>
 				<div class="content">
 					<ul class="slides">
-						<li class="slide">
+						<li class="slide" style="transform: translate(0%, 0%);">
 							<img src="img/client-1.png">
 						</li>
-						<li class="slide">
+						<li class="slide" style="transform: translate(0%, 0%);">
 							<img src="img/client-2.png">
 						</li>
-						<li class="slide">
+						<li class="slide" style="transform: translate(0%, 0%);">
 							<img src="img/client-3.png">
 						</li>
-						<li class="slide">
+						<li class="slide" style="transform: translate(0%, 0%);">
 							<img src="img/client-4.png">
 						</li>
-						<li class="slide">
+						<li class="slide" style="transform: translate(0%, 0%);">
 							<img src="img/client-1.png">
 						</li>
-						<li class="slide">
+						<li class="slide" style="transform: translate(0%, 0%);">
 							<img src="img/client-2.png">
 						</li>
 					</ul>
 				</div>
-				<div class="next">
+				<div class="next" onclick="NextSlide(this);">
 					<span></span>
 				</div>
 			</div>
@@ -510,30 +528,30 @@
 			<div class="slider">
 				<ul class="slides">
 					<li class="slide">
-						<img src="img/play.png" class="play">
-						<video src="img/video.mp4"></video>
+						<img src="img/play.png" class="play" onclick="Play(this);">
+						<video src="img/video.mp4" onclick="this.pause();"></video>
 					</li>
 					<li class="slide">
-						<img src="img/play.png" class="play">
-						<video src="img/video.mp4"></video>
+						<img src="img/play.png" class="play" onclick="Play(this);">
+						<video src="img/video.mp4" onclick="this.pause();"></video>
 					</li>
 					<li class="slide">
-						<img src="img/play.png" class="play">
-						<video src="img/video.mp4"></video>
+						<img src="img/play.png" class="play" onclick="Play(this);">
+						<video src="img/video.mp4" onclick="this.pause();"></video>
 					</li>
 					<li class="slide">
-						<img src="img/play.png" class="play">
-						<video src="img/video.mp4"></video>
+						<img src="img/play.png" class="play" onclick="Play(this);">
+						<video src="img/video.mp4" onclick="this.pause();"></video>
 					</li>
 					<li class="slide">
-						<img src="img/play.png" class="play">
-						<video src="img/video.mp4"></video>
+						<img src="img/play.png" class="play" onclick="Play(this);">
+						<video src="img/video.mp4" onclick="this.pause();"></video>
 					</li>
 				</ul>
 				<ul class="points">
-					<li class="point active"></li>
-					<li class="point"></li>
-					<li class="point"></li>
+					<li class="point active" onclick="SlideTo(this, 0);"></li>
+					<li class="point" onclick="SlideTo(this, 1);"></li>
+					<li class="point" onclick="SlideTo(this, 2);"></li>
 				</ul>
 			</div>
 		</div>
@@ -568,5 +586,6 @@
 			</li>
 		</ul>
 	</footer>
+	<script src="js/script.js"></script>
 </body>
 </html>
