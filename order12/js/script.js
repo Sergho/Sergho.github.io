@@ -150,3 +150,91 @@ function Count(){
 	const cost = price * square;
 	dom_price.innerHTML = cost + " руб";
 }
+
+function get_offset(element) {
+	let offsetTop = 0;
+	do {
+		offsetTop  += element.offsetTop;
+	} while (element = element.offsetParent);
+	return offsetTop;
+}
+
+function Show(){
+	const form = document.querySelector("#form");
+	const services = document.querySelector("#services");
+	const about = document.querySelector("#about");
+	const adv = document.querySelector("#adv");
+	const equipment = document.querySelector("#equipment");
+	const plans = document.querySelector("#plans");
+	const works = document.querySelector("#works");
+	const calc = document.querySelector("#calc");
+	const clients = document.querySelector("#clients");
+	const reviews = document.querySelector("#reviews");
+	const map = document.querySelector("#map");
+	const footer = document.querySelector("footer");
+
+	const scroll = document.documentElement.scrollTop + window.innerHeight * 0.5;
+
+	if(scroll >= get_offset(form)){
+		form.style.opacity = "1";
+		form.style.transform = "translate(0, 0)";
+	}
+	if(scroll >= get_offset(services)){
+		services.style.opacity = "1";
+		services.style.transform = "translate(0, 0)";
+	}
+	if(scroll >= get_offset(about)){
+		about.style.opacity = "1";
+		about.style.transform = "translate(0, 0)";
+	}
+	if(scroll >= get_offset(adv)){
+		adv.style.opacity = "1";
+		adv.style.transform = "translate(0, 0)";
+	}
+	if(scroll >= get_offset(equipment)){
+		equipment.style.opacity = "1";
+		equipment.style.transform = "translate(0, 0)";
+	}
+	if(scroll >= get_offset(plans)){
+		plans.style.opacity = "1";
+		plans.style.transform = "translate(0, 0)";
+	}
+	if(scroll >= get_offset(works)){
+		works.style.opacity = "1";
+		works.style.transform = "translate(0, 0)";
+	}
+	if(scroll >= get_offset(calc)){
+		calc.style.opacity = "1";
+		calc.style.transform = "translate(0, 0)";
+	}
+	if(scroll >= get_offset(clients)){
+		clients.style.opacity = "1";
+		clients.style.transform = "translate(0, 0)";
+	}
+	if(scroll >= get_offset(reviews)){
+		reviews.style.opacity = "1";
+		reviews.style.transform = "translate(0, 0)";
+	}
+	if(scroll >= get_offset(map)){
+		map.style.opacity = "1";
+		map.style.transform = "translate(0, 0)";
+	}
+	if(scroll >= get_offset(footer)){
+		footer.style.opacity = "1";
+		footer.style.transform = "translate(0, 0)";
+	}
+
+}
+
+var timeOut;
+function goUp() {
+   var top = Math.max(document.body.scrollTop,document.documentElement.scrollTop);
+   if(top > 0) {
+      window.scrollBy(0,-100);
+      timeOut = setTimeout('goUp()',20);
+   } else clearTimeout(timeOut);
+}
+
+Show();
+
+window.onscroll = function() {Show();}

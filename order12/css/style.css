@@ -26,6 +26,8 @@
 		border-radius: 20px;
 		box-sizing: border-box;
 		padding: 20px;
+		max-height: 90vh;
+		overflow: auto;
 	}
 	#dropdown .content .close{
 		width: 20px;
@@ -68,9 +70,9 @@
 	#dropdown .content .navbar .navbar-item a{
 		display: block;
 		width: 100%;
-		height: 35px;
+		height: 25px;
 		text-transform: uppercase;
-		font-size: 18px;
+		font-size: 16px;
 		text-align: center;
 		font-family: Montserrat;
 		font-weight: 500;
@@ -79,12 +81,50 @@
 	}
 	#dropdown .content .phone{
 		width: 100%;
-		margin-top: 20px;
+		margin-top: 15px;
 		text-align: center;
 		font-family: Montserrat;
 		font-weight: 500;
 		color: #432E17;
 		font-size: 24px;
+	}
+	#dropdown .content span{
+		font-family: Montserrat;
+		font-size: 14px;
+		color: #432E17;
+		display: block;
+		margin-top: 5px;
+		width: 100%;
+		text-align: center;
+	}
+	#dropdown .content h2{
+		font-size: 16px;
+		font-family: Montserrat;
+		font-weight: normal;
+		color: #432E17;
+		width: 100%;
+		text-align: center;
+	}
+	#dropdown .content .socials{
+		width: 100%;
+		margin-top: 10px;
+		display: flex;
+		justify-content: center;
+	}
+	#dropdown .content .socials .social{
+		width: 25px;
+		margin-left: 7px;
+		margin-right: 7px;
+		list-style: none;
+	}
+	#dropdown .content .callback{
+		width: 100%;
+		display: block;
+		text-align: center;
+		margin-top: 10px;
+		font-family: Montserrat;
+		font-size: 14px;
+		color: #BB4300;
 	}
 	header{
 		width: 100%;
@@ -100,9 +140,15 @@
 		background-repeat: no-repeat;
 		padding-bottom: 60px;
 	}
+	header .left{
+		display: none;
+	}
+	header .right{
+		display: none;
+	}
 	header .logo{
 		order: 0;
-		width: 70px;
+		width: 130px;
 	}
 	header .logo img{
 		width: 100%;
@@ -173,6 +219,7 @@
 		margin-right: auto;
 		background-color: #333333;
 		padding: 20px;
+		transition: .5s ease;
 	}
 	#form span{
 		display: block;
@@ -231,6 +278,7 @@
 		width: 100%;
 		box-sizing: border-box;
 		padding: 20px;
+		transition: .5s ease;
 	}
 	#services .cards{
 		display: flex;
@@ -269,6 +317,7 @@
 		margin-top: 30px;
 		padding: 20px;
 		background-color: #E0E0E0;
+		transition: .5s ease;
 	}
 	#about .content{
 		background-color: white;
@@ -341,6 +390,7 @@
 		margin-top: 20px;
 		padding: 20px;
 		box-sizing: border-box;
+		transition: .5s ease;
 	}
 	#adv .cards{
 		display: flex;
@@ -390,6 +440,7 @@
 		flex-wrap: wrap;
 		border-top: 1px solid #E0E0E0;
 		border-bottom: 1px solid #E0E0E0;
+		transition: .5s ease;
 	}
 	#equipment .image{
 		width: 100%;
@@ -425,6 +476,7 @@
 		box-sizing: border-box;
 		padding: 20px;
 		margin-top: 20px;
+		transition: .5s ease;
 	}
 	#plans h1{
 		text-align: center;
@@ -542,6 +594,7 @@
 		box-sizing: border-box;
 		padding: 20px;
 		margin-top: 20px;
+		transition: .5s ease;
 	}
 	#works h1{
 		font-family: Montserrat;
@@ -606,6 +659,7 @@
 		margin-top: 20px;
 		display: flex;
 		flex-wrap: wrap;
+		transition: .5s ease;
 	}
 	#calc .top{
 		width: 100%;
@@ -638,6 +692,7 @@
 		color: #333;
 		font-size: 26px;
 		width: 100%;
+		text-align: center;
 	}
 	#calc .text span{
 		font-family: Roboto;
@@ -646,9 +701,12 @@
 		width: 100%;
 		margin-top: 10px;
 		font-size: 16px;
+		text-align: center;
 	}
 	#calc .text .select{
 		width: 280px;
+		margin-left: auto;
+		margin-right: auto;
 		position: relative;
 	}
 	#calc .text .select span{
@@ -692,7 +750,10 @@
 		font-size: 14px;
 	}
 	#calc .text input{
+		display: block;
 		width: 280px;
+		margin-left: auto;
+		margin-right: auto;
 		margin-top: 15px;
 		background-color: white;
 		border: 1px solid #C4C4C4;
@@ -705,6 +766,8 @@
 	}
 	#calc .result{
 		width: 280px;
+		margin-left: auto;
+		margin-right: auto;
 		height: 40px;
 		margin-top: 15px;
 		box-sizing: border-box;
@@ -724,7 +787,10 @@
 		margin-left: 10px;
 	}
 	#calc button{
+		display: block;
 		width: 280px;
+		margin-left: auto;
+		margin-right: auto;
 		height: 40px;
 		background-color: #828282;
 		border: none;
@@ -743,6 +809,7 @@
 		box-sizing: border-box;
 		padding: 20px;
 		margin-top: 20px;
+		transition: .5s ease;
 	}
 	#clients h1{
 		text-align: center;
@@ -821,6 +888,7 @@
 		box-sizing: border-box;
 		padding: 20px;
 		margin-top: 20px;
+		transition: .5s ease;
 	}
 	#reviews h1{
 		text-align: center;
@@ -883,6 +951,7 @@
 		box-sizing: border-box;
 		padding: 20px;
 		margin-top: 20px;
+		transition: .5s ease;
 	}
 	#map iframe{
 		width: 100%;
@@ -898,6 +967,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
+		transition: .5s ease;
 	}
 	footer .navbar-left{
 		display: none;
@@ -910,6 +980,40 @@
 	}
 	footer .logo img{
 		width: 100%;
+	}
+	footer .left{
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	footer .left span{
+		color: white;
+		font-family: Montserrat;
+		font-size: 14px;
+		text-align: center;
+		display: block;
+	}
+	footer .left h2{
+		font-family: Montserrat;
+		font-size: 16px;
+		text-align: center;
+		font-weight: 500;
+		color: white;
+	}
+	footer .left .phone{
+		margin-top: 5px;
+		font-family: Montserrat;
+		font-size: 18px;
+		font-weight: 500;
+		color: white;
+		text-align: center;
+	}
+	footer .left .mail{
+		margin-top: 5px;
+		display: block;
+		text-align: center;
+		color: #FF6B00;
+		font-family: Montserrat;
+		font-size: 14px;
 	}
 	footer .socials{
 		width: 100%;
@@ -927,6 +1031,56 @@
 	footer .socials .social img{
 		width: 100%;
 	}
+	footer .right{
+		margin-top: 10px;
+		width: 100%;
+	}
+	footer .right .billing{
+		display: block;
+		text-align: center;
+		font-family: Montserrat;
+		font-size: 14px;
+		color: white;
+		font-weight: 500;
+	}
+	footer .right .items{
+		display: flex;
+		justify-content: center;
+		margin-top: 10px;
+	}
+	footer .right .items .item{
+		width: 60px;
+		margin-left: 10px;
+		margin-right: 10px;
+		list-style: none;
+	}
+	footer .right span{
+		display: block;
+		margin-top: 10px;
+		text-align: center;
+		font-family: Montserrat;
+		font-weight: 500;
+		color: #828282;
+		font-size: 12px;
+	}
+	footer .copyright{
+		width: 100%;
+		margin-top: 10px;
+		font-family: Montserrat;
+		font-size: 14px;
+		color: #4F4F4F;
+		text-align: center;
+	}
+	footer .scroll{
+		margin-top: 15px;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+	footer .scroll img{
+		width: 30px;
+		cursor: pointer;
+	}
 
 }
 
@@ -934,17 +1088,78 @@
 	
 	header{
 		padding: 10px 20px;
-		background-size: 120%;
+		background-size: 160%;
 		padding-bottom: 60px;
 	}
-	header .phone{
+	header .left{
 		display: block;
-		order: 0;
+		width: 50%;
+		margin-bottom: 20px;
+	}
+	header .left span{
+		display: block;
 		width: 100%;
+		font-family: Montserrat;
+		font-size: 12px;
+		color: #432E17;
+	}
+	header .left h2{
+		display: block;
+		width: 100%;
+		font-family: Montserrat;
+		font-size: 14px;
+		color: #432E17;
+		margin-top: 5px;
+		font-weight: 500;
+	}
+	header .right{
+		display: block;
+		width: 50%;
+		margin-bottom: 20px;
+	}
+	header .right .top{
+		display: flex;
+		width: 100%;
+		justify-content: flex-end;
+	}
+	header .right .top span{
+		font-family: Montserrat;
+		font-size: 14px;
+		color: #432E17;
+	}
+	header .right .top .phone{
+		display: block;
 		text-align: right;
 		font-family: Montserrat;
 		font-weight: 500;
 		color: #78542D;
+		margin-left: 5px;
+	}
+	header .right .bottom{
+		display: flex;
+		justify-content: flex-end;
+		margin-top: 10px;
+	}
+	header .right .bottom .socials{
+		display: flex;
+		justify-content: center;
+	}
+	header .right .bottom .socials .social{
+		width: 20px;
+		margin-left: 5px;
+		margin-right: 5px;
+		list-style: none;
+	}
+	header .right .bottom .socials .social img{
+		width: 100%;
+		cursor: pointer;
+	}
+	header .right .bottom .callback{
+		font-family: Montserrat;
+		font-weight: 500;
+		font-size: 14px;
+		color: #BB4300;
+		margin-left: 15px;
 	}
 	header .navbar-left{
 		display: flex;
@@ -986,7 +1201,7 @@
 		text-decoration: none;
 	}
 	header .logo{
-		width: 60px;
+		width: 70px;
 	}
 	header .dropdown-menu{
 		display: none;
@@ -1301,6 +1516,7 @@
 
 	footer{
 		align-items: center;
+		position: relative;
 	}
 	footer .navbar-left{
 		display: flex;
@@ -1344,6 +1560,59 @@
 	footer .logo{
 		width: 60px;
 	}
+	footer .left{
+		width: 30%;
+		align-self: start;
+		margin-top: 20px;
+	}
+	footer .left span{
+		text-align: left;
+	}
+	footer .left h2{
+		text-align: left;
+		margin-top: 5px;
+	}
+	footer .left .phone{
+		text-align: left;
+		margin-top: 10px;
+	}
+	footer .left .mail{
+		text-align: left;
+		margin-top: 10px;
+	}
+	footer .socials{
+		width: 30%;
+	}
+	footer .socials .social{
+		width: 40px;
+	}
+	footer .right{
+		width: 30%;
+		align-self: start;
+		margin-top: 20px;
+	}
+	footer .right .billing{
+		text-align: right;
+	}
+	footer .right .items{
+		justify-content: flex-end;
+	}
+	footer .right .items .item{
+		margin-left: 0;
+		margin-right: 0;
+	}
+	footer .right .items .item:nth-child(1){
+		margin-right: 20px;
+	}
+	footer .right span{
+		text-align: right;
+	}
+	footer .scroll{
+		position: absolute;
+		bottom: 20px;
+		right: 7%;
+		width: auto;
+	}
 
 }
 
@@ -1353,11 +1622,33 @@
 		padding: 10px 60px;
 		padding-bottom: 60px;
 	}
-	header .phone{
+	header .left span{
+		font-size: 14px;
+	}
+	header .left h2{
+		font-size: 16px;
+	}
+	header .right .top{
+		align-items: center;
+	}
+	header .right .top span{
+		font-size: 16px;
+	}
+	header .right .top .phone{
 		font-size: 24px;
 	}
+	header .right .bottom{
+		align-items: center;
+	}
+	header .right .bottom .socials .social{
+		width: 30px;
+	}
+	header .right .bottom .callback{
+		margin-left: 45px;
+		font-size: 16px;
+	}
 	header .logo{
-		width: 100px;
+		width: 125px;
 	}
 	header .navbar-left{
 		width: 43%;
@@ -1505,6 +1796,7 @@
 
 	footer .logo{
 		width: 100px;
+		transform: translate(0, 25%);
 	}
 	footer .navbar-left{
 		width: 43%;
@@ -1519,6 +1811,9 @@
 		font-size: 14px;
 	}
 	footer .socials .social{
+		width: 60px;
+	}
+	footer .scroll img{
 		width: 40px;
 	}
 
@@ -1528,16 +1823,36 @@
 	
 	header{
 		max-width: 1920px;
-		padding: 10px 10%;
+		padding: 10px 8%;
 		padding-bottom: 110px;
 		margin-left: auto;
 		margin-right: auto;
 	}
+	header .left span{
+		font-size: 16px;
+	}
+	header .left h2{
+		font-size: 18px;
+	}
+	header .right .top span{
+		font-size: 18px;
+		font-weight: 500;
+	}
+	header .right .top .phone{
+		margin-left: 10px;
+	}
+	header .right .bottom .socials .social{
+		width: 35px;
+	}
+	header .right .bottom .callback{
+		font-size: 18px;
+		margin-left: 25px;
+	}
 	header .logo{
-		width: 115px;
+		width: 220px;
 	}
 	header .navbar-left{
-		width: 43%;
+		width: 40%;
 	}
 	header .navbar-left .navbar-item{
 		margin-left: 10px;
@@ -1547,7 +1862,7 @@
 		font-size: 16px;
 	}
 	header .navbar-right{
-		width: 43%;
+		width: 40%;
 	}
 	header .navbar-right .navbar-item{
 		margin-left: 10px;
@@ -1783,12 +2098,12 @@
 		margin-right: auto;
 	}
 	footer .logo{
-		width: 115px;
+		width: 150px;
 		margin-right: 15px;
 		margin-left: 15px;
 	}
 	footer .navbar-left{
-		width: 43%;
+		width: 42%;
 	}
 	footer .navbar-left .navbar-item{
 		margin-left: 10px;
@@ -1798,7 +2113,7 @@
 		font-size: 16px;
 	}
 	footer .navbar-right{
-		width: 43%;
+		width: 42%;
 	}
 	footer .navbar-right .navbar-item{
 		margin-left: 10px;
@@ -1811,6 +2126,21 @@
 		width: 60px;
 		margin-left: 11px;
 		margin-right: 11px;
+	}
+	footer .left span{
+		font-size: 16px;
+	}
+	footer .left h2{
+		font-size: 18px;
+	}
+	footer .left .phone{
+		font-size: 24px;
+	}
+	footer .left .mail{
+		font-size: 16px;
+	}
+	footer .scroll{
+		right: 14%;
 	}
 
 }

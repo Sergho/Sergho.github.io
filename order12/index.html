@@ -15,32 +15,69 @@
 				<span></span>
 			</div>
 			<ul class="navbar">
-				<li class="navbar-item" onclick="CloseMenu();"><a href="#">О компании</a></li>
-				<li class="navbar-item" onclick="CloseMenu();"><a href="#">наши услуги</a></li>
-				<li class="navbar-item" onclick="CloseMenu();"><a href="#">оборудование</a></li>
-				<li class="navbar-item" onclick="CloseMenu();"><a href="#">наши работы</a></li>
-				<li class="navbar-item" onclick="CloseMenu();"><a href="#">отзывы</a></li>
-				<li class="navbar-item" onclick="CloseMenu();"><a href="#">цены</a></li>
-				<li class="navbar-item" onclick="CloseMenu();"><a href="#">контакты</a></li>
+				<li class="navbar-item" onclick="CloseMenu();"><a href="#about">О компании</a></li>
+				<li class="navbar-item" onclick="CloseMenu();"><a href="#services">наши услуги</a></li>
+				<li class="navbar-item" onclick="CloseMenu();"><a href="#equipment">оборудование</a></li>
+				<li class="navbar-item" onclick="CloseMenu();"><a href="#works">наши работы</a></li>
+				<li class="navbar-item" onclick="CloseMenu();"><a href="#reviews">отзывы</a></li>
+				<li class="navbar-item" onclick="CloseMenu();"><a href="#plans">цены</a></li>
+				<li class="navbar-item" onclick="CloseMenu();"><a href="#map">контакты</a></li>
 			</ul>
-			<div class="phone">+7 (499) 390 38 81</div>
+			<span>123060, г Москва, Графский переулок, 12А, стр. 1</span>
+			<h2>Работаем по Москве и МО</h2>
+			<div class="phone"><span>ежедневно</span> +7 (499) 390 38 81</div>
+			<ul class="socials">
+				<li class="social">
+					<img src="img/vk-orange.png" alt="vk">
+				</li>
+				<li class="social">
+					<img src="img/inst-orange.png" alt="inst">
+				</li>
+				<li class="social">
+					<img src="img/facebook-orange.png" alt="facebook">
+				</li>
+			</ul>
+			<a href="#" class="callback">Обратный звонок</a>
 		</div>
 	</div>
 	<header>
-		<div class="phone">+7 (499) 390 38 81</div>
+		<div class="left">
+			<span>123060, г Москва, Графский переулок, 12А, стр. 1</span>
+			<h2>Работаем по Москве и МО</h2>
+		</div>
+		<div class="right">
+			<div class="top">
+				<span>ежедневно</span>
+				<div class="phone">+7 (499) 390 38 81</div>
+			</div>
+			<div class="bottom">
+				<ul class="socials">
+					<li class="social">
+						<img src="img/vk-orange.png">
+					</li>
+					<li class="social">
+						<img src="img/inst-orange.png">
+					</li>
+					<li class="social">
+						<img src="img/facebook-orange.png">
+					</li>
+				</ul>
+				<a href="" class="callback">Обратный звонок</a>
+			</div>
+		</div>
 		<ul class="navbar-left">
-			<li class="navbar-item"><a href="#">о компании</a></li>
-			<li class="navbar-item"><a href="#">наши услуги</a></li>
-			<li class="navbar-item"><a href="#">оборудование</a></li>
+			<li class="navbar-item"><a href="#about">о компании</a></li>
+			<li class="navbar-item"><a href="#services">наши услуги</a></li>
+			<li class="navbar-item"><a href="#equipment">оборудование</a></li>
 		</ul>
 		<div class="logo">
 			<img src="img/logo.png" alt="logo">
 		</div>
 		<ul class="navbar-right">
-			<li class="navbar-item"><a href="#">наши работы</a></li>
-			<li class="navbar-item"><a href="#">отзывы</a></li>
-			<li class="navbar-item"><a href="#">цены</a></li>
-			<li class="navbar-item"><a href="#">контакты</a></li>
+			<li class="navbar-item"><a href="#works">наши работы</a></li>
+			<li class="navbar-item"><a href="#reviews">отзывы</a></li>
+			<li class="navbar-item"><a href="#plans">цены</a></li>
+			<li class="navbar-item"><a href="#map">контакты</a></li>
 		</ul>
 		<div class="dropdown-menu" onclick="OpenMenu();">
 			<span></span>
@@ -53,7 +90,7 @@
 		</div>
 	</header>
 	<main>
-		<div id="form">
+		<div id="form" style="opacity: 0; transform: translate(0, 100%);">
 			<span>Вызовите нашего специалиста для замеров и расчета стоимости услуги</span>
 			<form>
 				<div class="item">
@@ -67,7 +104,7 @@
 				<button>Оставить заявку</button>
 			</form>
 		</div>
-		<div id="services">
+		<div id="services" style="opacity: 0; transform: translate(0, 100%);">
 			<ul class="cards">
 				<li class="card">
 					<img src="img/services-1.png">
@@ -91,7 +128,7 @@
 				</li>
 			</ul>
 		</div>
-		<div id="about">
+		<div id="about" style="opacity: 0; transform: translate(0, 100%);">
 			<div class="content">
 				<div class="text">
 					<h1>о компании</h1>
@@ -120,7 +157,7 @@
 				</div>
 			</div>
 		</div>
-		<div id="adv">
+		<div id="adv" style="opacity: 0; transform: translate(0, 100%);">
 			<ul class="cards">
 				<li class="card">
 					<div class="image">
@@ -151,7 +188,7 @@
 				</li>
 			</ul>
 		</div>
-		<div id="equipment">
+		<div id="equipment" style="opacity: 0; transform: translate(0, 100%);">
 			<div class="image">
 				<img src="img/equipment-img.png" alt="equipment-img">
 			</div>
@@ -162,7 +199,7 @@
 				<p>Наши технологи тщательно отбирают самое лучшее сырье от европейских производителей и это обеспечивает безупречное качество, долговечность и идеальный внешний вид паркетного пола. Мы внимательно следим за новинками рынка и используем в работе только самое лучшее. Это позволяет быстро и качественно обрабатывать паркет как в потоковых помещениях с большой нагрузкой, так и редкие благородные разновидности паркета в элитных домах и организациях, старинных усадьбах, музеях с атмосферой, которую необходимо бережно сохранить.</p>
 			</div>
 		</div>
-		<div id="plans">
+		<div id="plans" style="opacity: 0; transform: translate(0, 100%);">
 			<h1>Наши тарифные планы</h1>
 			<span>Мы разработали гибкие тарифные планы для наших клиентов</span>
 			<ul class="groups">
@@ -415,7 +452,7 @@
 				</li>
 			</ul>
 		</div>
-		<div id="works">
+		<div id="works" style="opacity: 0; transform: translate(0, 100%);">
 			<h1>Наши работы</h1>
 			<div class="slider">
 				<ul class="slides">
@@ -460,7 +497,7 @@
 				</ul>
 			</div>
 		</div>
-		<div id="calc">
+		<div id="calc" style="opacity: 0; transform: translate(0, 100%);">
 			<div class="top">
 				<span>Заполните форму и получите расчет стоимости Вашего объекта</span>
 			</div>
@@ -490,7 +527,7 @@
 				<button>Заказать</button>
 			</div>
 		</div>
-		<div id="clients">
+		<div id="clients" style="opacity: 0; transform: translate(0, 100%);">
 			<h1>Наши клиенты</h1>
 			<div class="slider">
 				<div class="prev" onclick="PrevSlide(this);">
@@ -523,7 +560,7 @@
 				</div>
 			</div>
 		</div>
-		<div id="reviews">
+		<div id="reviews" style="opacity: 0; transform: translate(0, 100%);">
 			<h1>видео отзывы</h1>
 			<div class="slider">
 				<ul class="slides">
@@ -555,24 +592,30 @@
 				</ul>
 			</div>
 		</div>
-		<div id="map">
+		<div id="map" style="opacity: 0; transform: translate(0, 100%);">
 			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d577325.3466551504!2d36.82513470948811!3d55.58152446329152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54afc73d4b0c9%3A0x3d44d6cc5757cf4c!2z0JzQvtGB0LrQstCw!5e0!3m2!1sru!2sru!4v1598441144081!5m2!1sru!2sru" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 		</div>
 	</main>
-	<footer>
+	<footer style="opacity: 0; transform: translate(0, 100%);">
 		<ul class="navbar-left">
-			<li class="navbar-item"><a href="#">О компании</a></li>
-			<li class="navbar-item"><a href="#">наши услуги</a></li>
-			<li class="navbar-item"><a href="#">оборудование</a></li>
+			<li class="navbar-item"><a href="#about">О компании</a></li>
+			<li class="navbar-item"><a href="#services">наши услуги</a></li>
+			<li class="navbar-item"><a href="#equipment">оборудование</a></li>
 		</ul>
 		<div class="logo">
 			<img src="img/logo-white.png" alt="logo-white">
 		</div>
 		<div class="navbar-right">
-			<li class="navbar-item"><a href="#">наши работы</a></li>
-			<li class="navbar-item"><a href="#">отзывы</a></li>
-			<li class="navbar-item"><a href="#">цены</a></li>
-			<li class="navbar-item"><a href="#">контакты</a></li>
+			<li class="navbar-item"><a href="#works">наши работы</a></li>
+			<li class="navbar-item"><a href="#reviews">отзывы</a></li>
+			<li class="navbar-item"><a href="#plans">цены</a></li>
+			<li class="navbar-item"><a href="#map">контакты</a></li>
+		</div>
+		<div class="left">
+			<span>123060, г Москва, Графский переулок, 12А, стр. 1</span>
+			<h2>Работаем по Москве и МО</h2>
+			<div class="phone">+7 (499) 390 38 81</div>
+			<a href="#" class="mail">info@primer.ru</a>
 		</div>
 		<ul class="socials">
 			<li class="social">
@@ -585,6 +628,22 @@
 				<img src="img/facebook.png">
 			</li>
 		</ul>
+		<div class="right">
+			<div class="billing">Принимаем к оплате</div>
+			<ul class="items">
+				<li class="item">
+					<img src="img/mastercard.png">
+				</li>
+				<li class="item">
+					<img src="img/visa.png">
+				</li>
+			</ul>
+			<span>Политика конфиденциальности</span>
+		</div>
+		<div class="copyright">Copyright Все права защищены</div>
+		<div class="scroll">
+			<img src="img/scroll.png" alt="scroll" onclick="goUp();">
+		</div>
 	</footer>
 	<script src="js/script.js"></script>
 </body>
