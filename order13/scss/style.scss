@@ -12,7 +12,7 @@ img{
     width: 100%;
 }
 body{
-    background-color: #F9F9F9;
+    background-color: white;
     overflow-x: hidden;
 }
 html{
@@ -468,6 +468,16 @@ li{
             margin-top: 20px;
             .advantages__item{
                 margin-top: 20px;
+            }
+        }
+    }
+    .images{
+        @include w100;
+        padding: 20px;
+        img{
+            margin-top: 20px;
+            &:nth-child(1){
+                border-radius: 5px;
             }
         }
     }
@@ -1037,6 +1047,20 @@ li{
             display: flex;
         }
     }
+    .images{
+        padding: 20px 10%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        img{
+            margin-top: 30px;
+        }
+        img:nth-child(1){
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
     .certificates{
         .certificates__list{
             flex-wrap: nowrap;
@@ -1275,6 +1299,9 @@ li{
     .our-projects{
         margin-top: 30px;
     }
+    .images{
+        padding: 30px 15%;
+    }
     
     .header{
         width: calc(100% - 50px);
@@ -1512,6 +1539,15 @@ li{
         margin-left: auto;
         margin-right: auto;
         max-width: 1800px;
+    }
+    .images{
+        padding: 35px 20%;
+        max-width: 1800px;
+        margin-left: auto;
+        margin-right: auto;
+        img{
+            margin-top: 35px;
+        }
     }
     .certificates{
 
