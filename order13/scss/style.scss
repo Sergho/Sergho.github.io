@@ -567,8 +567,8 @@ li{
         display: flex;
         align-items: center;
         .logo__image{
-            width: 40px;
-            height: 40px;
+            transform: translate(0, 2px);
+            width: 150px;
             margin-right: 10px;
         }
         .logo__span{
@@ -760,16 +760,20 @@ li{
         }
     }
     .example{
-        min-width: 80%;
+        height: 380px;
         margin-right: 5%;
         position: relative;
-        &:nth-child(4){
+        img{
+            width: auto;
+            height: 100%;
+        }
+        &:nth-child(7){
             margin-right: 0;
         }
         .example__price{
             width: auto;
             position: absolute;
-            bottom: 5px;
+            bottom: 0;
             left: 50%;
             transform: translate(-50%, 0);
             padding: 15px 25px;
@@ -1026,7 +1030,6 @@ li{
         .our-projects__examples{
             display: flex;
             margin-top: 50px;
-            overflow: visible;
         }
     }
     .advantages{
@@ -1047,8 +1050,7 @@ li{
     }
     .logo{
         .logo__image{
-            width: 50px;
-            height: 50px;
+            width: 160px;
         }
         .logo__span{
             font-size: 22px;
@@ -1112,14 +1114,8 @@ li{
         }
     }
     .example{
-        min-width: auto;
-        width: 25%;
-        margin: 0;
+        height: 400px;
         transition: .4s ease;
-        &:hover{
-            z-index: 10;
-            transform: scale(1.1);
-        }
     }
     .adv-item{
         margin-left: 2%;
@@ -1600,6 +1596,9 @@ li{
         .footer__span{
             font-size: 18px;
         }
+    }
+    .example{
+        height: 550px;
     }
 
 }
