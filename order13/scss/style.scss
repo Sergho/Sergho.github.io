@@ -1,0 +1,821 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+input, button{
+    outline: none;
+}
+button{
+    cursor: pointer;
+}
+img{
+    width: 100%;
+}
+body{
+    background-color: #F9F9F9;
+}
+li{
+    list-style: none;
+}
+
+@media screen and (min-width: 320px) {
+
+    @mixin w100{
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .page{
+        @include w100;
+    }
+    .dropdown{
+        @include w100;
+        display: none;
+        opacity: 0;
+    }
+    .preview{
+        @include w100;
+        background-image: url("../img/preview-bg.png");
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        padding-bottom: 90px;
+        .preview__header{
+            top: 15px;
+            left: 15px;
+        }
+        .preview__text{
+            @include w100;
+            margin-top: 120px;
+            padding: 15px;
+            .preview__slogan{
+                font-size: 14px;
+                font-family: 'SF Pro Display';
+                color: #FF2929;
+            }
+            .preview__title{
+                font-size: 22px;
+                font-family: 'SF Pro Display';
+                font-weight: 900;
+                color: #353535;
+                margin-top: 5px;
+                line-height: 27px;
+            }
+            .preview__subtitle{
+                font-size: 16px;
+                font-family: 'SF Pro Display';
+                color: #353535;
+                margin-top: 5px;
+                line-height: 1.37;
+                b{
+                    color: #FF2929;
+                }
+            }
+            .preview__button{
+                margin-top: 15px;
+            }
+            .preview__socials{
+                display: none;
+            }
+        }
+        .preview__image{
+            display: none;
+        }
+    }
+    .banner{
+        margin-top: 20px;
+        position: relative;
+        @include w100;
+        .banner__red{
+            @include w100;
+            padding: 20px;
+            background-image: url("../img/red-bg.png");
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            .banner__fire{
+                width: 60px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 15px;
+            }
+            .banner__cry{
+                font-family: 'SF Pro Display';
+                font-size: 36px;
+                color: white;
+                width: 100%;
+                text-align: center;
+                margin-top: 10px;
+            }
+        }
+        .banner__white{
+            @include w100;
+            padding: 20px;
+            background-image: url("../img/white-bg.png");
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            .banner__title{
+                font-family: 'SF Pro Display';
+                font-size: 28px;
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+                margin-top: 100px;
+                color: #353535;
+                line-height: 34px;
+                b{
+                    color: #FF2929;
+                }
+            }
+            .banner__span{
+                display: block;
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+                margin-top: 10px;
+                font-family: 'SF Pro Display';
+                font-size: 16px;
+                line-height: 22px;
+                color: #5E5E5E;
+            }
+        }
+        .banner__circle{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    .size{
+        @include w100;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        .size__content{
+            order: 0;
+            .size__title{
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 5px;
+            }
+            .size__text{
+                margin-top: 15px;
+            }
+            .size__button{
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 15px;
+            }
+        }
+        .size__image{
+            order: 1;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 30px;
+            img:nth-child(1){
+                display: none;
+            }
+        }
+    }
+    .material{
+        @include w100;
+        margin-top: 20px;
+        background-color: #FF2929;
+        padding: 20px;
+        .material__text{
+            width: 100%;
+            .material__title{
+                width: 100%;
+                text-align: center;
+                font-family: 'SF Pro Display';
+                font-size: 22px;
+                color: white;
+                font-weight: 400;
+                &:after{
+                    content: "";
+                    display: block;
+                    width: 20%;
+                    height: 1px;
+                    background-color: white;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-top: 5px;
+                }
+            }
+            .material__subtitle{
+                width: 100%;
+                font-family: 'SF Pro Display';
+                color: white;
+                font-size: 16px;
+                font-weight: 400;
+                margin-top: 10px;
+            }
+        }
+        .material__image{
+            display: none;
+        }
+    }
+    .sliding{
+        @include w100;
+        padding: 20px;
+        .sliding__content{
+            @include w100;
+            .sliding__title{
+                margin-top: 10px;
+            }
+            .sliding__bold{
+                margin-top: 15px;
+            }
+            .sliding__text{
+                margin-top: 10px;
+                margin-bottom: 5px;
+            }
+            .sliding__parts{
+                @include w100;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                .sliding__part{
+                    width: 100%;
+                    text-align: center;
+                    margin-top: 15px;
+                    font-family: 'SF Pro Display';
+                    font-weight: 700;
+                    font-size: 16px;
+                    color: #353535;
+                    b{
+                        color: #FF2929;
+                    }
+                }
+            }
+            .sliding__bold_hide{
+                display: none;
+            }
+            .sliding__button{
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 15px;
+            }
+        }
+        .sliding__image{
+            @include w100;
+            margin-top: 30px;
+            img:nth-child(1){
+                display: none;
+            }
+        }
+    }
+    .buy{
+        @include w100;
+        padding: 20px;
+        background-image: url("../img/steps-bg.png");
+        background-size: auto 100%;
+        background-position: center;
+        .buy__steps{
+            @include w100;
+            .buy__step{
+                margin-top: 25px;
+                &:nth-child(3) .step__image{
+                    width: 190px;
+                }
+            }
+        }
+    }
+    .contacts{
+        @include w100;
+        padding: 15px;
+        margin-top: 20px;
+        background-image: url("../img/form-bg.png");
+        background-size: cover;
+        background-position: center;
+        .contacts__title{
+            color: white;
+            &:after{
+                height: 2px;
+            }
+        }
+        .contacts__text{
+            font-weight: 500;
+            margin-top: 10px;
+        }
+        .contacts__form{
+            margin-top: 15px;
+            @include w100;
+            .contacts__input{
+                @include w100;
+                margin-top: 10px;
+                position: relative;
+                input{
+                    @include w100;
+                    height: 50px;
+                    padding: 15px;
+                    border: none;
+                    border-radius: 2px;
+                    font-family: 'SF Pro Display';
+                    font-weight: 500;
+                    font-size: 16px;
+                    color: #353535;
+                    &:focus ~ .placeholder, &:valid ~ .placeholder{
+                        display: none;
+                    }
+                }
+                .placeholder{
+                    position: absolute;
+                    top: 50%;
+                    left: 15px;
+                    font-family: 'SF Pro Display';
+                    font-weight: 400;
+                    font-size: 16px;
+                    color: #818181;
+                    transform: translate(0, -50%);
+                    b{
+                        color: #FF2929;
+                    }
+                }
+            }
+            .contacts__button{
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 20px;
+                padding: 10px 20px;
+            }
+        }
+        .contacts__bold{
+            margin-top: 20px;
+        }
+        .contacts__socials{
+            margin-top: 15px;
+        }
+        .contacts__lite{
+            display: block;
+            width: 100%;
+            text-align: center;
+            font-family: 'SF Pro Display';
+            font-size: 11px;
+            margin-top: 10px;
+            color: #A5A5A5;
+        }
+    }
+    .variants{
+        @include w100;
+        padding: 20px;
+        .variants__title{
+            margin-top: 10px;
+        }
+        .variants__items{
+            @include w100;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            .variants__item{
+                width: 45%;
+                margin-left: 1.75%;
+                margin-right: 1.75%;
+                margin-top: 20px;
+                .variants__span{
+                    display: block;
+                    width: 100%;
+                    text-align: center;
+                    font-family: 'SF Pro Display';
+                    font-weight: 700;
+                    color: #353535;
+                    font-size: 14px;
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+    .main-color{
+        @include w100;
+        padding: 20px;
+        .main-color__title{
+            margin-top: 10px;
+        }
+        .main-color__subtitle{
+            margin-top: 15px;
+        }
+        .main-color__colors{
+            @include w100;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            .main-color__color{
+                margin-top: 20px;
+                width: 45%;
+                margin-left: 1.75%;
+                margin-right: 1.75%;
+            }
+        }
+    }
+    .profile-color{
+        @include w100;
+        padding: 20px;
+        .profile-color__colors{
+            @include w100;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            .profile-color__color{
+                margin-top: 20px;
+                width: 45%;
+                margin-left: 1.75%;
+                margin-right: 1.75%;
+            }
+        }
+    }
+    .our-projects{
+        @include w100;
+        padding: 20px;
+        .our-projects__examples{
+            margin-top: 20px;
+            display: flex;
+            width: 100%;
+            overflow: auto;
+            padding-bottom: 20px;
+            &::-webkit-scrollbar{
+                width: 15px;
+                height: 15px;
+                border-radius: 5px;
+            }
+            &::-webkit-scrollbar-track{
+                background-color: white;
+                border-radius: 5px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            }
+            &::-webkit-scrollbar-thumb{
+                background-color: #FF2929;
+                border-radius: 5px;
+            }
+        }
+    }
+    .advantages{
+        @include w100;
+        padding: 20px;
+        background-image: url("../img/adv-bg.png");
+        background-size: cover;
+        background-position: center;
+        .advantages__list{
+            margin-top: 20px;
+            .advantages__item{
+                margin-top: 20px;
+            }
+        }
+    }
+    .certificates{
+        @include w100;
+        padding: 20px;
+        .certificates__list{
+            margin-top: 20px;
+            display: flex;
+            width: 100%;
+            overflow: auto;
+            padding-bottom: 20px;
+            &::-webkit-scrollbar{
+                width: 15px;
+                height: 15px;
+                border-radius: 5px;
+            }
+            &::-webkit-scrollbar-track{
+                background-color: white;
+                border-radius: 5px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            }
+            &::-webkit-scrollbar-thumb{
+                background-color: #FF2929;
+                border-radius: 5px;
+            }
+        }
+    }
+    .footer{
+        @include w100;
+        margin-top: 30px;
+        background-color: #2D2D2D;
+        padding: 20px;
+        .footer__span{
+            display: block;
+            font-family: 'SF Pro Display';
+            font-size: 14px;
+            color: #C7C7C7;
+            text-align: center;
+            font-weight: 400;
+        }
+    }
+
+    .header{
+        width: calc(100% - 30px);
+        box-sizing: border-box;
+        padding: 10px;
+        position: absolute;
+        background-color: white;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        .header__navbar{
+            display: none;
+        }
+        .header__contact{
+            display: none;
+        }
+        .header__dropdown-burger{
+            cursor: pointer;
+            width: 45px;
+            height: 45px;
+            background-color: red;
+            border-radius: 50%;
+            position: relative;
+            transition: .4s ease;
+            span{
+                width: 25px;
+                height: 3px;
+                background-color: white;
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%, 0);
+            }
+            span:nth-child(1){
+                top: 11px;
+            }
+            span:nth-child(2){
+                top: 21px;
+                width: 15px;
+                right: 0;
+                left: auto;
+                transform: translate(-70%, 0);
+            }
+            span:nth-child(3){
+                bottom: 11px;
+            }
+            &:hover{
+                opacity: 0.5;
+            }
+        }
+    }
+    .logo{
+        width: auto;
+        display: flex;
+        align-items: center;
+        .logo__image{
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        .logo__span{
+            font-family: 'SF Pro Display';
+            font-weight: 700;
+            font-size: 18px;
+            color: #FF2929;
+        }
+    }
+    .button{
+        cursor: pointer;
+        transition: .4s ease;
+        width: auto;
+        height: 40px;
+        padding: 10px 15px;
+        display: flex;
+        align-items: center;
+        background-color: #FF2929;
+        border-radius: 20px;
+        border: none;
+        box-shadow: 0px 2px 0px #D91313;
+        .button__play{
+            width: 25px;
+            margin-right: 10px;
+            margin-top: 3px;
+        }
+        .button__span{
+            font-family: 'SF Pro Display';
+            font-size: 16px;
+            color: white;
+            font-weight: 700;
+        }
+        &:hover{
+            opacity: 0.5;
+        }
+    }
+    .circle{
+        width: 190px;
+        .circle__image{
+            width: 100%;
+        }
+        .circle__text{
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            .circle__title{
+                width: 100%;
+                font-family: 'SF Pro Display';
+                font-size: 30px;
+                font-weight: 700;
+                color: white;
+                text-align: center;
+            }
+            .circle__subtitle{
+                display: block;
+                width: 100%;
+                font-family: 'SF Pro Display';
+                font-size: 18px;
+                color: white;
+                font-weight: 700;
+                text-align: center;
+                margin-top: 5px;
+            }
+        }
+    }
+    h1.title{
+        width: 100%;
+        text-align: center;
+        font-family: 'SF Pro Display';
+        font-size: 22px;
+        font-weight: 400;
+        color: #353535;
+        line-height: 28px;
+        &:after{
+            content: "";
+            display: block;
+            width: 20%;
+            height: 5px;
+            background-color: #FF2929;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    }
+    h2.title{
+        width: 100%;
+        text-align: center;
+        font-family: 'SF Pro Display';
+        font-size: 20px;
+        font-weight: 400;
+        color: #353535;
+        line-height: 28px;
+        &:after{
+            content: "";
+            display: block;
+            width: 20%;
+            height: 2px;
+            background-color: #FF2929;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    }
+    .text{
+        width: 100%;
+        text-align: center;
+        font-family: 'SF Pro Display';
+        font-size: 16px;
+        color: #353535;
+        font-weight: 400;
+    }
+    .text_white{
+        color: white;
+    }
+    .bold{
+        display: block;
+        width: 100%;
+        font-family: 'SF Pro Display';
+        font-size: 14px;
+        font-weight: 700;
+        color: #353535;
+        text-align: center;
+    }
+    .bold_white{
+        color: white;
+        font-size: 16px;
+    }
+    .step{
+        width: 100%;
+        .step__image{
+            width: 150px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .step__title{
+            width: 100%;
+            text-align: center;
+            margin-top: 10px;
+            font-family: 'SF Pro Display';
+            font-weight: 400;
+            color: #FF2929;
+            font-size: 24px;
+            line-height: 38px;
+            b{
+                font-size: 38px;
+                font-weight: 700;
+                margin-right: 10px;
+            }
+        }
+        .step__subtitle{
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+    }
+    .socials{
+        @include w100;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .socials__item{
+            width: 40px;
+            margin-left: 7px;
+            margin-right: 7px;
+            transition: .4s ease;
+            &:hover{
+                opacity: 0.5;
+            }
+        }
+    }
+    .color{
+        .color__image{
+            width: 100%;
+        }
+        .color__span{
+            width: 100%;
+            display: block;
+            text-align: center;
+            font-family: 'SF Pro Display';
+            font-weight: 500;
+            color: #353535;
+            font-size: 14px;
+        }
+    }
+    .example{
+        min-width: 80%;
+        margin-right: 5%;
+        position: relative;
+        &:nth-child(4){
+            margin-right: 0;
+        }
+        .example__price{
+            width: auto;
+            position: absolute;
+            bottom: 5px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            padding: 15px 25px;
+            background-color: #FF2929;
+            font-family: 'SF Pro Display';
+            font-size: 16px;
+            font-weight: 700;
+            color: white;
+            white-space: nowrap;
+        }
+    }
+    .adv-item{
+        @include w100;
+        position: relative;
+        .adv-item__text{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'SF Pro Display';
+            color: white;
+            width: 80%;
+            text-align: center;
+            line-height: 27px;
+            .adv-item__bold{
+                font-size: 20px;
+                font-weight: 700;
+            }
+            .adv-item__small{
+                font-weight: 400;
+                font-size: 20px;
+            }
+        }
+    }
+    .cert-item{
+        min-width: 80%;
+        margin-right: 5%;
+        position: relative;
+        &:nth-child(4){
+            margin-right: 0;
+        }
+    }
+
+}
+@media screen and (min-width: 768px) {
+    
+}
+@media screen and (min-width: 1024px) {
+    
+}
+@media screen and (min-width: 1440px) {
+    
+}
