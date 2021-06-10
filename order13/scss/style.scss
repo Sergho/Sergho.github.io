@@ -293,7 +293,6 @@ li{
     .contacts{
         @include w100;
         padding: 15px;
-        margin-top: 20px;
         background-image: url("../img/form-bg.png");
         background-size: cover;
         background-position: center;
@@ -1201,19 +1200,23 @@ li{
             width: 55%;
             margin-top: 0;
             padding: 0;
+            position: relative;
             img:nth-child(1){
                 display: block;
+                position: absolute;
+                transform: scale(0.74);
+                top: 13%;
             }
             img:nth-child(2){
-                display: none;
+                display: block;
             }
         }
     }
     .banner{
         .banner__red{
-            height: 200px;
+            height: 160px;
             .banner__fire{
-                width: 90px;
+                width: 80px;
                 margin-right: 20px;
             }
             .banner__cry{
@@ -1221,11 +1224,11 @@ li{
             }
         }
         .banner__white{
-            height: 200px;
+            height: 160px;
             padding-top: 60px;
             padding-bottom: 60px;
             .banner__title{
-                font-size: 28px;
+                font-size: 26px;
                 width: 86%;
             }
             .banner__span{
@@ -1236,12 +1239,15 @@ li{
     }
     .size{
         .size__image{
-            width: 50%;
+            width: 45%;
+            margin-left: 2%;
+            position: relative;
             img:nth-child(1){
                 display: block;
-            }
-            img:nth-child(2){
-                display: none;
+                position: absolute;
+                top: 25%;
+                left: 10%;
+                transform: scale(1.31);
             }
         }
         .size__content{
@@ -1265,11 +1271,16 @@ li{
     }
     .sliding{
         .sliding__image{
+            position: relative;
             img:nth-child(1){
                 display: block;
+                position: absolute;
+                transform: scale(1.066);
+                top: 1%;
+                left: -6%;
             }
             img:nth-child(2){
-                display: none;
+                display: block;
             }
         }
     }
@@ -1304,6 +1315,7 @@ li{
     }
     
     .header{
+        z-index: 1;
         width: calc(100% - 50px);
         .header__navbar{
             display: flex;
@@ -1339,14 +1351,14 @@ li{
         }
     }
     .circle{
-        width: 200px;
-        height: 200px;
+        width: 160px;
+        height: 160px;
         .circle__text{
             .circle__title{
-                font-size: 32px;
+                font-size: 26px;
             }
             .circle__subtitle{
-                font-size: 24px;
+                font-size: 20px;
             }
         }
     }
