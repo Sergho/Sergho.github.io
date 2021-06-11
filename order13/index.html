@@ -41,16 +41,16 @@
             <div class="dropdown__wrapper">
                 <div class="dropdown__top">
                     <h1 class="dropdown__title">Меню</h1>
-                    <div class="dropdown__arrow">
+                    <div class="dropdown__arrow" onclick="CloseMenu();">
                         <img src="img/arrow.png" alt="arrow">
                     </div>
                 </div>
                 <ul class="dropdown__items">
-                    <li class="dropdown__item"><a class="dropdown__link" href="#">Наши преимущества</a></li>
-                    <li class="dropdown__item"><a class="dropdown__link" href="#">Узнать стоимость</a></li>
-                    <li class="dropdown__item"><a class="dropdown__link" href="#">О нас</a></li>
-                    <li class="dropdown__item"><a class="dropdown__link" href="#">Дизайнерам и Архитекторам</a></li>
-                    <li class="dropdown__item"><a class="dropdown__link" href="#">Контакты</a></li>
+                    <li class="dropdown__item"><a class="dropdown__link" href="#adv" onclick="CloseMenu();">Наши преимущества</a></li>
+                    <li class="dropdown__item"><a class="dropdown__link" href="#price" onclick="CloseMenu();">Узнать стоимость</a></li>
+                    <li class="dropdown__item"><a class="dropdown__link" href="#about" onclick="CloseMenu();">О нас</a></li>
+                    <li class="dropdown__item"><a class="dropdown__link" href="#design" onclick="CloseMenu();">Дизайнерам и Архитекторам</a></li>
+                    <li class="dropdown__item"><a class="dropdown__link" href="#contact" onclick="CloseMenu();">Контакты</a></li>
                 </ul>
                 <div class="dropdown__contact contact">
                     <div class="contact__row">099-44-921-44</div>
@@ -74,11 +74,11 @@
                     </div>
                 </div>
                 <ul class="header__navbar navbar">
-                    <li class="navbar__item"><a class="navbar__link" href="#">Наши преимущества</a></li>
-                    <li class="navbar__item"><a class="navbar__link" href="#">Узнать стоимость</a></li>
-                    <li class="navbar__item"><a class="navbar__link" href="#">О нас</a></li>
-                    <li class="navbar__item"><a class="navbar__link" href="#">Дизайнерам и Архитекторам</a></li>
-                    <li class="navbar__item"><a class="navbar__link" href="#">Контакты</a></li>
+                    <li class="navbar__item"><a class="navbar__link" href="#adv">Наши преимущества</a></li>
+                    <li class="navbar__item"><a class="navbar__link" href="#price">Узнать стоимость</a></li>
+                    <li class="navbar__item"><a class="navbar__link" href="#about">О нас</a></li>
+                    <li class="navbar__item"><a class="navbar__link" href="#design">Дизайнерам и Архитекторам</a></li>
+                    <li class="navbar__item"><a class="navbar__link" href="#contact">Контакты</a></li>
                 </ul>
                 <div class="header__contact contact">
                     <div class="contact__row">099-44-921-44</div>
@@ -135,7 +135,7 @@
                 </div>
             </div>
         </div>
-        <div class="size">
+        <div class="size" id="price">
             <div class="size__image">
                 <img src="img/size-text.svg" alt="size-text">
                 <img src="img/size.png" alt="size">
@@ -143,7 +143,7 @@
             <div class="size__content">
                 <h1 class="size__title title">Вместительное внутреннее наполнение</h1>
                 <p class="size__text text">Универсальное и эргономичное внутреннее пространство шкафа позволяет вместить множество вещей и использовать максимальную площадь! Ранее продуманное наполнение уже успели оценить более 1000 семей Украины!</p>
-                <button class="size__button button"><span class="button__span" onclick="OpenCallback();">Рассчитать стоимость</span></button>
+                <button class="size__button button" onclick="OpenCallback();"><span class="button__span">Рассчитать стоимость</span></button>
             </div>
         </div>
         <div class="material">
@@ -168,14 +168,14 @@
                     <li class="sliding__part"><b>-</b> Лакобель</li>
                 </ul>
                 <span class="sliding__bold bold sliding__bold_hide">Мы также можем использовать комбинацию из вышеперечисленных материалов</span>
-                <button class="sliding__button button"><span class="button__span" onclick="OpenCallback();">Рассчитать стоимость</span></button>
+                <button class="sliding__button button" onclick="OpenCallback();"><span class="button__span">Рассчитать стоимость</span></button>
             </div>
             <div class="sliding__image">
                 <img src="img/slide-text.svg" alt="slide-text">
                 <img src="img/slide.png" alt="slide">
             </div>
         </div>
-        <div class="buy">
+        <div class="buy" id="about">
             <h1 class="buy__title title">Покупка в три шага!</h1>
             <ul class="buy__steps">
                 <li class="buy__step step">
@@ -228,7 +228,7 @@
             </ul>
             <span class="contacts__lite">Ваши данные конфиденциальны и не передаются третьим лицам</span>
         </div>
-        <div class="variants">
+        <div class="variants" id="design">
             <h1 class="variants__title title">Вариации внутреннего наполнения</h1>
             <ul class="variants__items">
                 <li class="variants__item">
@@ -253,7 +253,7 @@
                 </li>
             </ul>
         </div>
-        <div class="contacts">
+        <div class="contacts" id="contact">
             <h1 class="contacts__title title">Не нашли подходящий вариант?</h1>
             <p class="contacts__text text text_white">Оставьте заявку, мы отправим Вам дополнительные предложения</p>
             <form class="contacts__form">
@@ -385,7 +385,7 @@
                 </li>
             </ul>
         </div>
-        <div class="advantages">
+        <div class="advantages" id="adv">
             <h1 class="advantages__title title">Наши 100% преимущества</h1>
             <ul class="advantages__list">
                 <li class="advantages__item adv-item">

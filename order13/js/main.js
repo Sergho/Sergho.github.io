@@ -10,12 +10,12 @@ open.addEventListener("click", function() {
     window.scrollTo(0, 0);
     setTimeout(() => {menu.style.opacity = "1"}, 50);
 });
-close.addEventListener("click", function() {
+function CloseMenu() {
     // close menu
     menu.style.opacity = "0";
     document.querySelector("html").style.overflow = "visible";
     setTimeout(() => {menu.style.display = "none"}, 450);
-});
+};
 
 // Callback modal
 let callback = document.querySelector(".callback");

@@ -306,7 +306,6 @@ li{
         }
     }
     .banner{
-        margin-top: 20px;
         position: relative;
         @include w100;
         .banner__red{
@@ -810,7 +809,7 @@ li{
         transition: .4s ease;
         width: auto;
         height: 40px;
-        padding: 10px 15px;
+        padding: 0 15px;
         display: flex;
         align-items: center;
         background-color: #FF2929;
@@ -825,6 +824,8 @@ li{
         .button__span{
             font-family: 'SF Pro Display';
             font-size: 16px;
+            line-height: 40px;
+            margin-top: 1px;
             color: white;
             font-weight: 700;
         }
