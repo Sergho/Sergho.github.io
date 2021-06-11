@@ -598,7 +598,7 @@ li {
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
-    padding: 10px 20px;
+    padding: 0 20px;
   }
   .contacts .contacts__bold {
     margin-top: 20px;
@@ -1457,9 +1457,12 @@ li {
   }
 
   .button {
-    padding: 25px 30px;
+    padding: 0 30px;
     height: 50px;
     border-radius: 50px;
+  }
+  .button .button__span {
+    line-height: 50px;
   }
 
   .step {
