@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="fonts/SF/stylesheet.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-    
 <body>
     <div class="page">
         <div class="callback" style="display: none; opacity: 0;">
@@ -47,11 +46,11 @@
                     </div>
                 </div>
                 <ul class="dropdown__items">
-                    <li class="dropdown__item"><a class="dropdown__link" href="#adv" onclick="CloseMenu();">Наши преимущества</a></li>
                     <li class="dropdown__item"><a class="dropdown__link" href="#price" onclick="CloseMenu();">Узнать стоимость</a></li>
                     <li class="dropdown__item"><a class="dropdown__link" href="#about" onclick="CloseMenu();">О нас</a></li>
                     <li class="dropdown__item"><a class="dropdown__link" href="#design" onclick="CloseMenu();">Дизайнерам и Архитекторам</a></li>
                     <li class="dropdown__item"><a class="dropdown__link" href="#contact" onclick="CloseMenu();">Контакты</a></li>
+                    <li class="dropdown__item"><a class="dropdown__link" href="#adv" onclick="CloseMenu();">Наши преимущества</a></li>
                 </ul>
                 <div class="dropdown__contact contact">
                     <div class="contact__row">099-44-921-44</div>
@@ -75,11 +74,11 @@
                     </div>
                 </div>
                 <ul class="header__navbar navbar">
+                    <li class="navbar__item"><a class="navbar__link" href="#size">Умное наполнение</a></li>
+                    <li class="navbar__item"><a class="navbar__link" href="#sliding">Раздвижная система</a></li>
                     <li class="navbar__item"><a class="navbar__link" href="#adv">Наши преимущества</a></li>
-                    <li class="navbar__item"><a class="navbar__link" href="#price">Узнать стоимость</a></li>
-                    <li class="navbar__item"><a class="navbar__link" href="#about">О нас</a></li>
-                    <li class="navbar__item"><a class="navbar__link" href="#design">Дизайнерам и Архитекторам</a></li>
-                    <li class="navbar__item"><a class="navbar__link" href="#contact">Контакты</a></li>
+                    <li class="navbar__item"><a class="navbar__link" href="#buy">Покупка</a></li>
+                    <li class="navbar__item"><a class="navbar__link" href="#variants">Варианты шкафов</a></li>
                 </ul>
                 <div class="header__contact contact">
                     <a class="contact__row" href="tel:099-44-921-44">099-44-921-44</a>
@@ -137,7 +136,7 @@
                 </div>
             </div>
         </div>
-        <div class="size" id="price">
+        <div class="size" id="size">
             <div class="size__image">
                 <img src="img/size-text.svg" alt="size-text">
                 <img src="img/size.png" alt="size">
@@ -157,7 +156,7 @@
                 <img src="img/material.png" alt="material">
             </div>
         </div>
-        <div class="sliding">
+        <div class="sliding" id="sliding">
             <div class="sliding__content">
                 <h1 class="sliding__title title">Раздвижная система</h1>
                 <span class="sliding__bold bold">Один из самых важных элементов шкафа!</span>
@@ -177,8 +176,9 @@
                 <img src="img/slide.png" alt="slide">
             </div>
         </div>
-        <div class="buy" id="about">
+        <div class="buy" id="buy">
             <h1 class="buy__title title">Покупка в три шага!</h1>
+            <span class="buy__subtitle bold">Мы облегчили задачу покупки шкафа купе для Вас. Необходимо всего  15 минут для создания Вашего шкафа.</span>
             <ul class="buy__steps">
                 <li class="buy__step step">
                     <div class="step__image">
@@ -202,6 +202,7 @@
                     <span class="step__subtitle bold">Выбираем материал на фасады</span>
                 </li>
             </ul>
+            <span class="buy__bold bold">Оформляйте заявку и получите бесплатный проект внутреннего наполнения</span>
         </div>
         <div class="contacts">
             <p class="contacts__text text text_white">Оставьте Ваши контактные данные  и мы сделаем расчет стоимости по Вашим размерам.</p>
@@ -230,7 +231,7 @@
             </ul>
             <span class="contacts__lite">Ваши данные конфиденциальны и не передаются третьим лицам</span>
         </div>
-        <div class="variants" id="design">
+        <div class="variants" id="variants">
             <h1 class="variants__title title">Вариации внутреннего наполнения</h1>
             <ul class="variants__items">
                 <li class="variants__item">

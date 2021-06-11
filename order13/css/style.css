@@ -526,6 +526,12 @@ li {
     background-size: auto 100%;
     background-position: center;
   }
+  .buy .buy__subtitle {
+    margin-top: 15px;
+  }
+  .buy .buy__bold {
+    margin-top: 15px;
+  }
   .buy .buy__steps {
     width: 100%;
     box-sizing: border-box;
@@ -1619,6 +1625,15 @@ li {
   }
   .sliding .sliding__image img:nth-child(2) {
     display: block;
+  }
+
+  .buy .buy__subtitle {
+    margin-top: 25px;
+    margin-bottom: 10px;
+  }
+  .buy .buy__bold {
+    margin-top: 35px;
+    margin-bottom: 5px;
   }
 
   .variants .variants__items .variants__item .variants__span {

@@ -499,6 +499,12 @@ li{
         background-image: url("../img/steps-bg.png");
         background-size: auto 100%;
         background-position: center;
+        .buy__subtitle{
+            margin-top: 15px;
+        }
+        .buy__bold{
+            margin-top: 15px;
+        }
         .buy__steps{
             @include w100;
             .buy__step{
@@ -1575,6 +1581,16 @@ li{
             img:nth-child(2){
                 display: block;
             }
+        }
+    }
+    .buy{
+        .buy__subtitle{
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+        .buy__bold{
+            margin-top: 35px;
+            margin-bottom: 5px;
         }
     }
     .variants{
