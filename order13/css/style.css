@@ -272,7 +272,7 @@ li {
     display: flex;
     flex-wrap: wrap;
     position: relative;
-    padding-bottom: 90px;
+    padding-bottom: 40px;
   }
   .preview .preview__header {
     top: 15px;
@@ -294,24 +294,26 @@ li {
     font-family: "SF Pro Display";
     font-weight: 900;
     color: #353535;
-    margin-top: 5px;
+    margin-top: 15px;
     line-height: 27px;
   }
   .preview .preview__text .preview__subtitle {
     font-size: 16px;
     font-family: "SF Pro Display";
     color: #353535;
-    margin-top: 5px;
+    margin-top: 15px;
     line-height: 1.37;
   }
   .preview .preview__text .preview__subtitle b {
     color: #FF2929;
   }
   .preview .preview__text .preview__button {
-    margin-top: 15px;
+    margin-top: 25px;
   }
   .preview .preview__text .preview__socials {
-    display: none;
+    display: flex;
+    margin-top: 25px;
+    justify-content: flex-start;
   }
   .preview .preview__image {
     display: none;
@@ -1024,10 +1026,19 @@ li {
     width: 100%;
     box-sizing: border-box;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
   }
+  .socials .socials__span {
+    width: 100%;
+    font-family: "SF Pro Display";
+    font-size: 18px;
+    color: #353535;
+    font-weight: 500;
+  }
   .socials .socials__item {
+    margin-top: 15px;
     width: 40px;
     margin-left: 7px;
     margin-right: 7px;
