@@ -10,31 +10,60 @@
 </head>
 <body>
     <div class="page">
-        <div class="dropdown">
-            <div class="dropdown__top">
-                <h1 class="dropdown__title">Меню</h1>
-                <div class="dropdown__arrow">
-                    <img src="img/arrow.png" alt="arrow">
+        <div class="callback" style="display: none; opacity: 0;">
+            <div class="callback__wrapper">
+                <div class="callback__top">
+                    <h1 class="callback__title">Связаться с нами</h1>
+                    <div class="callback__close">
+                        <span></span>
+                        <span></span>
+                    </div>
                 </div>
+                <span class="callback__subtitle">Оставьте Ваши контактные данные и мы свяжемся с Вами в блежайшее время</span>
+                <form class="callback__form">
+                    <div class="callback__input">
+                        <input type="text" required>
+                        <div class="placeholder">Ваше имя<b>*</b></div>
+                    </div>
+                    <div class="callback__input">
+                        <input type="tel" required>
+                        <div class="placeholder">Ваш телефон<b>*</b></div>
+                    </div>
+                    <textarea class="callback__textarea" placeholder="Введите ваш комментарий"></textarea>
+                    <button class="callback__button button">
+                        <span class="button__span">Связаться с нами</span>
+                    </button>
+                    <span class="callback__small">Ваши данные конфиденциальны и не передаются третьим лицам</span>
+                </form>
             </div>
-            <ul class="dropdown__items">
-                <li class="dropdown__item"><a class="dropdown__link" href="#">Наши преимущества</a></li>
-                <li class="dropdown__item"><a class="dropdown__link" href="#">Узнать стоимость</a></li>
-                <li class="dropdown__item"><a class="dropdown__link" href="#">О нас</a></li>
-                <li class="dropdown__item"><a class="dropdown__link" href="#">Дизайнерам и Архитекторам</a></li>
-                <li class="dropdown__item"><a class="dropdown__link" href="#">Контакты</a></li>
-            </ul>
-            <div class="dropdown__contact contact">
-                <div class="contact__row">099-44-921-44</div>
-                <div class="contact__row">063-51-223-23</div>
-            </div>
-            <div class="dropdown__socials socials">
-                <a href="#" class="socials__item">
-                    <img src="img/viber.png" alt="viber">
-                </a>
-                <a href="#" class="socials__item">
-                    <img src="img/telegram.png" alt="telegram">
-                </a>
+        </div>
+        <div class="dropdown" style="opacity: 0; display: none;">
+            <div class="dropdown__wrapper">
+                <div class="dropdown__top">
+                    <h1 class="dropdown__title">Меню</h1>
+                    <div class="dropdown__arrow">
+                        <img src="img/arrow.png" alt="arrow">
+                    </div>
+                </div>
+                <ul class="dropdown__items">
+                    <li class="dropdown__item"><a class="dropdown__link" href="#">Наши преимущества</a></li>
+                    <li class="dropdown__item"><a class="dropdown__link" href="#">Узнать стоимость</a></li>
+                    <li class="dropdown__item"><a class="dropdown__link" href="#">О нас</a></li>
+                    <li class="dropdown__item"><a class="dropdown__link" href="#">Дизайнерам и Архитекторам</a></li>
+                    <li class="dropdown__item"><a class="dropdown__link" href="#">Контакты</a></li>
+                </ul>
+                <div class="dropdown__contact contact">
+                    <div class="contact__row">099-44-921-44</div>
+                    <div class="contact__row">063-51-223-23</div>
+                </div>
+                <div class="dropdown__socials socials">
+                    <a href="#" class="socials__item">
+                        <img src="img/viber.png" alt="viber">
+                    </a>
+                    <a href="#" class="socials__item">
+                        <img src="img/telegram.png" alt="telegram">
+                    </a>
+                </div>
             </div>
         </div>
         <div class="preview">
@@ -114,7 +143,7 @@
             <div class="size__content">
                 <h1 class="size__title title">Вместительное внутреннее наполнение</h1>
                 <p class="size__text text">Универсальное и эргономичное внутреннее пространство шкафа позволяет вместить множество вещей и использовать максимальную площадь! Ранее продуманное наполнение уже успели оценить более 1000 семей Украины!</p>
-                <button class="size__button button"><span class="button__span">Рассчитать стоимость</span></button>
+                <button class="size__button button"><span class="button__span" onclick="OpenCallback();">Рассчитать стоимость</span></button>
             </div>
         </div>
         <div class="material">
@@ -139,7 +168,7 @@
                     <li class="sliding__part"><b>-</b> Лакобель</li>
                 </ul>
                 <span class="sliding__bold bold sliding__bold_hide">Мы также можем использовать комбинацию из вышеперечисленных материалов</span>
-                <button class="sliding__button button"><span class="button__span">Рассчитать стоимость</span></button>
+                <button class="sliding__button button"><span class="button__span" onclick="OpenCallback();">Рассчитать стоимость</span></button>
             </div>
             <div class="sliding__image">
                 <img src="img/slide-text.svg" alt="slide-text">
