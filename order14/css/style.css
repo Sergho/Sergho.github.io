@@ -91,7 +91,8 @@ img {
     margin-right: auto;
   }
   .footer .footer__rights .footer__span {
-    font-family: Proxima Nova Rg;
+    font-family: Proxima Nova Lt;
+    font-weight: bold;
     color: #797b7f;
     font-size: 16px;
     text-align: center;
@@ -111,7 +112,8 @@ img {
   }
   .footer .footer__options .footer__option {
     width: 100%;
-    font-family: Proxima Nova Rg;
+    font-family: Proxima Nova Lt;
+    font-weight: bold;
     color: #797b7f;
     font-size: 16px;
     text-align: center;
@@ -576,7 +578,7 @@ img {
   .col .col__bold a {
     display: block;
     width: 100%;
-    font-family: Proxima Nova Lt;
+    font-family: Proxima Nova Rg;
     font-weight: bold;
     color: white;
     text-transform: uppercase;
@@ -638,6 +640,8 @@ img {
     cursor: pointer;
     -webkit-transition: 0.3s ease;
     transition: 0.3s ease;
+    -webkit-transform: scale(1, 0.95);
+            transform: scale(1, 0.95);
   }
   .contacts .contacts__span:hover {
     opacity: 0.7;
@@ -789,6 +793,8 @@ img {
     margin-top: 0;
   }
   .footer .footer__options .footer__option {
+    font-size: 14px;
+    letter-spacing: 0.5px;
     margin-top: 0;
     margin-bottom: 25px;
   }
@@ -1064,6 +1070,10 @@ img {
   .navbar .navbar__item .navbar__link {
     cursor: pointer;
     font-family: Proxima Nova Rg;
+    font-weight: bold;
+    letter-spacing: 1px;
+    -webkit-transform: scale(1, 0.95);
+            transform: scale(1, 0.95);
     font-size: 16px;
     color: white;
     text-transform: uppercase;
@@ -1100,8 +1110,11 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 155px;
+    width: 160px;
     margin-right: 3%;
+  }
+  .header .header__contact .contact-info .contact-info__text {
+    font-weight: bold;
   }
   .header .header__search {
     margin-right: 3%;
@@ -1317,6 +1330,9 @@ img {
 
   .col .col__bold {
     margin-top: 25px;
+    letter-spacing: 1px;
+    -webkit-transform: scale(1, 0.95);
+            transform: scale(1, 0.95);
   }
   .col .col__bold a {
     text-align: left;
@@ -1343,7 +1359,7 @@ img {
     width: 180px;
   }
   .header .header__contact {
-    width: 170px;
+    width: 180px;
   }
   .header .header__personal {
     max-width: 70px;
@@ -1484,7 +1500,7 @@ img {
   }
 
   .contacts .contacts__span {
-    font-size: 15px;
+    font-size: 13px;
   }
 
   .contact-info .contact-info__text {
