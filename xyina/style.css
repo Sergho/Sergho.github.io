@@ -1,0 +1,19 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	overflow: hidden;
+}
+.ball{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 70px;
+	height: 70px;
+	background-color: red;
+	border-radius: 50%;
+	box-sizing: border-box;
+	border: 2px solid black;
+	cursor: pointer;
+}
