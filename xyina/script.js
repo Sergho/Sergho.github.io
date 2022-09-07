@@ -72,7 +72,7 @@ function Interact(){
 		mode = true;
 	});
 	document.addEventListener("mouseup", (e) => {
-		if(path.length != 0){
+		if(path.length != 0 && mode){
 			vx = path[path.length - 1][0] - path[path.length - 2][0];
 			vy = path[path.length - 1][1] - path[path.length - 2][1];
 			path = [];
