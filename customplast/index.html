@@ -3,24 +3,23 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="fonts/fonts.css">
+	<link rel="stylesheet" href="css/style.css"> 
 	<title>Главная страница</title>
 </head>
 <body>
 	<div id="wrapper">
 		<div class="main">
 			<div class="main__header header">
-				<a href="#" class="header__logo logo">
+				<a href="./index.html" class="header__logo logo">
 					<img src="img/logo.svg" alt="logo" class="logo__image">
 				</a>
 				<div class="header__navbar navbar">
 					<ul class="navbar__list">
-						<li class="navbar__item"><a href="#" class="navbar__link">О компании</a></li>
-						<li class="navbar__item"><a href="#" class="navbar__link">Преимущества</a></li>
-						<li class="navbar__item"><a href="#" class="navbar__link">Отзывы</a></li>
-						<li class="navbar__item"><a href="#" class="navbar__link">Акции</a></li>
-						<li class="navbar__item"><a href="#" class="navbar__link">Контакты</a></li>
+						<li class="navbar__item"><a href="#about" class="navbar__link scroll-to">О компании</a></li>
+						<li class="navbar__item"><a href="#adv" class="navbar__link scroll-to">Преимущества</a></li>
+						<li class="navbar__item"><a href="#reviews" class="navbar__link scroll-to">Отзывы</a></li>
+						<li class="navbar__item"><a href="#actions" class="navbar__link scroll-to">Акции</a></li>
+						<li class="navbar__item"><a href="#footer" class="navbar__link scroll-to">Контакты</a></li>
 					</ul>
 				</div>
 				<div class="header__burger">
@@ -31,107 +30,282 @@
 			</div>
 			<div class="main__screen screen">
 				<div class="screen__content">
-					<h1 class="screen__heading">Custom Plast 3D</h1>
-					<h1 class="screen__heading_small">Custom</h1>
-					<h1 class="screen__heading_small">Plast</h1>
-					<h1 class="screen__heading_small">3D</h1>
+					<h1 class="screen__heading typer" data-typer-id="1" data-typer="typer" data-typer-text="Custom Plast 3D"></h1>
+					<h1 class="screen__heading_small typer" data-typer-id="2" data-typer="typer" data-typer-text="Custom"></h1>
+					<h1 class="screen__heading_small typer" data-typer-id="2" data-typer="typer" data-typer-text="Plast"></h1>
+					<h1 class="screen__heading_small typer" data-typer-id="2" data-typer="typer" data-typer-text="3D"></h1>
 				</div>
-				<div class="screen__slider slider-full">
-					<ul class="slider-full__slides">
-						<li class="slider-full__darkness"></li>
-						<li class="slider-full__slide">
-							<img src="img/main_3.jpg" alt="slide_1" class="slider-full__image">
-						</li>
-						<li class="slider-full__slide">
-							<img src="img/main_1.jpg" alt="slide_2" class="slider-full__image">
-						</li>
-						<li class="slider-full__slide">
-							<img src="img/main_2.jpg" alt="slide_3" class="slider-full__image">
-						</li>
-					</ul>
-					<ul class="slider-full__nav">
-						<li class="slider-full__dot active"></li>
-						<li class="slider-full__dot"></li>
-						<li class="slider-full__dot"></li>
-					</ul>
+				<div class="screen__slider slider-full js-slider" data-slider="itc-slider"data-autoplay="true" data-interval="5000">
+					<div class="slider-full__wrapper js-slider-wrapper">
+						<div class="slider-full__darkness"></div>
+						<ul class="slider-full__slides js-slider-slides">
+							<li class="slider-full__slide js-slider-slide">
+								<img src="img/main_3.jpg" alt="slide_1" class="slider-full__image">
+							</li>
+							<li class="slider-full__slide js-slider-slide">
+								<img src="img/main_1.jpg" alt="slide_2" class="slider-full__image">
+							</li>
+							<li class="slider-full__slide js-slider-slide">
+								<img src="img/main_2.jpg" alt="slide_3" class="slider-full__image">
+							</li>
+						</ul>
+						<ul class="slider-full__nav js-slider-dots">
+							<li class="slider-full__dot" data-slide-to="0"></li>
+							<li class="slider-full__dot" data-slide-to="1"></li>
+							<li class="slider-full__dot" data-slide-to="2"></li>
+						</ul>
+					</div>
 				</div>
-				<div class="screen__down down">
+				<a class="screen__down down scroll-to" href="#about">
 					<span></span>
-				</div>
+				</a>
 			</div>
 		</div>
-		<div class="about">
+		<div class="about" id="about">
 			<img src="img/printer.png" alt="" class="about__image">
 			<div class="about__content">
 				<h1 class="about__heading">О компании</h1>
 				<p class="about__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint</p>
 				<div class="about__more more">
 					<span class="more__text">Подробнее</span>
-					<img src="img/arrow.svg" alt="arrow" class="more__arrow">
+					<div class="more__arrow">
+						<span class="long"></span>
+						<span class="top"></span>
+						<span class="bottom"></span>
+					</div>
 				</div>
 			</div>
 		</div>
-		<div class="adv">
+		<div class="adv" id="adv">
 			<h1 class="adv__heading heading">Наши<br>преимущества</h1>
 			<ul class="adv__list">
 				<li class="adv__item advantage">
-					<img src="img/tracking.svg" alt="tracking" class="advantage__icon">
+					<svg version="1.1" class="advantage__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 375 376" style="enable-background:new 0 0 375 376;" xml:space="preserve">
+					<style type="text/css">
+						.st0{fill:#777777;}
+					</style>
+					<g>
+						<path class="st0" d="M186.5,9C87.36,9,7,89.36,7,188.5S87.36,368,186.5,368S366,287.64,366,188.5S285.64,9,186.5,9z M187,333
+							c-80.08,0-145-64.92-145-145S106.92,43,187,43s145,64.92,145,145S267.08,333,187,333z"/>
+						<path class="st0" d="M186.5,205L186.5,205c-9.11,0-16.5-7.39-16.5-16.5v-97c0-9.11,7.39-16.5,16.5-16.5h0
+							c9.11,0,16.5,7.39,16.5,16.5v97C203,197.61,195.61,205,186.5,205z"/>
+						<path class="st0" d="M244.36,247.06L244.36,247.06c-6.44,6.44-16.89,6.44-23.33,0l-46.3-46.3c-6.44-6.44-6.44-16.89,0-23.33l0,0
+							c6.44-6.44,16.89-6.44,23.33,0l46.3,46.3C250.8,230.17,250.8,240.62,244.36,247.06z"/>
+					</g>
+					</svg>
 					<h1 class="advantage__heading">Отслеживание<br>заказа</h1>
 					<p class="advantage__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				</li>
 				<li class="adv__item advantage">
-					<img src="img/modern.svg" alt="modern" class="advantage__icon">
+					<svg version="1.1" class="advantage__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 400 445" style="enable-background:new 0 0 400 445;" xml:space="preserve">
+					<style type="text/css">
+						.st0{fill:#777777;}
+						.st1{fill:none;stroke:#777777;stroke-width:23;stroke-linecap:round;stroke-miterlimit:10;}
+					</style>
+					<g>
+						<path class="st0" d="M381,29.5H19.5c-6.08,0-11-4.92-11-11v0c0-6.08,4.92-11,11-11H381c6.08,0,11,4.92,11,11v0
+							C392,24.58,387.08,29.5,381,29.5z"/>
+						<path class="st0" d="M72,8v32c0,17.67,14.77,32,33,32h190c18.23,0,33-14.33,33-32V8H72z M307,40c0,5.89-4.92,10.67-11,10.67H105
+							c-6.08,0-11-4.78-11-10.67V29.33h213V40z"/>
+						<path class="st0" d="M135,50.87v72.74c0,30.47,24.7,55.16,55.16,55.16h19.67c30.47,0,55.16-24.7,55.16-55.16V50.87H135z
+							 M243,123.41c0,20.21-16.38,36.59-36.59,36.59h-11.82c-20.21,0-36.59-16.38-36.59-36.59V72h85V123.41z"/>
+						<path class="st0" d="M168,161v54.21c0,13.69,11.1,24.79,24.79,24.79h15.41c13.69,0,24.79-11.1,24.79-24.79V161H168z M211,210.5
+							c0,5.8-4.7,10.5-10.5,10.5s-10.5-4.7-10.5-10.5V175h21V210.5z"/>
+						<path class="st0" d="M200,264L200,264c-6.63,0-12-5.37-12-12v-16c0-6.63,5.37-12,12-12h0c6.63,0,12,5.37,12,12v16
+							C212,258.63,206.63,264,200,264z"/>
+						<path class="st1" d="M381.5,424.5H40.42c-11,0-19.92-8.92-19.92-19.92v-7.05c0-9.96,8.07-18.03,18.03-18.03h282.78
+							c10.05,0,18.19-8.14,18.19-18.19v-3.18c0-10.29-8.34-18.63-18.63-18.63h-98.05c-12.33,0-22.33-10-22.33-22.33V295.5"/>
+					</g>
+					</svg>
 					<h1 class="advantage__heading">Современное<br>оборудование</h1>
 					<p class="advantage__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				</li>
 				<li class="adv__item advantage">
-					<img src="img/material.svg" alt="materials" class="advantage__icon">
+					<svg version="1.1" class="advantage__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 353 397" style="enable-background:new 0 0 353 397;" xml:space="preserve">
+					<style type="text/css">
+						.st0{fill:#777777;}
+					</style>
+					<path class="st0" d="M177,164c-18.78,0-34,15.22-34,34c0,18.78,15.22,34,34,34s34-15.22,34-34C211,179.22,195.78,164,177,164z
+						 M177,209c-6.08,0-11-4.92-11-11s4.92-11,11-11s11,4.92,11,11S183.08,209,177,209z"/>
+					<path class="st0" d="M177,5c-44.74,0-81,86.63-81,193.5S132.26,392,177,392s81-86.63,81-193.5S221.74,5,177,5z M177.5,368
+						c-31.2,0-56.5-75.89-56.5-169.5S146.3,29,177.5,29S234,104.89,234,198.5S208.7,368,177.5,368z"/>
+					<path class="st0" d="M344.59,101.13c-22.37-38.74-115.53-26.83-208.08,26.6S-12.93,255.89,9.43,294.63s115.53,26.83,208.08-26.6
+						S366.95,139.88,344.59,101.13z M30.47,283.07c-15.6-27.02,37.47-86.87,118.54-133.68s159.44-62.84,175.04-35.82
+						s-37.47,86.87-118.54,133.68S46.07,310.09,30.47,283.07z"/>
+					<path class="st0" d="M9.43,102.13c-22.37,38.74,34.53,113.46,127.08,166.9s185.71,65.34,208.08,26.6
+						c22.37-38.74-34.53-113.46-127.08-166.9S31.8,63.39,9.43,102.13z M324.05,283.2c-15.6,27.02-93.97,10.99-175.04-35.82
+						S14.87,140.72,30.47,113.7s93.97-10.99,175.04,35.82S339.65,256.18,324.05,283.2z"/>
+					</svg>
 					<h1 class="advantage__heading">Качественные<br>материалы</h1>
 					<p class="advantage__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				</li>
 				<li class="adv__item advantage">
-					<img src="img/happy.svg" alt="happy" class="advantage__icon">
+					<svg version="1.1" class="advantage__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 399 397" style="enable-background:new 0 0 399 397;" xml:space="preserve">
+					<style type="text/css">
+						.st0{fill:#777777;}
+						.st1{fill:none;stroke:#777777;stroke-width:30;stroke-linecap:round;stroke-miterlimit:10;}
+					</style>
+					<path class="st0" d="M199.5,7C93.74,7,8,92.51,8,198s85.74,191,191.5,191S391,303.49,391,198S305.26,7,199.5,7z M200,360
+						c-89.47,0-162-72.53-162-162S110.53,36,200,36s162,72.53,162,162S289.47,360,200,360z"/>
+					<circle class="st0" cx="134" cy="148" r="18"/>
+					<circle class="st0" cx="265" cy="148" r="18"/>
+					<path class="st1" d="M133,245l14.77,14.67c27.61,27.43,72.21,27.36,99.73-0.16L264,243"/>
+					</svg>
 					<h1 class="advantage__heading">Внимание<br>к клиенту</h1>
 					<p class="advantage__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				</li>
 				<li class="adv__item advantage">
-					<img src="img/delivery.svg" alt="delivery" class="advantage__icon">
+					<svg version="1.1" class="advantage__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 450 450" style="enable-background:new 0 0 450 450;" xml:space="preserve">
+					<style type="text/css">
+						.st0{fill:#777777;}
+					</style>
+					<g>
+						<path class="st0" d="M287.74,108.41H67.25c-5.39,0-9.75-4.37-9.75-9.75v-6.49c0-5.39,4.37-9.75,9.75-9.75h220.49
+							c5.39,0,9.75,4.37,9.75,9.75v6.49C297.49,104.04,293.13,108.41,287.74,108.41z"/>
+						<path class="st0" d="M297.49,92.12v110.49c0,5.39-4.37,9.75-9.75,9.75h-6.49c-5.39,0-9.75-4.37-9.75-9.75V92.12
+							c0-5.39,4.37-9.75,9.75-9.75h6.49C293.13,82.36,297.49,86.73,297.49,92.12z"/>
+						<path class="st0" d="M353.96,135.41h-72.49c-5.39,0-9.75-4.37-9.75-9.75v-7.49c0-5.39,4.37-9.75,9.75-9.75h72.49
+							c5.39,0,9.75,4.37,9.75,9.75v7.49C363.72,131.04,359.35,135.41,353.96,135.41z"/>
+						<path class="st0" d="M392.86,212.86H282.36c-5.39,0-9.75-4.37-9.75-9.75v-7.49c0-5.39,4.37-9.75,9.75-9.75h110.49
+							c5.39,0,9.75,4.37,9.75,9.75v7.49C402.61,208.5,398.24,212.86,392.86,212.86z"/>
+						<path class="st0" d="M378.75,203.61l-39.64-77.8c-2.45-4.8-0.54-10.67,4.26-13.12l5.79-2.95c4.8-2.45,10.67-0.54,13.12,4.26
+							l39.64,77.8c2.45,4.8,0.54,10.67-4.26,13.12l-5.79,2.95C387.07,210.32,381.2,208.41,378.75,203.61z"/>
+						<path class="st0" d="M407.87,239.65l-23.66-28.2c-3.46-4.13-2.92-10.28,1.2-13.74l4.98-4.17c4.13-3.46,10.28-2.92,13.74,1.2
+							l23.66,28.2c3.46,4.13,2.92,10.28-1.2,13.74l-4.98,4.17C417.49,244.32,411.34,243.78,407.87,239.65z"/>
+						<path class="st0" d="M403.8,318.82v-86.49c0-5.39,4.37-9.75,9.75-9.75h6.49c5.39,0,9.75,4.37,9.75,9.75v86.49
+							c0,5.39-4.37,9.75-9.75,9.75h-6.49C408.17,328.57,403.8,324.2,403.8,318.82z"/>
+						<path class="st0" d="M167.78,161.41H51.29c-5.39,0-9.75-4.37-9.75-9.75v-6.49c0-5.39,4.37-9.75,9.75-9.75h116.49
+							c5.39,0,9.75,4.37,9.75,9.75v6.49C177.54,157.04,173.17,161.41,167.78,161.41z"/>
+						<path class="st0" d="M146.45,212.36H29.95c-5.39,0-9.75-4.37-9.75-9.75v-6.49c0-5.39,4.37-9.75,9.75-9.75h116.49
+							c5.39,0,9.75,4.37,9.75,9.75v6.49C156.2,208,151.83,212.36,146.45,212.36z"/>
+						<path class="st0" d="M116.87,263.32H51.38c-5.39,0-9.75-4.37-9.75-9.75v-6.49c0-5.39,4.37-9.75,9.75-9.75h65.49
+							c5.39,0,9.75,4.37,9.75,9.75v6.49C126.63,258.95,122.26,263.32,116.87,263.32z"/>
+						<path class="st0" d="M115.74,328.57H67.25c-5.39,0-9.75-4.37-9.75-9.75v-6.49c0-5.39,4.37-9.75,9.75-9.75h48.49
+							c5.39,0,9.75,4.37,9.75,9.75v6.49C125.49,324.2,121.13,328.57,115.74,328.57z"/>
+						<path class="st0" d="M415.09,328.57h-48.49c-5.39,0-9.75-4.37-9.75-9.75v-6.49c0-5.39,4.37-9.75,9.75-9.75h48.49
+							c5.39,0,9.75,4.37,9.75,9.75v6.49C424.84,324.2,420.48,328.57,415.09,328.57z"/>
+						<path class="st0" d="M291.27,328.57H190.77c-5.39,0-9.75-4.37-9.75-9.75v-6.49c0-5.39,4.37-9.75,9.75-9.75h100.49
+							c5.39,0,9.75,4.37,9.75,9.75v6.49C301.02,324.2,296.65,328.57,291.27,328.57z"/>
+						<path class="st0" d="M153.26,264.32c-28.44,0-51.5,23.06-51.5,51.5s23.06,51.5,51.5,51.5c28.44,0,51.5-23.06,51.5-51.5
+							S181.7,264.32,153.26,264.32z M153.26,341.07c-14.08,0-25.5-11.42-25.5-25.5s11.42-25.5,25.5-25.5s25.5,11.42,25.5,25.5
+							S167.34,341.07,153.26,341.07z"/>
+						<path class="st0" d="M329.07,264.07c-28.44,0-51.5,23.06-51.5,51.5s23.06,51.5,51.5,51.5s51.5-23.06,51.5-51.5
+							S357.52,264.07,329.07,264.07z M329.07,341.32c-14.08,0-25.5-11.42-25.5-25.5s11.42-25.5,25.5-25.5s25.5,11.42,25.5,25.5
+							S343.16,341.32,329.07,341.32z"/>
+					</g>
+					</svg>
 					<h1 class="advantage__heading">Доставка<br>по адресу</h1>
 					<p class="advantage__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				</li>
 				<li class="adv__item advantage">
-					<img src="img/quality.svg" alt="quality" class="advantage__icon">
+					<svg version="1.1" class="advantage__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 428 425" style="enable-background:new 0 0 428 425;" xml:space="preserve">
+					<style type="text/css">
+						.st0{fill:#777777;}
+						.st1{fill:none;stroke:#777777;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+					</style>
+					<g>
+						<path class="st0" d="M214,9C100.78,9,9,100.78,9,214s91.78,205,205,205s205-91.78,205-205S327.22,9,214,9z M213.5,386
+							C118.23,386,41,308.77,41,213.5S118.23,41,213.5,41S386,118.23,386,213.5S308.77,386,213.5,386z"/>
+						<polyline class="st1" points="124.73,206.27 189.14,270.69 300.16,158.16 	"/>
+					</g>
+					</svg>
 					<h1 class="advantage__heading">Высокое<br>качество</h1>
 					<p class="advantage__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				</li>
 			</ul>
 		</div>
-		<div class="reviews">
+		<div class="reviews" id="reviews">
 			<h1 class="reviews__heading heading">Отзывы</h1>
-			<div class="reviews__slider slider">
-				<ul class="slider__slides">
-					<li class="slider__slide card">
-						<img src="img/person.jpg" alt="person" class="card__image">
-						<div class="card__title">Иван Иванов</div>
-						<div class="card__rating rating">
-							<img src="img/star-full.svg" alt="star-full" class="rating__star">
-							<img src="img/star-full.svg" alt="star-full" class="rating__star">
-							<img src="img/star-full.svg" alt="star-full" class="rating__star">
-							<img src="img/star-full.svg" alt="star-full" class="rating__star">
-							<img src="img/star.svg" alt="star" class="rating__star">
-						</div>
-						<div class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-						<img src="img/quotes.svg" alt="quotes" class="card__quotes">
-					</li>
-				</ul>
-				<div class="slider__nav">
-					<span class="slider__dot active"></span>
-					<span class="slider__dot"></span>
-					<span class="slider__dot"></span>
+			<div class="reviews__slider slider js-slider" data-slider="itc-slider" data-slider="itc-slider"data-autoplay="true" data-interval="5000">
+				<div class="slider__wrapper js-slider-wrapper">
+					<ul class="slider__slides js-slider-slides">
+						<li class="slider__slide card js-slider-slide">
+							<div class="card__wrapper">
+								<img src="img/person.jpg" alt="person" class="card__image">
+								<div class="card__title">Иван Иванов</div>
+								<div class="card__rating rating">
+									<img src="img/star-full.svg" alt="star-full" class="rating__star">
+									<img src="img/star-full.svg" alt="star-full" class="rating__star">
+									<img src="img/star-full.svg" alt="star-full" class="rating__star">
+									<img src="img/star-full.svg" alt="star-full" class="rating__star">
+									<img src="img/star.svg" alt="star" class="rating__star">
+								</div>
+								<div class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+								<img src="img/quotes.svg" alt="quotes" class="card__quotes">
+							</div>
+						</li>
+						<li class="slider__slide card js-slider-slide">
+							<div class="card__wrapper">
+								<img src="img/person.jpg" alt="person" class="card__image">
+								<div class="card__title">Иван Иванов</div>
+								<div class="card__rating rating">
+									<img src="img/star-full.svg" alt="star-full" class="rating__star">
+									<img src="img/star-full.svg" alt="star-full" class="rating__star">
+									<img src="img/star-full.svg" alt="star-full" class="rating__star">
+									<img src="img/star-full.svg" alt="star-full" class="rating__star">
+									<img src="img/star.svg" alt="star" class="rating__star">
+								</div>
+								<div class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+								<img src="img/quotes.svg" alt="quotes" class="card__quotes">
+							</div>
+						</li>
+						<li class="slider__slide card js-slider-slide">
+							<div class="card__wrapper">
+								<img src="img/person.jpg" alt="person" class="card__image">
+								<div class="card__title">Иван Иванов</div>
+								<div class="card__rating rating">
+									<img src="img/star-full.svg" alt="star-full" class="rating__star">
+									<img src="img/star-full.svg" alt="star-full" class="rating__star">
+									<img src="img/star-full.svg" alt="star-full" class="rating__star">
+									<img src="img/star-full.svg" alt="star-full" class="rating__star">
+									<img src="img/star.svg" alt="star" class="rating__star">
+								</div>
+								<div class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+								<img src="img/quotes.svg" alt="quotes" class="card__quotes">
+							</div>
+						</li>
+						<li class="slider__slide card js-slider-slide">
+							<div class="card__wrapper">
+								<img src="img/person.jpg" alt="person" class="card__image">
+								<div class="card__title">Иван Иванов</div>
+								<div class="card__rating rating">
+									<img src="img/star-full.svg" alt="star-full" class="rating__star">
+									<img src="img/star-full.svg" alt="star-full" class="rating__star">
+									<img src="img/star-full.svg" alt="star-full" class="rating__star">
+									<img src="img/star-full.svg" alt="star-full" class="rating__star">
+									<img src="img/star.svg" alt="star" class="rating__star">
+								</div>
+								<div class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+								<img src="img/quotes.svg" alt="quotes" class="card__quotes">
+							</div>
+						</li>
+						<li class="slider__slide card js-slider-slide">
+							<div class="card__wrapper">
+								<img src="img/person.jpg" alt="person" class="card__image">
+								<div class="card__title">Иван Иванов</div>
+								<div class="card__rating rating">
+									<img src="img/star-full.svg" alt="star-full" class="rating__star">
+									<img src="img/star-full.svg" alt="star-full" class="rating__star">
+									<img src="img/star-full.svg" alt="star-full" class="rating__star">
+									<img src="img/star-full.svg" alt="star-full" class="rating__star">
+									<img src="img/star.svg" alt="star" class="rating__star">
+								</div>
+								<div class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+								<img src="img/quotes.svg" alt="quotes" class="card__quotes">
+							</div>
+						</li>
+					</ul>
 				</div>
+				<ul class="slider__nav js-slider-dots">
+					<li class="slider__dot" data-slide-to="0"></li>
+					<li class="slider__dot" data-slide-to="1"></li>
+					<li class="slider__dot" data-slide-to="2"></li>
+					<li class="slider__dot" data-slide-to="3"></li>
+					<li class="slider__dot" data-slide-to="4"></li>
+				</ul>
 			</div>
 		</div>
-		<div class="actions">
+		<div class="actions" id="actions">
 			<h1 class="actions__heading heading">Акции</h1>
 			<ul class="actions__list">
 				<li class="actions__action action">
@@ -145,7 +319,7 @@
 				</li>
 			</ul>
 		</div>
-		<div class="footer">
+		<div class="footer" id="footer">
 			<a href="#" class="footer__logo logo">
 				<img src="img/logo.svg" alt="logo" class="logo__image">
 			</a>
@@ -153,22 +327,25 @@
 			<ul class="footer__socials">
 				<span class="footer__span">Возникли вопросы?</span>
 				<li class="footer__social">
-					<a href="#" class="footer__link">
+					<a href="mailto:sergche04@gmail.com" class="footer__link">
 						<img src="img/email.png" alt="email" class="footer__icon">
 					</a>
 				</li>
 				<li class="footer__social">
 					<a href="#" class="footer__link">
-						<img src="img/telegram.png" alt="telegram" class="footer__icon">
+						<img src="https://t.me/d7pper" alt="telegram" class="footer__icon">
 					</a>
 				</li>
 				<li class="footer__social">
-					<a href="#" class="footer__link">
-						<img src="img/whatsapp.png" alt="whatsapp" class="footer__icon">
+					<a href="./index.html" class="footer__link">
+						<img src="https://wa.me/89040593123" alt="whatsapp" class="footer__icon">
 					</a>
 				</li>
 			</ul>
 		</div>
 	</div>
+	<script src="js/typer.js"></script>
+	<script src="js/slider.js"></script>
+	<script src="js/main.js"></script>
 </body>
 </html>
