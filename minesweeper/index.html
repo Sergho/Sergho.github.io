@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MineSweeper</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        outline: none;
+        user-select: none;
+    }
+    body{
+        overflow: hidden;
+    }
+    .wrapper{
+        width: 100vw;
+        height: 100vh;
+        box-sizing: border-box;
+    }
+    .menu{
+        width: 100%;
+        height: 70px;
+        background-color: #ccc;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .menu button{
+        height: 50px;
+        box-sizing: border-box;
+        padding: 0 15px;
+        border: 2px solid #333;
+        background-color: transparent;
+        cursor: pointer;
+        font-size: 24px;
+        transition: .3s ease;
+    }
+    .menu button:hover{
+        background-color: #333;
+        color: #ccc;
+    }
+    .field{
+        width: 90%;
+        height: calc(90vh - 70px);
+        margin: 0 auto;
+        margin-top: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .cell{
+        position: relative;
+        border: 1px solid #777;
+        background-color: #ccc;
+        box-sizing: border-box;
+        cursor: pointer;
+        margin: 0;
+    }
+    .cell.opened{
+        background-color: #aaa;
+    }
+    .cell .flag{
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 60%;
+    }
+    .cell.flag .flag img{
+        width: 100%;
+    }
+    .cell .hidden{
+        width: 70%;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .cell.opened .hidden{
+        opacity: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .cell .hidden .text{
+        font-weight: bold;
+    }
+    .cell .hidden .image{
+        width: 100%;
+    }
+    .cell.flag .flag{
+        opacity: 1;
+    }
+    .cell:hover{
+        opacity: 0.5;
+    }
+</style>
+<body>
+    <div class="wrapper">
+        <div class="menu">
+            <button>Restart</button>
+        </div>
+        <div class="field">
+            
+        </div>
+    </div>
+    <script>
+        
+        const mines_count = 50;
+        const rows = 20;
+        const columns = 20;
+        let game_over =  false;
+
+        function is_win(cells, mines){
+            win = true;
+            cells.forEach((cell, key) => {
+                if(!is_opened(key) && mines.indexOf(key, 0) == -1){
+                    win = false;
+                    return;
+                }
+            })
+            return win;
+        }
+
+        function get_close_cells(cell, rows, columns){
+            const cells_count = rows * columns;
+            let cells = []
+            if(cell + 1 < cells_count && (cell + 1) % columns != 0) cells.push(cell + 1);
+            if(cell - 1 >= 0 && cell % columns != 0) cells.push(cell - 1);
+            if(cell + columns < cells_count) cells.push(cell + columns);
+            if(cell + columns + 1 < cells_count && (cell + 1) % columns != 0) cells.push(cell + columns + 1);
+            if(cell + columns - 1 < cells_count && cell % columns != 0) cells.push(cell + columns - 1);
+            if(cell - columns >= 0) cells.push(cell - columns);
+            if(cell - columns + 1 >= 0 && (cell + 1) % columns != 0) cells.push(cell - columns + 1);
+            if(cell - columns - 1 >= 0 && cell % columns != 0) cells.push(cell - columns - 1);
+            return cells;
+        }
+        function count_mines(cell, mines, rows, columns){
+            let counter = 0;
+            // if mine
+            if(mines.indexOf(cell, 0) != -1) return -1;
+
+            const close_cells = get_close_cells(cell, rows, columns);
+            close_cells.forEach((close_cell) => {
+                if(mines.indexOf(close_cell, 0) != -1) counter++;
+            })
+
+            return counter;
+
+        }
+
+        function is_opened(index){
+            const cells = document.querySelectorAll(".cell");
+            const cell = cells[index];
+            return cell.classList.contains("opened");
+        }
+
+        function generate_mines(mines_count, cell_count){
+            let mines = [];
+            for(let i = 0; i < mines_count; i++){
+                let index = Math.floor(Math.random() * cell_count);
+                while(mines.indexOf(index, 0) != -1){
+                    index = Math.floor(Math.random() * cell_count);
+                }
+                mines.push(index);
+            }
+            return mines;
+        }
+    
+        function setup(){
+            const field = document.querySelector(".field");
+            field.innerHTML = "";
+            const max_cell_width = field.offsetWidth / columns;
+            const max_cell_height = field.offsetHeight / rows;
+            const cell_size = max_cell_height > max_cell_width ? max_cell_width : max_cell_height;
+
+            // creating cells
+            for(let i = 0; i < rows * columns; i++){
+                const cell = document.createElement("div");
+                cell.classList.add("cell");
+                cell.style.width = cell_size + "px";
+                cell.style.height = cell_size + "px";
+                cell.style.fontSize = 0.6 * cell_size + "px";
+                cell.innerHTML = "<div class='hidden'><div class='text'>1</div></div><div class='flag'><img src='./flag.svg'></div>";
+                field.appendChild(cell);
+            }
+
+            const cells = field.querySelectorAll(".cell");
+
+            // correcting field size
+            field.style.width = columns * cell_size + "px";
+            field.style.height = rows * cell_size + "px";
+
+            // generate mins
+            mines = generate_mines(mines_count, rows * columns);
+            mines.forEach((index) => {
+                const hidden = cells[index].querySelector(".hidden");
+                hidden.innerHTML = "<img class='mine' src='./mine.svg'>";
+            });
+
+            // generate numbers
+            cells.forEach((cell, key) => {
+                const hidden = cell.querySelector(".hidden");
+                let count = count_mines(key, mines, rows, columns);
+                if(count != -1){
+                    if(count == 0) count = "";
+                    hidden.innerHTML = count;
+                }
+            });
+
+            // cells opening
+            cells.forEach((cell, key) => {
+                cell.addEventListener("click", (e) => {
+                    open(key, mines);
+                });
+            });
+
+            // flagging cells 
+            cells.forEach((cell, key) => {
+                cell.addEventListener("mousedown", (e) => {
+                    if(e.which == 2){
+                        e.preventDefault();
+                        toggle_flag(key);
+                    }
+                })
+            });
+
+            // restart
+            const button = document.querySelector("button");
+            button.addEventListener("click", () => {
+                game_over = false;
+                setup();
+            });
+        }
+
+        function toggle_flag(index){
+            if(game_over) return;
+            if(is_opened(index)) return;
+            const cells = document.querySelectorAll(".cell");
+            const cell = cells[index];
+            if(cell.classList.contains("flag")) cell.classList.remove("flag");
+            else cell.classList.add("flag");
+        }
+
+        function is_flagged(index){
+            const cells = document.querySelectorAll(".cell");
+            return cells[index].classList.contains("flag");
+        }
+
+        function open(index, mines){
+            if(game_over) return;
+            if(is_opened(index)) return;
+            if(is_flagged(index)) toggle_flag(index);
+            const cells = document.querySelectorAll(".cell");
+            const cell = cells[index];
+            cell.classList.add("opened");
+            const hidden = cell.querySelector(".hidden");
+            if(hidden.innerHTML == ""){
+                const close_cells = get_close_cells(index, rows, columns);
+                close_cells.forEach((close_cell) => {
+                    open(close_cell, mines);
+                })
+            }
+            if(mines.indexOf(index, 0) != -1){
+                // GAME OVER
+                mines.forEach((mine) => {
+                    cells[mine].style.backgroundColor = "red";
+                    open(mine, mines);
+                })
+                game_over = true;
+            }
+
+            // WIN
+            if(is_win(cells, mines)){
+                cells.forEach((cell, key) => {
+                    if(mines.indexOf(key, 0) != -1){
+                        cell.style.backgroundColor = "green";
+                    }
+                })
+                game_over = true;
+            }
+        }
+
+
+
+        // main 
+        window.addEventListener('DOMContentLoaded', (event) => {
+            setup();
+        });
+    </script>
+</body>
+</html>
