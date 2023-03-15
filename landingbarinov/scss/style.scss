@@ -702,6 +702,10 @@ img{
 				font-weight: 600;
 				transition: .3s ease;
 				text-decoration: none;
+				width: calc(100% - 70px);
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow: hidden;
 				&:hover{
 					color: #0a1b70;
 				}

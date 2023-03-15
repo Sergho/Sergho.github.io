@@ -829,6 +829,10 @@ img {
     -webkit-transition: 0.3s ease;
     transition: 0.3s ease;
     text-decoration: none;
+    width: calc(100% - 70px);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
   #main .file .file__name:hover {
     color: #0a1b70;
