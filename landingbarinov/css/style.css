@@ -63,9 +63,6 @@ img {
     transition: 0.3s ease;
     opacity: 1;
   }
-  #main .socials .socials__item:hover {
-    opacity: 0.7;
-  }
   #main .socials .socials__item .socials__link {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -74,6 +71,11 @@ img {
         -ms-flex-align: center;
             align-items: center;
     width: 100%;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+  }
+  #main .socials .socials__item .socials__link:hover {
+    opacity: 0.7;
   }
   #main .burger {
     cursor: pointer;
@@ -816,6 +818,11 @@ img {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+  }
+  #main .file:hover {
+    opacity: 0.7;
   }
   #main .file .file__icon {
     width: 50px;
@@ -858,8 +865,8 @@ img {
 }
 @media screen and (min-width: 425px) {
   #main .slider-full .screen .screen__background .screen__image {
-    width: 120%;
-    height: auto;
+    width: auto;
+    height: 110%;
   }
   #main .slider-full .screen .screen__content h1.screen__heading {
     max-width: 500px;
@@ -938,9 +945,15 @@ img {
     color: white;
     font-size: 16px;
     text-decoration: none;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+  }
+  #main .navbar .navbar__item .navbar__link:hover {
+    opacity: 0.7;
   }
   #main .slider-full .screen .screen__background .screen__image {
     width: 100%;
+    height: auto;
   }
   #main .slider-full .screen .screen__content {
     -webkit-box-sizing: border-box;
@@ -1111,6 +1124,8 @@ img {
     max-width: 1024px;
   }
   #main .slider .slider__slides {
+    position: relative;
+    z-index: 2;
     width: 85%;
     margin-top: 40px;
     display: -webkit-box;
@@ -1196,5 +1211,244 @@ img {
   #main .contacts .contacts__form .contacts__submit {
     width: 300px;
     height: 60px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #main h1.title {
+    font-size: 38px;
+  }
+  #main .more {
+    font-size: 22px;
+  }
+  #main .header {
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #main .header .header__socials {
+    width: 25%;
+  }
+  #main .nav {
+    width: 75%;
+  }
+  #main .navbar .navbar__item {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  #main .navbar .navbar__item .navbar__link {
+    font-size: 18px;
+  }
+  #main .socials .socials__item {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  #main .main {
+    max-width: 1300px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #main .slider-full .slider-full__slides .slider-full__slide {
+    height: 600px;
+  }
+  #main .slider-full .slider-full__control {
+    height: 600px;
+  }
+  #main .slider-full .slider-full__control .slider-full__next {
+    width: 25px;
+    height: 25px;
+    right: 30px;
+  }
+  #main .slider-full .slider-full__control .slider-full__prev {
+    width: 25px;
+    height: 25px;
+    left: 30px;
+  }
+  #main .slider-full .screen {
+    height: 600px;
+  }
+  #main .slider-full .screen .screen__image {
+    width: 100%;
+  }
+  #main .slider-full .screen .screen__content {
+    margin-top: 290px;
+    padding: 100px;
+  }
+  #main .slider-full .screen .screen__content h1.screen__heading {
+    width: 100%;
+    font-size: 44px;
+  }
+  #main .slider-full .screen .screen__content h1.screen__heading-wide {
+    width: 100%;
+    font-size: 44px;
+  }
+  #main .slider-full .screen .screen__content h2.screen__heading {
+    max-width: none;
+    width: 100%;
+    font-size: 40px;
+  }
+  #main .slider-full .screen .screen__content .screen__list {
+    max-width: none;
+    width: 70%;
+    max-width: 600px;
+  }
+  #main .slider-full .screen .screen__content .screen__list .screen__list-item {
+    width: 100%;
+    font-size: 22px;
+  }
+  #main .slider-full .screen .screen__content .screen__text {
+    width: 70%;
+    font-size: 22px;
+    margin-top: 35px;
+    max-width: 600px;
+  }
+  #main .slider-full .screen .screen__content .screen__bold {
+    font-size: 24px;
+    margin-top: 35px;
+    max-width: none;
+  }
+  #main .news {
+    margin-top: 50px;
+  }
+  #main .news .news__list {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  #main .news .news__list .news__item {
+    width: calc(50% - 20px);
+    margin-left: 0;
+    margin-right: 0;
+    max-width: none;
+    margin-top: 40px;
+    margin-bottom: 80px;
+  }
+  #main .news .news__list .news__item:nth-child(6) {
+    display: none;
+  }
+  #main .news .news__list .news__item:nth-child(3), #main .news .news__list .news__item:nth-child(4), #main .news .news__list .news__item:nth-child(5) {
+    width: calc(33% - 20px);
+  }
+  #main .news .news__list .news__item:nth-child(3) .news__content, #main .news .news__list .news__item:nth-child(4) .news__content, #main .news .news__list .news__item:nth-child(5) .news__content {
+    height: 70px;
+    bottom: -69px;
+  }
+  #main .news .news__list .news__item:nth-child(3) .news__content h2.news__heading, #main .news .news__list .news__item:nth-child(4) .news__content h2.news__heading, #main .news .news__list .news__item:nth-child(5) .news__content h2.news__heading {
+    height: 70px;
+    line-height: 70px;
+    font-size: 20px;
+    padding-left: 15px;
+  }
+  #main .news .news__list .news__item:nth-child(3) .news__content .news__open, #main .news .news__list .news__item:nth-child(4) .news__content .news__open, #main .news .news__list .news__item:nth-child(5) .news__content .news__open {
+    margin-right: 0;
+  }
+  #main .news .news__list .news__item:nth-child(3) .news__content .news__open span, #main .news .news__list .news__item:nth-child(4) .news__content .news__open span, #main .news .news__list .news__item:nth-child(5) .news__content .news__open span {
+    width: 15px;
+    height: 15px;
+  }
+  #main .news .news__list .news__item .news__content {
+    height: 80px;
+    bottom: -79px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #main .news .news__list .news__item .news__content h2.news__heading {
+    height: 80px;
+    line-height: 80px;
+    font-size: 24px;
+    padding-left: 20px;
+  }
+  #main .news .news__list .news__item .news__content .news__open {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+  }
+  #main .news .news__list .news__item .news__content .news__open span {
+    width: 20px;
+    height: 20px;
+  }
+  #main .about {
+    margin-top: 50px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #main .about .about__image {
+    max-width: 320px;
+    margin-right: 30px;
+  }
+  #main .about .about__image img {
+    width: 100%;
+  }
+  #main .about .about__content {
+    width: 60%;
+    max-width: 650px;
+  }
+  #main .about .about__content h2.about__heading {
+    margin-top: 0;
+    font-size: 28px;
+  }
+  #main .about .about__content .about__text {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+  #main .portfolio {
+    margin-top: 100px;
+  }
+  #main .portfolio .portfolio__slider {
+    max-width: 1180px;
+  }
+  #main .portfolio .portfolio__more {
+    margin-top: 90px;
+  }
+  #main .slider .slider__control .slider__prev {
+    width: 20px;
+    height: 20px;
+    left: 30px;
+  }
+  #main .slider .slider__control .slider__next {
+    width: 20px;
+    height: 20px;
+    right: 30px;
+  }
+  #main .slider .slider__control .slider__dots {
+    bottom: -60px;
+  }
+  #main .slider .slider__control .slider__dots .slider__dot {
+    width: 20px;
+    height: 20px;
+    margin-left: 7px;
+    margin-right: 7px;
+  }
+  #main .document .document__hidden .document__title {
+    font-size: 22px;
+  }
+  #main .contacts {
+    margin-top: 100px;
+  }
+  #main .contacts .contacts__form {
+    max-width: 1000px;
+  }
+  #main .materials .materials__content {
+    max-width: 700px;
+  }
+  #main .file .file__name {
+    font-size: 26px;
+  }
+  #main .footer {
+    margin-top: 80px;
+    height: 100px;
+  }
+  #main .footer .footer__text {
+    font-size: 26px;
+    line-height: 100px;
+    height: 100px;
   }
 }
