@@ -45,9 +45,9 @@
 			</div>
 		</div>
 		<div class="main">
-			<div class="main__slider slider-full">
+			<div class="main__slider slider-full js-main-slider">
 				<ul class="slider-full__slides">
-					<li class="slider-full__slide screen active">
+					<li class="slider-full__slide screen js-slide active">
 						<div class="screen__background">
 							<img src="assets/main-1.jpg" alt="main-1" class="screen__image">
 							<div class="screen__darkness"></div>
@@ -58,7 +58,7 @@
 							<b class="screen__bold">Баринова Александра Евгеньевича</b>
 						</div>
 					</li>
-					<li class="slider-full__slide screen">
+					<li class="slider-full__slide screen js-slide">
 						<div class="screen__background">
 							<img src="assets/main-2.jpg" alt="main-2" class="screen__image">
 							<div class="screen__darkness"></div>
@@ -73,7 +73,7 @@
 							</ul>
 						</div>
 					</li>
-					<li class="slider-full__slide screen">
+					<li class="slider-full__slide screen js-slide">
 						<div class="screen__background">
 							<img src="assets/main-2.jpg" alt="main-2" class="screen__image">
 							<div class="screen__darkness"></div>
@@ -84,12 +84,12 @@
 					</li>
 				</ul>
 				<div class="slider-full__control">
-					<div class="slider-full__prev"></div>
-					<div class="slider-full__next"></div>
+					<div class="slider-full__prev js-prev"></div>
+					<div class="slider-full__next js-next"></div>
 					<ul class="slider-full__dots">
-						<li class="slider-full__dot active"></li>
-						<li class="slider-full__dot"></li>
-						<li class="slider-full__dot"></li>
+						<li class="slider-full__dot js-slider-dot active"></li>
+						<li class="slider-full__dot js-slider-dot"></li>
+						<li class="slider-full__dot js-slider-dot"></li>
 					</ul>
 				</div>
 			</div>
@@ -97,14 +97,14 @@
 		<div class="news">
 			<h1 class="news__heading title">Новости</h1>
 			<ul class="news__list">
-				<li class="news__item">
+				<li class="news__item js-news">
 					<div class="news__image">
 						<img src="assets/main_1.jpg" alt="news-1">
 						<div class="news__gradient"></div>
 					</div>
 					<div class="news__content">
 						<h2 class="news__heading">Заняли 1 место</h2>
-						<div class="news__open">
+						<div class="news__open js-news-button">
 							<span></span>
 						</div>
 						<div class="news__hidden">
@@ -113,14 +113,14 @@
 						</div>
 					</div>
 				</li>
-				<li class="news__item">
+				<li class="news__item js-news">
 					<div class="news__image">
 						<img src="assets/main_1.jpg" alt="news-1">
 						<div class="news__gradient"></div>
 					</div>
 					<div class="news__content">
 						<h2 class="news__heading">Заняли 1 место</h2>
-						<div class="news__open">
+						<div class="news__open js-news-button">
 							<span></span>
 						</div>
 						<div class="news__hidden">
@@ -129,14 +129,14 @@
 						</div>
 					</div>
 				</li>
-				<li class="news__item">
+				<li class="news__item js-news">
 					<div class="news__image">
 						<img src="assets/main_1.jpg" alt="news-1">
 						<div class="news__gradient"></div>
 					</div>
 					<div class="news__content">
 						<h2 class="news__heading">Заняли 1 место</h2>
-						<div class="news__open">
+						<div class="news__open js-news-button">
 							<span></span>
 						</div>
 						<div class="news__hidden">
@@ -145,14 +145,14 @@
 						</div>
 					</div>
 				</li>
-				<li class="news__item">
+				<li class="news__item js-news">
 					<div class="news__image">
 						<img src="assets/main_1.jpg" alt="news-1">
 						<div class="news__gradient"></div>
 					</div>
 					<div class="news__content">
 						<h2 class="news__heading">Заняли 1 место</h2>
-						<div class="news__open">
+						<div class="news__open js-news-button">
 							<span></span>
 						</div>
 						<div class="news__hidden">
@@ -161,14 +161,14 @@
 						</div>
 					</div>
 				</li>
-				<li class="news__item">
+				<li class="news__item js-news">
 					<div class="news__image">
 						<img src="assets/main_1.jpg" alt="news-1">
 						<div class="news__gradient"></div>
 					</div>
 					<div class="news__content">
 						<h2 class="news__heading">Заняли 1 место</h2>
-						<div class="news__open">
+						<div class="news__open js-news-button">
 							<span></span>
 						</div>
 						<div class="news__hidden">
@@ -177,14 +177,14 @@
 						</div>
 					</div>
 				</li>
-				<li class="news__item">
+				<li class="news__item js-news">
 					<div class="news__image">
 						<img src="assets/main_1.jpg" alt="news-1">
 						<div class="news__gradient"></div>
 					</div>
 					<div class="news__content">
 						<h2 class="news__heading">Заняли 1 место</h2>
-						<div class="news__open">
+						<div class="news__open js-news-button">
 							<span></span>
 						</div>
 						<div class="news__hidden">
@@ -209,53 +209,55 @@
 		</div>
 		<div class="portfolio">
 			<h1 class="portfolio__heading title">Портфолио</h1>
-			<div class="portfolio__slider slider">
-				<ul class="slider__slides">
-					<li class="slider__slide document active">
-						<img src="assets/portfolio_1.jpg" alt="document-1" class="document__image">
-						<div class="document__hidden">
-							<div class="document__darkness"></div>
-							<h1 class="document__title">Диплом о высшем образовании</h1>
-						</div>
-					</li>
-					<li class="slider__slide document active">
-						<img src="assets/portfolio_2.jpg" alt="document-1" class="document__image">
-						<div class="document__hidden">
-							<div class="document__darkness"></div>
-							<h1 class="document__title">Диплом о высшем образовании</h1>
-						</div>
-					</li>
-					<li class="slider__slide document active">
-						<img src="assets/portfolio_3.jpg" alt="document-1" class="document__image">
-						<div class="document__hidden">
-							<div class="document__darkness"></div>
-							<h1 class="document__title">Диплом о высшем образовании</h1>
-						</div>
-					</li>
-					<li class="slider__slide document">
-						<img src="assets/portfolio_1.jpg" alt="document-1" class="document__image">
-						<div class="document__hidden">
-							<div class="document__darkness"></div>
-							<h1 class="document__title">Диплом о высшем образовании</h1>
-						</div>
-					</li>
-					<li class="slider__slide document">
-						<img src="assets/portfolio_2.jpg" alt="document-1" class="document__image">
-						<div class="document__hidden">
-							<div class="document__darkness"></div>
-							<h1 class="document__title">Диплом о высшем образовании</h1>
-						</div>
-					</li>
-				</ul>
+			<div class="portfolio__slider slider js-slider">
+				<div class="slider__slides">
+					<ul class="slider__row js-slider-row">
+						<li class="slider__slide js-slide document active">
+							<img src="assets/portfolio_1.jpg" alt="document-1" class="document__image">
+							<div class="document__hidden">
+								<div class="document__darkness"></div>
+								<h1 class="document__title">Диплом о высшем образовании</h1>
+							</div>
+						</li>
+						<li class="slider__slide js-slide document active">
+							<img src="assets/portfolio_2.jpg" alt="document-1" class="document__image">
+							<div class="document__hidden">
+								<div class="document__darkness"></div>
+								<h1 class="document__title">Диплом о высшем образовании</h1>
+							</div>
+						</li>
+						<li class="slider__slide js-slide document active">
+							<img src="assets/portfolio_3.jpg" alt="document-1" class="document__image">
+							<div class="document__hidden">
+								<div class="document__darkness"></div>
+								<h1 class="document__title">Диплом о высшем образовании</h1>
+							</div>
+						</li>
+						<li class="slider__slide js-slide document">
+							<img src="assets/portfolio_1.jpg" alt="document-1" class="document__image">
+							<div class="document__hidden">
+								<div class="document__darkness"></div>
+								<h1 class="document__title">Диплом о высшем образовании</h1>
+							</div>
+						</li>
+						<li class="slider__slide js-slide document">
+							<img src="assets/portfolio_2.jpg" alt="document-1" class="document__image">
+							<div class="document__hidden">
+								<div class="document__darkness"></div>
+								<h1 class="document__title">Диплом о высшем образовании</h1>
+							</div>
+						</li>
+					</ul>
+				</div>
 				<div class="slider__control">
-					<div class="slider__prev disabled"></div>
-					<div class="slider__next"></div>
+					<div class="slider__prev js-slider-prev disabled"></div>
+					<div class="slider__next js-slider-next"></div>
 					<ul class="slider__dots">
-						<li class="slider__dot active"></li>
-						<li class="slider__dot"></li>
-						<li class="slider__dot"></li>
-						<li class="slider__dot"></li>
-						<li class="slider__dot"></li>
+						<li class="slider__dot js-slider-dot active"></li>
+						<li class="slider__dot js-slider-dot active"></li>
+						<li class="slider__dot js-slider-dot active"></li>
+						<li class="slider__dot js-slider-dot"></li>
+						<li class="slider__dot js-slider-dot"></li>
 					</ul>
 				</div>
 			</div>
@@ -306,5 +308,6 @@
 			<div class="footer__text">© Баринов Александр Евгеньевич</div>
 		</div>
 	</div>
+	<script src="js/script.js"></script>
 </body>
 </html>
