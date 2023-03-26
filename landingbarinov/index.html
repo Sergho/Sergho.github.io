@@ -10,6 +10,24 @@
 </head>
 <body>
 	<div id="wrapper" class="main">
+		<div class="modal-image js-modal-image" style="display: none; opacity: 0;">
+			<div class="modal-image__darkness js-modal-darkness"></div>
+			<img src="" alt="modal-image" class="modal-image__image">
+		</div>
+		<div class="modal-menu js-menu" style="transform: translate(100%, 0);">
+			<div class="modal-menu__close js-menu-close">
+				<span></span>
+				<span></span>
+			</div>
+			<ul class="modal-menu__navbar">
+				<li class="modal-menu__item js-menu-close"><a href="#" class="modal-menu__link">Главная</a></li>
+				<li class="modal-menu__item js-menu-close"><a href="./news.html" class="modal-menu__link">Новости</a></li>
+				<li class="modal-menu__item js-menu-close"><a href="./about.html" class="modal-menu__link">Об авторе</a></li>
+				<li class="modal-menu__item js-menu-close"><a href="./portfolio.html" class="modal-menu__link">Портфолио</a></li>
+				<li class="modal-menu__item js-menu-close"><a href="#" class="modal-menu__link">Контакты</a></li>
+				<li class="modal-menu__item js-menu-close"><a href="#" class="modal-menu__link">Родителям и детям</a></li>
+			</ul>
+		</div>
 		<div class="header">
 			<nav class="header__nav nav">
 				<ul class="nav__navbar navbar">
@@ -38,7 +56,7 @@
 					</a>
 				</div>
 			</div>
-			<div class="header__menu burger">
+			<div class="header__menu burger js-menu-open">
 				<span></span>
 				<span></span>
 				<span></span>
@@ -212,35 +230,35 @@
 			<div class="portfolio__slider slider js-slider">
 				<div class="slider__slides">
 					<ul class="slider__row js-slider-row">
-						<li class="slider__slide js-slide document active">
+						<li class="slider__slide js-slide document active js-image-open">
 							<img src="assets/portfolio_1.jpg" alt="document-1" class="document__image">
 							<div class="document__hidden">
 								<div class="document__darkness"></div>
 								<h1 class="document__title">Диплом о высшем образовании</h1>
 							</div>
 						</li>
-						<li class="slider__slide js-slide document active">
+						<li class="slider__slide js-slide document active js-image-open">
 							<img src="assets/portfolio_2.jpg" alt="document-1" class="document__image">
 							<div class="document__hidden">
 								<div class="document__darkness"></div>
 								<h1 class="document__title">Диплом о высшем образовании</h1>
 							</div>
 						</li>
-						<li class="slider__slide js-slide document active">
+						<li class="slider__slide js-slide document active js-image-open">
 							<img src="assets/portfolio_3.jpg" alt="document-1" class="document__image">
 							<div class="document__hidden">
 								<div class="document__darkness"></div>
 								<h1 class="document__title">Диплом о высшем образовании</h1>
 							</div>
 						</li>
-						<li class="slider__slide js-slide document">
+						<li class="slider__slide js-slide document js-image-open">
 							<img src="assets/portfolio_1.jpg" alt="document-1" class="document__image">
 							<div class="document__hidden">
 								<div class="document__darkness"></div>
 								<h1 class="document__title">Диплом о высшем образовании</h1>
 							</div>
 						</li>
-						<li class="slider__slide js-slide document">
+						<li class="slider__slide js-slide document js-image-open">
 							<img src="assets/portfolio_2.jpg" alt="document-1" class="document__image">
 							<div class="document__hidden">
 								<div class="document__darkness"></div>

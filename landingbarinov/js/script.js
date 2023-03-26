@@ -169,7 +169,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		function render(){
 			let offset_count = Array.from(slides).indexOf(active_slides[0]);
 			if(single_render){
-				row.style.transform = "translate(-" + 111.11 * offset_count + "%, 0)";
+				row.style.transform = "translate(-" + 100 * offset_count + "%, 0)";
 			} else {
 				row.style.transform = "translate(-" + 33 * offset_count + "%, 0)";
 			}
@@ -248,6 +248,57 @@ document.addEventListener("DOMContentLoaded", function() {
 
 		next_btn.addEventListener("click", () => {
 			next();
-		})
+		});
+	});
+
+	// MODAL-MENU
+	const open_menu_tools = document.querySelectorAll(".js-menu-open");
+	const close_menu_tools = document.querySelectorAll(".js-menu-close");
+	const menu = document.querySelector(".js-menu");
+
+	function open_menu(){
+		menu.style.transform = "translate(0, 0)";
+	}
+	function close_menu(){
+		menu.style.transform = "translate(100%, 0)";
+	}
+
+	open_menu_tools.forEach((open_menu_tool) => {
+		open_menu_tool.addEventListener("click", () => {open_menu();});
+	});
+
+	close_menu_tools.forEach((close_menu_tool) => {
+		close_menu_tool.addEventListener("click", () => {close_menu();});
 	})
+
+	// MODAL_IMAGE
+
+	const open_image_tools = document.querySelectorAll(".js-image-open");
+	const image_modal = document.querySelector(".js-modal-image")
+	const modal_darkness = image_modal.querySelector(".js-modal-darkness");
+
+	function open_image(event){
+		let root = event.target;
+		while(!root.classList.contains("js-image-open")) root = root.parentNode;
+		const image = root.querySelector("img");
+		const modal_img = image_modal.querySelector("img");
+		modal_img.src = image.src;
+		image_modal.style.display = "block";
+		setTimeout(() => {
+			image_modal.style.opacity = "1";
+		}, 50);
+	}
+	function close_image(){
+		image_modal.style.opacity = "0";
+		setTimeout(() => {
+			image_modal.style.display = "none";
+		}, 350);
+	}
+
+	open_image_tools.forEach((open_image_tool) => {
+		open_image_tool.addEventListener("click", (e) => {open_image(e);});
+	});
+
+	modal_darkness.addEventListener("click", () => {close_image();});
+
 });
