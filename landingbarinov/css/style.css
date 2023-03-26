@@ -15,7 +15,9 @@ img {
   #wrapper .header {
     position: fixed;
     top: 0;
-    left: 0;
+    left: 50vw;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
     z-index: 10;
     width: 100%;
     -webkit-box-sizing: border-box;
@@ -549,6 +551,17 @@ img {
     margin-right: auto;
     margin-top: 20px;
   }
+  #wrapper .about .about__text_wide {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Montserrat;
+    font-size: 16px;
+    color: #333333;
+    font-weight: 400;
+    margin-top: 20px;
+    text-align: justify;
+  }
   #wrapper .more {
     display: block;
     font-family: Montserrat;
@@ -960,6 +973,35 @@ img {
   #wrapper.news .news {
     margin-top: 60px;
   }
+  #wrapper.about .about {
+    margin-top: 60px;
+  }
+  #wrapper.portfolio .portfolio {
+    margin-top: 100px;
+  }
+  #wrapper.portfolio .portfolio .portfolio__list {
+    max-width: 400px;
+    margin-top: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #wrapper.portfolio .portfolio .portfolio__list .portfolio__item {
+    width: 100%;
+    list-style: none;
+    margin-top: 20px;
+  }
+  #wrapper.portfolio .portfolio .portfolio__more {
+    margin-top: 30px;
+  }
 }
 @media screen and (min-width: 425px) {
   #wrapper .slider-full .screen .screen__background .screen__image {
@@ -1350,6 +1392,44 @@ img {
   #wrapper.news-single .news .news__list .news__item:nth-child(3) {
     display: none;
   }
+  #wrapper.about .about .about__image {
+    width: 230px;
+    margin-right: 20px;
+  }
+  #wrapper.about .about .about__image img {
+    width: 100%;
+  }
+  #wrapper.about .about .about__content {
+    width: 450px;
+  }
+  #wrapper.about .about .about__content h2.about__heading {
+    font-size: 22px;
+  }
+  #wrapper.about .about .about__content p.about__text {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  #wrapper.about .about .about__text_wide {
+    margin-top: 40px;
+    width: 700px;
+    line-height: 1.4;
+    text-align: left;
+  }
+  #wrapper.portfolio .portfolio {
+    margin-top: 120px;
+  }
+  #wrapper.portfolio .portfolio .portfolio__list {
+    max-width: 900px;
+  }
+  #wrapper.portfolio .portfolio .portfolio__list .portfolio__item {
+    width: calc(50% - 40px);
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 40px;
+  }
+  #wrapper.portfolio .portfolio .portfolio__list .portfolio__item:nth-child(9) {
+    display: none;
+  }
 }
 @media screen and (min-width: 1024px) {
   #wrapper {
@@ -1362,9 +1442,7 @@ img {
     font-size: 22px;
   }
   #wrapper .header {
-    position: fixed;
-    top: 0;
-    left: 0;
+    width: 102%;
     z-index: 10;
     max-width: 1300px;
     margin-left: auto;
@@ -1689,6 +1767,38 @@ img {
   #wrapper.news .news .news__list .news__item.active .news__content, #wrapper.news-single .news .news__list .news__item.active .news__content {
     height: 220px;
   }
+  #wrapper.about .about .about__image {
+    width: 270px;
+    margin-right: 40px;
+  }
+  #wrapper.about .about .about__content {
+    width: 650px;
+  }
+  #wrapper.about .about .about__content h2.about__heading {
+    font-size: 28px;
+  }
+  #wrapper.about .about .about__content p.about__text {
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  #wrapper.about .about .about__text_wide {
+    margin-top: 50px;
+    width: 960px;
+    line-height: 1.6;
+    font-size: 20px;
+  }
+  #wrapper.portfolio .portfolio {
+    margin-top: 150px;
+  }
+  #wrapper.portfolio .portfolio .portfolio__list {
+    max-width: 1500px;
+  }
+  #wrapper.portfolio .portfolio .portfolio__list .portfolio__item {
+    width: calc(33.33% - 40px);
+  }
+  #wrapper.portfolio .portfolio .portfolio__list .portfolio__item:nth-child(9) {
+    display: block;
+  }
 }
 @media screen and (min-width: 1440px) {
   #wrapper h1.title {
@@ -1890,5 +2000,32 @@ img {
   }
   #wrapper.news-single .news .news__list {
     max-width: 1250px;
+  }
+  #wrapper.about .about {
+    margin-top: 100px;
+  }
+  #wrapper.about .about .about__image {
+    margin-top: 70px;
+    width: 350px;
+    margin-right: 50px;
+  }
+  #wrapper.about .about .about__content {
+    margin-top: 70px;
+    width: 850px;
+    max-width: none;
+  }
+  #wrapper.about .about .about__content h2.about__heading {
+    font-size: 36px;
+  }
+  #wrapper.about .about .about__content p.about__text {
+    font-size: 26px;
+  }
+  #wrapper.about .about .about__text_wide {
+    margin-top: 70px;
+    width: 1250px;
+    font-size: 26px;
+  }
+  #wrapper.portfolio .portfolio {
+    margin-top: 180px;
   }
 }
