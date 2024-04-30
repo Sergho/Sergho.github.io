@@ -1,0 +1,437 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #000;
+}
+img{
+    width: 100%;
+}
+
+.red{
+    background-color: red;
+}
+
+.blue{
+    background-color: blue;
+}
+
+#wrapper {
+    overflow-x: hidden;
+
+    .volume{
+        .volume__button{
+            width: 35px;
+            background-color: transparent;
+            border: none;
+            opacity: 0.7;
+            transition: opacity .5s ease;
+            cursor: pointer;
+            position: relative;
+
+            &:hover{
+                opacity: 1;
+            }
+            &.disabled{
+                &::after{
+                    content: "";
+                    display: block;
+                    width: 120%;
+                    height: 7%;
+                    background-color: red;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%) rotate(45deg);
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    .logo{
+        .logo__link{
+            max-width: 200px;
+            transition: opacity .5s ease;
+
+            &:hover{
+                opacity: 0.7;
+            }
+        }
+    }
+
+    .burger{
+        .burger__icon{
+            width: 28px;
+            height: 25px;
+            position: relative;
+            opacity: 0.7;
+            cursor: pointer;
+            transition: opacity .5s ease;
+
+            &:hover{
+                opacity: 1;
+            }
+            .burger__line{
+                height: 3px;
+                background-color: white;
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%, 0);
+                
+                &:nth-child(1){
+                    top: 0;
+                }
+                &:nth-child(2){
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                }
+                &:nth-child(3){
+                    bottom: 0;
+                }
+            }
+        }
+    }
+
+    .heading{
+        font-family: Montserrat;
+        font-weight: bold;
+        color: #c8c8c8;
+        letter-spacing: 1px;
+        font-size: 28px;
+    }
+
+    .heroes{
+        .heroes__list{
+            max-width: 350px;
+        }
+    }
+
+    .hero{
+        list-style: none;
+        position: relative;
+    }
+
+    .subheading{
+        font-family: Montserrat;
+        font-weight: bold;
+        color: #c8c8c8;
+        font-size: 18px;
+    }
+    .annotation{
+        .annotation__text{
+            font-family: Montserrat;
+            font-weight: normal;
+            font-size: 14px;
+            color: #999;
+        }
+        .annotation__quote{
+            font-family: Montserrat;
+            font-weight: medium;
+            color: #ced63c;
+            font-size: 18px;
+        }
+    }
+    .prologue{
+        .prologue__text{
+            font-family: Montserrat;
+            font-weight: normal;
+            font-size: 14px;
+            color: #999;
+        }
+    }
+    .buy{
+        .buy__button{
+            box-sizing: border-box;
+            width: 200px;
+            font-family: Montserrat;
+            border: 1px solid #c8c8c8;
+            color: #c8c8c8;
+            border-radius: 15px;
+            background-color: transparent;
+            padding: 15px 0;
+            font-size: 20px;
+            cursor: pointer;
+            transition: .5s ease;
+
+            &:hover{
+                background-color: #c8c8c8;
+                color: black;
+            }
+        }
+    }
+    .footer{
+        .footer__content{
+            font-family: Montserrat;
+            color: #c8c8c8;
+            font-size: 16px;
+        }
+    }
+}
+
+@media screen and (min-width: 576px) {
+    #wrapper{
+
+        .volume{
+            .volume__button{
+                width: 45px;
+            }
+        }
+
+        .burger{
+            .burger__icon{
+                width: 30px;
+                height: 30px;
+                .burger__line{
+                    height: 4px;
+                }
+            }
+        }
+        .buy{
+            .buy__button{
+                width: 220px;
+                border: 2px solid #c8c8c8;
+                border-radius: 20px;
+                padding: 20px 0;
+                font-size: 22px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #wrapper{
+        .volume{
+            .volume__button{
+                width: 35px;
+            }
+        }
+        .socials{
+            .socials__list{
+                .socials__item{
+                    list-style: none;
+                    width: 35px;
+
+                    .socials__link{
+                        opacity: 0.7;
+                        transition: .5s ease;
+
+                        &:hover{
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+        .auth{
+            .auth__login{
+                background-color: transparent;
+                color: white;
+                border: 1px solid white;
+                font-family: Montserrat;
+                font-weight: medium;
+                padding: 5px 15px;
+                font-size: 16px;
+                border-radius: 10px;
+                opacity: 0.7;
+                transition: .5s ease;
+
+                &:hover{
+                    opacity: 1;
+                    color: black;
+                    background-color: white;
+                }
+            }
+            .auth__user{
+                cursor: pointer;
+
+                .auth__username{
+                    font-family: Montserrat;
+                    font-weight: medium;
+                    font-size: 16px;
+                    color: white;
+                    opacity: 0.7;
+                    transition: opacity .5s ease;
+                }
+                .auth__avatar{
+                    width: 30px;
+                    opacity: 0.7;
+                    margin-left: 10px;
+                    transition: opacity .5s ease;
+                }
+                &:hover{
+                    .auth__username, .auth__avatar{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        .torch{
+            .torch__video{
+                width: 40px;
+            }
+        }
+        .hero{
+            .hero__hidden{
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+                transition: opacity .5s ease;
+                cursor: pointer;
+
+                &:hover{
+                    opacity: 1;
+                }
+                .hero__darkness{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background-color: black;
+                    opacity: 0.5;
+                }
+                .hero__title{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    font-family: Montserrat;
+                    font-weight: medium;
+                    color: #c8c8c8;
+                    font-size: 16px;
+                }
+            }
+        }
+        .subheading{
+            font-size: 20px;
+        }
+        .annotation{
+            .annotation__text{
+                font-size: 16px;
+            }
+            .annotation__quote{
+                font-size: 20px;
+            }
+        }
+        .prologue{
+            .prologue__text{
+                font-size: 16px;
+            }
+        }
+        .footer{
+            .footer__content{
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    #wrapper{
+        .logo{
+            .logo__link{
+                max-width: 270px;
+            }
+        }
+        .volume{
+            .volume__button{
+                width: 50px;
+            }
+        }
+        .socials{
+            .socials__list{
+                .socials__item{
+                    width: 50px;
+                    margin-left: 15px;
+                    margin-right: 15px;
+                }
+            }
+        }
+        .auth{
+            .auth__login{
+                font-size: 20px;
+                padding: 7px 25px;
+            }
+            .auth__user{
+                .auth__username{
+                    font-size: 20px;
+                }
+                .auth__avatar{
+                    width: 40px;
+                }
+            }
+        }
+        .torch{
+            .torch__video{
+                width: 60px;
+            }
+        }
+        .heading{
+            font-size: 34px;
+        }
+        .heroes{
+            .heroes__list{
+                max-width: 450px;
+            }
+        }
+        .hero{
+            .hero__hidden{
+                .hero__title{
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #wrapper{
+        .logo{
+            .logo__link{
+                max-width: 300px;
+            }
+        }
+        .heroes{
+            .heroes__list{
+                max-width: 550px;
+            }
+        }
+        .heading{
+            font-size: 40px;
+        }
+        .hero{
+            .hero__hidden{
+                .hero__title{
+                    font-size: 24px;
+                }
+            }
+        }
+        .subheading{
+            font-size: 22px;
+        }
+        .annotation{
+            .annotation__text{
+                font-size: 18px;
+
+                i{
+                    font-size: 16px;
+                }
+            }
+            .annotation__quote{
+                font-size: 22px;
+            }
+        }
+        .prologue{
+            .prologue__text{
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    
+}

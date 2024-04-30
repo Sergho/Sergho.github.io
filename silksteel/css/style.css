@@ -1,0 +1,343 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+}
+
+img {
+  width: 100%;
+}
+
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+}
+
+#wrapper {
+  overflow-x: hidden;
+}
+#wrapper .volume .volume__button {
+  width: 35px;
+  background-color: transparent;
+  border: none;
+  opacity: 0.7;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+  cursor: pointer;
+  position: relative;
+}
+#wrapper .volume .volume__button:hover {
+  opacity: 1;
+}
+#wrapper .volume .volume__button.disabled::after {
+  content: "";
+  display: block;
+  width: 120%;
+  height: 7%;
+  background-color: red;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+  opacity: 1;
+}
+#wrapper .logo .logo__link {
+  max-width: 200px;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+#wrapper .logo .logo__link:hover {
+  opacity: 0.7;
+}
+#wrapper .burger .burger__icon {
+  width: 28px;
+  height: 25px;
+  position: relative;
+  opacity: 0.7;
+  cursor: pointer;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+#wrapper .burger .burger__icon:hover {
+  opacity: 1;
+}
+#wrapper .burger .burger__icon .burger__line {
+  height: 3px;
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+#wrapper .burger .burger__icon .burger__line:nth-child(1) {
+  top: 0;
+}
+#wrapper .burger .burger__icon .burger__line:nth-child(2) {
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+#wrapper .burger .burger__icon .burger__line:nth-child(3) {
+  bottom: 0;
+}
+#wrapper .heading {
+  font-family: Montserrat;
+  font-weight: bold;
+  color: #c8c8c8;
+  letter-spacing: 1px;
+  font-size: 28px;
+}
+#wrapper .heroes .heroes__list {
+  max-width: 350px;
+}
+#wrapper .hero {
+  list-style: none;
+  position: relative;
+}
+#wrapper .subheading {
+  font-family: Montserrat;
+  font-weight: bold;
+  color: #c8c8c8;
+  font-size: 18px;
+}
+#wrapper .annotation .annotation__text {
+  font-family: Montserrat;
+  font-weight: normal;
+  font-size: 14px;
+  color: #999;
+}
+#wrapper .annotation .annotation__quote {
+  font-family: Montserrat;
+  font-weight: medium;
+  color: #ced63c;
+  font-size: 18px;
+}
+#wrapper .prologue .prologue__text {
+  font-family: Montserrat;
+  font-weight: normal;
+  font-size: 14px;
+  color: #999;
+}
+#wrapper .buy .buy__button {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 200px;
+  font-family: Montserrat;
+  border: 1px solid #c8c8c8;
+  color: #c8c8c8;
+  border-radius: 15px;
+  background-color: transparent;
+  padding: 15px 0;
+  font-size: 20px;
+  cursor: pointer;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+#wrapper .buy .buy__button:hover {
+  background-color: #c8c8c8;
+  color: black;
+}
+#wrapper .footer .footer__content {
+  font-family: Montserrat;
+  color: #c8c8c8;
+  font-size: 16px;
+}
+
+@media screen and (min-width: 576px) {
+  #wrapper .volume .volume__button {
+    width: 45px;
+  }
+  #wrapper .burger .burger__icon {
+    width: 30px;
+    height: 30px;
+  }
+  #wrapper .burger .burger__icon .burger__line {
+    height: 4px;
+  }
+  #wrapper .buy .buy__button {
+    width: 220px;
+    border: 2px solid #c8c8c8;
+    border-radius: 20px;
+    padding: 20px 0;
+    font-size: 22px;
+  }
+}
+@media screen and (min-width: 768px) {
+  #wrapper .volume .volume__button {
+    width: 35px;
+  }
+  #wrapper .socials .socials__list .socials__item {
+    list-style: none;
+    width: 35px;
+  }
+  #wrapper .socials .socials__list .socials__item .socials__link {
+    opacity: 0.7;
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+  }
+  #wrapper .socials .socials__list .socials__item .socials__link:hover {
+    opacity: 1;
+  }
+  #wrapper .auth .auth__login {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    font-family: Montserrat;
+    font-weight: medium;
+    padding: 5px 15px;
+    font-size: 16px;
+    border-radius: 10px;
+    opacity: 0.7;
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+  }
+  #wrapper .auth .auth__login:hover {
+    opacity: 1;
+    color: black;
+    background-color: white;
+  }
+  #wrapper .auth .auth__user {
+    cursor: pointer;
+  }
+  #wrapper .auth .auth__user .auth__username {
+    font-family: Montserrat;
+    font-weight: medium;
+    font-size: 16px;
+    color: white;
+    opacity: 0.7;
+    -webkit-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
+  }
+  #wrapper .auth .auth__user .auth__avatar {
+    width: 30px;
+    opacity: 0.7;
+    margin-left: 10px;
+    -webkit-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
+  }
+  #wrapper .auth .auth__user:hover .auth__username, #wrapper .auth .auth__user:hover .auth__avatar {
+    opacity: 1;
+  }
+  #wrapper .torch .torch__video {
+    width: 40px;
+  }
+  #wrapper .hero .hero__hidden {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    -webkit-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
+    cursor: pointer;
+  }
+  #wrapper .hero .hero__hidden:hover {
+    opacity: 1;
+  }
+  #wrapper .hero .hero__hidden .hero__darkness {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.5;
+  }
+  #wrapper .hero .hero__hidden .hero__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    font-family: Montserrat;
+    font-weight: medium;
+    color: #c8c8c8;
+    font-size: 16px;
+  }
+  #wrapper .subheading {
+    font-size: 20px;
+  }
+  #wrapper .annotation .annotation__text {
+    font-size: 16px;
+  }
+  #wrapper .annotation .annotation__quote {
+    font-size: 20px;
+  }
+  #wrapper .prologue .prologue__text {
+    font-size: 16px;
+  }
+  #wrapper .footer .footer__content {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 992px) {
+  #wrapper .logo .logo__link {
+    max-width: 270px;
+  }
+  #wrapper .volume .volume__button {
+    width: 50px;
+  }
+  #wrapper .socials .socials__list .socials__item {
+    width: 50px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  #wrapper .auth .auth__login {
+    font-size: 20px;
+    padding: 7px 25px;
+  }
+  #wrapper .auth .auth__user .auth__username {
+    font-size: 20px;
+  }
+  #wrapper .auth .auth__user .auth__avatar {
+    width: 40px;
+  }
+  #wrapper .torch .torch__video {
+    width: 60px;
+  }
+  #wrapper .heading {
+    font-size: 34px;
+  }
+  #wrapper .heroes .heroes__list {
+    max-width: 450px;
+  }
+  #wrapper .hero .hero__hidden .hero__title {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #wrapper .logo .logo__link {
+    max-width: 300px;
+  }
+  #wrapper .heroes .heroes__list {
+    max-width: 550px;
+  }
+  #wrapper .heading {
+    font-size: 40px;
+  }
+  #wrapper .hero .hero__hidden .hero__title {
+    font-size: 24px;
+  }
+  #wrapper .subheading {
+    font-size: 22px;
+  }
+  #wrapper .annotation .annotation__text {
+    font-size: 18px;
+  }
+  #wrapper .annotation .annotation__text i {
+    font-size: 16px;
+  }
+  #wrapper .annotation .annotation__quote {
+    font-size: 22px;
+  }
+  #wrapper .prologue .prologue__text {
+    font-size: 18px;
+  }
+}
