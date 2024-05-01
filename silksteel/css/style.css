@@ -35,6 +35,8 @@ img {
   left: 0;
   background-color: black;
   z-index: 2;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
 }
 #wrapper .preview .preview__heading {
   width: 100%;
@@ -105,6 +107,10 @@ img {
   -webkit-transform: translate(-50%, -50%) rotate(-45deg);
           transform: translate(-50%, -50%) rotate(-45deg);
 }
+#wrapper .socials {
+  -webkit-transition: opacity 1s ease;
+  transition: opacity 1s ease;
+}
 #wrapper .socials .socials__list .socials__item {
   list-style: none;
   width: 70px;
@@ -116,6 +122,10 @@ img {
 }
 #wrapper .socials .socials__list .socials__item .socials__link:hover {
   opacity: 1;
+}
+#wrapper .auth {
+  -webkit-transition: opacity 1s ease;
+  transition: opacity 1s ease;
 }
 #wrapper .auth .auth__login {
   background-color: transparent;
@@ -157,6 +167,10 @@ img {
 #wrapper .auth .auth__user:hover .auth__username, #wrapper .auth .auth__user:hover .auth__avatar {
   opacity: 1;
 }
+#wrapper .volume {
+  -webkit-transition: opacity 1s ease;
+  transition: opacity 1s ease;
+}
 #wrapper .volume .volume__button {
   width: 35px;
   background-color: transparent;
@@ -170,7 +184,7 @@ img {
 #wrapper .volume .volume__button:hover {
   opacity: 1;
 }
-#wrapper .volume .volume__button.disabled::after {
+#wrapper .volume .volume__button::after {
   content: "";
   display: block;
   width: 120%;
@@ -181,7 +195,16 @@ img {
   left: 50%;
   -webkit-transform: translate(-50%, -50%) rotate(45deg);
           transform: translate(-50%, -50%) rotate(45deg);
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+#wrapper .volume .volume__button.disabled::after {
   opacity: 1;
+}
+#wrapper .logo {
+  -webkit-transition: opacity 1s ease;
+  transition: opacity 1s ease;
 }
 #wrapper .logo .logo__link {
   max-width: 200px;
@@ -229,6 +252,10 @@ img {
   letter-spacing: 1px;
   font-size: 28px;
 }
+#wrapper .heroes {
+  -webkit-transition: opacity 1s ease;
+  transition: opacity 1s ease;
+}
 #wrapper .heroes .heroes__list {
   max-width: 350px;
 }
@@ -271,6 +298,10 @@ img {
   font-weight: bold;
   color: #c8c8c8;
   font-size: 18px;
+}
+#wrapper .annotation {
+  -webkit-transition: opacity 1s ease;
+  transition: opacity 1s ease;
 }
 #wrapper .annotation .annotation__text {
   font-family: Montserrat;
@@ -370,6 +401,10 @@ img {
   }
   #wrapper .auth .auth__user:hover .auth__username, #wrapper .auth .auth__user:hover .auth__avatar {
     opacity: 1;
+  }
+  #wrapper .torch {
+    -webkit-transition: opacity 1s ease;
+    transition: opacity 1s ease;
   }
   #wrapper .torch .torch__video {
     width: 40px;

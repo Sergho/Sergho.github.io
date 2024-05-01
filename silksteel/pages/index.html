@@ -8,14 +8,16 @@
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
+<body style="overflow: hidden;">
     <div id="wrapper" class="main container">
-        <div class="music"></div>
-        <div class="preview container-fluid justify-content-center align-items-center m-0" style="opacity: 0; display: none;">
+        <div class="music">
+            <audio class="music__audio d-none" src="../assets/music.mp3" loop="true"></audio>
+        </div>
+        <div class="preview container-fluid justify-content-center align-items-center m-0">
             <div class="preview__row text-center">
                 <h1 class="preview__heading heading m-auto">Добро пожаловать на сайт книги "Шёлковая сталь"</h1>
                 <div class="preview__subheading subheading m-auto mt-4">На данном сайте присутствуют звуковые эффекты, нажимая на кнопку ниже вы подтверждаете, что проинформированы об этом</div>
-                <button class="preview__button m-auto mt-5">Зайти</button>
+                <button class="preview__button m-auto mt-5" onclick="HidePreview();">Зайти</button>
             </div>
         </div>
         <div class="menu container-fluid justify-content-center align-items-center d-md-none m-0" style="opacity: 0; display: none;">
@@ -42,14 +44,14 @@
                 </div>
             </div>
         </div>
-        <div class="header container-xxl">
+        <header class="header container-xxl">
             <div class="header__row row align-items-center p-2 p-lg-3">
-                <div class="header__volume volume col-2 col-md-1 p-0 d-flex justify-content-center">
-                    <button class="volume__button">
+                <div class="header__volume volume col-2 col-md-1 p-0 d-flex justify-content-center" style="opacity: 0;">
+                    <button class="volume__button" onclick="SwitchMusic();">
                         <img src="../assets/volume.png" alt="volume" class="volume__image">
                     </button>
                 </div>
-                <div class="header__socials socials col-md-1 col-lg-2 p-md-2 d-none d-md-block">
+                <div class="header__socials socials col-md-1 col-lg-2 p-md-2 d-none d-md-block" style="opacity: 0;">
                     <ul class="socials__list w-100 d-flex justify-content-center justify-content-lg-start p-0 m-0">
                         <li class="socials__item">
                             <a href="#" class="socials__link w-100 d-block">
@@ -58,12 +60,12 @@
                         </li>
                     </ul>
                 </div>
-                <div class="header__logo logo col-8 col-md-8 col-lg-6 d-flex justify-content-center">
+                <div class="header__logo logo col-8 col-md-8 col-lg-6 d-flex justify-content-center" style="opacity: 0;">
                     <a href="#" class="logo__link w-100">
                         <img src="../assets/logo.jpg" alt="logo" class="logo__image w-100">
                     </a>
                 </div>
-                <div class="header__auth auth col-md-2 col-lg-3 d-none d-md-flex justify-content-end">
+                <div class="header__auth auth col-md-2 col-lg-3 d-none d-md-flex justify-content-end" style="opacity: 0;">
                     <button class="auth__login">Войти</button>
                     <!-- <div class="auth__user d-flex justify-content-center align-items-center">
                         <span class="auth__username">Sergho</span>
@@ -78,13 +80,13 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </header>
         <div class="main container-xxl">
             <div class="main__screen screen row p-2 mt-4 d-flex justify-content-between">
-                <div class="screen__torch torch d-none d-md-flex justify-content-center align-items-start col-1 p-0">
-                    <video class="torch__video" src="../assets/torch-left.mp4" autoplay="true" loop="true" muted></video>
+                <div class="screen__torch torch d-none d-md-flex justify-content-center align-items-start col-1 p-0" style="opacity: 0;">
+                    <video class="torch__video" src="../assets/torch-left.mp4" loop="true"></video>
                 </div>
-                <div class="screen__heroes heroes col-12 col-md-10">
+                <div class="screen__heroes heroes col-12 col-md-10" style="opacity: 0;">
                     <h1 class="heroes__heading heading text-center">Персонажи</h1>
                     <div class="heroes__list container p-0 mt-3 mt-lg-5">
                         <ul class="heroes__row row p-0">
@@ -161,11 +163,11 @@
                         </ul>
                     </div>
                 </div>
-                <div class="screen__torch torch d-none d-md-flex justify-content-center align-items-start col-1 p-0">
-                    <video class="torch__video" src="../assets/torch-right.mp4" autoplay="true" loop="true" muted></video>
+                <div class="screen__torch torch d-none d-md-flex justify-content-center align-items-start col-1 p-0" style="opacity: 0;">
+                    <video class="torch__video" src="../assets/torch-right.mp4" loop="true"></video>
                 </div>
             </div>
-            <div class="main__annotation annotation row mt-5">
+            <div class="main__annotation annotation row mt-5" style="opacity: 0;">
                 <h1 class="annotation__heading heading text-center mt-0 mt-md-3">Аннотация</h1>
                 <h2 class="annotation__subheading subheading text-center mt-2 mt-md-4 mb-md-3">Дорогой читатель!</h2>
                 <p class="annotation__text text-center mb-2">В твоих руках первая часть книги, которая повествует о жизни армянской царицы по имени Парандзем. На протяжении долгого времени я пытался экранизировать историю Парандзем, однако безуспешно. Поэтому я принял решение написать книгу "Шёлковая сталь" произведение в жанре остросюжетной исторической драмы. Я старался максимально вложиться в каждую страницу, чтобы она стала увлекательной и интересной для читателей всех национальностей. Хочется верить, что она понравится любителям исторических романов. В самом сюжете, пронизанном дворцовыми интригами и запутанными заговорами, я попытался показать духовную и эмоциональную связь персонажей с родиной. Центральной фигурой этой книги является царица Парандзем, обладающая несказанным обаянием и неподдельной верности к Родине. Её действия и поступки направлены исключительно на благо государства, ведь она понимает, что любовь к своей Родине- это нечто большее, чем просто эмоциональная привязанность или патриотические клятвы. Царица стала неотъемлемой частью коллективного наследия, величественной страницей армянской истории, способной вдохновить и вознести читателей те в сложные и опасные времена.</p>
@@ -188,9 +190,10 @@
                 <button class="buy__button mt-4">Купить</button>
             </div>
         </div>
-        <div class="footer container-xxl mt-5">
+        <footer class="footer container-xxl mt-5">
             <p class="footer__content p-2 text-center">Шёлковая сталь © 2012-2024</p>
-        </div>
+        </footer>
     </div>
+    <script src="../js/index.js"></script>
 </body>
 </html>

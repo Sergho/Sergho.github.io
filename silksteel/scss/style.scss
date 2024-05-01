@@ -31,6 +31,7 @@ img{
         left: 0;
         background-color: black;
         z-index: 2;
+        transition: opacity .5s ease;
 
         .preview__heading{
             width: 100%;
@@ -102,6 +103,7 @@ img{
         }
     }
     .socials{
+        transition: opacity 1s ease;
         .socials__list{
             .socials__item{
                 list-style: none;
@@ -119,6 +121,7 @@ img{
         }
     }
     .auth{
+        transition: opacity 1s ease;
         .auth__login{
             background-color: transparent;
             color: white;
@@ -163,6 +166,7 @@ img{
     }
 
     .volume{
+        transition: opacity 1s ease;
         .volume__button{
             width: 35px;
             background-color: transparent;
@@ -175,23 +179,28 @@ img{
             &:hover{
                 opacity: 1;
             }
+            &::after{
+                content: "";
+                display: block;
+                width: 120%;
+                height: 7%;
+                background-color: red;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(45deg);
+                opacity: 0;
+                transition: opacity .5s ease;
+            }
             &.disabled{
                 &::after{
-                    content: "";
-                    display: block;
-                    width: 120%;
-                    height: 7%;
-                    background-color: red;
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%) rotate(45deg);
                     opacity: 1;
                 }
             }
         }
     }
     .logo{
+        transition: opacity 1s ease;
         .logo__link{
             max-width: 200px;
             transition: opacity .5s ease;
@@ -244,6 +253,7 @@ img{
     }
 
     .heroes{
+        transition: opacity 1s ease;
         .heroes__list{
             max-width: 350px;
         }
@@ -291,6 +301,7 @@ img{
         font-size: 18px;
     }
     .annotation{
+        transition: opacity 1s ease;
         .annotation__text{
             font-family: Montserrat;
             font-weight: normal;
@@ -425,6 +436,7 @@ img{
             }
         }
         .torch{
+            transition: opacity 1s ease;
             .torch__video{
                 width: 40px;
             }
