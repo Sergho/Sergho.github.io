@@ -11,10 +11,41 @@
 <body>
     <div id="wrapper" class="main container">
         <div class="music"></div>
+        <div class="preview container-fluid justify-content-center align-items-center m-0" style="opacity: 0; display: none;">
+            <div class="preview__row text-center">
+                <h1 class="preview__heading heading m-auto">Добро пожаловать на сайт книги "Шёлковая сталь"</h1>
+                <div class="preview__subheading subheading m-auto mt-4">На данном сайте присутствуют звуковые эффекты, нажимая на кнопку ниже вы подтверждаете, что проинформированы об этом</div>
+                <button class="preview__button m-auto mt-5">Зайти</button>
+            </div>
+        </div>
+        <div class="menu container-fluid justify-content-center align-items-center d-md-none m-0" style="opacity: 0; display: none;">
+            <div class="menu__close close">
+                <span class="close__line d-block"></span>
+                <span class="close__line d-block"></span>
+            </div>
+            <div class="menu__content row d-flex justify-content-center w-100">
+                <div class="menu__socials socials w-100">
+                    <ul class="socials__list w-100 d-flex justify-content-center justify-content-lg-start p-0 m-0">
+                        <li class="socials__item">
+                            <a href="#" class="socials__link w-100 d-block">
+                                <img src="../assets/telegram.png" alt="telegram" class="socials__image w-100">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="menu__auth auth d-flex justify-content-center mt-5">
+                    <button class="auth__login">Войти</button>
+                    <!-- <div class="auth__user d-flex justify-content-center align-items-center">
+                        <span class="auth__username">Sergho</span>
+                        <img src="../assets/avatar.png" alt="avatar" class="auth__avatar">
+                    </div> -->
+                </div>
+            </div>
+        </div>
         <div class="header container-xxl">
             <div class="header__row row align-items-center p-2 p-lg-3">
                 <div class="header__volume volume col-2 col-md-1 p-0 d-flex justify-content-center">
-                    <button class="volume__button disabled">
+                    <button class="volume__button">
                         <img src="../assets/volume.png" alt="volume" class="volume__image">
                     </button>
                 </div>
@@ -59,70 +90,70 @@
                         <ul class="heroes__row row p-0">
                             <li class="heroes__item hero p-0 col-3">
                                 <img src="../assets/hero_01.jpg" alt="" class="hero__image w-100">
-                                <div class="hero__hidden d-none d-md-block w-100 h-100">
+                                <div class="hero__hidden d-block w-100 h-100">
                                     <div class="hero__darkness w-100 h-100"></div>
                                     <h2 class="hero__title">Имя</h2>
                                 </div>
                             </li>
                             <li class="heroes__item hero p-0 col-3">
                                 <img src="../assets/hero_02.jpg" alt="" class="hero__image w-100">
-                                <div class="hero__hidden d-none d-md-block w-100 h-100">
+                                <div class="hero__hidden d-md-block w-100 h-100">
                                     <div class="hero__darkness w-100 h-100"></div>
                                     <h2 class="hero__title">Имя</h2>
                                 </div>
                             </li>
                             <li class="heroes__item hero p-0 col-3">
                                 <img src="../assets/hero_03.jpg" alt="" class="hero__image w-100">
-                                <div class="hero__hidden d-none d-md-block w-100 h-100">
+                                <div class="hero__hidden d-md-block w-100 h-100">
                                     <div class="hero__darkness w-100 h-100"></div>
                                     <h2 class="hero__title">Имя</h2>
                                 </div>
                             </li>
                             <li class="heroes__item hero p-0 col-3">
                                 <img src="../assets/hero_04.jpg" alt="" class="hero__image w-100">
-                                <div class="hero__hidden d-none d-md-block w-100 h-100">
+                                <div class="hero__hidden d-md-block w-100 h-100">
                                     <div class="hero__darkness w-100 h-100"></div>
                                     <h2 class="hero__title">Имя</h2>
                                 </div>
                             </li>
                             <li class="heroes__item hero p-0 col-6">
                                 <img src="../assets/hero_05.jpg" alt="" class="hero__image w-100">
-                                <div class="hero__hidden d-none d-md-block w-100 h-100">
+                                <div class="hero__hidden d-md-block w-100 h-100">
                                     <div class="hero__darkness w-100 h-100"></div>
                                     <h2 class="hero__title">Имя</h2>
                                 </div>
                             </li>
                             <li class="heroes__item hero p-0 col-6">
                                 <img src="../assets/hero_06.jpg" alt="" class="hero__image w-100">
-                                <div class="hero__hidden d-none d-md-block w-100 h-100">
+                                <div class="hero__hidden d-md-block w-100 h-100">
                                     <div class="hero__darkness w-100 h-100"></div>
                                     <h2 class="hero__title">Имя</h2>
                                 </div>
                             </li>
                             <li class="heroes__item hero p-0 col-3">
                                 <img src="../assets/hero_07.jpg" alt="" class="hero__image w-100">
-                                <div class="hero__hidden d-none d-md-block w-100 h-100">
+                                <div class="hero__hidden d-md-block w-100 h-100">
                                     <div class="hero__darkness w-100 h-100"></div>
                                     <h2 class="hero__title">Имя</h2>
                                 </div>
                             </li>
                             <li class="heroes__item hero p-0 col-3">
                                 <img src="../assets/hero_08.jpg" alt="" class="hero__image w-100">
-                                <div class="hero__hidden d-none d-md-block w-100 h-100">
+                                <div class="hero__hidden d-md-block w-100 h-100">
                                     <div class="hero__darkness w-100 h-100"></div>
                                     <h2 class="hero__title">Имя</h2>
                                 </div>
                             </li>
                             <li class="heroes__item hero p-0 col-3">
                                 <img src="../assets/hero_09.jpg" alt="" class="hero__image w-100">
-                                <div class="hero__hidden d-none d-md-block w-100 h-100">
+                                <div class="hero__hidden d-md-block w-100 h-100">
                                     <div class="hero__darkness w-100 h-100"></div>
                                     <h2 class="hero__title">Имя</h2>
                                 </div>
                             </li>
                             <li class="heroes__item hero p-0 col-3">
                                 <img src="../assets/hero_10.jpg" alt="" class="hero__image w-100">
-                                <div class="hero__hidden d-none d-md-block w-100 h-100">
+                                <div class="hero__hidden d-md-block w-100 h-100">
                                     <div class="hero__darkness w-100 h-100"></div>
                                     <h2 class="hero__title">Имя</h2>
                                 </div>

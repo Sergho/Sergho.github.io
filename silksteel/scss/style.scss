@@ -23,6 +23,145 @@ img{
 #wrapper {
     overflow-x: hidden;
 
+    .preview{
+        display: flex;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: black;
+        z-index: 2;
+
+        .preview__heading{
+            width: 100%;
+            line-height: 1.3;
+        }
+        .preview__subheading{
+            width: 100%;
+            line-height: 1.4;
+        }
+        .preview__button{
+            background-color: transparent;
+            border: 1px solid white;
+            border-radius: 20px;
+            padding: 15px 30px;
+            font-family: Montserrat;
+            font-weight: medium;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            opacity: 0.7;
+            transition: .5s ease;
+
+            &:hover{
+                opacity: 1;
+                background-color: white;
+                color: black;
+            }
+        }
+    }
+    .menu{
+        display: flex;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: black;
+        z-index: 1;
+
+        .menu__close{
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+    }
+    .close{
+        width: 40px;
+        height: 40px;
+        opacity: 0.7;
+        transition: .5s ease;
+
+        &:hover{
+            opacity: 1;
+        }
+        .close__line{
+            width: 35px;
+            height: 3px;
+            background-color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            &:nth-child(1){
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+            
+            &:nth-child(2){
+                transform: translate(-50%, -50%) rotate(-45deg);
+            }
+        }
+    }
+    .socials{
+        .socials__list{
+            .socials__item{
+                list-style: none;
+                width: 70px;
+
+                .socials__link{
+                    opacity: 0.7;
+                    transition: .5s ease;
+
+                    &:hover{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+    .auth{
+        .auth__login{
+            background-color: transparent;
+            color: white;
+            border: 1px solid white;
+            font-family: Montserrat;
+            font-weight: medium;
+            padding: 15px 30px;
+            font-size: 22px;
+            border-radius: 20px;
+            opacity: 0.7;
+            transition: .5s ease;
+
+            &:hover{
+                opacity: 1;
+                color: black;
+                background-color: white;
+            }
+        }
+        .auth__user{
+            cursor: pointer;
+
+            .auth__username{
+                font-family: Montserrat;
+                font-weight: medium;
+                font-size: 22px;
+                color: white;
+                opacity: 0.7;
+                transition: opacity .5s ease;
+            }
+            .auth__avatar{
+                width: 50px;
+                opacity: 0.7;
+                margin-left: 15px;
+                transition: opacity .5s ease;
+            }
+            &:hover{
+                .auth__username, .auth__avatar{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
     .volume{
         .volume__button{
             width: 35px;
@@ -113,6 +252,36 @@ img{
     .hero{
         list-style: none;
         position: relative;
+
+        .hero__hidden{
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity .5s ease;
+            cursor: pointer;
+
+            &:hover{
+                opacity: 1;
+            }
+            .hero__darkness{
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: black;
+                opacity: 0.5;
+            }
+            .hero__title{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-family: Montserrat;
+                font-weight: medium;
+                color: #c8c8c8;
+                font-size: 16px;
+            }
+        }
     }
 
     .subheading{
@@ -204,6 +373,18 @@ img{
 
 @media screen and (min-width: 768px) {
     #wrapper{
+        .preview{
+            .preview__heading{
+                width: 75%;
+            }
+            .preview__subheading{
+                width: 75%;
+            }
+            .preview__button{
+                padding: 15px 40px;
+                font-size: 22px;
+            }
+        }
         .volume{
             .volume__button{
                 width: 35px;
@@ -212,32 +393,15 @@ img{
         .socials{
             .socials__list{
                 .socials__item{
-                    list-style: none;
                     width: 35px;
-
-                    .socials__link{
-                        opacity: 0.7;
-                        transition: .5s ease;
-
-                        &:hover{
-                            opacity: 1;
-                        }
-                    }
                 }
             }
         }
         .auth{
             .auth__login{
-                background-color: transparent;
-                color: white;
-                border: 1px solid white;
-                font-family: Montserrat;
-                font-weight: medium;
                 padding: 5px 15px;
                 font-size: 16px;
                 border-radius: 10px;
-                opacity: 0.7;
-                transition: .5s ease;
 
                 &:hover{
                     opacity: 1;
@@ -246,21 +410,12 @@ img{
                 }
             }
             .auth__user{
-                cursor: pointer;
-
                 .auth__username{
-                    font-family: Montserrat;
-                    font-weight: medium;
                     font-size: 16px;
-                    color: white;
-                    opacity: 0.7;
-                    transition: opacity .5s ease;
                 }
                 .auth__avatar{
                     width: 30px;
-                    opacity: 0.7;
                     margin-left: 10px;
-                    transition: opacity .5s ease;
                 }
                 &:hover{
                     .auth__username, .auth__avatar{
@@ -272,37 +427,6 @@ img{
         .torch{
             .torch__video{
                 width: 40px;
-            }
-        }
-        .hero{
-            .hero__hidden{
-                position: absolute;
-                top: 0;
-                left: 0;
-                opacity: 0;
-                transition: opacity .5s ease;
-                cursor: pointer;
-
-                &:hover{
-                    opacity: 1;
-                }
-                .hero__darkness{
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    background-color: black;
-                    opacity: 0.5;
-                }
-                .hero__title{
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    font-family: Montserrat;
-                    font-weight: medium;
-                    color: #c8c8c8;
-                    font-size: 16px;
-                }
             }
         }
         .subheading{
@@ -389,6 +513,14 @@ img{
 
 @media screen and (min-width: 1200px) {
     #wrapper{
+        .preview{
+            .preview__heading{
+                width: 65%;
+            }
+            .preview__subheading{
+                width: 65%;
+            }
+        }
         .logo{
             .logo__link{
                 max-width: 300px;
