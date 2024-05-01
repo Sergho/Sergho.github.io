@@ -2,6 +2,8 @@ const bootstrapDelay = 1000;
 const apperanceTime = 1000;
 const transitionTime = 550;
 
+const torchesVisibilitySize = 768;
+
 const torchVolume = 0.1;
 const musicVolume = 0.2;
 
@@ -52,19 +54,15 @@ function SwitchMusic(){
 }
 function ShowLogo(delay){
     const logo = document.querySelector(".logo");
-
-    if(logo.style.display !== "none"){
-        setTimeout(() => {
-            logo.style.opacity = 1;
-        }, delay);
-        delay += apperanceTime;
-    }
-    return delay;
+    setTimeout(() => {
+        logo.style.opacity = 1;
+    }, delay);
+    return delay + apperanceTime;
 }
 function ShowTorches(delay){
     const torches = document.querySelectorAll(".torch");
 
-    if(torches[0].style.display != "none"){
+    if(window.innerWidth >= torchesVisibilitySize){
         setTimeout(() => {
             torches.forEach((torch) => {
                 torch.style.opacity = 1;
@@ -76,49 +74,27 @@ function ShowTorches(delay){
 }
 function ShowHeroes(delay){
     const heroes = document.querySelector(".heroes");
-
-    if(heroes.style.display != "none"){
-        setTimeout(() => {
-            heroes.style.opacity = 1;
-        }, delay);
-        delay += apperanceTime
-    }
-    return delay;
+    setTimeout(() => {
+        heroes.style.opacity = 1;
+    }, delay);
+    return delay + apperanceTime;
 }
 function ShowOther(delay){
     const volume = document.querySelector(".volume");
     const socials = document.querySelector(".header__socials");
     const auth = document.querySelector(".header__auth");
+    const burger = document.querySelector(".burger");
     const annotation = document.querySelector(".annotation");
 
-    if(volume.style.display != "none"){
-        setTimeout(() => {
-            volume.style.opacity = 1;
-        }, delay);
-    }
-    if(socials.style.display != "none"){
-        setTimeout(() => {
-            socials.style.opacity = 1;
-        }, delay);
-    }
-    if(auth.style.display != "none"){
-        setTimeout(() => {
-            auth.style.opacity = 1;
-        }, delay);
-    }
-    if(annotation.style.display != "none"){
-        setTimeout(() => {
-            annotation.style.opacity = 1;
-        }, delay);
-    }
-    if(volume.style.display != "none" ||
-    socials.style.display != "none" ||
-    auth.style.display != "none" ||
-    annotation.style.display != "none"){
-        delay += apperanceTime;
-    }
+    setTimeout(() => {
+        volume.style.opacity = 1;
+        socials.style.opacity = 1;
+        auth.style.opacity = 1;
+        burger.style.opacity = 1;
+        annotation.style.opacity = 1;
+    }, delay);
 
-    return delay;
+    return delay + apperanceTime;
 }
 function ShowContent(){
     let delay = bootstrapDelay;

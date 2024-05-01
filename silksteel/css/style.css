@@ -214,6 +214,10 @@ img {
 #wrapper .logo .logo__link:hover {
   opacity: 0.7;
 }
+#wrapper .burger {
+  -webkit-transition: opacity 1s ease;
+  transition: opacity 1s ease;
+}
 #wrapper .burger .burger__icon {
   width: 28px;
   height: 25px;

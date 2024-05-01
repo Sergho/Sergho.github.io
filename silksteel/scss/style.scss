@@ -212,6 +212,7 @@ img{
     }
 
     .burger{
+        transition: opacity 1s ease;
         .burger__icon{
             width: 28px;
             height: 25px;
