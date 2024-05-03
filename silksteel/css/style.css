@@ -65,7 +65,97 @@ img {
   background-color: white;
   color: black;
 }
+#wrapper .authorization {
+  -webkit-transition: opacity 1s ease;
+  transition: opacity 1s ease;
+  background-color: black;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+#wrapper .authorization .authorization__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+#wrapper .authorization .authorization__content {
+  max-width: 400px;
+}
+#wrapper .authorization .authorization__content .authorization__error {
+  font-family: Montserrat;
+  color: #ef6666;
+  font-size: 16px;
+}
+#wrapper .form .form__input {
+  border: none;
+  border-bottom: 1px solid white;
+  background-color: transparent;
+  padding: 10px 15px;
+  font-size: 16px;
+  color: white;
+  opacity: 0.7;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+#wrapper .form .form__input.error {
+  border-color: #ef6666;
+  color: #ef6666;
+}
+#wrapper .form .form__input:focus {
+  opacity: 1;
+}
+#wrapper .form .form__input::-webkit-input-placeholder {
+  color: #989898;
+}
+#wrapper .form .form__input::-moz-placeholder {
+  color: #989898;
+}
+#wrapper .form .form__input:-ms-input-placeholder {
+  color: #989898;
+}
+#wrapper .form .form__input::-ms-input-placeholder {
+  color: #989898;
+}
+#wrapper .form .form__input::placeholder {
+  color: #989898;
+}
+#wrapper .form .form__submit {
+  width: 150px;
+  padding: 10px 15px;
+  font-family: Montserrat;
+  font-weight: medium;
+  font-size: 16px;
+  border-radius: 10px;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  opacity: 0.7;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+#wrapper .form .form__submit:hover {
+  opacity: 1;
+  background-color: white;
+  color: black;
+}
+#wrapper .form .form__link {
+  cursor: pointer;
+  font-family: Montserrat;
+  font-weight: medium;
+  color: white;
+  font-size: 16px;
+  opacity: 0.7;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+#wrapper .form .form__link:hover {
+  opacity: 1;
+}
 #wrapper .menu {
+  -webkit-transition: opacity 1s ease;
+  transition: opacity 1s ease;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -82,6 +172,7 @@ img {
   right: 20px;
 }
 #wrapper .close {
+  cursor: pointer;
   width: 40px;
   height: 40px;
   opacity: 0.7;
@@ -380,6 +471,21 @@ img {
     padding: 15px 40px;
     font-size: 22px;
   }
+  #wrapper .authorization .authorization__content {
+    max-width: 420px;
+  }
+  #wrapper .authorization .authorization__content .authorization__error {
+    font-size: 18px;
+  }
+  #wrapper .form .form__input {
+    font-size: 18px;
+  }
+  #wrapper .form .form__submit {
+    width: 200px;
+    padding: 15px 15px;
+    font-size: 20px;
+    border-radius: 20px;
+  }
   #wrapper .volume .volume__button {
     width: 35px;
   }
@@ -430,6 +536,20 @@ img {
   }
 }
 @media screen and (min-width: 992px) {
+  #wrapper .authorization .authorization__content {
+    max-width: 570px;
+  }
+  #wrapper .form .form__input {
+    max-width: 450px;
+    font-size: 20px;
+    padding: 15px;
+  }
+  #wrapper .form .form__submit {
+    width: 200px;
+    padding: 15px 15px;
+    font-size: 20px;
+    border-radius: 20px;
+  }
   #wrapper .logo .logo__link {
     max-width: 270px;
   }

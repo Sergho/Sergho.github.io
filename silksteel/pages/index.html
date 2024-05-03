@@ -13,15 +13,50 @@
         <div class="music">
             <audio class="music__audio d-none" src="../assets/music.mp3" loop="true"></audio>
         </div>
-        <div class="preview container-fluid justify-content-center align-items-center m-0">
+        <div class="preview container-fluid modal justify-content-center align-items-center m-0">
             <div class="preview__row text-center">
                 <h1 class="preview__heading heading m-auto">Добро пожаловать на сайт книги "Шёлковая сталь"</h1>
                 <div class="preview__subheading subheading m-auto mt-4">На данном сайте присутствуют звуковые эффекты, нажимая на кнопку ниже вы подтверждаете, что проинформированы об этом</div>
                 <button class="preview__button m-auto mt-5" onclick="HidePreview();">Зайти</button>
             </div>
         </div>
-        <div class="menu container-fluid justify-content-center align-items-center d-md-none m-0" style="opacity: 0; display: none;">
-            <div class="menu__close close">
+        <div id="login" class="authorization modal container-fluid justify-content-center align-items-center m-0" style="opacity: 0; display: none;">
+            <div class="authorization__close close" onclick="CloseModals();">
+                <span class="close__line"></span>
+                <span class="close__line"></span>
+            </div>
+            <div class="authorization__content row d-flex justify-content-center w-100">
+                <div class="authorization__heading heading text-center">Авторизоваться</div>
+                <div class="authorization__subheading subheading text-center mt-3">Войдите в систему, чтобы продолжить читать книгу</div>
+                <span class="authorization__error d-block text-center mt-2 mt-lg-3" style="opacity: 1;">Неверные данные</span>
+                <div class="authorization__form form w-100 row justify-content-center">
+                    <input type="text" class="form__input mt-2" placeholder="Ваша почта">
+                    <input type="text" class="form__input mt-2 mt-lg-3 error" placeholder="Ваш пароль">
+                    <button class="form__submit mt-4 mt-lg-5">Войти</button>
+                    <span class="form__link d-block text-center mt-3" onclick="OpenAuth('register')">Ещё нет аккаунта</span>
+                </div>
+            </div>
+        </div>
+        <div id="register" class="authorization modal container-fluid justify-content-center align-items-center m-0" style="opacity: 0; display: none;">
+            <div class="authorization__close close" onclick="CloseModals();">
+                <span class="close__line"></span>
+                <span class="close__line"></span>
+            </div>
+            <div class="authorization__content row d-flex justify-content-center w-100">
+                <div class="authorization__heading heading text-center">Зарегистрироваться</div>
+                <div class="authorization__subheading subheading text-center mt-3">Создайте аккаунт, чтобы начать читать книгу уже сейчас</div>
+                <span class="authorization__error d-block text-center mt-2 mt-lg-3" style="opacity: 1;">Неверные данные</span>
+                <div class="authorization__form form w-100 row justify-content-center">
+                    <input type="text" class="form__input mt-2" placeholder="Ваша почта">
+                    <input type="text" class="form__input mt-2 mt-lg-3 error" placeholder="Ваш пароль">
+                    <input type="text" class="form__input mt-2 mt-lg-3 error" placeholder="Повторите пароль">
+                    <button class="form__submit mt-4 mt-lg-5">Создать</button>
+                    <span class="form__link d-block text-center mt-3" onclick="OpenAuth('login')">Уже есть аккаунт</span>
+                </div>
+            </div>
+        </div>
+        <div id="menu" class="menu modal container-fluid justify-content-center align-items-center d-md-none m-0" style="opacity: 0; display: none;">
+            <div class="menu__close close" onclick="CloseModals();">
                 <span class="close__line d-block"></span>
                 <span class="close__line d-block"></span>
             </div>
@@ -36,7 +71,7 @@
                     </ul>
                 </div>
                 <div class="menu__auth auth d-flex justify-content-center mt-5">
-                    <button class="auth__login">Войти</button>
+                    <button class="auth__login" onclick="OpenAuth('login');">Войти</button>
                     <!-- <div class="auth__user d-flex justify-content-center align-items-center">
                         <span class="auth__username">Sergho</span>
                         <img src="../assets/avatar.png" alt="avatar" class="auth__avatar">
@@ -66,14 +101,14 @@
                     </a>
                 </div>
                 <div class="header__auth auth col-md-2 col-lg-3 d-none d-md-flex justify-content-end" style="opacity: 0;">
-                    <button class="auth__login">Войти</button>
+                    <button class="auth__login" onclick="OpenAuth('login');">Войти</button>
                     <!-- <div class="auth__user d-flex justify-content-center align-items-center">
                         <span class="auth__username">Sergho</span>
                         <img src="../assets/avatar.png" alt="avatar" class="auth__avatar">
                     </div> -->
                 </div>
                 <div class="header__burger burger col-2 p-0 d-flex justify-content-center d-md-none" style="opacity: 0;">
-                    <div class="burger__icon d-block">
+                    <div class="burger__icon d-block" onclick="OpenMenu();">
                         <span class="burger__line d-block w-100"></span>
                         <span class="burger__line d-block w-100"></span>
                         <span class="burger__line d-block w-100"></span>
@@ -122,14 +157,14 @@
                                 <img src="../assets/hero_05.jpg" alt="" class="hero__image w-100">
                                 <div class="hero__hidden d-md-block w-100 h-100">
                                     <div class="hero__darkness w-100 h-100"></div>
-                                    <h2 class="hero__title">Имя</h2>
+                                    <h2 class="hero__title big">Имя</h2>
                                 </div>
                             </li>
                             <li class="heroes__item hero p-0 col-6">
                                 <img src="../assets/hero_06.jpg" alt="" class="hero__image w-100">
                                 <div class="hero__hidden d-md-block w-100 h-100">
                                     <div class="hero__darkness w-100 h-100"></div>
-                                    <h2 class="hero__title">Имя</h2>
+                                    <h2 class="hero__title big">Имя</h2>
                                 </div>
                             </li>
                             <li class="heroes__item hero p-0 col-3">
@@ -187,7 +222,7 @@
             <div class="main__buy buy row mt-5 d-flex justify-content-center">
                 <h1 class="buy__heading heading text-center mt-0 mt-md-3">Купить книгу</h1>
                 <h2 class="buy__subheading subheading text-center mt-2 mt-md-4 mb-md-3">Начните читать книгу уже сейчас!</h2>
-                <button class="buy__button mt-4">Купить</button>
+                <button class="buy__button mt-4" onclick="OpenAuth('login');">Купить</button>
             </div>
         </div>
         <footer class="footer container-xxl mt-5">

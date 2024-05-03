@@ -1,14 +1,16 @@
 const bootstrapDelay = 1000;
 const apperanceTime = 1000;
-const transitionTime = 550;
+const transitionTime = 500;
+const debounceTime = 50;
 
-const torchesVisibilitySize = 768;
+const desktopSize = 768;
 
 const torchVolume = 0.1;
 const musicVolume = 0.2;
 
 let music = false;
 
+// Sounds
 function EnableTorchSounds(){
     const torches = document.querySelectorAll('.torch__video');
     torches.forEach((torch) => {
@@ -52,6 +54,7 @@ function SwitchMusic(){
         switcher.classList.remove("disabled");
     }
 }
+// Show content
 function ShowLogo(delay){
     const logo = document.querySelector(".logo");
     setTimeout(() => {
@@ -62,7 +65,7 @@ function ShowLogo(delay){
 function ShowTorches(delay){
     const torches = document.querySelectorAll(".torch");
 
-    if(window.innerWidth >= torchesVisibilitySize){
+    if(window.innerWidth >= desktopSize){
         setTimeout(() => {
             torches.forEach((torch) => {
                 torch.style.opacity = 1;
@@ -108,6 +111,7 @@ function ShowContent(){
         document.body.style.overflow = "auto";
     }, delay);
 }
+// Preview
 function HidePreview(){
     const preview = document.querySelector(".preview");
     preview.style.opacity = 0;
@@ -115,7 +119,42 @@ function HidePreview(){
         preview.style.display = "none";
         ShowContent();
         StartSounds();
-    }, transitionTime);
+    }, transitionTime + debounceTime);
+}
+// All modals
+function CloseModals(exclude){
+    const modals = document.querySelectorAll(".modal");
+    modals.forEach((modal) => {
+        if(modal !== exclude) modal.style.opacity = 0;
+    })
+    setTimeout(() => {
+        modals.forEach((modal) => {
+            if(modal !== exclude) modal.style.display = "none";
+            if(!exclude) document.body.style.overflow = "auto";
+        })
+    }, apperanceTime + debounceTime);
+}
+// Menu
+function OpenMenu(){
+    const menu = document.querySelector("#menu");
+    CloseModals(menu);
+
+    menu.style.display = "flex";
+    document.body.style.overflow = "hidden";
+    setTimeout(() => {
+        menu.style.opacity = 1;
+    }, debounceTime);
+}
+// Auth modals
+function OpenAuth(id){
+    const auth = document.querySelector("#" + id);
+    CloseModals(auth);
+
+    auth.style.display = "flex";
+    document.body.style.overflow = "hidden";
+    setTimeout(() => {
+        auth.style.opacity = 1;
+    }, debounceTime);
 }
 document.addEventListener("DOMContentLoaded", () => {
     
