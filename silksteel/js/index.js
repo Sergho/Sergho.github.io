@@ -65,14 +65,12 @@ function ShowLogo(delay){
 function ShowTorches(delay){
     const torches = document.querySelectorAll(".torch");
 
-    if(window.innerWidth >= desktopSize){
-        setTimeout(() => {
-            torches.forEach((torch) => {
-                torch.style.opacity = 1;
-            })
-        }, delay);
-        delay += apperanceTime
-    }
+    setTimeout(() => {
+        torches.forEach((torch) => {
+            torch.style.opacity = 1;
+        })
+    }, delay);
+    delay += apperanceTime
     return delay;
 }
 function ShowHeroes(delay){

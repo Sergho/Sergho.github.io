@@ -246,6 +246,13 @@ img{
         }
     }
 
+    .torch{
+        transition: opacity 1s ease;
+        .torch__video{
+            width: 20px;
+        }
+    }
+
     .volume{
         transition: opacity 1s ease;
         .volume__button{

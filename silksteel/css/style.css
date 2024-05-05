@@ -258,6 +258,13 @@ img {
 #wrapper .auth .auth__user:hover .auth__username, #wrapper .auth .auth__user:hover .auth__avatar {
   opacity: 1;
 }
+#wrapper .torch {
+  -webkit-transition: opacity 1s ease;
+  transition: opacity 1s ease;
+}
+#wrapper .torch .torch__video {
+  width: 20px;
+}
 #wrapper .volume {
   -webkit-transition: opacity 1s ease;
   transition: opacity 1s ease;
