@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шёлковая сталь</title>
+    <link rel="stylesheet" href="../fonts/fonts.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div id="wrapper" class="account container">
+        <div class="music">
+            <audio class="music__audio d-none" src="../assets/music.mp3" loop="true"></audio>
+        </div>
+        <div id="menu" class="menu modal container-fluid justify-content-center align-items-center d-md-none m-0" style="opacity: 0; display: none;">
+            <div class="menu__close close" onclick="CloseModals();">
+                <span class="close__line d-block"></span>
+                <span class="close__line d-block"></span>
+            </div>
+            <div class="menu__content row d-flex justify-content-center w-100">
+                <div class="menu__socials socials w-100">
+                    <ul class="socials__list w-100 d-flex justify-content-center justify-content-lg-start p-0 m-0">
+                        <li class="socials__item">
+                            <a href="#" class="socials__link w-100 d-block">
+                                <img src="../assets/telegram.png" alt="telegram" class="socials__image w-100">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="menu__auth auth d-flex justify-content-center mt-5">
+                    <!-- <button class="auth__login" onclick="OpenAuth('login');">Войти</button> -->
+                    <div class="auth__user d-flex justify-content-center align-items-center">
+                        <span class="auth__username">Sergho</span>
+                        <img src="../assets/avatar.png" alt="avatar" class="auth__avatar">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <header class="header container-xxl">
+            <div class="header__row row align-items-center p-2 p-lg-3">
+                <div class="header__volume volume col-2 col-md-1 p-0 d-flex justify-content-center">
+                    <button class="volume__button" onclick="SwitchMusic();">
+                        <img src="../assets/volume.png" alt="volume" class="volume__image">
+                    </button>
+                </div>
+                <div class="header__socials socials col-md-1 col-lg-2 p-md-2 d-none d-md-block">
+                    <ul class="socials__list w-100 d-flex justify-content-center justify-content-lg-start p-0 m-0">
+                        <li class="socials__item">
+                            <a href="#" class="socials__link w-100 d-block">
+                                <img src="../assets/telegram.png" alt="telegram" class="socials__image w-100">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header__logo logo col-8 col-md-8 col-lg-6 d-flex justify-content-center">
+                    <a href="#" class="logo__link w-100">
+                        <img src="../assets/logo.jpg" alt="logo" class="logo__image w-100">
+                    </a>
+                </div>
+                <div class="header__auth auth col-md-2 col-lg-3 d-none d-md-flex justify-content-end">
+                    <!-- <button class="auth__login" onclick="OpenAuth('login');">Войти</button> -->
+                    <div class="auth__user d-flex justify-content-center align-items-center">
+                        <span class="auth__username">Sergho</span>
+                        <img src="../assets/avatar.png" alt="avatar" class="auth__avatar">
+                    </div>
+                </div>
+                <div class="header__burger burger col-2 p-0 d-flex justify-content-center d-md-none">
+                    <div class="burger__icon d-block" onclick="OpenMenu();">
+                        <span class="burger__line d-block w-100"></span>
+                        <span class="burger__line d-block w-100"></span>
+                        <span class="burger__line d-block w-100"></span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="main container-xxl d-flex align-items-center justify-content-center">
+            <div class="main__buy buy row d-flex justify-content-center">
+                <h1 class="buy__heading heading text-center mt-0 mt-md-3">Купить книгу</h1>
+                <h2 class="buy__subheading subheading text-center mt-2 mt-md-4 mb-md-3">Начните читать книгу уже сейчас!</h2>
+                <button class="buy__button mt-4" onclick="OpenAuth('login');">Купить</button>
+                <h2 class="buy__subheading subheading text-center mt-5">Стоимость - $$$$$ рублей</h2>
+            </div>
+        </div>
+        <footer class="footer container-xxl mt-3">
+            <p class="footer__content text-center">Шёлковая сталь © 2012-2024</p>
+        </footer>
+    </div>
+    <script src="../js/index.js"></script>
+</body>
+</html>

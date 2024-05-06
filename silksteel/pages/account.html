@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шёлковая сталь</title>
+    <link rel="stylesheet" href="../fonts/fonts.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div id="wrapper" class="account container">
+        <div class="music">
+            <audio class="music__audio d-none" src="../assets/music.mp3" loop="true"></audio>
+        </div>
+        <div id="menu" class="menu modal container-fluid justify-content-center align-items-center d-md-none m-0" style="opacity: 0; display: none;">
+            <div class="menu__close close" onclick="CloseModals();">
+                <span class="close__line d-block"></span>
+                <span class="close__line d-block"></span>
+            </div>
+            <div class="menu__content row d-flex justify-content-center w-100">
+                <div class="menu__socials socials w-100">
+                    <ul class="socials__list w-100 d-flex justify-content-center justify-content-lg-start p-0 m-0">
+                        <li class="socials__item">
+                            <a href="#" class="socials__link w-100 d-block">
+                                <img src="../assets/telegram.png" alt="telegram" class="socials__image w-100">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="menu__auth auth d-flex justify-content-center mt-5">
+                    <!-- <button class="auth__login" onclick="OpenAuth('login');">Войти</button> -->
+                    <div class="auth__user d-flex justify-content-center align-items-center">
+                        <span class="auth__username">Sergho</span>
+                        <img src="../assets/avatar.png" alt="avatar" class="auth__avatar">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <header class="header container-xxl">
+            <div class="header__row row align-items-center p-2 p-lg-3">
+                <div class="header__volume volume col-2 col-md-1 p-0 d-flex justify-content-center">
+                    <button class="volume__button" onclick="SwitchMusic();">
+                        <img src="../assets/volume.png" alt="volume" class="volume__image">
+                    </button>
+                </div>
+                <div class="header__socials socials col-md-1 col-lg-2 p-md-2 d-none d-md-block">
+                    <ul class="socials__list w-100 d-flex justify-content-center justify-content-lg-start p-0 m-0">
+                        <li class="socials__item">
+                            <a href="#" class="socials__link w-100 d-block">
+                                <img src="../assets/telegram.png" alt="telegram" class="socials__image w-100">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header__logo logo col-8 col-md-8 col-lg-6 d-flex justify-content-center">
+                    <a href="#" class="logo__link w-100">
+                        <img src="../assets/logo.jpg" alt="logo" class="logo__image w-100">
+                    </a>
+                </div>
+                <div class="header__auth auth col-md-2 col-lg-3 d-none d-md-flex justify-content-end">
+                    <!-- <button class="auth__login" onclick="OpenAuth('login');">Войти</button> -->
+                    <div class="auth__user d-flex justify-content-center align-items-center">
+                        <span class="auth__username">Sergho</span>
+                        <img src="../assets/avatar.png" alt="avatar" class="auth__avatar">
+                    </div>
+                </div>
+                <div class="header__burger burger col-2 p-0 d-flex justify-content-center d-md-none">
+                    <div class="burger__icon d-block" onclick="OpenMenu();">
+                        <span class="burger__line d-block w-100"></span>
+                        <span class="burger__line d-block w-100"></span>
+                        <span class="burger__line d-block w-100"></span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="main container-xxl d-flex align-items-center justify-content-center">
+            <!-- <div class="main__buy buy row d-flex justify-content-center">
+                <h1 class="buy__heading heading text-center mt-0 mt-md-3">Купить книгу</h1>
+                <h2 class="buy__subheading subheading text-center mt-2 mt-md-4 mb-md-3">Начните читать книгу уже сейчас!</h2>
+                <button class="buy__button mt-4" onclick="OpenAuth('login');">Купить</button>
+                <h2 class="buy__subheading subheading text-center mt-5">Стоимость - $$$$$ рублей</h2>
+            </div> -->
+            <div class="main__book book w-100">
+                <h1 class="book__heading heading text-center mt-0 mt-md-3">Шёлковая сталь</h1>
+                <div class="book__wrapper row w-100 mx-auto mt-4">
+                    <div class="book__content content col-12 col-lg-9 p-3 p-md-4">
+                        <h1 class="content__heading">Глава 2. Границы Армении: где заканчивается Мец Хайк</h1>
+                        <p class="content__text mt-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet fuga dolores nemo, quo numquam dolor ducimus voluptates cumque quas saepe necessitatibus neque similique facilis ipsa corporis ut enim! Voluptates corrupti assumenda sunt ipsam dolores vitae eligendi necessitatibus, quia cupiditate, ex labore quo ad aliquid. Eos animi ea velit amet dicta.</p>
+                        <p class="content__text mt-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae expedita fuga vel vitae sapiente vero placeat, hic at magni possimus, distinctio, sed veritatis impedit id quod optio animi! Soluta, sapiente aspernatur praesentium amet fuga hic dignissimos sequi nisi ipsum ullam sunt ea, quia eius magnam, maxime accusantium deleniti cumque doloribus. Unde praesentium distinctio excepturi ad nesciunt, veniam accusamus veritatis! Illo impedit repudiandae nobis repellendus ipsam incidunt, necessitatibus magnam magni tenetur totam explicabo fuga delectus sit. Aspernatur tenetur quisquam similique perferendis exercitationem ipsa facere ratione quia repellendus ab. Aliquam, placeat. Fugiat quibusdam perspiciatis nulla. Libero facilis explicabo earum eaque, sed sapiente!</p>
+                        <p class="content__text mt-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia quibusdam consequatur veritatis illo quos odit aut, suscipit incidunt molestias dolorem iure eaque libero fugit. Nemo exercitationem ipsa quos in accusamus dolores voluptatibus mollitia quidem? Expedita, voluptatibus maxime quasi, tenetur repudiandae voluptas ea voluptates numquam eaque vel a minus? Blanditiis, aspernatur velit quibusdam dolore, quo assumenda exercitationem deserunt eum maxime voluptas debitis iure nisi autem tempora soluta ab laboriosam dicta cupiditate.</p>
+                    </div>
+                    <div class="book__nav nav col-12 col-lg-3 p-0">
+                        <ul class="nav__list px-3 w-100">
+                            <li class="nav__item mt-2">Предисловие</li>
+                            <li class="nav__item mt-3 nav__disabled">Часть I. Кто есть армяне? Путешествие в глубину веков</li>
+                            <li class="nav__item mt-2">Глава 1. Народ Хайка и его колыбель</li>
+                            <li class="nav__item mt-2 active">Глава 2. Границы Армении: где заканчивается Мец Хайк</li>
+                            <li class="nav__item mt-2">Глава 3. Армянская борьба в эпоху деколонизации</li>
+                            <li class="nav__item mt-2">Глава 4. Уроки истории</li>
+                            <li class="nav__item mt-3 nav__disabled">Часть II. Армяне и мир</li>
+                            <li class="nav__item mt-2">Глава 5. Иранцы. Караван истории от Кира Великого до Хомейни</li>
+                            <li class="nav__item mt-2">Глава 6. Армяне и курды: спина к спине, и никак иначе</li>
+                            <li class="nav__item mt-2">Глава 7. Армяне и эллины. Вспоминая забытые уроки</li>
+                            <li class="nav__item mt-2">Глава 8. Евреи на пути к Свету. Чему учит опыт Хайка и Авраама?</li>
+                        </ul>
+                    </div>
+                    <div class="book__controls controls d-flex d-lg-none justify-content-center align-items-center">
+                        <div class="controls__list">
+                            <img src="../assets/list.png" alt="list" class="controls__image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer container-xxl mt-3">
+            <p class="footer__content text-center">Шёлковая сталь © 2012-2024</p>
+        </footer>
+    </div>
+    <script src="../js/index.js"></script>
+</body>
+</html>

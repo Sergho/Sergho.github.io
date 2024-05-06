@@ -22,6 +22,10 @@ img {
   background-color: blue;
 }
 
+.green {
+  background-color: green;
+}
+
 #wrapper {
   overflow-x: hidden;
 }
@@ -448,6 +452,94 @@ img {
   font-size: 16px;
 }
 
+#wrapper.account {
+  min-height: 100vh;
+}
+#wrapper.account .header {
+  height: 100px;
+}
+#wrapper.account .main {
+  min-height: calc(100vh - 160px);
+}
+#wrapper.account .book .book__wrapper {
+  border: 1px solid #333;
+  max-width: 1000px;
+  height: calc(100vh - 235px);
+  position: relative;
+}
+#wrapper.account .book .book__wrapper .book__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: calc(100% - 60px);
+  overflow: auto;
+  z-index: 1;
+  scrollbar-width: thin;
+  scrollbar-color: #c8c8c8 black;
+}
+#wrapper.account .book .book__wrapper .book__nav {
+  overflow: auto;
+  height: calc(100% - 60px);
+  scrollbar-width: thin;
+  scrollbar-color: #c8c8c8 black;
+}
+#wrapper.account .book .book__wrapper .book__controls {
+  border-top: 1px solid #333;
+  height: 60px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: black;
+}
+#wrapper.account .content {
+  background-color: black;
+}
+#wrapper.account .content .content__heading {
+  font-family: Montserrat;
+  font-weight: bold;
+  color: #c8c8c8;
+  font-size: 20px;
+}
+#wrapper.account .content .content__text {
+  font-family: Montserrat;
+  font-size: 16px;
+  color: #c8c8c8;
+}
+#wrapper.account .controls .controls__list {
+  cursor: pointer;
+  width: 40px;
+  opacity: 0.7;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+#wrapper.account .controls .controls__list:hover {
+  opacity: 1;
+}
+#wrapper.account .controls .controls__list.active {
+  opacity: 1;
+}
+#wrapper.account .nav .nav__list .nav__item {
+  list-style: none;
+  cursor: pointer;
+  font-family: Montserrat;
+  color: white;
+  opacity: 0.7;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+  font-size: 16px;
+}
+#wrapper.account .nav .nav__list .nav__item:hover {
+  opacity: 1;
+}
+#wrapper.account .nav .nav__list .nav__item.active {
+  opacity: 1;
+}
+#wrapper.account .nav .nav__list .nav__item.nav__disabled {
+  cursor: auto;
+  opacity: 1;
+  font-weight: bold;
+}
+
 @media screen and (min-width: 576px) {
   #wrapper .volume .volume__button {
     width: 45px;
@@ -541,6 +633,12 @@ img {
   #wrapper .footer .footer__content {
     font-size: 18px;
   }
+  #wrapper.account .content .content__heading {
+    font-size: 24px;
+  }
+  #wrapper.account .content .content__text {
+    font-size: 18px;
+  }
 }
 @media screen and (min-width: 992px) {
   #wrapper .authorization .authorization__content {
@@ -590,6 +688,26 @@ img {
   #wrapper .hero .hero__hidden .hero__title {
     font-size: 20px;
   }
+  #wrapper.account .header {
+    height: 141px;
+  }
+  #wrapper.account .main {
+    min-height: calc(100vh - 200px);
+  }
+  #wrapper.account .book .book__wrapper {
+    height: calc(100vh - 290px);
+  }
+  #wrapper.account .book .book__wrapper .book__content {
+    position: static;
+    height: 100%;
+  }
+  #wrapper.account .book .book__wrapper .book__nav {
+    border-left: 1px solid #333;
+    height: 100%;
+  }
+  #wrapper.account .nav .nav__list .nav__item {
+    font-size: 14px;
+  }
 }
 @media screen and (min-width: 1200px) {
   #wrapper .preview .preview__heading {
@@ -624,5 +742,20 @@ img {
   }
   #wrapper .prologue .prologue__text {
     font-size: 18px;
+  }
+  #wrapper.account .header {
+    height: 153px;
+  }
+  #wrapper.account .main {
+    min-height: calc(100vh - 215px);
+  }
+  #wrapper.account .book .book__wrapper {
+    height: calc(100vh - 300px);
+  }
+  #wrapper.account .nav .nav__list .nav__item {
+    font-size: 16px;
+  }
+  #wrapper.account .content .content__heading {
+    font-size: 28px;
   }
 }
