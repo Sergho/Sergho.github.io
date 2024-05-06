@@ -416,8 +416,8 @@ img{
             color: #999;
         }
     }
-    .buy{
-        .buy__button{
+    .buy, .contact{
+        .buy__button, .contact__button{
             box-sizing: border-box;
             width: 200px;
             font-family: Montserrat;
@@ -560,8 +560,8 @@ img{
                 }
             }
         }
-        .buy{
-            .buy__button{
+        .buy, .contact{
+            .buy__button, .contact__button{
                 width: 220px;
                 border: 2px solid #c8c8c8;
                 border-radius: 20px;

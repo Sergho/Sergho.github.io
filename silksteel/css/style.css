@@ -427,7 +427,7 @@ img {
   font-size: 14px;
   color: #999;
 }
-#wrapper .buy .buy__button {
+#wrapper .buy .buy__button, #wrapper .buy .contact__button, #wrapper .contact .buy__button, #wrapper .contact .contact__button {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 200px;
@@ -442,7 +442,7 @@ img {
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
 }
-#wrapper .buy .buy__button:hover {
+#wrapper .buy .buy__button:hover, #wrapper .buy .contact__button:hover, #wrapper .contact .buy__button:hover, #wrapper .contact .contact__button:hover {
   background-color: #c8c8c8;
   color: black;
 }
@@ -551,7 +551,7 @@ img {
   #wrapper .burger .burger__icon .burger__line {
     height: 4px;
   }
-  #wrapper .buy .buy__button {
+  #wrapper .buy .buy__button, #wrapper .buy .contact__button, #wrapper .contact .buy__button, #wrapper .contact .contact__button {
     width: 220px;
     border: 2px solid #c8c8c8;
     border-radius: 20px;
