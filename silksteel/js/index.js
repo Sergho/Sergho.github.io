@@ -85,6 +85,7 @@ function ShowOther(delay){
     const socials = document.querySelector(".header__socials");
     const auth = document.querySelector(".header__auth");
     const burger = document.querySelector(".burger");
+    const contact = document.querySelector('.contact');
     const annotation = document.querySelector(".annotation");
 
     setTimeout(() => {
@@ -92,6 +93,7 @@ function ShowOther(delay){
         socials.style.opacity = 1;
         auth.style.opacity = 1;
         burger.style.opacity = 1;
+        contact.style.opacity = 1;
         annotation.style.opacity = 1;
     }, delay);
 

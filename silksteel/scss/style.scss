@@ -416,6 +416,9 @@ img{
             color: #999;
         }
     }
+    .contact{
+        transition: opacity 1s ease;
+    }
     .buy, .contact{
         .buy__button, .contact__button{
             box-sizing: border-box;

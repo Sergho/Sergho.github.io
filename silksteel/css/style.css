@@ -427,6 +427,10 @@ img {
   font-size: 14px;
   color: #999;
 }
+#wrapper .contact {
+  -webkit-transition: opacity 1s ease;
+  transition: opacity 1s ease;
+}
 #wrapper .buy .buy__button, #wrapper .buy .contact__button, #wrapper .contact .buy__button, #wrapper .contact .contact__button {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
