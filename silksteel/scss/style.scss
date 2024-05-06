@@ -495,11 +495,11 @@ img{
             font-family: Montserrat;
             font-weight: bold;
             color: #c8c8c8;
-            font-size: 20px;
+            font-size: 18px;
         }
         .content__text{
             font-family: Montserrat;
-            font-size: 16px;
+            font-size: 14px;
             color: #c8c8c8;
         }
     }
@@ -527,7 +527,7 @@ img{
                 color: white;
                 opacity: 0.7;
                 transition: opacity .5s ease;
-                font-size: 16px;
+                font-size: 14px;
 
                 &:hover{
                     opacity: 1;
@@ -682,6 +682,13 @@ img{
             }
             .content__text{
                 font-size: 18px;
+            }
+        }
+        .nav{
+            .nav__list{
+                .nav__item{
+                    font-size: 14px;
+                }
             }
         }
     }

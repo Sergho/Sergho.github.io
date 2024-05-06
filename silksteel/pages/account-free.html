@@ -75,11 +75,21 @@
             </div>
         </header>
         <div class="main container-xxl d-flex align-items-center justify-content-center">
-            <div class="main__buy buy row d-flex justify-content-center">
-                <h1 class="buy__heading heading text-center mt-0 mt-md-3">Купить книгу</h1>
-                <h2 class="buy__subheading subheading text-center mt-2 mt-md-4 mb-md-3">Начните читать книгу уже сейчас!</h2>
-                <button class="buy__button mt-4" onclick="OpenAuth('login');">Купить</button>
-                <h2 class="buy__subheading subheading text-center mt-5">Стоимость - $$$$$ рублей</h2>
+            <div class="main__row row d-flex justify-content-center align-items-center">
+                <div class="main__torch torch d-flex justify-content-center align-items-start col-1 p-0">
+                    <video class="torch__video" src="../assets/torch-left.mp4" autoplay="true" loop="true" muted></video>
+                </div>
+                <div class="main__buy buy col-10">
+                    <div class="buy__row row d-flex justify-content-center">
+                        <h1 class="buy__heading heading text-center mt-0 mt-md-3">Купить книгу</h1>
+                        <h2 class="buy__subheading subheading text-center mt-2 mt-md-4 mb-md-3">Начните читать книгу уже сейчас!</h2>
+                        <button class="buy__button mt-4" onclick="OpenAuth('login');">Купить</button>
+                        <h2 class="buy__subheading subheading text-center mt-5">Стоимость - $$$$$ рублей</h2>
+                    </div>
+                </div>
+                <div class="main__torch torch d-flex justify-content-center align-items-start col-1 p-0">
+                    <video class="torch__video" src="../assets/torch-right.mp4" autoplay="true" loop="true" muted></video>
+                </div>
             </div>
         </div>
         <footer class="footer container-xxl mt-3">

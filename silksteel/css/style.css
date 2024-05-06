@@ -502,11 +502,11 @@ img {
   font-family: Montserrat;
   font-weight: bold;
   color: #c8c8c8;
-  font-size: 20px;
+  font-size: 18px;
 }
 #wrapper.account .content .content__text {
   font-family: Montserrat;
-  font-size: 16px;
+  font-size: 14px;
   color: #c8c8c8;
 }
 #wrapper.account .controls .controls__list {
@@ -530,7 +530,7 @@ img {
   opacity: 0.7;
   -webkit-transition: opacity 0.5s ease;
   transition: opacity 0.5s ease;
-  font-size: 16px;
+  font-size: 14px;
 }
 #wrapper.account .nav .nav__list .nav__item:hover {
   opacity: 1;
@@ -642,6 +642,9 @@ img {
   }
   #wrapper.account .content .content__text {
     font-size: 18px;
+  }
+  #wrapper.account .nav .nav__list .nav__item {
+    font-size: 14px;
   }
 }
 @media screen and (min-width: 992px) {
